@@ -1,0 +1,71 @@
+/* Customize Container */
+@media (min-width: 768px) {
+  .container{
+    max-width:968px;
+    padding:0px;
+  }
+}
+
+/* Responsive @992px */
+
+@media(max-width: 992px){
+    
+    .contact-divider > div{
+        height: 86px;
+    }
+    
+    .contact-container > .arrow-right {
+        border-top:43px solid transparent;
+        border-bottom:43px solid transparent;
+        border-left:30px solid #313131;
+    }
+    
+    .social-ic {
+        height: 48px;
+        width: 48px;
+        top: 25%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    .social-tag {
+        width: 48px;   
+    }
+    
+    #get-in-touch > p {
+        font-size: 48px;
+        bottom: -16px;
+    }
+    
+}
+
+
+@media(max-width: 768px){
+    
+    
+}
+
+
+
+/* Mobile & Desktop Switch @ 600px */
+@media (max-width: 600px){
+    .comp{
+        display: none;
+    }
+    
+    .mobile{
+        display:block;
+    }
+
+}
+@media (min-width: 600px){
+    .comp{
+        display:block;
+    }
+    
+    .mobile{
+        display:none;
+    }
+
+}
