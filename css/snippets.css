@@ -44,3 +44,19 @@
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 }
+
+
+/* Animations */
+
+@-webkit-keyframes spinZ {
+    0% {transform: rotateZ(0deg); 
+        transform-origin: 0% 50% 0%;}
+    100% {transform: rotateZ(360deg); transform-origin: 0% 50% 0%;}
+}
+
+
+@keyframes spinZ {
+    0% {transform: rotateZ(0deg); 
+        transform-origin: 0% 50% 0%;}
+    100% {transform: rotateZ(360deg); transform-origin: 0% 50% 0%;}
+}
