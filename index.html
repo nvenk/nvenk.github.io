@@ -33,7 +33,7 @@
         <div class="col-xs-4 col-md-4 profile-pic"><div></div></div>
 
         <div class="col-xs-8 col-md-8 profile-about">
-        <p class="abouttext"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus, justo et porttitor pharetra, mauris mauris sollicitudin libero, dictum pulvinar ipsum neque in nisi. Morbi sollicitudin et justo et tristique.  </p>
+        <p class="abouttext"></p>
 
             
 <!-- Old More About Me Section 
@@ -272,6 +272,17 @@
     });
     </script>
     <!-- End BlueImp link-->
+      
+    <!-- Touch Support for hover effects -->
+    <script>
+    $(document).ready(function() {
+        $('.hover').bind('touchstart touchend', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('hover_effect');
+        });
+    });      
+      
+    </script>
       
   </body>
 </html>

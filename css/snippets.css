@@ -1,3 +1,9 @@
+.hover {
+-webkit-user-select: none;
+-webkit-touch-callout: none;        
+}
+
+
 /* CSS Arrows From Css-Tricks */
 
 .arrow-up {

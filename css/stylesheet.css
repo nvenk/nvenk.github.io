@@ -1,11 +1,16 @@
 /* Definitions */
 
 body{
-  background-color:#656565;
+  background-color:#bbb;
   font-family:'Roboto', sans-serif;
 }
 
-a:hover{
+.container{
+    box-shadow: 0px 0px 50px #000;
+}
+
+
+a:hover {
   text-decoration: none;
   color:inherit;
 }
@@ -29,7 +34,7 @@ a:hover{
   font-weight:500;
 }
 
-.header p{
+.header > p{
   text-align: center;
   font-size: 72px;
   font-weight: 100;
@@ -61,7 +66,6 @@ a:hover{
   height: 100%;
   width: 100%;
   background-image: url(images/profile_pic.jpg);
-
   background-size: cover;
   background-position: center;
 }
@@ -71,9 +75,12 @@ a:hover{
 }
 
 .abouttext{
-  margin:30px 40px 30px 40px;
-  color: white;
-  font-size:18px;
+    font-size:36px;
+    font-weight: 700;
+    margin: 20px 20px;
+    width: 85%;
+    position: absolute;
+    color:#4d7093;
 }
 
 .BottomTitle{
@@ -102,7 +109,7 @@ a:hover{
     z-index: 99;
 }
 
-.resume-download:hover{
+.resume-download:hover, .resume-download.hover_effect{
     box-shadow: 0px 0px 10px #555; 
     -webkit-animation: spinZ .2s 1;
     animation: spinZ .2s 1;
@@ -115,11 +122,10 @@ a:hover{
 
 .resume-tag{
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
     width:110px;
     height: 20px;
     color: #fff;
-    padding-top: 2px;
     font-weight:100;
     font-style: italic;
     transition: all 0.3s ease-in-out;
@@ -133,9 +139,9 @@ a:hover{
     text-shadow: 1px 3px 5px #333;
 }
 
-.resume-download:hover + .resume-tag{
+.resume-download:hover + .resume-tag, .resume-download.hover_effect + .resume-tag {
     opacity: 1;
-    right: 100px;
+    right: 120px;
 }
 
 
@@ -159,13 +165,13 @@ a:hover{
 
 #portfolio-text > p {
   color:#ffba00;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 100;
   font-style: italic;
   margin:0px;
   position: absolute;
   right:10px;
-  bottom: -10px;
+  bottom: 0px;
 }
 
 #divider-blank > .arrow-right {
@@ -221,7 +227,7 @@ a:hover{
   display: inline-block;
 }
 
-.sections-bg:hover{
+.sections-bg:hover, .sections-bg.hover_effect{
   transform: scale(1.03);
   opacity: 0.8;
 }
@@ -239,7 +245,7 @@ a:hover{
     transition: all 0.3s ease-in-out;
 }
 
-.sections-bg:hover > div{
+.sections-bg:hover > div, .sections-bg.hover_effect > div {
     opacity: 0.8;
     bottom: 10%;
     transform: scale(1.1)
@@ -268,13 +274,14 @@ a:hover{
 
 #get-in-touch > p {
   color:#ffba00;
+  height: 54px;
   font-size: 48px;
   font-weight: 100;
   font-style: italic;
   margin:0px;
   position: absolute;
   right:10px;
-  bottom: -15px;
+  bottom:15px;
   white-space: nowrap;
 }
     
@@ -303,7 +310,7 @@ a:hover{
     transition: all .1s ease-in-out;
 }
 
-.social-ic:hover {
+.social-ic:hover, .social-ic.hover_effect {
     -webkit-animation: spinZ .2s 1;
     animation: spinZ .2s 1;
     box-shadow: 0px 0px 15px #333;
@@ -345,7 +352,7 @@ a:hover{
     transition: all 0.3s ease-in-out;
     opacity: 0;
     position: absolute;
-    bottom: -14px;
+    bottom: 0px;
     left: -39%;
     top: 50%;
     white-space: nowrap;
@@ -353,19 +360,7 @@ a:hover{
     animation: spinZ .2s 1;
 }
 
-.social-ic:hover + .social-tag {
+.social-ic:hover + .social-tag, .social-ic.hover_effect + .social-tag {
     opacity: 0.6;
-}
-
-.social-ic:hover + .email-tag {
-    top: 35%;
-}
-.social-ic:hover + .fb-tag {
-    top: 35%;
-}
-.social-ic:hover + .gp-tag {
-    top: 35%;
-}
-.social-ic:hover + .li-tag {
     top: 35%;
 }
