@@ -148,7 +148,7 @@
         <!-- Experimental PHP list -->
         
         <?php
-            echo "<div id="links" style="display:none;">
+            echo "<div id='links' style='display:none;'>";
             $photoPath = "./content/photographs/";
             $thumbnailPath = "./content/thumbnails/";
             $dh = opendir($path);
@@ -163,9 +163,7 @@
             echo "</div>";
         ?>
         <!--End Experiment -->
-
-                    
-
+        
     </div> <!--Close Main Container -->
       
       
