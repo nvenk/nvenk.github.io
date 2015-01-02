@@ -108,15 +108,14 @@ a:hover{
 }
 
 .resume-download:hover{
-    transform: scale(1.1);
-    box-shadow: 1px 1px 10px #555; 
+    box-shadow: 0px 0px 10px #555; 
     -webkit-animation: spinZ .2s 1;
     animation: spinZ .2s 1;
 }
 
 .resume-download:active{
-    transform: scale(1.05);
-    box-shadow: 1px 1px 6px #333;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 6px #333;
 }
 
 .resume-tag{
@@ -142,8 +141,8 @@ a:hover{
 .resume-download:hover + .resume-tag{
     opacity: 1;
     right: 100px;
-    
 }
+
 
 
 
@@ -205,7 +204,7 @@ a:hover{
 }
 
 .design > .sections-bg{
-    background-image: url(images/design-tile.jpg);
+    background-image: url(images/anim-tile.jpg);
 }
 
 .animation > .sections-bg{
@@ -310,15 +309,14 @@ a:hover{
 }
 
 .social-ic:hover {
-    transform: scale(1.2);
-    box-shadow: 3px 2px 10px #333;
     -webkit-animation: spinZ .2s 1;
     animation: spinZ .2s 1;
+    box-shadow: 0px 0px 15px #333;
 }
 
 .social-ic:active{
-    transform: scale(1.15);
-    box-shadow: 2px 1px 10px #333;
+    transform: scale(0.95);
+    box-shadow: 1px 1px 6px #333;
 }
 
 .ic-email{
