@@ -137,25 +137,34 @@
         
         
         
-        <!-- Photography Gallery -->
+        <!-- Photography Gallery Links-->
         <div id="links" style="display:none;">
-            <a href="./content/photographs/Rope.jpg" title="" data-gallery>
-                <img src="css/images/photo-thumbnails/Rope.jpg" alt="Rope">
-            </a>
-            <a href="./content/photographs/Selfie.jpg" title="" data-gallery>
-                <img src="css/images/photo-thumbnails/Selfie.jpg" alt="Selfie">
-            </a>
-            <a href="./content/photographs/Monkey1.jpg" title="" data-gallery>
-                <img src="css/images/photo-thumbnails/Monkey1.jpg" alt="Monkey1">
-            </a>
-            <a href="./content/photographs/Monkey2.jpg" title="" data-gallery>
-                <img src="css/images/photo-thumbnails/Monkey2.jpg" alt="Monkey2">
-            </a>
-            <a href="./content/photographs/GoPro.jpg" title="" data-gallery>
-                <img src="css/images/photo-thumbnails/GoPro.jpg" alt="GoPro">
+            <a href="./content/photographs/Ant.jpg" title="" data-gallery>
+                <img src="./content/thumbnails/Ant.jpg" alt="Rope">
             </a>
         </div>
         <!-- Photo Gallery End -->
+        
+        <!-- Experimental PHP list -->
+        
+        <?php
+            echo "<div id="links" style="display:none;">
+            $photoPath = "./content/photographs/";
+            $thumbnailPath = "./content/thumbnails/";
+            $dh = opendir($path);
+            while ($file = readdir($dh)){
+                if($file != "." && $file != ".." && $file != "Thumbs.db" && $file != "index.html" && $file != "index.php")
+                {
+                    echo "<a href='$photoPath$file' title='' data-gallery>";
+                    echo "<img src='$thumbnailPath$file' alt='$file'></a>";
+                }
+            }
+            closedir($dh);
+            echo "</div>";
+        ?>
+        <!--End Experiment -->
+
+                    
 
     </div> <!--Close Main Container -->
       
