@@ -13,6 +13,7 @@
     
     .header > p {
         font-size:60px;
+        margin-top:0px;
     }
     
     .header {
@@ -64,6 +65,23 @@
     
     .social-ic:hover + .social-tag, .social-ic.hover_effect + .social-tag{
         top: 15%   
+    }
+    
+    .sections-bg > div {
+        opacity: 0.5;
+    }
+    
+    .resume-tag{
+        opacity: 0.5;
+        font-size: 14px;
+        top: 71%;
+        right: 85px;
+        white-space: normal;
+        text-align: right;
+    }
+    .resume-download:hover + .resume-tag,
+    .resume-download.hover_effect + .resume-tag{
+        right:100px;
     }
 }
 
