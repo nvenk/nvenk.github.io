@@ -52,6 +52,11 @@
         font-size: 48px;
         bottom: 10px;
     }
+    
+    .abouttext{
+        padding-top: 40px;
+    
+    }
 }
 
 
@@ -64,7 +69,7 @@
     }
     
     .social-ic:hover + .social-tag, .social-ic.hover_effect + .social-tag{
-        top: 15%   
+        top: 15%;
     }
     
     .sections-bg > div {
@@ -72,9 +77,9 @@
     }
     
     .resume-tag{
-        opacity: 0.5;
+        opacity: 0.7;
         font-size: 14px;
-        top: 71%;
+        top: 267px;
         right: 85px;
         white-space: normal;
         text-align: right;
@@ -82,6 +87,72 @@
     .resume-download:hover + .resume-tag,
     .resume-download.hover_effect + .resume-tag{
         right:100px;
+    }
+    
+    .abouttext{
+        padding-top: 30px;
+        font-size: 30px;
+        width: 85%;
+        
+    }
+    
+    .resume-download{
+        top:255px;
+    }
+}
+
+@media (max-width: 640px){
+    
+    .abouttext{
+        padding-top: 0px;
+        
+    }
+    
+}
+
+@media (max-width: 580px){
+    
+    #get-in-touch > p {
+        font-size:8vw;
+    }
+    
+    .social-ic:hover +.social-tag, .social-ic.hover_effect + .social-tag{
+        opacity:0;   
+    } 
+    .header > p{
+        font-size: 48px;
+    }
+    
+    .header {
+        padding-left: 5%;
+        height: 110px;
+    }
+    
+    .abouttext{
+        padding-top:0px;
+        text-align: left;
+        width: 85%;
+    }
+    
+    #b1:before, #b2:before {
+        content: "\a";
+        white-space: pre;
+    }
+    
+    #b1:after, #b2: after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+@media(max-width:360px){
+    .abouttext{
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    .resume-tag{
+        font-size: 12px;
+        width: 80px;
     }
 }
 
@@ -106,23 +177,4 @@
         display:none;
     }
 
-}
-
-@media (max-width: 580px){
-    
-    #get-in-touch > p {
-        font-size:8vw;
-    }
-    
-    .social-ic:hover +.social-tag, .social-ic.hover_effect + .social-tag{
-        opacity:0;   
-    } 
-    .header > p{
-        font-size: 48px;
-    }
-    
-    .header {
-        padding-left: 5%;
-        height: 110px;
-    }
 }

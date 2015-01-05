@@ -1,7 +1,7 @@
 /* Definitions */
 
 body {
-    background-color: #555455;
+    background: #555455;
     background: linear-gradient(#646566,#414243);
     font-family: 'Roboto', sans-serif;
 }
@@ -64,11 +64,20 @@ a:hover {
     position: absolute;
     color: #fff;
     text-shadow: 0px 2px 3px #666;
+    text-align: center;
+    padding-top:55px;
 }
 
-.abouttext > span {
+#h1, #h2, #h3 {
+    font-weight: 100;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+#b1, #b2{
     font-weight: 700;
     opacity: 0.8;
+    white-space: nowrap;
 }
 .BottomTitle {
     font-size: 48px;
@@ -123,6 +132,7 @@ a:hover {
     text-shadow: 0px 0px 5px #111;
     border-radius: 5px;
     text-shadow: 1px 3px 5px #333;
+    z-index: 98;
 }
 .resume-download:hover + .resume-tag,
 .resume-download.hover_effect + .resume-tag {
