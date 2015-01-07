@@ -109,7 +109,7 @@
   border-radius: 23px;
   opacity: 0.5;
   cursor: pointer;
-  display: none;
+  display: inline-block;
 }
 .blueimp-gallery > .next {
   left: auto;
