@@ -90,7 +90,7 @@
     }
     
     .abouttext{
-        padding-top: 30px;
+        padding-top: 0px;
         font-size: 30px;
         width: 85%;
         
@@ -110,7 +110,7 @@
     
 }
 
-@media (max-width: 580px){
+@media (max-width: 640px){
     
     #get-in-touch > p {
         font-size:8vw;
