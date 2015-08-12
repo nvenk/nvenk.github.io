@@ -1,5 +1,0 @@
-ERROR|Wed, 05 Aug 2015 10:36:54 -0500|page|content|/Blog|::1|dev|404 - Page not found. There is a bad link on <a href="/Blog">/Blog</a>.
-ERROR|Wed, 05 Aug 2015 12:26:25 -0500|visitor|content|/blog/entries|::1|dev|404 - Page not found. Visitor came directly to this page and may have typed the URL incorrectly.
-INFO|Wed, 05 Aug 2015 12:26:26 -0500|site|favicon|/blog/favicon.ico|::1|dev|The site favicon could not be found.
-INFO|Wed, 05 Aug 2015 12:52:03 -0500|site|favicon|/blog-entries/favicon.ico|::1|dev|The site favicon could not be found.
-ERROR|Wed, 05 Aug 2015 13:29:09 -0500|template|parser|/blog/0148-hello-again|::1|dev|Cannot display tag `{{ tags }}` because it is a list, not a single value. To display list values, use a tag-pair.
