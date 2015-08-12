@@ -1,0 +1,49 @@
+<footer class="footer">
+
+  <div class="l-panel">
+    <div class="cols_3_1">
+      <a class="footer-logo" href="/">FourKites</a>
+      {{ get_content from="globals" show_drafts="true" }}
+        <p class="address">{{ address_street_1|smartypants }}{{ if address_street_2 }}, {{ address_street_2|smartypants|widont }}{{ /if }}<br>{{ address_city|smartypants }}, {{ address_state|smartypants }} {{ address_ZIP|smartypants }}{{ if phone }}<br>{{ phone }}{{ /if }}</p>
+      {{ /get_content }} 
+    </div>
+
+    <div class="cols_3_2">
+      <h6 class="h4">Explore</h6>
+      <ul class="nav-footer">
+        {{ nav from="/" exclude="privacy|terms" }}
+        <li><a class="footer-link{{ if page_url == url }} nav-here{{ endif }}" href="{{ url }}">{{ title|smartypants }}</a></li>
+        {{ /nav }}
+        <li><a class="footer-link" href="{{ link_login }}">Log In</a></li>
+      </ul>
+    </div>
+
+    <div class="cols_3_3">
+      <h6 class="h4">Follow Us</h6>
+      <ul class="footer-social">
+      {{ get_content from="globals" show_drafts="true" }}
+        {{ if social_linkedin }}<li class="social-link social-link-li"><a class="footer-link" href="{{ social_linkedin }}">LinkedIn</a></li>{{ /if }}
+        {{ if social_facebook }}<li class="social-link social-link-fb"><a class="footer-link" href="{{ social_facebook }}">Facebook</a></li>{{ /if }}
+        {{ if social_twitter }}<li class="social-link social-link-tw"><a class="footer-link" href="{{ social_twitter }}">Twitter</a></li>{{ /if }}
+        {{ if social_google }}<li class="social-link social-link-go"><a class="footer-link" href="{{ social_google }}">Google</a></li>{{ /if }}
+      {{ /get_content }} 
+      </ul>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; <?php echo date("Y") ?> FourKites, Inc. All Rights Reserved. {{ get_content from="privacy" }}<a href="{{ url }}">{{ title|smartypants }}</a>{{ /get_content }}&nbsp;{{ get_content from="terms" }}<a href="{{ url }}">{{ title|smartypants }}</a>{{ /get_content }}
+    </p>
+  </div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="/assets/js/vendor/jquery.2.1.4.min.js"><\/script>')</script>
+{{ if _template == 'customer' || _template == 'demo' }}<script src="/assets/js/vendor/wufoo.js"></script>{{ /if }}
+<script src="/assets/js/fourkites.js"></script>
+<!-- RRSSB SCRIPTS -->
+<script src="/assets/rrssb/js/rrssb.min.js"></script>
+<!-- END RRSSB -->
+</body>
+</html>

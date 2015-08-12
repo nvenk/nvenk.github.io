@@ -1,0 +1,71 @@
+<header class="l-panel l-page-intro">
+  <div class="fade">
+    <h1 class="t-small-head color">{{ title }}</h1>
+    <h2 class="h1">{{ page_intro|smartypants|widont }}</h2>
+  </div>
+</header>
+
+<section class="l-panel panel-features">
+  <h3 class="h2 header-panel color">{{ claim|smartypants|widont }}</h3>
+
+  {{ feature_section }}
+    <div class="feature cols_3_{{ index }} fade">
+      <img class="feature-icon" alt="{{ feature_alt|smartypants }}" title="{{ feature_title|smartypants }}" src="{{ feature_src }}">
+      <div class="feature-copy">
+        {{ feature }}
+      </div>
+    </div>
+  {{ /feature_section }}
+</section>
+
+{{ if pricing_intro and price_chart }}
+<section class="l-panel panel-pricing rule-top">
+  <h3 class="h2 header-panel color">{{ pricing_intro|smartypants|widont }}</h3>
+
+  <table class="price-box">
+    <tr>
+      {{ price_chart }}
+      <td class="price-{{index}}">
+        <div class="wrapper">
+          <h4 class="h3">{{ package|smartypants }}</h4>
+          <p class="size">{{ size|smartypants|widont }}</p>
+          <p class="price">{{ price|smartypants }}</p>
+          <a class="button" href="https://tracking.fourkites.com">Sign Up Now</a>
+        </div>
+      </td>
+      {{ /price_chart }}
+    </tr>
+  </table>
+
+</section>
+{{ /if }}
+
+{{ if req_demo }}
+<section class="l-panel panel-cta-small">
+  <div class="wrapper">
+    <h3>{{ req_demo|smartypants|widont }}</h3>
+    <a class="button" href="#demo">{{ req_demo_button|smartypants }}</a>
+  </div>
+</section>
+{{ /if }}
+
+<section class="l-panel">
+  <h3 class="h2 color">{{ hassle_intro|smartypants|widont }}</h3>
+
+  {{ hassle_solution }}
+    <div class="hassle-solution{{ if index != "1" }} rule-top{{ /if }} fade">
+      <div class="hassle">
+        <div class="avatar"></div>
+        <h4 class="t-small">Your Hassle</h4>
+        <p>{{ hassle|smartypants|widont }}</p>
+      </div>
+      <div class="solution">
+        <div class="avatar"></div>
+        <h4 class="t-small">Our Solution</h4>
+        <p>{{ solution|smartypants|widont }}</p>
+      </div>
+    </div>
+  {{ /hassle_solution }}
+</section>
+
+{{ theme:partial src="request-demo" }}

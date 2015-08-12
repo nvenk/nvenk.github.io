@@ -1,0 +1,18 @@
+fields:
+
+	meta_subject:
+		display: Meta Title
+		type: text
+		value: FourKites Blog, Logistics, supply chain visibility, and location tracking products, TMS, SAS
+		hide: true
+
+	meta_description:
+		hide: true
+		type: text
+		value: By providing the most accurate, real-time information, we empower our customers to make proactive business decisions.
+
+	meta_keywords:
+	    display: Meta Keywords
+	    type: text
+	    instructions: 
+	   		below: Separate SEO Keywords using Commas(,)

@@ -1,0 +1,5 @@
+ERROR|Sat, 08 Aug 2015 23:19:33 -0500|visitor|content|/blog/mt-olympus|::1|dev|404 - Page not found. Visitor came directly to this page and may have typed the URL incorrectly.
+ERROR|Sat, 08 Aug 2015 23:20:37 -0500|template|parser|/blog-entries/mt-olympus|::1|dev|Cannot display tag `{{ meta_keywords|smartypants }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Sat, 08 Aug 2015 23:28:25 -0500|template|parser|/blog-entries/mt-olympus|::1|dev|Cannot display tag `{{ meta_keywords|smartypants }}` because it is a list, not a single value. To display list values, use a tag-pair.
+ERROR|Sat, 08 Aug 2015 23:30:27 -0500|template|parser|/blog-entries/mt-olympus|::1|dev|Cannot display tag `{{ meta_keywords|smartypants }}` because it is a list, not a single value. To display list values, use a tag-pair.
+INFO|Sat, 08 Aug 2015 23:33:21 -0500|site|favicon|/blog-entries/favicon.ico|::1|dev|The site favicon could not be found.

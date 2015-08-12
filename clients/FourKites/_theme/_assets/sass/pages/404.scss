@@ -1,0 +1,25 @@
+.error404 {
+  .h2 {
+    color: $red-text;
+    text-align: center;
+  }
+}
+
+.sitemap-404 {
+  columns: 2;
+  font-size: 16px;
+  line-height: 2em;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    columns: 3;
+    font-size: 18px;
+    max-width: 650px;
+  }
+
+  @include breakpoint(laptop) {
+    font-size: 19px;
+  }
+}

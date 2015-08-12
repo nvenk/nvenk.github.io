@@ -1,0 +1,54 @@
+.visible-phone,
+.visible-tablet,
+.visible-laptop,
+.visible-desktop {
+  display: none !important;
+}
+
+.visible-phone {
+  @media (max-width: $screen-tablet - 1) {
+    display: block !important;
+  }
+}
+
+.visible-tablet {
+  @media (min-width: $screen-tablet) and (max-width: $screen-laptop - 1) {
+    display: block !important;
+  }
+}
+
+.visible-laptop {
+  @media (min-width: $screen-laptop) and (max-width: $screen-desktop - 1) {
+    display: block !important;
+  }
+}
+
+.visible-desktop {
+  @media (min-width: $screen-desktop) {
+    display: block !important;
+  }
+}
+
+.hidden-phone {
+  @media (max-width: $screen-tablet - 1) {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @media (min-width: $screen-tablet) and (max-width: $screen-laptop - 1) {
+    display: none !important;
+  }
+}
+
+.hidden-laptop {
+  @media (min-width: $screen-laptop) and (max-width: $screen-desktop - 1) {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @media (min-width: $screen-desktop) {
+    display: none !important;
+  }
+}

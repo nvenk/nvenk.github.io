@@ -1,0 +1,252 @@
+body.home {
+  .l-panel {
+    // padding for home panels differs from rest of site due to their visual design
+    padding: $pad-mob;
+    @include breakpoint(tablet) { padding: $pad-tab; }
+  }
+}
+
+
+
+//---------------------------------------------------------------
+// Subhead Styles
+//---------------------------------------------------------------
+.home-subhead {
+  background: $white;
+
+  .h2 {
+    color: $red-text;
+    
+    @include breakpoint(tablet) {
+      background: url(../img/logo-icon.svg) 50% top / 60px 60px no-repeat;
+      padding-top: 80px;
+      max-width: 850px;
+      margin: 0 auto 20px;
+    }
+
+    @include breakpoint(laptop) {
+      background-size: 70px 70px;
+      padding-top: 90px;
+    }
+  }
+}
+
+
+
+//---------------------------------------------------------------
+// Intro & Customer Styles
+//---------------------------------------------------------------
+
+.home-intro, .home-customer {
+  text-shadow: 0 0 15px rgba($grey-home,1);
+
+  .table {
+    height: 100%;
+  }
+
+  .table-cell {
+    vertical-align: middle;
+  }
+}
+
+
+
+//---------------------------------------------------------------
+// Intro Styles
+//---------------------------------------------------------------
+body.home {
+  .l-panel.home-intro {
+    // padding for home panels differs from rest of site due to their visual design
+    padding: 0;
+    @include breakpoint(tablet) { padding: $pad-tab; }
+  }
+}
+
+.home-intro {
+  background: url(../img/bg-home-mobile.jpg) top center / 100% auto no-repeat $grey-home;
+
+  @include breakpoint(tablet) {
+    background: url(../img/bg-home.jpg) 50% 50% / cover no-repeat $grey-home;
+  }
+
+  .home-copy {
+    bottom: 0; left: 0;
+    width: 100%; height: auto;
+    padding: $pad-mob;
+
+    @include breakpoint(tablet) { 
+      padding: 0 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+      position: absolute;
+      top: 0; left: 0;
+      width: 48%; height: 100%;
+    }
+    @include breakpoint($screen-nav-tablet) { 
+      padding: ($nav-height-tab) 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+    }
+    @include breakpoint(laptop) { 
+      padding: ($nav-height-lap) 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+    }
+    @include breakpoint(desktop) { 
+      padding: ($nav-height-dsk) 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+    }
+  }
+
+  .spacer { // aspect ratio for panel
+    padding-top: percentage(1000/1200);
+
+    @include breakpoint(tablet)  { padding-top: 50%;  }
+    @include breakpoint(laptop)  { padding-top: 40%;  }
+    @include breakpoint(desktop) { padding-top: 35%;  }
+  }
+
+  .button {
+    color: $red-text;
+    border-color: $red-text;
+    background: $grey-home;
+    margin-top: $column-gap * 3/4;
+    text-shadow: none;
+
+    &:hover {
+      background: $red-text;
+      color: white;
+    }
+  }
+}
+
+
+
+//---------------------------------------------------------------
+// Customer Styles
+//---------------------------------------------------------------
+.home-customer {
+  @include rule-top;
+  padding: 0;
+
+  @include breakpoint(tablet) { 
+    height: auto; 
+    min-height: 440px;
+  }
+
+  .claim-1 { // hide claim_1 on mobile
+    display: none;
+    margin-bottom: 0.5em;
+    @include breakpoint(tablet) { display: block; }
+  }
+
+  .claim-2 {
+    font-weight: $font-reg;
+  }
+
+  .home-copy {
+    width: 100%; height: auto;
+
+    @include breakpoint(tablet) { 
+      padding: 0 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+      position: absolute;
+      top: 0; left: 0;
+      width: 48%; height: 100%;
+    }
+    @include breakpoint(laptop) { 
+      padding: 0 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+    }
+    @include breakpoint(desktop) { 
+      padding: 0 0 0 9.6%; // I have NO idea why 9.6% works here, but it does
+    }
+  }
+
+  .t-small-head {
+    display: block;
+    margin-bottom: 1.5em;
+  }
+
+  .button {
+    margin-top: $column-gap / 3;
+  }
+
+  &.home-shippers, &.home-carriers { // float copy right
+    .home-copy {
+      @include breakpoint(tablet) { 
+        left: auto;
+        right: $pad-tab;
+      }
+    }
+  }
+
+  &.home-shippers {
+    @include breakpoint(tablet) {
+      background: url(../img/bg-shipper.jpg) 50% 50% / cover no-repeat $grey-home;    
+      border-top: 5px $shippers-color solid;
+    }
+
+    .t-small-head, .claim-2, .button { color: $shippers-color-text; }
+    .t-small-head:after { background-color: $shippers-color-text; }
+
+    .button { 
+      border-color: $shippers-color; 
+      text-shadow: none;
+
+      @include breakpoint(tablet) {
+        background: $grey-home;
+      }
+
+      &:hover {
+        background: $shippers-color;
+        color: white;
+      }
+    }
+  }
+
+  &.home-brokers {
+    @include breakpoint(tablet) {
+      background: url(../img/bg-broker.jpg) 50% 50% / cover no-repeat $grey-home;
+      border-top: 5px $brokers-color solid;
+    }
+
+    .t-small-head, .claim-2, .button { color: $brokers-color-text; }
+    .t-small-head:after { background-color: $brokers-color-text; }
+
+    .button { 
+      border-color: $brokers-color-text; 
+      text-shadow: none;
+
+      @include breakpoint(tablet) {
+        background: $grey-home;
+      }
+
+      &:hover {
+        background: $brokers-color-text;
+        color: white;
+      }
+    }
+  }
+
+  &.home-carriers {
+    @include breakpoint(tablet) {
+      background: url(../img/bg-carrier.jpg) 50% 50% / cover no-repeat $grey-home;
+      border-top: 5px $carriers-color solid;
+    }
+
+    .t-small-head, .claim-2, .button { color: $carriers-color-text; }
+    .t-small-head:after { background-color: $carriers-color-text; }
+
+    .button { 
+      border-color: $carriers-color-text; 
+      text-shadow: none;
+
+      @include breakpoint(tablet) {
+        background: $grey-home;
+      }
+
+      &:hover {
+        background: $carriers-color-text;
+        color: white;
+      }
+    }
+  }
+
+  .spacer { // aspect ratio for panel
+    @include breakpoint(tablet)  { padding-top: 40%;  }
+    @include breakpoint(laptop)  { padding-top: 37%;  }
+    @include breakpoint(desktop) { padding-top: 35%;  }
+  }
+}

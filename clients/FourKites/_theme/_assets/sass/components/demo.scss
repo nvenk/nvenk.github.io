@@ -1,0 +1,196 @@
+// Wufoo Base Styles
+// --------------------------
+@import "../wufoo/structure";
+@import "../wufoo/form";
+
+
+// Demo Panel/Page Styles
+// --------------------------
+.l-req-demo {
+  .cols_2_l {
+    @include breakpoint(tablet) {
+      padding-right: $column-gap;
+    }
+  }  
+}
+
+.demo-phone {
+  margin-top: 1.25em;
+
+  .hours {
+    margin-top: 1em;
+  }
+}
+
+.demo-tabs {
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .tab-buttons {
+    overflow: hidden;
+    text-align: center;
+    margin: $pad-mob auto ($pad-mob / 2);
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  .tab-button {
+    border-bottom: 3px $grey-light solid;
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 37px; // lineheight - borderheight
+    width: percentage(1/3);
+  }
+
+  // Hide all form tabs by default
+  .form-tab {
+    display: none;
+    opacity: 0; // animate in
+    animation: fade 0.5s 0.2s ease-in forwards;
+  }
+
+  // When Tab-1 Visible, show Tab 1
+  &.tab-1-visible {
+    .form-tab.form-tab-1 {
+      display: block;
+    }
+    .tab-button-1 {
+      color: $shippers-color-text;
+      font-weight: $font-bold;
+      border-bottom-color: $shippers-color-text;
+    }
+    .button {
+      border-color: $red-text;
+      background: $red-text;
+      color: $white;
+
+      &:hover {
+        background: $white;
+        color: $red-text;
+      }
+    }
+  }
+
+  // When Tab-2 Visible, show Tab 2
+  &.tab-2-visible {
+    .form-tab.form-tab-2 {
+      display: block;
+    }
+    .tab-button-2 {
+      color: $brokers-color-text;
+      font-weight: $font-bold;
+      border-bottom-color: $brokers-color-text;
+    }
+    .button {
+      border-color: $blue-text;
+      background: $blue-text;
+      color: $white;
+
+      &:hover {
+        background: $white;
+        color: $blue-text;
+      }
+    }
+  }
+
+  // When Tab-3 Visible, show Tab 3
+  &.tab-3-visible {
+    .form-tab.form-tab-3 {
+      display: block;
+    }
+    .tab-button-3 {
+      color: $carriers-color-text;
+      font-weight: $font-bold;
+      border-bottom-color: $carriers-color-text;
+    }
+    .button {
+      border-color: $yellow-text;
+      background: $yellow-text;
+      color: $white;
+
+      &:hover {
+        background: $white;
+        color: $yellow-text;
+      }
+    }
+  }
+}
+
+.customer .demo-tabs {
+  .tab-button {
+    border-bottom: 3px rgba($black,0.2) solid;
+    color: rgba($white,0.8);
+  }
+  .button {
+    border-color: $white;
+    background: $white;
+    color: $black; // default
+
+    &:hover {
+      background: rgba($white,0);
+      color: $white;
+    }
+  }
+
+  // When Tab-1 Visible, show Tab 1
+  &.tab-1-visible {
+    .tab-button-1 {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
+
+  // When Tab-2 Visible, show Tab 2
+  &.tab-2-visible {
+    .tab-button-2 {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
+
+  // When Tab-3 Visible, show Tab 3
+  &.tab-3-visible {
+    .tab-button-3 {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
+}
+
+// button type color on specific customer pages
+.shippers.customer .demo-tabs {
+  .button {
+    color: $red-text;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.brokers.customer .demo-tabs {
+  .button {
+    color: $blue-text;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.carriers.customer .demo-tabs {
+  .button {
+    color: $yellow-text;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

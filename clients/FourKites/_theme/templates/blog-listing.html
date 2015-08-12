@@ -1,0 +1,32 @@
+<header class="l-panel l-page-intro">
+  <div class="fade">
+    <h1 class="t-small-head">{{ title }}</h1>
+    <h2 class="h1">{{ page_intro|smartypants|widont }}</h2>
+  </div>
+</header>
+<div class="content">
+  <div class="content-body">
+        {{ theme:partial src="blog-cat" use_context="true" }}
+    {{ if get:cat }}
+        {{ entries:listing folder="/blog-entries*" conditions="blog_category:{get:cat}" limit="3" paginate="true" }}
+            {{ theme:partial src="blog-listing-content" use_context="true" }}
+        {{ /entries:listing }}
+    {{ else }}
+        {{ entries:listing folder="/blog-entries*" limit="3" paginate="true" }}
+            {{ theme:partial src="blog-listing-content" use_context="true" }}
+        {{ /entries:listing }}
+    {{ /if }}
+
+        <div class="l-panel blog-pagination">
+        {{ if get:cat }}
+            {{ entries:pagination folder="/blog-entries*" conditions="blog_category:{get:cat}" limit="3" }}
+                {{ theme:partial src="blog-listing-paginate" use_context="true" }}
+            {{ /entries:pagination }} 
+        {{ else }}
+            {{ entries:pagination folder="/blog-entries*" limit="3" }}
+                {{ theme:partial src="blog-listing-paginate" use_context="true" }}
+            {{ /entries:pagination }} 
+        {{ /if }}
+        </div>
+    </div>
+</div>

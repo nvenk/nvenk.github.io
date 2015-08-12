@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+// Global Dependencies
+// ----------------------------------------------------------
+@import "global/variables";
+@import "global/colors";
+@import "global/mixins";
+
+
+// Remove dotted outlines on text
+// ----------------------------------------------------------
+a { outline: 0; }
+
+
+// Show form tab, animation defaults to opacity:0
+// ----------------------------------------------------------
+.demo-tabs {
+  .form-tab {
+    opacity: 1;
+  }
+}
+
+
+// Home page correct nav colors
+// ----------------------------------------------------------
+.nav {
+  body.home & {
+    background: $white;
+
+    @include breakpoint($screen-nav-tablet) {
+      background: $white;
+    }
+  }
+
+  body.home.scrolled & { // JS on Home
+    background: $white;
+
+    a { 
+      color: $black; 
+      text-shadow: none;
+
+      &.button {
+        color: $white;
+
+        &:hover {
+          color: $red-text;
+        }
+      }
+    }
+  }
+
+  a {
+    body.home & {
+      @include breakpoint($screen-nav-tablet) {
+        color: $black;
+      }
+    }
+  }
+}

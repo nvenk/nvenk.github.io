@@ -1,0 +1,18 @@
+.social-share{
+	height: auto;
+	margin: 5px auto;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	display: block;
+	.share-text{
+		padding-bottom: 10px;
+		@include breakpoint(phone-lg){text-align: center;}
+	}
+	.rrssb-buttons{
+		.s1{ &.v{animation-delay: 0.3s;}}
+		.s2{ &.v{animation-delay: 0.7s;}}
+		.s3{ &.v{animation-delay: 0.5s;}}
+		.s4{ &.v{animation-delay: 0.9s;}}
+	}
+}
+

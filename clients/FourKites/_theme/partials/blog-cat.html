@@ -1,0 +1,8 @@
+<div class="blog-cat-contain">
+    <ul class="cat-nav">
+        {{ taxonomy:listing folder="blog-entries" type="blog_category"}}
+            <li><a class="cat-nav-link {{if get:cat == name }}cat-active{{/if}}" href="/blog?cat={{name}}"> {{name|deslugify|title}} </a> </li>
+        {{ /taxonomy:listing}}
+        	<li><a class="cat-nav-link {{if get:cat == name }}cat-active{{/if}}" href="/blog"> All Posts </a> </li>
+    </ul>
+</div>

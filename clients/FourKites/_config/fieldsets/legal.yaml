@@ -1,0 +1,32 @@
+title: Privacy Policy
+
+fields:
+  content: 
+    hide: true
+
+  _template:    
+    hide: true
+    default: legal
+
+  slug:
+    hide: true
+
+  header:
+    display: Header
+    type: text
+    instructions: "FourKites Privacy Policy" or "FourKites Online Terms of Use"
+
+  mod_text:
+    display: TEXT — Date Last Modified
+    type: text
+
+  mod_date:
+    type: text
+    display: DATE — Date Last Modified
+    instructions: 'i.e. February 12, 2015'
+
+  policy_text:
+    type: redactor
+    display: Privacy Policy Text
+
+hide: true

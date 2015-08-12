@@ -1,0 +1,131 @@
+body.about {
+  .header-panel {
+    color: $red-text;
+  }
+}
+
+.team-members {
+  @include rule-top;
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  img {
+    @include rule;
+    display: block;
+    margin-bottom: $pad-mob;
+    width: 100%; height: auto;
+    max-width: 600px;
+
+    @include breakpoint(tablet) {
+      width: 30%; height: auto;
+      float: left;
+      margin-right: $column-gap;
+      margin-bottom: 0;
+    }
+  }
+
+  .member-info {
+    overflow: hidden;
+    padding-bottom: $pad-mob;
+
+    @include breakpoint(tablet) {
+      padding-bottom: $pad-tab-top / 2;
+    }
+
+    @include breakpoint(laptop) {
+      padding-bottom: $pad-lap-top / 2;
+    }
+
+    @include breakpoint(desktop) {
+      padding-bottom: $pad-dsk-top / 2;
+    }
+  }
+
+  .h3 {
+    text-align: left;
+    color: $blue-text;
+
+    @include breakpoint(tablet) {
+      padding-top: $pad-tab;
+    }
+  }
+
+  .member-bio {
+    margin-bottom: $pad-mob;
+    overflow: hidden;
+    padding-bottom: 40px;
+    position: relative;
+    max-height: 140px;
+    transition: max-height 0.25s ease;
+    transform: translateZ(0);
+
+    @include breakpoint(tablet) {
+      margin-bottom: $pad-tab-top / 2;
+      max-height: 120px;
+    }
+
+    @include breakpoint(laptop) {
+      margin-bottom: $pad-lap-top / 2;
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: $pad-dsk-top / 2;
+    }
+
+    a.expand {
+      background: url(../img/fade.png) 0 0 / 100% 100% repeat-x;
+      cursor: pointer;
+      height: 65px;
+      left: 0; bottom: 0;
+      position: absolute;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+
+      &:after {
+        content:'+ Expand Bio';
+        display: block;
+        position: absolute;
+        top: 40px; left: 0;
+        width: 100%; height: 30px;
+        line-height: 30px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        &:after {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.open {
+      max-height: 1000px; // large fictional number
+
+      a.expand {
+
+        &:after {
+          content:'– Collapse Bio';
+        }
+      }
+    }
+  }
+}
+
+.investors {
+  @include rule-top;
+  text-align: center;
+
+  .investor-logo {
+    display: inline-block;
+    margin: ($column-gap / 2) $column-gap;
+    height: 50px; width: auto;
+  }
+}
+
+.team-members .wrapper:last-of-type .member-bio {
+  margin-bottom: 0; // remove space under last member bio
+}

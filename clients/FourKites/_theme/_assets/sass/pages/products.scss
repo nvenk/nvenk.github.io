@@ -1,0 +1,315 @@
+.product-overview {
+
+  .cols_3_1 h3 { color: $red-text; }
+  .cols_3_2 h3 { color: $blue-text; }
+  .cols_3_3 h3 { color: $yellow-text; }
+
+  a.learn-more {
+
+  }
+}
+
+.product-features {
+  @include rule-top;
+  margin-top: $pad-mob;
+  padding: $pad-mob 0;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    margin-top: ($pad-tab-top / 2);
+    padding: ($pad-tab-top / 2) 0;
+  }
+
+  // Laptop & Desktop styles are specific to each product
+
+  h4 {
+    margin-bottom: 0.75em;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 0.75em;
+    padding-left: 22px;
+    background: url(../img/bullet-black.svg) 0px 3px / 15px auto no-repeat;
+
+    @include breakpoint(tablet) {
+      background-position: 0px 6px;
+    }
+    @include breakpoint(laptop) {
+      padding-left: 25px;
+    }
+  }
+}
+
+.prod-feat-copy {
+  margin-bottom: $pad-mob;
+
+  @include breakpoint(tablet) {
+    margin-bottom: $pad-tab-top / 2;
+  }
+  @include breakpoint(laptop) {
+    margin-bottom: $pad-lap-top / 2;
+  }
+  @include breakpoint(desktop) {
+    margin-bottom: $pad-dsk-top / 2;
+  }
+}
+
+.prod-img {
+  display: block;
+  width: 100%; height: auto;
+}
+
+.product-eld, .product-backhaul, .product-mobile {
+  .h1 {
+    text-align: center;
+  }
+}
+
+// ELD Control Center
+.product-eld {
+  .h1, .product-cta .h3 {
+    color: $red-text;
+  }
+
+  .button {
+    background: $red-text;
+    border-color: $red-text;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $red-text;
+    }
+  }
+
+  .product-features {
+    // Mobile & Tablet styles are global, listed above
+    @include breakpoint(laptop) {
+      margin-top: ($pad-lap-top / 2);
+      padding: ($pad-lap-top / 2) 0;
+      min-height: $prod-img-laptop-h + ($pad-lap-top);
+    }
+    @include breakpoint(desktop) {
+      margin-top: ($pad-dsk-top / 2);
+      padding: ($pad-dsk-top / 2) 0;
+      min-height: $prod-img-desktop-h + ($pad-dsk-top);
+    }
+    @include breakpoint(1280px) {
+      min-height: $prod-img-max-h + ($pad-dsk-top);
+    }
+  }
+
+  .product-features li { 
+    background-image: url(../img/bullet-red.svg); 
+  }
+
+  .prod-feat-copy {
+    @include breakpoint(laptop) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 0;
+      padding-top: $pad-dsk-top / 3;
+    }
+  }
+
+  .prod-feat-img {
+    @include breakpoint(laptop) {
+      position: absolute;
+      left: 50%;
+      bottom: $pad-lap-top / 3;
+      width: $prod-img-laptop-w; 
+      height: $prod-img-laptop-h;
+      margin-left: -($prod-img-laptop-w * $prod-img-margin) + $column-gap;
+    }
+    @include breakpoint(desktop) {
+      bottom: $pad-dsk-top / 3;
+      width: $prod-img-desktop-w; 
+      height: $prod-img-desktop-h;
+      margin-left: -($prod-img-desktop-w * $prod-img-margin) + $column-gap;
+    }
+    @include breakpoint(1280px) {
+      width: $prod-img-max-w; 
+      height: $prod-img-max-h;
+      margin-left: -($prod-img-max-w * $prod-img-margin) + $column-gap;
+    }
+  }
+}
+
+// BackHaul Management
+.product-backhaul {
+  .h1, .product-cta .h3 {
+    color: $blue-text;
+  }
+
+  .button {
+    background: $blue-text;
+    border-color: $blue-text;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $blue-text;
+    }
+  }
+  .product-features li { 
+    background-image: url(../img/bullet-blue.svg); 
+  }
+  .product-features {
+    // Mobile & Tablet styles are global, listed above
+    @include breakpoint(laptop) {
+      margin-top: ($pad-lap-top / 2);
+      padding: ($pad-lap-top / 2) 0;
+      min-height: $prod-img-laptop-h + ($pad-lap-top);
+    }
+    @include breakpoint(desktop) {
+      margin-top: ($pad-dsk-top / 2);
+      padding: ($pad-dsk-top / 2) 0;
+      min-height: $prod-img-desktop-h + ($pad-dsk-top);
+    }
+    @include breakpoint(1280px) {
+      min-height: $prod-img-max-h + ($pad-dsk-top);
+    }
+  }
+
+  .prod-feat-copy {
+    @include breakpoint(laptop) {
+      width: 50%;
+      float: right;
+      margin-bottom: 0;
+      padding-top: $pad-lap-top / 3;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 0;
+      padding-top: $pad-dsk-top / 3;
+    }
+  }
+
+  .prod-feat-img {
+    @include breakpoint(laptop) {
+      position: absolute;
+      right: 50%; 
+      bottom: $pad-lap-top / 3;
+      width: $prod-img-laptop-w; 
+      height: $prod-img-laptop-h;
+      margin-right: -($prod-img-laptop-w * $prod-img-margin) + $column-gap + 10px;
+    }
+    @include breakpoint(desktop) {
+      bottom: $pad-dsk-top / 3;
+      width: $prod-img-desktop-w; 
+      height: $prod-img-desktop-h;
+      margin-right: -($prod-img-desktop-w * $prod-img-margin) + $column-gap + 10px;
+    }
+    @include breakpoint(1280px) {
+      width: $prod-img-max-w; 
+      height: $prod-img-max-h;
+      margin-right: -($prod-img-max-w * $prod-img-margin) + $column-gap + 10px;
+    }
+  }
+}
+
+// MobileTracker
+.product-mobile {
+  .h1, .product-cta .h3 {
+    color: $yellow-text;
+  }
+
+  .button {
+    background: $yellow-text;
+    border-color: $yellow-text;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $yellow-text;
+    }
+  }
+  .product-features li { 
+    background-image: url(../img/bullet-yellow.svg); 
+  }
+}
+
+.product-benefits {
+  @include rule-top;
+  @include rule-bottom;
+  overflow: hidden; // clearfix
+  padding: $pad-mob 0;
+
+  @include breakpoint(tablet) {
+    padding: ($pad-tab-top / 2) 0;
+    text-align: center;
+  }
+
+  @include breakpoint(laptop) {
+    padding: ($pad-lap-top / 2) 0;
+  }
+
+  @include breakpoint(desktop) {
+    padding: ($pad-dsk-top / 2) 0;
+  }
+
+  .benefit {
+    display: block;
+    overflow: hidden; // clearfix
+  }
+
+  .cols_3_1 {
+    @include breakpoint(tablet) {
+      padding-right: $column-gap * 2/3;
+    }
+  }
+
+  .cols_3_2 {
+    @include breakpoint(tablet) {
+      padding-left:  $column-gap * 1/3;
+      padding-right: $column-gap * 1/3;
+    }
+  }
+
+  .cols_3_3 {
+    @include breakpoint(tablet) {
+      padding-left: $column-gap * 2/3;
+    }
+  }
+}
+
+.prod-desc {
+  font-weight: $font-reg;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.product-cta {
+  padding-top: $pad-mob;
+  position: relative;
+  text-align: center;
+
+  p {
+    margin: 1em auto;
+  }
+
+  .h3 {
+    text-align: center;
+  }
+
+  @include breakpoint(tablet) {
+    padding-top: ($pad-tab-top / 2);
+  }
+
+  @include breakpoint(laptop) {
+    padding-top: ($pad-lap-top / 2);
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: ($pad-dsk-top / 2);
+  }
+}
+
+
+
+
+
+
+

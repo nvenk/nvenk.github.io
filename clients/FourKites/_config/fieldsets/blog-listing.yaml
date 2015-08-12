@@ -1,0 +1,13 @@
+title: Blog Listing
+hide: true
+
+fields:
+  content: 
+    hide: true
+
+  _template:
+    default: blog-listing
+    hide: true
+
+  slug:
+    hide: true

@@ -1,0 +1,61 @@
+// ==========================================================================
+// ==========================================================================
+// This file overrides some normalize styles, and adds a few things
+// ==========================================================================
+// ==========================================================================
+
+
+// ==========================================================================
+// 1. Override normalize styles
+// ==========================================================================
+
+figure {
+  // margin: 1em 40px;
+  margin: 0;
+}
+
+textarea, input {
+  outline: none;
+}
+
+// ==========================================================================
+// 2. Add some styles
+// ==========================================================================
+
+html, body { height: 100%; }
+
+// Some holdovers from reset.css
+// ol, ul { list-style: none; }
+
+blockquote, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // font-size: 100%;
+  // font: inherit;
+  // vertical-align: baseline;
+}
+
+// remove margin/padding of dt, dl, dd
+dt, dl, dd {
+  margin: 0; padding: 0;
+}
+
+// apply a natural box layout model to all elements, but allowing components to change
+// via Paul Irish
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+// ::selection {
+//   background: rgba($black, 0.05); /* WebKit/Blink Browsers */
+// }
+// ::-moz-selection {
+//   background: rgba($black, 0.05); /* Gecko Browsers */
+// }

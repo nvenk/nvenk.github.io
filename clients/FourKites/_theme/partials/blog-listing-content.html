@@ -1,0 +1,19 @@
+{{ if last }}
+<div class="l-panel blog-listing fade fade-delay-4">
+{{ else }}
+<div class="l-panel rule-bottom blog-listing fade fade-delay-4">
+{{ /if }}
+{{ if no_results }}
+    <div class="h2 no-entries fade-delay-6"> We haven't got anything for you right now. <br> <a href="/blog">Check out our Home Page! </a></div>
+{{ else }}
+    <div class="blog-listing">
+  		<h3 class="h2 blog-title"><a href="{{ url }}">{{ title }}</a></h3> 
+        <h4 class="h5"><span class="blog-date">{{ date format="F jS Y"}}, </span><span class="blog-cat">{{ blog_category|widont|deslugify|title }}</span></h4>
+  		<br>
+        <div class="blog-summary">
+  		    {{ content|striptags|truncate:1000 }}
+        </div>
+        <a href="{{ url }}" class="button blog-read-more">Read More</a>
+    </div>
+{{ /if }}
+</div>

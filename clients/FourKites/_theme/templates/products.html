@@ -1,0 +1,66 @@
+<header class="l-panel l-page-intro">
+  <div class="fade">
+    <h1 class="t-small-head">{{ title }}</h1>
+    <h2 class="h1">{{ page_intro|smartypants|widont }}</h2>
+  </div>
+</header>
+ 
+<section class="l-panel product-overview">
+  <h2 class="h2 header-panel">{{ products_overview|smartypants|widont }}</h2>
+
+  {{ product_set }}
+  <div class="feature cols_3_{{index}} fade">
+    <img class="feature-icon" alt="{{ product_icon_alt|smartypants }}" title="{{ product_icon_title|smartypants }}" src="{{ product_icon_src }}">
+    <div class="feature-copy">
+      <h3>{{ product_name }}</h3>
+      {{ if product_intro }}
+      <p>{{ product_intro|smartypants|widont }}</p>
+      {{ /if }}
+      <a class="learn-more" href="#{{ product_id|smartypants }}">Learn More</a>
+    </div>
+  </div>
+  {{ /product_set }}
+</section>
+
+{{ product_set }}
+<section class="l-panel rule-top product-{{ product_id|smartypants }}" id="{{ product_id|smartypants }}">
+  
+  {{ if product_name }}
+  <h2 class="h1">{{ product_name|smartypants|widont }}</h2>
+  {{ /if }}
+  
+  {{ if product_description }}
+  <h3 class="prod-desc">{{ product_description|smartypants|widont }}</h3>
+  {{ /if }}
+
+  <div class="product-features">
+    <div class="prod-feat-copy">
+      {{ if product_features_intro }}
+      <h4>{{ product_features_intro|smartypants|widont }}</h4>
+      {{ /if }}
+      {{ product_features|smartypants|widont }}
+    </div>
+    <div class="prod-feat-img fade">
+      <img class="prod-img" src="{{ prod_img_src }}" alt="{{ product_name|smartypants }}">
+    </div>
+  </div>
+
+  <div class="product-benefits">
+  {{ product_benefits limit="3" }}
+    <div class="feature cols_3_{{index}} benefit fade">
+      <img class="feature-icon" alt="{{ benefit|smartypants }}" src="{{ benefit_icon_src }}">
+      <div class="feature-copy">
+        {{ benefit|smartypants|widont }}
+      </div>
+    </div>
+  {{ /product_benefits }}
+  </div>
+
+  <div class="product-cta">
+    <h3 class="h3">{{ product_cta_ask|smartypants|widont }}</h3>
+    <p>{{ product_cta_claim|smartypants|widont }}</p>
+    <a class="button" href="/request-demo">{{ req_demo_button|smartypants }}</a>
+  </div>
+
+</section>
+{{ /product_set }}

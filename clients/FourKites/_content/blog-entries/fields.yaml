@@ -1,0 +1,4 @@
+type: date
+_template: blog-entry
+_fieldset: blog-entry
+_entries_label: Blog Posts

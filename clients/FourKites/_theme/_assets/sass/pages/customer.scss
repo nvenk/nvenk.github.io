@@ -1,0 +1,375 @@
+//---------------------------------------------------------
+// Features Panel
+//---------------------------------------------------------
+.panel-features {
+  @include breakpoint(tablet) {
+    text-align: center;
+  }
+}
+
+
+//---------------------------------------------------------
+// Pricing Panel
+//---------------------------------------------------------
+.price-box {
+  @include rule-left;
+  @include rule-right;
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    @include rule;
+  }
+
+  p.size {
+    line-height: 1.1em;
+    margin-top: 1em;
+  }
+
+  p.price {
+    line-height: 1.5em;
+    font-weight: $font-bold;
+    margin-bottom: 1em;
+    font-size: $font-size-mob + 1px;
+
+    @include breakpoint(tablet) {
+      @include rule-top;
+      @include rule-bottom;
+      font-size: $font-size-tab + 1px;
+      line-height: 3em;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: $font-size-lap + 1px;
+    }
+  }
+
+  .h3 {
+    text-align: center;
+    br {
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: inline;
+      }
+    }
+  }
+
+  td {
+    @include rule-top;
+    display: block;
+    padding-top: $pad-mob;
+    padding-bottom: $pad-mob;
+    vertical-align: top;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      border-top: none;
+      display: table-cell;
+      padding-top: $pad-tab-top / 2;
+      padding-bottom: $pad-tab-top / 2;
+      padding-left: $column-gap / 2;
+      padding-right: $column-gap / 2;
+      text-align: center;
+      width: percentage(1/3) !important;
+    }
+
+    @include breakpoint(laptop) {
+      padding-top: $pad-lap-top / 2;
+      padding-bottom: $pad-lap-top / 2;
+    }
+
+    @include breakpoint(desktop) {
+      padding-top: $pad-dsk-top / 2;
+      padding-bottom: $pad-dsk-top / 2;
+    }
+
+    &.price-1 {
+      .h3, a.button, .price { color: $red-text; }
+      position: relative;
+
+      a.button { border-color: $red-text; }
+      a.button:hover {
+        background: $red-text;
+        color: $white;
+      }
+
+      &:after {
+        content:'FREE';
+        display: block;
+        position: absolute;
+        top: 10px; left: -5px;
+        font-size: 11px; line-height: 12px;
+        font-weight: $font-bold;
+        width: auto; height: 24px;
+        padding: 6px 12px;
+        background: $red;
+        color: $white;
+      }
+    }
+
+    &.price-2 {
+      @include breakpoint(tablet) {
+        @include rule-left;
+        @include rule-right;
+      }
+      .h3, a.button { color: $blue-text; }
+
+      a.button { border-color: $blue-text; }
+      a.button:hover {
+        background: $blue-text;
+        color: $white;
+      }
+    }
+
+    &.price-3 {
+      @include rule-bottom;
+      @include breakpoint(tablet) {
+        border-bottom: none;
+      }
+      .h3, a.button { color: $yellow-text; }
+
+      a.button { border-color: $yellow-text; }
+      a.button:hover {
+        background: $yellow-text;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+//---------------------------------------------------------
+// CTA Panel
+//---------------------------------------------------------
+.panel-cta-small {
+  .wrapper {
+    @include breakpoint(tablet) {
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+
+  h3 {
+    line-height: 1.4em;
+    margin-bottom: 1em;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      padding: 0 185px 0 0;
+      font-size: 19px;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: 20px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 21px;
+    }
+
+  }
+
+  .button {
+    background: $white;
+    border-color: $white;
+
+    &:hover {
+      background: none;
+      color: $white;
+    }
+
+    @include breakpoint(tablet) {
+      position: absolute;
+      top: 50%; right: 0;
+      margin-top: -($button-height / 2);
+    }
+    @include breakpoint(laptop) {
+      right: 0;
+    }
+    @include breakpoint(desktop) {
+      right: 0;
+    }
+  }
+}
+
+
+//---------------------------------------------------------
+// Hassles Panel
+//---------------------------------------------------------
+.hassle-solution {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: $pad-mob 0;
+  @include breakpoint(tablet)  { padding: ($pad-tab-top/2) 0; }
+  @include breakpoint(laptop)  { padding: ($pad-lap-top/2) 0; }
+  @include breakpoint(desktop) { padding: ($pad-dsk-top/2) 0; }
+}
+
+.hassle, .solution {
+  margin: 0 auto;
+  min-height: 60px;
+  padding: 10px 10px 10px 60px;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    min-height: 75px;
+    padding: 15px 15px 15px 75px;
+  }
+
+  @include breakpoint(laptop) {
+    padding: 20px 25px 25px 85px;
+  }
+
+  .avatar{
+    @include rule;
+    background: $white;
+    border-radius: 50%; // circle
+    position: absolute;
+    top: 50%; left: 15px;
+    width: 40px; height: 40px;
+    margin-top: -20px; 
+
+    @include breakpoint(tablet) { 
+      width: 45px; 
+      height: 45px; 
+    }
+
+    @include breakpoint(laptop) { 
+      width: 55px; 
+      height: 55px; 
+      margin-top: 20px; 
+      top: 0; 
+    }
+  }
+
+  p { padding: 0; margin: 0; } // remove extra space breaking box
+}
+
+.hassle {
+  @include rule;
+
+  body.shippers & {
+    .avatar { background: url(../img/icon-hassle-red.svg) center center / 60% 60% no-repeat;}
+  }
+  body.brokers & {
+    .avatar { background: url(../img/icon-hassle-blue.svg) center center / 60% 60% no-repeat;}
+  }
+  body.carriers & {
+    .avatar { background: url(../img/icon-hassle-yellow.svg) center center / 60% 60% no-repeat;}
+  }
+}
+
+.solution {
+  @include rule;
+  background: lighten($grey-light,8%);
+  border-top-width: 0;
+
+  .avatar { 
+    background: url(../img/logo-icon.svg) center center / 75% 75% no-repeat $white;
+  }
+}
+
+
+
+//---------------------------------------------------------
+// Gross page-specific styles
+//---------------------------------------------------------
+
+body.shippers {
+  .panel-cta-small,
+  .l-req-demo
+  { background-color: $shippers-color-text; }
+
+  .l-page-intro .t-small-head:after {
+    background-color: $white;
+  }
+  
+  .l-panel a,
+  .color, 
+  .shippers-color      
+  { color: $shippers-color-text; }
+
+  .l-panel .hassle-solution a:hover {
+    color: $black;
+  }
+
+  .l-req-demo, 
+  .l-req-demo a, 
+  .l-req-demo .color,
+  .t-small-head.color
+  {
+    color: $white;
+  }
+
+  .wufoo input 
+  {
+    color: $black;
+  }
+}
+
+body.brokers {
+  .panel-cta-small,
+  .l-req-demo
+  { background-color: $brokers-color-text; }
+
+  .l-page-intro .t-small-head:after {
+    background-color: $white;
+  }
+
+  .l-panel a,
+  .color, 
+  .brokers-color      
+  { color: $brokers-color-text; }
+
+  .l-panel .hassle-solution a:hover {
+    color: $black;
+  }
+
+  .l-req-demo, 
+  .l-req-demo a, 
+  .l-req-demo .color,
+  .t-small-head.color
+  {
+    color: $white;
+  }
+
+  .wufoo input 
+  {
+    color: $black;
+  }
+}
+
+body.carriers {
+  .panel-cta-small,
+  .l-req-demo
+  { background-color: $carriers-color-text; }
+
+  .l-page-intro .t-small-head:after {
+    background-color: $white;
+  }
+
+  .l-panel a,
+  .color, 
+  .carriers-color      
+  { color: $carriers-color-text; }
+
+  .l-panel .hassle-solution a:hover {
+    color: $black;
+  }
+
+  .l-req-demo, 
+  .l-req-demo a, 
+  .l-req-demo .color,
+  .t-small-head.color
+  {
+    color: $white;
+  }
+
+  .wufoo input 
+  {
+    color: $black;
+  }
+}

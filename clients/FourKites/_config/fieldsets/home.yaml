@@ -1,0 +1,13 @@
+title: Home
+hide: true
+
+fields:
+  content: 
+    hide: true
+
+  _template:
+    default: home
+    hide: true
+
+  slug:
+    hide: true

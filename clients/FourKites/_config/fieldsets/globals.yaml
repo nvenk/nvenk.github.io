@@ -1,0 +1,219 @@
+hide: true
+
+fields:
+  content: 
+    hide: true
+
+  _template:
+    type: text
+    default: globals
+    hide: true
+
+  slug:
+    hide: true
+
+# section
+  contact:
+    type: section
+    display: NAME Contact Information   
+    instructions: Appears on footer and About page
+
+  contact_company:
+    type: text
+    display: Company Name
+    default: 
+    required: true
+
+  contact_address_1:
+    type: text
+    display: Address 1
+    required: true
+
+  contact_address_2:
+    type: text
+    display: Address 2
+
+  grid_address:
+    display:
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    max_rows: 1
+    fields:
+      contact_city:
+        type: text
+        display: City
+        required: true
+        width: 35%
+
+      contact_state:
+        type: select
+        display: State
+        required: true
+        width: 15 % 
+        options: 
+          - ""
+          - AK
+          - AL
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+
+      contact_zip:
+        type: text
+        display: ZIP
+        required: true
+        width: 20%
+
+      contact_phone:  
+        type: text
+        instructions: 
+          below: 123-456-7890
+        display: Phone
+        width: 35%
+
+# section
+  investment_contacts:
+    type: section
+    display: Investment Contact(s)   
+    instructions: Appear on Investments page
+
+  inquiry_investments:  
+    type: text
+    display: Inquiry Type (Required)
+    instructions: i.e. – "Please direct investment inquiries to:"
+
+  grid_investments:
+    display:
+    type: grid
+    starting_rows: 2
+    min_rows: 0
+    max_rows: 3
+    fields:
+      contact_inquiry_name:  
+        type: text
+        display: Contact Name(s)
+        instructions: optional
+        width: 35%
+
+      contact_inquiry_email:  
+        type: text
+        display: Contact Email(s)
+        instructions: required
+        width: 65%
+        required: true
+
+# section
+  press_contacts:
+    type: section
+    display: Press Contact
+    instructions: Appears on About and Press pages 
+
+  inquiry_press:  
+    type: text
+    display: Inquiry Type (required)
+    instructions: i.e. – "Please direct press inquiries to:"
+
+  grid_press:
+    display:
+    type: grid
+    starting_rows: 1
+    min_rows: 0
+    max_rows: 1
+    fields:
+      contact_inquiry_name:  
+        type: text
+        display: Contact Name
+        instructions: optional
+        width: 35%
+
+      contact_inquiry_email:  
+        type: text
+        display: Contact Email
+        instructions: required
+        width: 65%
+
+# section
+  legal_contact:
+    type: section
+    display: Legal Contact
+    instructions: Appears on About page
+
+  inquiry_legal:  
+    type: text
+    display: Inquiry Type (required)
+    instructions: i.e. – "Please direct legal inquiries to:"
+
+  grid_legal:
+    display:
+    type: grid
+    starting_rows: 1
+    min_rows: 0
+    max_rows: 1
+    fields:
+      contact_inquiry_name:  
+        type: text
+        display: Contact Name
+        instructions: optional
+        width: 35%
+
+      contact_inquiry_email:  
+        type: text
+        display: Contact Email
+        instructions: required 
+        width: 65
+
+# section
+  legal:
+    type: section
+    display: Legal Disclaimer
+    instructions: Appears in footer
+
+  disclaimer:
+    type: redactor
+    display:  
