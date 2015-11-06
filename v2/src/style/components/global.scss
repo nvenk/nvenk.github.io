@@ -1,0 +1,19 @@
+//-----------------------------------------------
+// Document Setup
+//-----------------------------------------------
+
+html,body{
+	height: 100%;
+}
+
+body {
+	background-color: $white;
+	font-family: $font-sans;
+}
+.container{
+	width: $container-width-tab;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 10px;
+	@include breakpoint(tablet) { width: $container-width; padding: 0 30px;}
+}

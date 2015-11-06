@@ -1,0 +1,30 @@
+//-----------------------------------------------
+// Color Palette
+//-----------------------------------------------
+
+$black: 	#263238; //#282828; // Almost Black
+$white: 	#F4F4F4; // Almost White
+$blue: 		#2980b9; //#498ACE; 
+$red: 		#D64445;
+$yellow: 	#F5C855;
+
+//-----------------------------------------------
+// Font Families
+//-----------------------------------------------
+
+$font-sans:   'Open Sans', helvetica, arial, sans-serif;
+$font-serif:  'Georgia', 'Times New Roman', serif;
+$font-title:  'Poiret One', 'Open Sans', helvetica, sans-serif;
+$font-light:   300; // for Light Source Sans
+$font-reg:     400; // for Regular Source Sans & Bitter
+$font-bold:    700; // for Bold Source Sans
+$font-ultra:   900; // for UltraBold Source Sans
+$font-regular: regular;
+$font-italic:  italic;
+
+//-----------------------------------------------
+// Sizes and Widths
+//-----------------------------------------------
+
+$container-width-tab: calc(100% - 20px);
+$container-width: calc(100% - 50px);
