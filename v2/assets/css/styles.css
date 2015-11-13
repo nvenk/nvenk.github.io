@@ -686,7 +686,7 @@ footer {
           height: 48px;
           width: 48px;
           margin: 0 auto;
-          background: transparent url(assets/img/arrow.svg);
+          background: transparent url(/v2/assets/img/arrow.svg);
           -webkit-animation: arrow-translate 4s ease-in-out infinite;
           animation: arrow-translate 4s ease-in-out infinite; }
 
