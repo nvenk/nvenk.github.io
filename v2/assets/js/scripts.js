@@ -1,0 +1,1 @@
+$(window).scroll(function(){$(this).scrollTop()>0?$(".pointer").fadeOut():$(".pointer").fadeIn()});var $root=$("html, body");$(".pointer-container").click(function(){return $root.animate({scrollTop:$($.attr(this,"href")).offset().top},500),!1});

@@ -23,14 +23,14 @@ gulp.task('serve', ['css'], function() {
         browser: "google chrome"
     });
 
-    gulp.watch("src/style/**/*.scss", ['css']);
+    gulp.watch("src/sass/**/*.scss", ['css']);
     gulp.watch("*.html").on('change', browsersync.reload);
 });
 
 //CSS Linting ---------------------------------
 
 gulp.task('lint-scss', function() {
-	return gulp.src(['src/style/**/*.scss', '!src/style/vendor/*.scss'])
+	return gulp.src(['src/sass/**/*.scss', '!src/sass/vendor/*.scss'])
 	.pipe(scsslint())
 	.pipe(scsslint.reporter());
 });
@@ -38,7 +38,7 @@ gulp.task('lint-scss', function() {
 //JS Linting ----------------------------------
 
 gulp.task('lint-js', function(){
-	return gulp.src(['src/scripts/**/*.js', '!src/scripts/vendor/*.js'])
+	return gulp.src(['src/js/**/*.js', '!src/js/vendor/*.js'])
 	.pipe(jshint())
 	.pipe(jshint.reporter('jshint-stylish'));
 });
@@ -47,7 +47,7 @@ gulp.task('lint-js', function(){
 // Content ------------------------------------
 gulp.task('html', function() {
 	gulp.src('src/*.html')
-	.pipe(include({basepath: 'src/partials/'}))
+	.pipe(include({basepath: 'src/html-partials/'}))
 	.pipe(prettify({
 		indent_with_tabs: "true"
 	}))
@@ -56,19 +56,19 @@ gulp.task('html', function() {
 
 // Styles -------------------------------------
 gulp.task('css', function(){
-	gulp.src('src/style/*.scss')
+	gulp.src('src/sass/*.scss')
 	.pipe(globbing({extensions: '.scss'})) // Glob all SASS files
 	.pipe(sass()) // SASS Preprocessor
 	// .pipe(cmq()) // Combine all Media Queries
-	.pipe(autoprefixer({browsers: ['last 3 versions'], cascade: false})) // Auto-Prefix
-	.pipe(minifycss()) // Minify css
+	.pipe(autoprefixer({browsers: ['last 4 versions'], cascade: false})) // Auto-Prefix
+	// .pipe(minifycss()) // Minify css
 	.pipe(gulp.dest('assets/css'))
 	.pipe(browsersync.stream());
 });
 
 // Scripts ------------------------------------
 gulp.task('js', function(){
-	gulp.src('src/scripts/**/*.js', '!src/scripts/vendor/*.js')
+	gulp.src('src/js/**/*.js')
 	.pipe(newer('assets/js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('assets/js'));
@@ -95,7 +95,7 @@ gulp.task('img', function(){
 gulp.task('watch', function() {
 	gulp.watch('src/**/*.html', ['html']);
 	// gulp.watch('src/style/**/*.scss', ['css']);
-	gulp.watch('src/scripts/**/*.js', ['js']);
+	gulp.watch('src/js/**/*.js', ['js']);
 	gulp.watch('src/img/**/*', ['img']);
 });
 
