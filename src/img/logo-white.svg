@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="N" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 262 232.1" enable-background="new 0 0 262 232.1" xml:space="preserve">
+<rect x="-277" y="-192.8" display="none" fill="#1A1A1A" width="811.7" height="694.4"/>
+<polygon id="Bridge" fill="#CCCCCC" points="185,232 70,92 77,0 193,141 "/>
+<polyline id="Shadow_1_" fill="#BBBBBB" points="173.3,117.1 199.7,149.1 185.1,232.1 "/>
+<polyline id="Shadow" fill="#BBBBBB" points="93.6,120.8 62.4,82.9 77,0 "/>
+<path id="R-Wing" fill="#E5E5E5" d="M185,232c0,0,22.6-12.7,38.5-23.1s31.5-24.6,31.5-24.6s7-36.7,7-68.3s-7-68.3-7-68.3
+	s-16.8-13.9-31.5-24.6C208.8,12.5,185,0,185,0s7,90.8,7,116S185,232,185,232z"/>
+<path id="L-Wing" fill="#E5E5E5" d="M77,232c0,0-22.6-12.7-38.5-23.1S7,184.3,7,184.3S0,147.6,0,116c0-31.6,7-68.3,7-68.3
+	s16.8-13.9,31.5-24.6S77,0,77,0s-7,90.8-7,116S77,232,77,232z"/>
+</svg>

@@ -1,0 +1,78 @@
+.landing{
+	height: 100vh;
+	width: 100%;
+	background-color: $black;
+
+	.container{
+		margin: 0 auto;
+		height: 100vh;
+		display: table;
+
+		.content{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			padding: 0 5%;
+			padding-bottom: 50px;
+			-webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+
+  			.logo{
+  				display: block;
+  				width: 96px;
+  				height: 96px;
+  				// background-color: $yellow;
+  				margin: 20px auto;
+  			}
+
+  			.nametag{
+  				font-family: $font-sans;
+  				font-size: 3.6rem; 
+  				color: $white;
+                font-weight: $font-light;
+
+  				span{
+  					color: $red;
+  					font-weight: $font-bold;
+  				}
+  			}
+
+  			.about-text{
+  				color: $white;
+  				font-weight: $font-light;
+  				font-size: 1.8rem;
+  				max-width: 500px;
+  				margin: 0 auto;
+  				padding: 10px 10%; 
+
+  				span{
+  					color: $yellow;
+  					font-weight: $font-reg;
+  				}
+  			}
+  			.pointer-container{
+  				display: block;
+  				height: 48px;
+	  			width: 200px;
+	  			margin: 0 auto;
+	  			position: absolute;
+	  			bottom: 3%;
+	  			left: calc(50% - 100px);
+	  			animation: arrow-reveal 2.5s ease-in;
+
+	  			.pointer{
+	  				display: block;
+	  				height: 48px;
+	  				width: 48px;
+	  				margin: 0 auto;
+	  				background: transparent url(/assets/img/arrow.svg);
+                    animation: arrow-translate 4s ease-in-out infinite 2s;
+	  			}
+	  		}
+
+            .social-container{
+                padding-top: 40px;
+            }
+		}
+	}
+}
