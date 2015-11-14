@@ -56,10 +56,13 @@ body {
 
 	.floating-browser{
 		max-width: 900px;
+		width: 90%;
 		padding: 0 50px;
 		margin: 0 auto;	
 		position: relative;
 		z-index:1;
+
+		@include breakpoint(laptop){width: 900px;}
 	}
 
 	.browser-content{
