@@ -1,0 +1,125 @@
+//-----------------------------------------------
+// Document Setup
+//-----------------------------------------------
+
+html,body{
+	height: 100%;
+	background-color: $black;
+}
+
+body {
+	background-color: $white;
+	font-family: $font-sans;
+}
+
+body *{
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+//-----------------------------------------------
+// Common Elements
+//-----------------------------------------------
+.container{
+	width: $container-width-tab;
+	max-width: 100%;
+	margin: 0 auto;
+	@include breakpoint(tablet) { max-width: 1440px; width: $container-width; padding: 0 30px;}
+}
+
+.section-title{
+	font-family: $font-title;
+	font-size: 1.3rem;
+	margin: 0 auto;
+	color: $black;
+	text-align: center;
+	padding: 50px 10px 10px;
+}
+
+//-----------------------------------------------
+// Aspect-Ratio Mixin from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+//-----------------------------------------------
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}	
+}
+
+//-----------------------------------------------
+// Grids - 4 Columns, Responsive
+//-----------------------------------------------
+
+.cols_4_25  {
+	width: 100%; 
+	display: inline-block;
+
+	@include breakpoint(tablet) {
+		width: calc(50% - 4px);
+	}
+
+	@include breakpoint(laptop) {
+		width: calc(33.333% - 4px);
+	}
+
+	@include breakpoint(desktop) {
+		width: calc(25% - 4px);
+	}
+}
+
+.cols_4_50  {
+	width: 100%; 
+	display: inline-block;
+
+	@include breakpoint(tablet) {
+		width: calc(50% - 4px);
+	}
+}
+
+//-----------------------------------------------
+// Social Icons
+//-----------------------------------------------
+
+.social-container{
+	display: table;
+	margin: 0 auto;
+	padding:0;
+
+	li{
+		list-style: none;
+		display: table-cell;
+		padding: 10px;
+		vertical-align: top;
+		@include breakpoint(tablet) { padding: 10px 30px;}
+
+		a{
+			display: block;
+			width: 32px;
+			height: 32px;
+			margin: 0 auto;
+			opacity: 0.5;
+			transition: all 0.3s ease-in-out;
+
+			svg{
+				fill: $white;
+			}
+		}
+
+		a:hover{
+			opacity: 1;
+		}
+	}
+}
+
+

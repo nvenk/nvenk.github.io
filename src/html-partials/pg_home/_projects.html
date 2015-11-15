@@ -1,0 +1,39 @@
+<div class="projects" id="projects">
+	<div class="container">
+		<div class="section-title">MY WORK</div>
+		<ul class="project-card-container">
+		
+		<!-- type can be "intraction, visual or motion"
+			 description should be limited to 80characters(col 113) -->
+
+			@@include('_project-card.html',{
+				"title": "Interaction Design Project",
+				"desctiption": "Project Description Goes Here. Work on content is still in progress.",
+				"imageSrc": "assets/img/project-placeholder.png",
+				"type": "interaction"
+			})
+
+			@@include('_project-card.html',{
+				"title": "Visual Design Project",
+				"desctiption": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
+				"imageSrc": "assets/img/project-placeholder.png",
+				"type": "visual"
+			})
+
+			@@include('_project-card.html',{
+				"title": "Tagless Design Project",
+				"desctiption": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
+				"imageSrc": "assets/img/project-placeholder.png",
+				"type": ""
+			})
+
+			@@include('_project-card.html',{
+				"title": "Motion Design Project",
+				"desctiption": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
+				"imageSrc": "assets/img/project-placeholder.png",
+				"type": "motion"
+			})
+
+		</ul>
+	</div>
+</div>

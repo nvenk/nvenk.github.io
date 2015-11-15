@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+// Vendor
+// ---------------------------------
+@import "vendor/normalize";
+
+// Components
+// ---------------------------------
+@import "components/variables";
+@import "components/responsive";
+@import "components/animation";
+
+// Global
+// ---------------------------------
+@import "components/global";
+
+.projects{
+	background: $white;
+	padding-bottom: 50px;
+
+	.pr_header{
+		height: 100px;
+		width: 100%;
+
+		.nav-container{
+			display: table;
+			width: 48px;
+			margin: 0 auto;
+
+			.logo{
+				margin: 0 auto;
+				padding: 25px 0;
+				opacity: 0.8;
+				height: 60px;
+				display: inline-block;
+				display: table-cell;
+			}
+		}
+	}
+
+	.container{
+		color: $black;
+		padding-top: 30px;
+		max-width: 800px;
+
+		.title{
+			font-size: 3rem;
+			font-family: $font-serif;
+			font-weight: $font-reg;
+			font-style: italic;
+			text-align: center;
+		}
+
+		.tags{
+			font-size: 1.3rem;
+			font-weight: $font-reg;
+			text-align: center;
+			margin-top: 40px;
+			padding: 0;
+
+			li{
+				list-style: none;
+				display: inline-block;
+				width: 155px;
+			}
+		}
+
+		.section-title{
+			font-family: $font-sans;
+			font-size: 1.8rem;
+			margin: 25px 0 10px;
+		}
+
+		.content{
+			font-size: 1.4rem;
+			font-family: $font-serif;
+			line-height: 1.7;
+		}
+	}
+}

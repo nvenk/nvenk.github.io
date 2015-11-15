@@ -1,0 +1,105 @@
+.landing{
+	height: 100vh;
+    min-height: 380px;
+	width: 100%;
+	background-color: $black;
+
+	.container{
+		margin: 0 auto;
+		height: 100vh;
+        min-height: 380px;
+		display: table;
+
+		.content{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			padding: 0 5%;
+			padding-bottom: 50px;
+
+  			.logo{
+  				display: block;
+  				width: 64px;
+  				height: 64px;
+  				margin: 20px auto;
+                animation-duration: 1.5s;
+
+                @include breakpoint(tablet) {
+                    height: 96px;
+                    width: 96px;
+                }
+  			}
+
+  			.nametag{
+  				font-family: $font-sans;
+  				font-size: 2.5rem; 
+  				color: $white;
+                font-weight: $font-light;
+                animation-delay: 0.5s;
+                animation-duration: 0.7s;
+
+  				span{
+  					color: $red;
+  					font-weight: $font-bold;
+  				}
+                @include breakpoint(tablet) {
+                    font-size: 3.6rem;
+                }
+  			}
+
+  			.about-text{
+  				color: $white;
+  				font-weight: $font-light;
+  				font-size: 1.3rem;
+  				max-width: 500px;
+  				margin: 0 auto;
+  				padding: 10px 10%; 
+                animation-delay: 0.8s;
+                animation-duration: 0.5s;
+
+  				span{
+  					color: $yellow;
+  					font-weight: $font-reg;
+  				}
+
+                @include breakpoint(tablet) {
+                    font-size: 1.8rem;
+                }
+  			}
+  			.pointer-container{
+  				display: block;
+  				height: 48px;
+	  			width: 100%;
+	  			margin: 0 auto;
+	  			position: absolute;
+	  			bottom: 1%;
+                left:0;
+                right:0;
+	  			animation: arrow-reveal 2.5s ease-in;
+
+                @include breakpoint(tablet) {
+                    bottom: 3%;
+                }
+
+	  			.pointer{
+	  				display: block;
+	  				height: 24px;
+	  				width: 24px;
+	  				margin: 0 auto;
+	  				background: transparent url(/assets/img/arrow.svg);
+                    background-size: contain;
+                    animation: arrow-translate 4s ease-in-out infinite 2s;
+
+                    @include breakpoint(tablet) {
+                        height: 48px;
+                        width: 48px;
+                    }
+	  			}
+                
+	  		}
+            .social-container{
+                padding-top: 40px;
+            }
+		}
+	}
+}
