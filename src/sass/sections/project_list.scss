@@ -1,3 +1,29 @@
+.projects{
+	background-color: $white;
+	padding: 10px 0px;
+	min-height: calc(100vh - 130px);
+
+	.container{
+
+		.project-card-container{
+			padding:0;
+		}
+
+		@for $i from 1 to 10 {
+			.project-card-container li:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
+		}
+
+		.section-title{
+			color: $black;
+		}
+		.col{
+			padding: 20px 0px;
+		}
+	}
+}
+
+
+
 //-----------------------------------------------
 // Project Card Styles
 //-----------------------------------------------
@@ -7,9 +33,9 @@
 	display: block;
 	margin: 25px auto;
 	position: relative;
-	border-radius: 4px;
+	border-radius: 8px;
 	overflow:hidden;
-	box-shadow: 0px 0px 40px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 	transition: all 0.4s ease-in-out;
 
 	@include breakpoint(tablet) {
@@ -74,6 +100,7 @@
 			width: auto;
 			padding: 4px 10px;
 			font-size: 12px;
+			font-weight: $font-bold;
 			color: $white;
 			border-bottom-left-radius: 3px;
 			opacity:0.4;
@@ -82,7 +109,7 @@
 }
 
 .project-card:hover{
-	box-shadow: 0px 0px 50px rgba(0,0,0,0.6);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 
 	.project-info{
 		height: 100px;

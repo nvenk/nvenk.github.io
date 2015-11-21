@@ -34,9 +34,7 @@
 //--------------------------------
 
 .animated {
-  // -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  // -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -53,50 +51,40 @@
 }
 
 .fadeIn {
-  // -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        // -webkit-transform: translate3d(0%, 20%, 0);
         transform: translate3d(0%, 20%, 0);
     }
 
     to {
         opacity: 1;
-        // -webkit-transform: none;
         transform: none;
     }
 }
 
 .fadeInUp {
-    // -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
 
 @keyframes fadeInUpLeft {
     from {
         opacity: 0;
-        // -webkit-transform: translate3d(-3%, 20%, 0);
         transform: translate3d(-3%, 20%, 0);
     }
 
     to {
         opacity: 1;
-        // -webkit-transform: none;
         transform: none;
     }
 }
 
 .fadeInUpLeft {
-    // -webkit-animation-name: fadeInUpLeft;
     animation-name: fadeInUpLeft;
 }
-
-
-
 
 //--------------------------------
 // Custom Fading animation - About Text
