@@ -110,13 +110,36 @@ body *{
 			margin: 0 auto;
 			opacity: 0.5;
 			transition: all 0.3s ease-in-out;
+			border-radius: 10px;
 
 			svg{
 				fill: $white;
+				transition: all 0.3s ease-in-out;
 			}
 		}
 
-		a:hover{
+		.dr{
+			border-radius: 50%;
+		}
+
+		.li:hover, .fb:hover, .dr:hover{
+			opacity: 0.8;
+			background-color: white;
+		}
+
+		.li:hover>svg{
+			fill: $linkedin;
+		}		
+		.fb:hover>svg{
+			fill: $facebook;
+		}
+		.tw:hover>svg{
+			fill: $twitter;
+		}
+		.dr:hover>svg{
+			fill: $dribbble;	
+		}
+		.em:hover{
 			opacity: 1;
 		}
 	}

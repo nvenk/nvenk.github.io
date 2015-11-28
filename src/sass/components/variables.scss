@@ -2,7 +2,7 @@
 // Color Palette
 //-----------------------------------------------
 
-$black: 	#27303c; // Almost Black
+$black: 	#1b2737; // #27303c; // Almost Black
 $white: 	#ECEFF1; // ALmost White
 $blue: 		#2e416a;
 $blue-alt:	#0277BD;
@@ -13,6 +13,8 @@ $yellow-alt:#F9A825;
 //-----------------------------------------------
 // Font Families
 //-----------------------------------------------
+
+// @import url(https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:200,500,700);
 
 $font-sans:   'Source Sans Pro', helvetica, arial, sans-serif;
 $font-serif:  'Georgia', 'Times New Roman', serif;
@@ -30,3 +32,14 @@ $font-italic:  italic;
 
 $container-width-tab: calc(100% - 60px);
 $container-width: calc(100% - 60px);
+
+
+//-----------------------------------------------
+// Social Media Colors
+//-----------------------------------------------
+
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$linkedin: #007bb6;
+$dribbble: #ea4c89;

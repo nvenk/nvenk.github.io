@@ -25,3 +25,4 @@ $('.projects-link').click(function() {
     }, 500);
     return false;
 });
+
