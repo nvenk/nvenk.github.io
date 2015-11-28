@@ -35,7 +35,7 @@
 	position: relative;
 	border-radius: 3px;
 	overflow:hidden;
-	box-shadow: 0px 0px 30px rgba(0,0,0,0.6);
+	// box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 	transition: all 0.4s ease-in-out;
 
 	@include breakpoint(tablet) {
@@ -50,8 +50,8 @@
 		top:0;
 		left:0;
 		border-radius: 3px;
-		border-top: 1px solid rgba(200,200,200,.4);
-		border-left: 1px solid rgba(200,200,200,.4);
+		// border-top: 1px solid rgba(200,200,200,.4);
+		// border-left: 1px solid rgba(200,200,200,.4);
 		background-clip: padding-box; 
 		-webkit-background-clip: padding-box; 
 
@@ -64,9 +64,9 @@
 		position: absolute;
 		bottom: 0px;
 		height: 70px; 
-		opacity: 0.9;
+		opacity: 1;
 		transition: all 0.3s ease-in-out;
-		box-shadow: 0px 5px 50px #555;
+		// box-shadow: 0px 5px 50px #555;
 
 		*{
 			transition: all 0.5s ease-in-out 0.1s;
@@ -103,13 +103,13 @@
 			font-weight: $font-bold;
 			color: $white;
 			border-bottom-left-radius: 3px;
-			opacity:0.4;
+			opacity:0.6;
 		}
 	}
 }
 
 .project-card:hover{
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	// box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 
 	.project-info{
 		height: 100px;
@@ -125,7 +125,7 @@
 		}
 
 		.tag{
-			opacity:0.8;
+			opacity:0.9;
 		}
 	}
 }
