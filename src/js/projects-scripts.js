@@ -34,7 +34,7 @@ $(window).scroll(function() {
 
     if ($(this).scrollTop() > 150)
      {
-        $('.pr-topbar').animate({opacity:1;,});
+        $('.pr-topbar').fadeIn();
      }
     else
      {

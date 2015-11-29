@@ -72,7 +72,7 @@ gulp.task('css', function(){
 gulp.task('js', function(){
 	gulp.src('src/js/**/*.js')
 	.pipe(newer('assets/js'))
-	.pipe(uglify())
+	// .pipe(uglsify())
 	.pipe(gulp.dest('assets/js'));
 });
 
