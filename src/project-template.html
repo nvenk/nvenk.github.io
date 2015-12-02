@@ -8,18 +8,17 @@
 	</head>
 	<body>
 		<div class="projects">
-			@@include('pg_project/_header.html')
+			@@include('pg_project/_header.html', {
+				"title" : "Project Title",
+				"tags" : {
+					"1" : "Research",
+					"2" : "Prototyping",
+					"3" : "Visual"
+				}
+			})
+
 
 			<div class="container">
-			<!-- PROJECT HEADERS -->
-				<div class="title">Project Title</div>
-				<ul class="tags">
-					<li>Research</li>
-					<li>Interaction Design</li>
-					<li>Visual Design</li>
-				</ul>
-
-				<!-- PROJECT CONTENT -->
 				<h2 class="section-title">The Problem</h2>
 
 				<div class="content">
@@ -33,6 +32,8 @@
 					<p>Lorem ipsum Mollit dolor ut amet dolor in eiusmod occaecat proident magna exercitation dolore adipisicing et minim in laborum nisi dolor in amet ex amet quis do ea incididunt labore sit velit sint Duis ut nisi eiusmod exercitation aute ullamco consequat sit ut proident culpa elit adipisicing pariatur mollit et sint proident et non eiusmod id culpa velit ut culpa non sunt enim ad sunt sint aliqua occaecat qui commodo elit voluptate officia elit sint ea consectetur cupidatat incididunt exercitation irure sit id Ut ad Ut dolor culpa aliqua in eiusmod mollit sit adipisicing ad pariatur exercitation officia deserunt elit exercitation et velit ut et do sint fugiat ea consectetur aliqua dolor sunt incididunt ut ea elit nulla laboris deserunt commodo sunt esse eu eiusmod minim dolor labore aliquip ut cupidatat labore ut commodo nostrud aliqua mollit nulla anim est consequat laboris anim sunt consectetur veniam labore ad in dolor Excepteur Excepteur commodo enim ullamco sunt labore et dolor ullamco consectetur eu elit Duis et sint ea sed sunt et laboris est eu ex proident mollit adipisicing in nostrud culpa eiusmod fugiat quis officia reprehenderit et amet non incididunt nulla magna dolore reprehenderit voluptate dolore fugiat nisi exercitation labore velit aute Excepteur sit quis eiusmod in eu culpa enim proident exercitation non Excepteur quis ea.</p>
 				</div>
 			</div>
+
+			@@include('pg_project/_footer.html')
 		</div>
 
 		<script src="assets/js/vendor/wow.min.js"></script>

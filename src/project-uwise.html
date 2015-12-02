@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('_meta.html')
+		<link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:200,500,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/css/project.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="projects">
+			@@include('pg_project/_header.html', {
+				"title" : "UW International Student Exchange",
+				"tags" : {
+					"1" : "Research",
+					"2" : "Prototyping",
+					"3" : "Visual"
+				}
+			})
+
+			<div class="container">
+				@@include(markdown('project-content/uwise.md'))
+			</div>
+
+			@@include('pg_project/_footer.html')
+		</div>
+
+		<script src="assets/js/vendor/wow.min.js"></script>
+		<script>new WOW().init();</script>
+		<script src="assets/js/projects-scripts.js"></script>
+		@@include('_analytics.html')
+	</body>
+</html>

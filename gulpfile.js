@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 	newer = require('gulp-newer'),
+	markdown = require('markdown'),
 	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify'),
 	sass = require('gulp-sass'),
@@ -48,7 +49,11 @@ gulp.task('lint-js', function(){
 // Content ------------------------------------
 gulp.task('html', function() {
 	gulp.src('src/*.html')
-	.pipe(include({basepath: 'src/html-partials/'}))
+	.pipe(include({
+		basepath: 'src/html-partials/',
+		filters: {
+			markdown: markdown.parse
+		}}))
 	.pipe(removeComment())
 	.pipe(prettify({
 		indent_with_tabs: "true"
@@ -72,7 +77,7 @@ gulp.task('css', function(){
 gulp.task('js', function(){
 	gulp.src('src/js/**/*.js')
 	.pipe(newer('assets/js'))
-	// .pipe(uglsify())
+	.pipe(uglify())
 	.pipe(gulp.dest('assets/js'));
 });
 
@@ -99,6 +104,7 @@ gulp.task('watch', function() {
 	// gulp.watch('src/style/**/*.scss', ['css']);
 	gulp.watch('src/js/**/*.js', ['js']);
 	gulp.watch('src/img/**/*', ['img']);
+	gulp.watch('src/**/*.md',['html']);
 });
 
 // Default Function

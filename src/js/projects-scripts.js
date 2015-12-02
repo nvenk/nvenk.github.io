@@ -32,7 +32,7 @@ $(document).on('ready', function() {
 
 $(window).scroll(function() {
 
-    if ($(this).scrollTop() > 150)
+    if ($(this).scrollTop() > 200)
      {
         $('.pr-topbar').fadeIn();
      }

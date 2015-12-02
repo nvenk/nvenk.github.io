@@ -17,30 +17,30 @@ $(window).scroll(function() {
       $('.pointer').fadeIn();
      }
 
-// Logo Fade In
-    if ($(this).scrollTop() > $logoTrigger)
-     {
-        $('.side-logo').fadeIn('fast');
-     } 
-    else
-     { 
-      $('.side-logo').fadeOut('fast');
-     }
+// // Logo Fade In
+//     if ($(this).scrollTop() > $logoTrigger)
+//      {
+//         $('.side-logo').fadeIn('fast');
+//      } 
+//     else
+//      { 
+//       $('.side-logo').fadeOut('fast');
+//      }
 
-// Change Color
+// // Change Color
 
-     if ($("#project-section"))
-     {
-        $('.logo-wings').animate({
-            'fill' : '#CCC'
-        });
-     }
-     else
-     {
-        $('.logo-wings').animate({
-            'fill' : '#333'
-        });
-     }
+//      if ($("#project-section"))
+//      {
+//         $('.logo-wings').animate({
+//             'fill' : '#CCC'
+//         });
+//      }
+//      else
+//      {
+//         $('.logo-wings').animate({
+//             'fill' : '#333'
+//         });
+//      }
  });
 
 //-------------------------------------
