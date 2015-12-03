@@ -6,7 +6,6 @@ As a part of our class project, we are looking to explore the problems that inte
 
 We worked on this project over ten weeks, but worked through the entire user centered design process as best we could.
 
-
 ##Research
 
 We did some research among International students at the University of Washington, Bellevue College and Seattle Central College, targeting International students who had just moved to the United States, and ones who had moved to the United States a few years ago.
@@ -20,7 +19,7 @@ Our research findings allowed us to narrow down our focus on the top problems th
 We now had a general idea of what our solution should be.
 
 We also identified and understood the workings of a student body that was providing a similar solution, by helping new students who are moving to the county. They provided temporary housing, airport pick-up, information and mentorship for everyday life activities.
-
+</div>
 ##Personas
 
 From our research findings, we went on to create personas. We identified that there were two distinct roles that would need to be filled. We have students who are outside the country who need help, and students who are already in the country who could provide help and information.
@@ -33,13 +32,10 @@ We designed three distinct personas who met these criteria.
 
 At this point in the process, ideas had started forming in our heads as to what the ideal solution should be. We sat down and put our heads together, and came up with a list of design requirements, to make sure that we were all on the same page.
 
-The solution should be internationally available and easily accessible.
-
-It should connect new students to each other.
-
-It should connect new students with existing students who had moved to the United States before them.
-
-It should be a secure platform, with some form of verification, to make sure that the information posted is legitimate.
+1. The solution should be internationally available and easily accessible.
+2. It should connect new students to each other.
+3. It should connect new students with existing students who had moved to the United States before them.
+4. It should be a secure platform, with some form of verification, to make sure that the information posted is legitimate.
 
 
 ## Brainstorming & Sketching

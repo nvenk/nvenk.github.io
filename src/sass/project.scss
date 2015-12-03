@@ -13,9 +13,10 @@
 // Global
 // ---------------------------------
 @import "components/global";
+@import "sections/social-icons.scss";
 
 .projects{
-	background: $white;
+	background: white;
 
 //Floating NavBar
 	.pr-topbar{
@@ -36,7 +37,7 @@
 			.logo{
 				width: 30px;
 				height: 30px;
-				padding: 10px;
+				padding: 10px 20px;
 				display: inline-block;
 				opacity: 0.8;
 				transition: all 0.2s ease-in-out;
@@ -118,14 +119,14 @@
 				.logo{
 					margin: 0 auto;
 					padding: 30px 0;
-					opacity: 0.8;
+					opacity: 1;
 					height: 72px;
 					display: inline-block;
 					display: table-cell;
-					transition: all 0.2s ease-in-out;
+					transition: all 0.5s ease-in-out;
 
 					&:hover{
-						opacity: 1;
+						transform: scale(1.2) rotate(-1 deg);
 					}
 				}
 			}
@@ -176,10 +177,10 @@
 	}
 
 	.container{
-	color: $black;
-	padding-top: 30px;
-	max-width: 800px;
-	padding-bottom: 60px;
+		color: $black;
+		padding-top: 30px;
+		max-width: 800px;
+		padding-bottom: 60px;
 
 		h2{
 			font-family: $font-sans;
@@ -202,6 +203,7 @@
 			font-weight: $font-reg;
 			list-style: none;
 		}
+
 		ol{
 			padding-left: 20px;
 
@@ -222,6 +224,8 @@
 		img{
 			width: 100%;
 			margin: 0px;
+			box-shadow: 0px 10px 50px rgba(0,0,0,0.15);
+			border-radius: 5px;
 
 			@include breakpoint(tablet) {
 				width: calc(100% - 30px);
@@ -231,24 +235,30 @@
 	}
 
 	footer{
-		height: 100px;
-		background: $red;
+		height: 200px;
+		background: $white;
 		display: block;
 		position: relative;
 		width: 100%;
-		box-shadow: 0 -2px 2px rgba(0,0,0,0.15);
+		box-shadow: 0 -2px 1px rgba(0,0,0,0.15);
 
 
 		.footer-button{
-			position: absolute;
 			height: 45px;
 			width: 250px;
-			top:0;bottom:0;left:0;right:0;
-			margin: auto;
 			text-align: center;
 			font-size: 1.8rem;
-			color: $white;
+			color: $red;
+			padding: 20px;
+			padding-bottom: 10px;
 			text-decoration: none;
+		}
+
+		.social-container{
+			li a{
+				height: 42px;
+				width: 42px;
+			}
 		}
 	}
 }
