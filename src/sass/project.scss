@@ -288,6 +288,7 @@
 					position: relative;
 					opacity: 0.7;
 					transition: all 0.3s ease-in-out; 
+					text-shadow: 0px 1px 1px rgba(0,0,0,0.25);
 
 					a{
 						display: block;
@@ -302,6 +303,7 @@
 							padding:0;
 							margin:0;
 							box-shadow: none;
+
 						}
 
 						.footer-navigate{
@@ -329,6 +331,7 @@
 				.footer-prev{
 					width: calc(40% - 60px);
 					text-align: left;
+
 					a{
 						padding-left: 30px;
 						img{left: 0;}
@@ -358,6 +361,7 @@
 						width: 40px;
 						margin: auto;
 					}
+
 					&:hover{
 						transform: scale(1.1);
 					}
@@ -366,10 +370,12 @@
 				.footer-next{
 					width: calc(40% - 60px);
 					text-align: right;
+
 					a{
 						padding-right: 30px;
 						img{right: 0;}
 					}
+
 					&:hover{
 						transform: translateX(10px);
 					}
