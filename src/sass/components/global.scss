@@ -79,9 +79,9 @@ body *{
 		width: calc(33.333% - 4px);
 	}
 
-	@include breakpoint(desktop) {
-		width: calc(25% - 4px);
-	}
+	// @include breakpoint(desktop) {
+	// 	width: calc(25% - 4px);
+	// }
 }
 
 .cols_4_50  {

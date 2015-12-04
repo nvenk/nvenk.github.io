@@ -7,6 +7,8 @@ I worked in animation for television, and have animated some iconic characters l
 So without further ado...
 
 <div class="videoWrapper">
-<iframe src="https://player.vimeo.com/video/94683657" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    <iframe src="https://player.vimeo.com/video/94683657" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 </iframe>
 </div>
+
+## Thanks for watching!!

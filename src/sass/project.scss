@@ -28,6 +28,7 @@
 		left:0;
 		display: none;
 		box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		z-index: 2;
 
 		@include breakpoint(tablet) {
 			height: 50px;
@@ -114,11 +115,11 @@
 			.nav-container{
 				display: table;
 				width: 72px;
-				margin: 0 auto;
+				margin: 30px auto 0;
 
 				.logo{
-					margin: 0 auto;
-					padding: 30px 0;
+					margin: 30px auto;
+					padding: 0;
 					opacity: 1;
 					height: 72px;
 					display: inline-block;
@@ -256,29 +257,130 @@
 	}
 
 	footer{
-		height: 200px;
 		background: $white;
 		display: block;
 		position: relative;
 		width: 100%;
 		box-shadow: 0 -2px 1px rgba(0,0,0,0.15);
 
+		.container{
+			padding-bottom: 30px;
 
-		.footer-button{
-			height: 45px;
-			width: 250px;
-			text-align: center;
-			font-size: 1.8rem;
-			color: $red;
-			padding: 20px;
-			padding-bottom: 10px;
-			text-decoration: none;
-		}
+			ul.project-footer-nav-container{
+				margin: 10px auto 30px;
+				padding: 0;
+				list-style: none;
+				max-width: 680px;
+				vertical-align: top;
 
-		.social-container{
-			li a{
-				height: 42px;
-				width: 42px;
+				.hide{
+					display: none;
+					visibility: hidden;
+				}
+
+				.footer-button{
+					display: inline-block;
+					margin: 0 30px;
+					min-height: 70px;
+					height: 70px !important; 
+					vertical-align: middle;
+					text-align: center;
+					position: relative;
+					opacity: 0.7;
+					transition: all 0.3s ease-in-out; 
+
+					a{
+						display: block;
+						text-decoration: none;
+
+						img{
+							position: absolute;
+							top: 13px;
+							display: inline-block;
+							height: 30px;
+							width: 20px;
+							padding:0;
+							margin:0;
+							box-shadow: none;
+						}
+
+						.footer-navigate{
+							display: inline-block;
+							font-size: 1.2rem;
+							font-weight: $font-bold;
+							color:$red;
+							line-height: 1.4;
+
+							span{
+								display: block;
+								color: $black;
+								font-weight: $font-reg;
+								font-size: 1;
+							}
+						}
+					}
+
+					&:hover{
+						opacity: 1;
+					}
+
+				}
+
+				.footer-prev{
+					width: calc(40% - 60px);
+					text-align: left;
+					a{
+						padding-left: 30px;
+						img{left: 0;}
+					}
+
+					&:hover{
+						transform: translateX(-10px);
+					}
+				}
+
+				.footer-home{
+					width: calc(20% - 70px);
+					margin:0 auto;
+					display: block;
+					width: 66px;
+					height: 51px;
+
+					@include breakpoint(tablet) {
+						display: inline-block;
+					    margin: 0 30px;
+					}
+
+					a img{
+						position: relative;
+						top: 6px;
+						height: 40px;
+						width: 40px;
+						margin: auto;
+					}
+					&:hover{
+						transform: scale(1.1);
+					}
+				}
+
+				.footer-next{
+					width: calc(40% - 60px);
+					text-align: right;
+					a{
+						padding-right: 30px;
+						img{right: 0;}
+					}
+					&:hover{
+						transform: translateX(10px);
+					}
+				}
+			}
+
+			.social-container{
+				li a{
+					height: 42px;
+					width: 42px;
+				}
 			}
 		}
 	}

@@ -20,9 +20,23 @@
 				@@include(markdown('project-content/uwise.md'))
 			</div>
 
-			@@include('pg_project/_footer.html')
+			@@include('pg_project/_footer.html', {
+				"prev" : {
+					"title" : "",
+					"subtitle" : "",
+					"link" : "",
+					"hidden" : "hide"
+				},
+				"next" : {
+					"title" : "Animation Showreel",
+					"subtitle" : "3d character animation",
+					"link" : "/project-animation.html",
+					"hidden" : ""
+				}
+			})
 		</div>
 
+		
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>new WOW().init();</script>
 		<script src="assets/js/projects-scripts.js"></script>

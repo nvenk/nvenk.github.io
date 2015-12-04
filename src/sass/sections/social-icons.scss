@@ -9,6 +9,9 @@
 		padding: 0px 10px;
 		vertical-align: top;
 
+		@include breakpoint(phone-lg) {
+		    padding: 0px 20px;
+		}
 		@include breakpoint(tablet) {
 			padding: 0px 30px;
 		}
@@ -26,6 +29,9 @@
 				fill: $white;
 				padding: 5px;
 				transition: all 0.3s ease-in-out;
+				position: relative;
+				left: -5px;
+				top: -5px;
 
 				*{
 					transition: all 0.6s ease-in-out;

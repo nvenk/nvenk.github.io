@@ -2,8 +2,8 @@
 <html>
 	<head>
 		@@include('_meta.html')
-		<link rel="stylesheet" href="assets/css/project.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="assets/css/project.css">
 	</head>
 	<body>
 		<div class="projects">
@@ -12,17 +12,31 @@
 				"tags" : {
 					"1" : "Character Animation",
 					"2" : "Storytelling",
-					"3" : "Motion Design"
+					"3" : "Motion"
 				}
 			})
-			
+
 			<div class="container">
 				@@include(markdown('project-content/animation.md'))
 			</div>
 
-			@@include('pg_project/_footer.html')
+			@@include('pg_project/_footer.html', {
+				"prev" : {
+					"title" : "UW-ISE",
+					"subtitle" : "UX Design",
+					"link" : "/project-uwise.html",
+					"hidden" : ""
+				},
+				"next" : {
+					"title" : "",
+					"subtitle" : "",
+					"link" : "#",
+					"hidden" : "hide"
+				}
+			})
 		</div>
 
+		
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>new WOW().init();</script>
 		<script src="assets/js/projects-scripts.js"></script>

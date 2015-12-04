@@ -1,14 +1,14 @@
-##The Problem
+## The Problem
 
 As a part of a class project, we sought to explore the problems that international students face when they move to the United States. The change in climate, food, culture, laws and overall lifestyle add to the challenges of everyday school life for these students. Our goal is to find a solution to make this transition easier for international students who are new to the country, and help them settle down more comfortably and quickly.
 
-##Process
+## Process
 
 ![The UCD Process](assets/img/projects/uwise/process-1.png)
 
 We worked on this project over ten weeks. We worked through the entire user-centered design process, from User Research to Hi-Fidelity prototypes.
 
-##Research
+## Research
 
 Our research group consisted of international students at the University of Washington, Bellevue College and Seattle Central College, who had just moved to the United States. We also interviewed a few students who had moved to the United States a few years ago.
 
@@ -22,7 +22,7 @@ We now had a general idea of what our solution should be.
 
 We also identified and understood the workings of a student body that was providing a similar solution by helping new students who are moving to the country. They provided temporary housing, airport pick-ups, information and mentorship for everyday life activities.
 
-##Personas
+## Personas
 
 ![Personas](assets/img/projects/uwise/personas-1.jpg)
 
@@ -30,7 +30,7 @@ Using the data gathered from our research, we went on to create personas. We ide
 
 We designed two primary personas, Satish and Amira, who were students starting their programs this year, and one secondary persona, Hari, who has been at the University of Washington for a year now, and is willing to help new students transition.
 
-##Design Requirements
+## Design Requirements
 
 At this point, ideas had started forming in our heads as to what the ideal solution should be. We sat down and put our heads together to come up with a list of design requirements, to make sure that we were all on the same page.
 
@@ -45,11 +45,11 @@ Keeping our design requirements at the back of our heads, the team got together 
 
 We picked the best of the ideas and created low fidelity wireframes to refine adn test them.
 
-##Wireframes
+## Wireframes
 
 ![Wireframes](assets/img/projects/uwise/wireframes-1.jpg)
 
-##Prototyping & User Testing
+## Prototyping & User Testing
 
 We converted our wireframes into paper prototypes and created a task flow that students would use the app for. We tested for usability issues and clarity of the interface.
 
@@ -57,13 +57,13 @@ We conducted usability tests with four users and got some very valuable feedback
 
 We iterated the prototype and are ready to test again and move on to the next phase.
 
-##Next Steps - Visual Design
+## Next Steps - Visual Design
 
 Once we test the revised prototype to make sure that the interface is easy to understand and navigate, we will make high fidelity prototypes to test the visual style and appeal of the app. 
 
 I'll update this section with our hi-fidelity test results and screenshots soon.
 
-##What I've Learnt
+## What I've Learnt
 
 This project has been amazing to work on, and has helped me understand how to design with the user in mind. I learnt a great deal from it, but to list my top takeaways from working on this project:
 
