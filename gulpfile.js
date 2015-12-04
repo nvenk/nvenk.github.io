@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
 	newer = require('gulp-newer'),
-	markdown = require('markdown'),
+	marked = require('marked'),
 	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify'),
 	sass = require('gulp-sass'),
@@ -52,7 +52,7 @@ gulp.task('html', function() {
 	.pipe(include({
 		basepath: 'src/html-partials/',
 		filters: {
-			markdown: markdown.parse
+			markdown: marked.setOptions({})
 		}}))
 	.pipe(removeComment())
 	.pipe(prettify({
