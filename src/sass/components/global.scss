@@ -41,6 +41,16 @@ body *{
 	padding: 50px 10px 10px;
 }
 
+
+.border-top::before{
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: rgba(0,0,0,0.15);
+	position: absolute;
+
+}
+
 //-----------------------------------------------
 // Aspect-Ratio Mixin from 
 // https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
@@ -54,6 +64,7 @@ body *{
 		width: 100%;
 		padding-top: ($height / $width) * 100%;
 	}
+	
 	> .content {
 		position: absolute;
 		top: 0;

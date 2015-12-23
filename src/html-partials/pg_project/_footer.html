@@ -1,25 +1,30 @@
+<div class="footer-navigation">
+	<div class="container">
+		<ul class="project-footer-nav-container">
+			<li class="footer-button footer-prev hidden-phone @@prev.hidden">
+				<a type="button" href="@@prev.link">
+					<img src="/assets/img/arrow-left.svg" />
+					<div class="footer-navigate">@@prev.title<span>@@prev.subtitle</span></div>
+				</a>
+			</li>
+			<li class="footer-button footer-home">
+				<a href="/#project-section">
+					<img src="/assets/img/footer-home.svg" />
+				</a>
+			</li>
+			<li class="footer-button footer-next hidden-phone @@next.hidden">
+				<a href="@@next.link">
+					<div class="footer-navigate">@@next.title<span>@@next.subtitle</span></div>
+					<img src="/assets/img/arrow-right.svg" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
 <footer>
 	<div class="container">
-	<ul class="project-footer-nav-container">
-		<li class="footer-button footer-prev hidden-phone @@prev.hidden">
-			<a type="button" href="@@prev.link">
-				<img src="/assets/img/arrow-left.svg" />
-				<div class="footer-navigate">@@prev.title<span>@@prev.subtitle</span></div>
-			</a>
-		</li>
-		<li class="footer-button footer-home">
-			<a href="/#project-section">
-				<img src="/assets/img/footer-home.svg" />
-			</a>
-		</li>
-		<li class="footer-button footer-next hidden-phone @@next.hidden">
-			<a href="@@next.link">
-				<div class="footer-navigate">@@next.title<span>@@next.subtitle</span></div>
-				<img src="/assets/img/arrow-right.svg" />
-			</a>
-		</li>
-	</ul>
-
+	
 	@@include('_social-icons.html', {
 		"linkedIn": "https://www.linkedin.com/in/nvenk",
 		"facebook": "https://www.facebook.com/nvenk",

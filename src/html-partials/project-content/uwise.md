@@ -22,7 +22,7 @@ We also identified and understood the workings of a student body that was provid
 
 ## Personas
 
-![Personas](assets/img/projects/uwise/personas-1.jpg)
+![Personas](assets/img/projects/uwise/personas-2.png)
 
 Using the data gathered from our research, we went on to create personas. We identified that there were two distinct roles that would need to be filled. We have students who are outside the country who need help, and students who are already in the country who could provide help and information.
 
