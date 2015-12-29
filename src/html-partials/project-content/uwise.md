@@ -51,17 +51,20 @@ We picked the best of the instances and created low fidelity wireframes to refin
 
 We converted our wireframes into paper prototypes and created a task flow. We tested for usability issues and clarity of the interface.
 
-We conducted usability tests with four users and got some very valuable feedback about the information architecture, the interface flow, and were also able to deduce what sort of icons worked for an international audience, and what didn't.
+We conducted usability tests with four users and got some very valuable feedback about the information architecture, the interface flow, and were also able to deduce what sort of icons worked for an international audience and what didn't.
 
-We have iterated the prototype and are now ready to test again and move on to the next phase.
+After a few iterations and loads of feedback, we were ready to come up with a more high fidelity mockup.
 
-## Next Steps - Visual Design
+## Visual Design
 
-Once we test the revised prototype to make sure that the interface is easy to understand and navigate, we will make high fidelity visual mockups to test the style and appeal of the app. 
+![Visual Design](assets/img/projects/uwise/hi-fidelity-1.png)
 
-I'll update this section with our hi-fidelity test results and screenshots soon.
+With our high fidelity mockup, we wanted to get a sense of what exactly the app would look like. We created the android application mockup, and a few things we wanted to focus on when creating this were:
 
-Look forward to our hi-fidelity test results and screenshots soon.
+1. Follow material design guidelines, giving the application a native feel.
+2. Use the University of Washington colors and branding to give users a sense of familiarity when using the app.
+3. Use the University of Washington NetID sign-in to ensure authenticity of the users on the platform.
+4. Use internationally understandable icons.
 
 ## What I've Learnt
 

@@ -14,43 +14,19 @@ $(window).scroll(function() {
      }
     else
      {
-      $('.pointer').fadeIn();
+        $('.pointer').fadeIn();
      }
-
-// // Logo Fade In
-//     if ($(this).scrollTop() > $logoTrigger)
-//      {
-//         $('.side-logo').fadeIn('fast');
-//      } 
-//     else
-//      { 
-//       $('.side-logo').fadeOut('fast');
-//      }
-
-// // Change Color
-
-//      if ($("#project-section"))
-//      {
-//         $('.logo-wings').animate({
-//             'fill' : '#CCC'
-//         });
-//      }
-//      else
-//      {
-//         $('.logo-wings').animate({
-//             'fill' : '#333'
-//         });
-//      }
  });
 
 //-------------------------------------
-// Smooth Scroll Pointer
+// Smooth Scroll Pointer to Projects Section
+// http://stackoverflow.com/questions/6677035/jquery-scroll-to-element
 //-------------------------------------
 
 var $root = $('html, body');
 $('.projects-link').click(function() {
     $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+        scrollTop: $('#project-section').offset().top
     }, 500);
     return false;
 });
