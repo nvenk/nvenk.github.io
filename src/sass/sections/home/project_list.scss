@@ -6,7 +6,7 @@
 	.container{
 
 		.project-card-container{
-			padding:0;
+			padding:0;	
 		}
 
 		@for $i from 1 to 10 {
@@ -18,20 +18,19 @@
 		.section-title{
 			color: $black;
 		}
+
 		.col{
 			padding: 20px 0px;
 		}
 	}
 }
 
-
-
 //-----------------------------------------------
 // Project Card Styles
 //-----------------------------------------------
 .project-card{
 	@include aspect-ratio(1,1.0667);
-	max-width: 400px;
+	max-width: 500px;
 	display: block;
 	margin: 25px auto;
 	position: relative;
@@ -48,7 +47,7 @@
 	}
 
 	@include breakpoint(tablet) {
-		width: 300px;
+		max-width: 400px;
 	}
 
 	img{

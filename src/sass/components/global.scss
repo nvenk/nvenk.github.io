@@ -81,15 +81,18 @@ body *{
 //-----------------------------------------------
 
 .cols_4_25  {
-	width: 100%; 
+	width: calc(100% - 60px); 
+	margin: 0 30px;
 	display: inline-block;
 
 	@include breakpoint(tablet) {
-		width: calc(50% - 4px);
+		width: calc(50% - 64px);
+		margin: 0 30px;
 	}
 
 	@include breakpoint(laptop) {
-		width: calc(33.333% - 4px);
+		width: calc(33.333% - 64px);
+		margin: 0 30px;
 	}
 
 	// @include breakpoint(desktop) {
