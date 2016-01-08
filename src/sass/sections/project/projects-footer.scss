@@ -58,6 +58,7 @@
 					padding: 10px 0 0 50px;
 					color: $white;
 					vertical-align: middle;
+
 					a{
 						text-decoration: none;
 						display: block;
@@ -65,21 +66,30 @@
 						h3{
 							font-family: $font-sans;
 							color: $white;
-							font-size: 1.4rem;
+							font-size: 1.3rem;
 							font-weight: $font-reg;
 							margin:0;
 							padding:0;
 							text-shadow: 0px 1px 0px rgba(0,0,0,0.15);
 							transition: 0.3s transform ease-in-out;
 							transition-delay: 0.05s;
+
+							@include breakpoint(tablet) {
+							    font-size: 1.4rem;
+							}
 						}
 
 						h4{
 							color: $red;	
-							font-size: 1.6rem;
+							font-size: 1.5rem;
 							padding: 0;
 							margin: 10px 0 0;
 							transition: 0.4s transform ease-in-out;
+							white-space: nowrap;
+
+							@include breakpoint(tablet) {
+							    font-size: 1.6rem;
+							}
 						}
 
 						&:hover{
