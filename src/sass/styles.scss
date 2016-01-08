@@ -9,11 +9,9 @@
 @import "components/variables";
 @import "components/responsive";
 @import "components/animation";
-
-// Global
-// ---------------------------------
 @import "components/global";
+@import "components/social-icons";
 
 // Page Sections
 // ---------------------------------
-@import "sections/*"
+@import "sections/home/*"
