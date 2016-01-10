@@ -1,6 +1,6 @@
 ## The Problem
 
-We sought to explore the problems that international students face when they move to the United States. The change in climate, food, culture, laws and overall lifestyle add to the challenges of everyday school life for these students. Our goal is to find a solution to make this transition easier for international students who are new to the country, and help them settle down more comfortably and quickly.
+As a part of a class project, we sought to explore the problems that international students face when they move to the United States. The change in climate, food, culture, laws and overall lifestyle add to the challenges of everyday school life for these students. Our goal is to find a solution to make this transition easier for international students who are new to the country, and help them settle down more comfortably and quickly.
 
 ## Process
 

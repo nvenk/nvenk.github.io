@@ -52,7 +52,7 @@
 
   			.about-text{
   				color: $white;
-  				font-weight: $font-light;
+  				font-weight: 200;
   				font-size: 1.3rem;
   				max-width: 500px;
   				margin: 0 auto;
@@ -62,7 +62,7 @@
 
   				span{
   					color: $yellow;
-  					font-weight: $font-reg;
+  					font-weight: $font-light;
   				}
 
                 @include breakpoint(tablet) {
