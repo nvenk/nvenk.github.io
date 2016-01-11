@@ -34,7 +34,8 @@ body *{
 
 .section-title{
 	font-family: $font-sans;
-	font-size: 1.6rem;
+	font-size: 2rem;
+	font-weight: $font-light;
 	margin: 0 auto;
 	color: $black;
 	text-align: center;
@@ -87,12 +88,10 @@ body *{
 
 	@include breakpoint(tablet) {
 		width: calc(50% - 64px);
-		margin: 0 30px;
 	}
 
 	@include breakpoint(laptop) {
 		width: calc(33.333% - 64px);
-		margin: 0 30px;
 	}
 
 	// @include breakpoint(desktop) {

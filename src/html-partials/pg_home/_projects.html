@@ -1,38 +1,38 @@
-<div class="projects" id="project-section">
+<section class="projects" id="project-section">
 	<div class="container">
 		<div class="section-title">PROJECTS</div>
 		<ul class="project-card-container">
 		
 		<!-- description should be limited to 80characters(col 113) -->
 
-			@@include('pg_home/_project-card.html',{
+			@@include('pg_home/proj-card.html',{
 				"link":"project-uwise.html",
 				"title": "UW-ISE",
 				"description": "Research | Interaction | Prototype",
 				"imageSrc": "assets/img/projects/uwise/card-bg.jpg"
 			})
 
-			@@include('pg_home/_project-card.html',{
+			@@include('pg_home/proj-card.html',{
 				"link":"under-construction.html",
 				"title": "PuppyHarmony",
 				"description": "Business Plan | Wireframe | Prototype",
 				"imageSrc": "assets/img/projects/puppyharmony/card-bg.jpg"
 			})
 			
-			@@include('pg_home/_project-card.html',{
+			@@include('pg_home/proj-card.html',{
 				"link":"project-animation.html",
 				"title": "Character Animation Reel",
 				"description": "3d Animation | Storytelling | Motion",
 				"imageSrc": "assets/img/projects/animation/card-bg.png"
 			})
 
-			@@include('pg_home/_project-card.html',{
+			<!-- @@include('pg_home/proj-card.html',{
 				"link":"/#project-section",
 				"title": "There's More Coming Soon!",
 				"description": "Hang tight while I compile more<br>projects on here.",
 				"imageSrc": "assets/img/projects/under-construction-card-bg.png"
-			})
+			}) -->
 
 		</ul>
 	</div>
-</div>
+</section>

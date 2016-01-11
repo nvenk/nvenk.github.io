@@ -10,5 +10,14 @@ footer{
 	.container{
 		display: table-cell;
 		vertical-align: middle;
+
+		.social-container{
+			li{
+				a{
+					height:36px;
+					width: 36px;
+				}
+			}
+		}
 	}
 }
