@@ -41,3 +41,15 @@ $(window).scroll(function() {
       $('.pr-topbar').fadeOut();
      }
  });
+
+//-------------------------------------
+// Back To Top
+//-------------------------------------
+var $root = $('html, body');
+function backtotop() {
+    $root.animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+}
+

@@ -48,6 +48,10 @@ $('.projects-link').click(function() {
 //      }
 //  });
 
+//-------------------------------------
+// Back To Top
+//-------------------------------------
+
 function backtotop() {
     $root.animate({
         scrollTop: 0
