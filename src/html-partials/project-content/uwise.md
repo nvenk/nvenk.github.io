@@ -6,7 +6,7 @@ We sought to explore the problems that international students face when they mov
 
 ![The UCD Process](assets/img/projects/uwise/process-1.png)
 
-The project spanned over 10 weeks. We worked through the entire user-centered design process, from User Research to Hi-Fidelity prototypes.
+This project was a part of the 'User Centered Design' class at the University of Washington. The theme was 'UX for good'. The project spanned over 10 weeks. We worked through the entire user-centered design process, from User Research to Hi-Fidelity prototypes.
 
 ## Research
 
@@ -65,6 +65,17 @@ With our high fidelity mockup, we wanted to get a sense of what exactly the app 
 2. Use the University of Washington colors and branding to give users a sense of familiarity when using the app.
 3. Use the University of Washington NetID sign-in to ensure authenticity of the users on the platform.
 4. Use internationally understandable icons.
+
+## Team
+
+<div class="team">
+<ul>
+<li><a target="_blank" href="https://www.linkedin.com/in/setumadhavagk">Setumadhava Kathawate</a></li>
+<li><a target="_blank" href="https://twitter.com/nathan_ormsby">Nathan Ormsby</a></li>
+<li><a target="_blank" href="#" onclick="return false;">Shilpa Gupta</a></li>
+<li><a href="#" onclick="return false;">Nikhil Venkatesh</a></li>
+</ul>
+</div>
 
 ## What I've Learnt
 

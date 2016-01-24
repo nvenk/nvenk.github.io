@@ -30,3 +30,31 @@ $('.projects-link').click(function() {
     }, 500);
     return false;
 });
+
+//-------------------------------------
+// Fade-In Topbar
+//-------------------------------------
+
+// var $triggerHeight = $winHeight * 0.65;
+// $(window).scroll(function() {
+
+//     if ($(this).scrollTop() > $triggerHeight)
+//      {
+//         $('header').fadeIn();
+//      }
+//     else
+//      {
+//       $('header').fadeOut();
+//      }
+//  });
+
+function backtotop() {
+    $root.animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+}
+
+
+
+

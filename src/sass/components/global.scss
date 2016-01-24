@@ -41,6 +41,30 @@ body *{
 	text-align: center;
 	padding: 50px 10px 10px;
 }
+//-----------------------------------------------
+// Button Style
+//-----------------------------------------------
+a.button{
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 20px 11px;
+	position: relative;
+	color: white;
+	background-color: $red;
+	font-weight: $font-reg;
+	transition: 0.2s all ease-in-out;
+	border: 1px solid $red;
+	font-size: 0.8rem;
+	margin: 20px 10px;
+	text-transform: uppercase;
+
+	&:hover, &:active {
+		color: $red;
+		background: white;
+		border: 1px solid $red;
+	}
+}
 
 //-----------------------------------------------
 // Top Border (add with '@extend .border-top')
@@ -107,5 +131,3 @@ body *{
 		width: calc(50% - 4px);
 	}
 }
-
-
