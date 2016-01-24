@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		@@include('_meta.html')
+		@@include('src/html/_meta.html')
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
 	<body>
-		@@include('pg_home/_header.html')
-		@@include('pg_home/_landing.html')
-		@@include('pg_home/_projects.html')
-		@@include('pg_home/_skills.html')
-		@@include('_footer.html')
+		@@include('src/html/home/_header.html')
+		@@include('src/html/home/_landing.html')
+		@@include('src/html/home/_projects.html')
+		@@include('src/html/home/_skills.html')
+		@@include('src/html/_footer.html')
 			
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>new WOW().init();</script>
-		<script src="assets/js/scripts.js"></script>
-		@@include('_analytics.html')
+		<script type="text/javascript">
+		@@include('assets/js/scripts.js')
+		</script>
+		@@include('src/html/_analytics.html')
 	</body>
 </html>

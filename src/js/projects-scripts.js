@@ -1,11 +1,11 @@
 //-------------------------------------
 // Scroll Position calculation & Progress Bar
 //-------------------------------------
+
 $(document).on('ready', function() {  
 	var winHeight = $(window).height(), 
 	docHeight = $(document).height(),
-	progressBar = $('progress'),
-	max, value;
+	progressBar = $('progress'), max, value;
 
 	/* Set the max scrollable area */
 	max = docHeight - winHeight;
@@ -45,6 +45,7 @@ $(window).scroll(function() {
 //-------------------------------------
 // Back To Top
 //-------------------------------------
+
 var $root = $('html, body');
 function backtotop() {
     $root.animate({

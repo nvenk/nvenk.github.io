@@ -56,7 +56,7 @@ The clients were very happy with the overall work! The research findings showed 
 <li><a target="_blank" href="https://www.linkedin.com/in/daviddw">David Wang</a></li>
 <li><a target="_blank" href="https://www.linkedin.com/in/mikenorthcutt">Mike Northcutt</a></li>
 <li><a target="_blank" href="https://www.linkedin.com/in/carolinecolon">Caroline Colon</a></li>
-<li><a href="#" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
+<li><a target="_blank" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
 </ul>
 </div>
 

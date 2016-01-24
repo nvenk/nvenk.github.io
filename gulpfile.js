@@ -50,7 +50,7 @@ gulp.task('lint-js', function(){
 gulp.task('html', function() {
 	gulp.src('src/*.html')
 	.pipe(include({
-		basepath: 'src/html-partials/',
+		basepath: '',
 		filters: {
 			markdown: marked.setOptions({})
 		}}))

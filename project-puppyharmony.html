@@ -30,14 +30,14 @@
 			<div class="pr-topbar">
 				<div class="pr-navigate">
 					<div class="pr-title"><span>PuppyHarmony</span></div>
-					<a href="/" class="logo"><img src="assets/img/logo/logo-black.svg"></a>
+					<a href="/" class="logo"><img alt="website logo" src="assets/img/logo/logo-black.svg"></a>
 				</div>
 				<progress value="0"></progress>
 			</div>
 			<section class="fixed-header">
 				<div class="pr-header">
 					<div class="nav-container">
-						<a href="/" class="logo wow fadeIn"><img src="assets/img/logo/logo-white.svg"></a>
+						<a href="/" class="logo wow fadeIn"><img alt="website logo" src="assets/img/logo/logo-white.svg"></a>
 					</div>
 				</div>
 				<div class="title wow fadeInUp">PuppyHarmony</div>
@@ -84,7 +84,7 @@
 						<li><a target="_blank" href="https://www.linkedin.com/in/daviddw">David Wang</a></li>
 						<li><a target="_blank" href="https://www.linkedin.com/in/mikenorthcutt">Mike Northcutt</a></li>
 						<li><a target="_blank" href="https://www.linkedin.com/in/carolinecolon">Caroline Colon</a></li>
-						<li><a href="#" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
 					</ul>
 				</div>
 				<h2 id="takeaways">Takeaways</h2>
@@ -102,7 +102,8 @@
 								<path class="box4" d="M570.5 466.4H372c-13.6 0-24.8 11.2-24.8 24.8v198.4c0 13.6 11.2 24.8 24.8 24.8h198.4c13.6 0 24.8-11.2 24.8-24.8V491.2c.1-13.6-11.1-24.8-24.7-24.8zm-24.8 198.4H396.9V516h148.8v148.8z" />
 								<path class="box1" d="M223.2 127.4H24.8C11.2 127.4 0 138.6 0 152.2v198.4c0 13.6 11.2 24.8 24.8 24.8h198.4c13.6 0 24.8-11.2 24.8-24.8V152.2c0-13.6-11.1-24.8-24.8-24.8zm-24.8 198.5H49.6V177h148.8v148.9z" />
 								<path class="box2" d="M570.5 127.4H372c-13.6 0-24.8 11.2-24.8 24.8v198.4c0 13.6 11.2 24.8 24.8 24.8h198.4c13.6 0 24.8-11.2 24.8-24.8V152.2c.1-13.6-11.1-24.8-24.7-24.8zm-24.8 198.5H396.9V177h148.8v148.9z" />
-								<path class="box3" d="M223.2 466.4H24.8C11.2 466.4 0 477.6 0 491.2v198.4c0 13.6 11.2 24.8 24.8 24.8h198.4c13.6 0 24.8-11.2 24.8-24.8V491.2c0-13.6-11.1-24.8-24.8-24.8zm-24.8 198.4H49.6V516h148.8v148.8z" /> </svg>
+								<path class="box3" d="M223.2 466.4H24.8C11.2 466.4 0 477.6 0 491.2v198.4c0 13.6 11.2 24.8 24.8 24.8h198.4c13.6 0 24.8-11.2 24.8-24.8V491.2c0-13.6-11.1-24.8-24.8-24.8zm-24.8 198.4H49.6V516h148.8v148.8z" />
+							</svg>
 						</a>
 					</div>
 					<div class="divider"></div>
@@ -142,29 +143,58 @@
 					</ul>
 					<div class="resume-email"> <a href="mailto:me@nvenk.com" role="button" class="button">Email Me</a> <a href="/assets/NikhilVenkatesh_Resume.pdf" role="button" target="_blank" class="button">Resume</a> </div>
 					<div class="copyright">
-						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div>
-						<a href="#" onclick="backtotop();" class="back-to-top button"> <span>Take me back up!<span>
-			</a>
-		</div>
-	</div>
-</footer>
-
+						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backtotop();" class="back-to-top button"><span>Take me back up!<span></a> </div>
+				</div>
+			</footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="assets/js/vendor/wow.min.js"></script>
-		<script>new WOW().init();</script>
-		<script src="assets/js/projects-scripts.js"></script>
-		
-
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-58390127-1', 'auto');
-    ga('send', 'pageview');
-
-</script>
+		<script>
+			new WOW().init();
+		</script>
+		<script type="text/javascript">
+			function backtotop()
+			{
+				return $root.animate(
+				{
+					scrollTop: 0
+				}, 500), !1
+			}
+			$(document).on("ready", function()
+			{
+				var o, t, n = $(window).height(),
+					r = $(document).height(),
+					a = $("progress");
+				o = r - n, a.attr("max", o), $(document).on("scroll", function()
+				{
+					t = $(window).scrollTop(), a.attr("value", t)
+				}), $(window).on("resize", function()
+				{
+					n = $(window).height(), r = $(document).height(), o = r - n, a.attr("max", o), t = $(window).scrollTop(), a.attr("value", t)
+				})
+			}), $(window).scroll(function()
+			{
+				$(this).scrollTop() > 200 ? $(".pr-topbar").fadeIn() : $(".pr-topbar").fadeOut()
+			});
+			var $root = $("html, body");
+		</script>
+		<script>
+			(function(i, s, o, g, r, a, m)
+			{
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function()
+				{
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-58390127-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 	</body>
+
 </html>

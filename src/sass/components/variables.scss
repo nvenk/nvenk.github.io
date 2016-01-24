@@ -21,14 +21,14 @@ $dribbble: 	#ea4c89;
 // Font Families
 //-----------------------------------------------
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700|Arvo:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700|Arvo:400|Alegreya:400);
 
 $font-sans:   'Source Sans Pro', helvetica, arial, sans-serif;
-$font-serif:  'Arvo','Georgia', 'Times New Roman', serif;
-$font-title:  'Poiret One', 'Open Sans', helvetica, sans-serif;
-$font-light:   300; // for Light Source Sans
-$font-reg:     500; // for Regular Source Sans & Bitter
-$font-bold:    700; // for Bold Source Sans
+$font-serif:  'Alegreya','Georgia', 'Times New Roman', serif;
+$font-title:  'Arvo', 'Open Sans', helvetica, sans-serif;
+$font-light:   300;
+$font-reg:     500;
+$font-bold:    700;
 $font-regular: regular;
 $font-italic:  italic;
 

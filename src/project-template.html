@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		@@include('_meta.html')
+		@@include('src/html/_meta.html')
 		<link rel="stylesheet" href="assets/css/project.css">
 	</head>
 	<body>
 		<div class="projects">
-			@@include('pg_project/_header.html', {
+			@@include('src/html/project/_header.html', {
 				"title" : "Project Title",
 				"tags" : {
 					"1" : "Research",
@@ -15,14 +15,16 @@
 				}
 			})
 		<div class="container">
-			@@include(markdown('project-content/uwise.md'))
+			@@include(markdown('src/html/project-content/uwise.md'))
 		</div>
-			@@include('pg_project/_footer.html')
+			@@include('src/html/project/_footer.html')
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>new WOW().init();</script>
-		<script src="assets/js/projects-scripts.js"></script>
-		@@include('_analytics.html')
+		<script type="text/javascript">
+			@@include('assets/js/projects-scripts.js')
+		</script>
+		@@include('src/html/_analytics.html')
 	</body>
 </html>

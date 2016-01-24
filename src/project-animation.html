@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		@@include('_meta.html')
+		@@include('src/html/_meta.html')
 		<link rel="stylesheet" href="assets/css/project.css">
 	</head>
 	<body>
 		<div class="projects">
-			@@include('pg_project/_header.html', {
+			@@include('src/html/project/_header.html', {
 				"title" : "A Previous Life as an Animator",
 				"tags" : {
 					"1" : "Character Animation",
@@ -16,9 +16,9 @@
 			})
 
 			<div class="container">
-				@@include(markdown('project-content/animation.md'))
+				@@include(markdown('src/html/project-content/animation.md'))
 			</div>
-			@@include('pg_project/_footer.html', {
+			@@include('src/html/project/_footer.html', {
 				"next" : {
 					"title" : "UW - International Student Exchange",
 					"link" : "project-uwise.html"
@@ -28,7 +28,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>new WOW().init();</script>
-		<script src="assets/js/projects-scripts.js"></script>
-		@@include('_analytics.html')
+		<script type="text/javascript">
+			@@include('assets/js/projects-scripts.js')
+		</script>
+		@@include('src/html/_analytics.html')
 	</body>
 </html>
