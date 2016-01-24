@@ -24,7 +24,7 @@ Once we were sure that puppyHarmony would be useful and would make for a profita
 
 ## Wireframes
 
-The most challenging aspect of this phase was deciding which features should make it to version 1 and which ones should be waitlisted for version 2. Ultimately, we looked back at the business goals and chose only those features that were absolutely essential to fill the user's needs and to accomplish the goals of puppyHarmony.
+The most challenging aspect of this phase was deciding which features should make it to version 1 and which ones should be waitlisted for version 2. Ultimately, we looked at the business goals and chose only those features that were absolutely essential to fill the user's needs.
 
 I created wireframes to show how users would interact with puppyHarmony.
 
