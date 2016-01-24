@@ -6,7 +6,7 @@ This was a class project as part of the 'Design in an Organization' program at t
 
 ## My Role
 
-I was the interaction / visual designer in our team of four. My responsibilities included visual design, wireframing and prototyping, but I was involved in the entire project cycle, from brainstorming and ideating features and developing a business plan, and creating documentation.
+I was the interaction / visual designer in our team of four. My responsibilities included visual design, wireframing and prototyping. I was involved in the entire project cycle, from brainstorming and ideating features, developing a business plan, and creating documentation.
 
 ## Design Process
 
@@ -16,15 +16,17 @@ We then worked on building a functional business model and an interactive protot
 
 ## Research
 
-Since we were developing a completely new product, we needed to research into multiple aspects. To find out if it would work as a business, we needed to find out who the comptition was and understand their weeknesses and strenghts. We needed to understand where puppyHarmony would generate revenue from. From a design angle, we needed to understand who the users would be, what their needs were and how their pets were getting exercise and playtime.
+Since we were developing a completely new product, we needed to research into multiple aspects. To find out if it would work as a business, we needed to know who the competition was and understand their weeknesses and strenghts. To understand this, the researchers conducted a heavy competitive analysis to get a sense of what user-needs were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
 
-We conducted heavy competitive analysie to get a sense of what user needs were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony. We also interviewed several dog owners to understand what they were currently doing and how puppyHarmony could benifit them.
+From a design angle, we interviewed several dog owners to get a better understanding of how puppyHarmony could benifit them.
 
-Once we were sure that it would be useful and it would make for a profitable business, we began sorting which features needed to be in version 1, and drew up some wireframes.
+Once we were sure that puppyHarmony would be useful and would make for a profitable business, we began deciding which features needed to be in the first version.
 
 ## Wireframes
 
-The most challenging aspect of this phase was deciding which features should make it to version 1, and which ones should be waitlisted for version 2. Ultimately, we looked back at the business goals and chose only those features that were absolutely essential to fill the user's needs and to accomplish the goals of puppyHarmony.
+The most challenging aspect of this phase was deciding which features should make it to version 1 and which ones should be waitlisted for version 2. Ultimately, we looked back at the business goals and chose only those features that were absolutely essential to fill the user's needs and to accomplish the goals of puppyHarmony.
+
+I created wireframes to show how users would interact with puppyHarmony.
 
 ![User Sign-Up Wireframes](assets/img/projects/puppyharmony/wireframes-1.jpg)
 ![Puppy Harmony Screen Wireframes](assets/img/projects/puppyharmony/wireframes-2.jpg)
@@ -33,7 +35,7 @@ The most challenging aspect of this phase was deciding which features should mak
 
 ## Interactive Prototype
 
-We built an interactive prototype to show the clients how puppyHarmony would work, and to give them an understanding of how users would interact with the app. 
+I built an interactive prototype to show the clients how puppyHarmony would work, and to give them an understanding of how users would interact with the app. 
 
 ![Prototype Link](assets/img/projects/puppyharmony/prototype-1.jpg)
 
@@ -52,7 +54,7 @@ The clients were happy with the overall work. The research findings showed that 
 <li><a target="_blank" href="https://www.linkedin.com/in/daviddw">David Wang</a></li>
 <li><a target="_blank" href="https://www.linkedin.com/in/mikenorthcutt">Mike Northcutt</a></li>
 <li><a target="_blank" href="https://www.linkedin.com/in/carolinecolon">Caroline Colon</a></li>
-<li><a href="#" onclick="return false;">Nikhil Venkatesh</a></li>
+<li><a href="#" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
 </ul>
 </div>
 

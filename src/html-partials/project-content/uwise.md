@@ -70,10 +70,10 @@ With our high fidelity mockup, we wanted to get a sense of what exactly the app 
 
 <div class="team">
 <ul>
-<li><a target="_blank" href="https://www.linkedin.com/in/setumadhavagk">Setumadhava Kathawate</a></li>
+<li><a target="_blank" href="https://www.linkedin.com/in/setumadhavagk">Setumadhava K</a></li>
 <li><a target="_blank" href="https://twitter.com/nathan_ormsby">Nathan Ormsby</a></li>
 <li><a target="_blank" href="#" onclick="return false;">Shilpa Gupta</a></li>
-<li><a href="#" onclick="return false;">Nikhil Venkatesh</a></li>
+<li><a href="#" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
 </ul>
 </div>
 
