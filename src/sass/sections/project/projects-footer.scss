@@ -1,125 +1,158 @@
 .projects{
-	footer{
-		.footer-navigate{
-			background-color: $black;
-			padding: 40px 0;
+	.footer-navigate{
+		background-color: $white;
+		padding: 40px 0;
 
-			.container{
-				height: 100px;
-				display: block;
-				padding: 30px;
+		.container{
+			height: 100px;
+			display: table;
+			padding: 30px;
 
-				.home-icon-container{
-					display: inline-block;
-					width: 100px;
-					padding:10px 25px 0;
-					max-width: 100px;
-					vertical-align: middle;
+			.home-icon-container{
+				display: table-cell;
+				width: 130px;
+				padding:10px 25px 0;
+				max-width: 100px;
+				vertical-align: middle;
 
-					a{
-						margin: 0 auto;
-						display: block;
-						height: 100%;
+				a{
+					margin: 0 auto;
+					display: block;
+					height: 100%;
+					width: 64px;
+					position: relative;
+
+					.grid{
+						height: 64px;
 						width: 64px;
+						padding-top: 8px;
+						overflow: visible;
+						fill: $black;
+						transition: 0.3s all;
 
-						.grid{
-							height: 64px;
-							width: 64px;
-							padding-top: 8px;
-							overflow: visible;
-							fill: $white;
-
-							*{
-								transition: 0.3s all ease-in-out;
-							}
-
-							&:hover{
-								.box1{
-									transform: translate(50px, -75px) rotate(25deg);
-									fill: $red;
-								}
-								.box2{
-									transform: translate(-15px, 15px);
-								}
-								.box3{
-									transform: translate(15px, -15px);
-								}
-								.box4{
-									transform: translate(-15px, -15px);
-								}
-							}
+						*{
+							transition: 0.3s all;
 						}
 					}
-				}
 
-				.navigate-next{
-					display: inline-block;
-					width: calc(100% - 250px);
-					padding: 10px 0 0 50px;
-					color: $white;
-					vertical-align: middle;
+					&:after{
+						content: 'All Projects';
+						position: absolute;
+						bottom: 20px;
+						left: -22%;
+						white-space: nowrap;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 0.9rem;
+						font-weight: $font-bold;
+						color: $red;
+						opacity: 0;
+						transition: 0.5s all;
+					}
 
-					a{
-						text-decoration: none;
-						display: block;
+					&:hover{
+						.grid{
+							transform: translateY(-15px);
 
-						h3{
-							font-family: $font-sans;
-							color: $white;
-							font-size: 1.3rem;
-							font-weight: $font-reg;
-							margin:0;
-							padding:0;
-							text-shadow: 0px 1px 0px rgba(0,0,0,0.15);
-							transition: 0.3s transform ease-in-out;
-							transition-delay: 0.05s;
-
-							@include breakpoint(tablet) {
-							    font-size: 1.4rem;
+							.box1{
+								transform: translate(50px, -75px) rotate(25deg);
+								fill: $red;
+							}
+							.box2{
+								transform: translate(-15px, 15px);
+							}
+							.box3{
+								transform: translate(15px, -15px);
+							}
+							.box4{
+								transform: translate(-15px, -15px);
 							}
 						}
-
-						h4{
-							color: $red;	
-							font-size: 1.5rem;
-							padding: 0;
-							margin: 10px 0 0;
-							transition: 0.4s transform ease-in-out;
-							white-space: nowrap;
-
-							@include breakpoint(tablet) {
-							    font-size: 1.6rem;
-							}
-						}
-
-						&:hover{
-							h3{
-								transform: translateX(5px);
-							}
-							h4{
-								transform: translateX(10px);
-							}
+						&:after{
+							bottom: 0px;
+							opacity: 1;
 						}
 					}
 				}
 			}
-		}
-		.footer-social{
-			background: $white;
-			display: block;
-			position: relative;
-			width: 100%;
-			@extend .border-top;
 
-			.container{
-				padding-bottom: 30px;
+			.divider{
+				display: table-cell;
+				height: 100%;
+				width: 1px;
+				background: $red;
+				margin:0;
+				padding:0;
+			}
 
-				.social-container{
-					li {
-						padding: 0 20px;
-						a{
-							height: 32px;
-							width: 32px;
+			.navigate-next{
+				display: table-cell;
+				// width: calc(100% - 250px);
+				width: auto;
+				padding: 10px 0 0 50px;
+				color: $white;
+				vertical-align: middle;
+				position: relative;
+
+				&:after{
+					content: '';
+					width:0;
+					height:0;
+					position: absolute;
+					bottom: 15px;
+					left: 10px;
+					opacity: 0;
+					border-bottom: 10px solid transparent;
+					border-left: 10px solid $red;
+					border-top: 10px solid transparent;
+					transition: 0.3s all ease-in-out;
+					transition-delay: 0.1s;
+				}
+
+				a{
+					text-decoration: none;
+					display: block;
+
+					h3{
+						font-family: $font-sans;
+						color: $black;
+						font-size: 1.3rem;
+						font-weight: $font-reg;
+						margin:0;
+						padding:0;
+						transition: 0.3s transform ease-in-out;
+						transition-delay: 0.05s;
+
+						@include breakpoint(tablet) {
+						    font-size: 1.4rem;
+						}
+					}
+
+					h4{
+						color: $red;	
+						font-size: 1.5rem;
+						padding: 0;
+						margin: 10px 0 0;
+						transition: 0.4s transform ease-in-out;
+						white-space: nowrap;
+
+						@include breakpoint(tablet) {
+						    font-size: 1.6rem;
+						}
+					}
+				}
+
+				&:hover{
+					&:after{
+						left:61px;
+						opacity: 1;
+					}
+					a{
+						h3{
+							transform: translateX(10px);
+						}
+						h4{
+							transform: translateX(30px);
 						}
 					}
 				}
