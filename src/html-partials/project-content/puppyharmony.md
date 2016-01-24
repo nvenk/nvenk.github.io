@@ -37,6 +37,8 @@ I created wireframes to show how users would interact with puppyHarmony.
 
 I built an interactive prototype to show the clients how puppyHarmony would work, and to give them an understanding of how users would interact with the app. 
 
+Go ahead! Give it a try...
+
 ![Prototype Link](assets/img/projects/puppyharmony/prototype-1.jpg)
 
 <div class="ext-link">
@@ -45,7 +47,7 @@ I built an interactive prototype to show the clients how puppyHarmony would work
 
 ## Results
 
-The clients were happy with the overall work. The research findings showed that puppyHarmony would be a viable and profitable business. The wireframes did a good job in showing what features would be essential for the first version of the product. They immediately understood how the user would use the app, and what needs it would fulfill. They were very happy with the way the prototype showed how the user would interact with puppyHarmony.
+The clients were very happy with the overall work! The research findings showed that puppyHarmony would be a viable and profitable business. The wireframes did a good job in showing what features would be essential for the first version of the product. They immediately understood how the user would use the app, and what needs it would fulfill. They were very happy with the way the prototype showed how the user would interact with puppyHarmony.
 
 ## The Team
 

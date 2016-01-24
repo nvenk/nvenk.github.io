@@ -80,7 +80,19 @@ footer{
 		}
 
 		.copyright{
-			padding-top: 50px;
+			padding-top: 0px;
+
+			.cprt-text{
+				padding: 10px 0 20px;
+				color: $white;
+				font-weight: $font-light;
+
+				span{
+					color: $red;
+					font-weight: $font-bold;
+
+				}
+			}
 		}
 	}
 }

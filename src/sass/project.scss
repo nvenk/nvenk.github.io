@@ -79,8 +79,12 @@
 		}
 
 		.ext-link{
-			padding: 20px;
 			text-align: center;
+			padding-bottom: 30px;
+
+			.button{
+				margin: 0;
+			}
 		}
 
 		.team{
