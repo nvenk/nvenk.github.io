@@ -16,7 +16,7 @@ We then worked on building a functional business model and an interactive protot
 
 ## Research
 
-Since we were developing a completely new product, we needed to research into multiple aspects. To find out if it would work as a business, we needed to know who the competition was and understand their weeknesses and strenghts. To understand this, the researchers conducted a heavy competitive analysis to get a sense of what user-needs were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
+Since we were developing a completely new product, we needed to research into multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strenghts. To understand this, the researchers conducted a heavy competitive analysis to get a sense of what user-needs were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
 
 From a design angle, we interviewed several dog owners to get a better understanding of how puppyHarmony could benifit them.
 
