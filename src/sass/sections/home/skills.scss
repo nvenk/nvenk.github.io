@@ -27,7 +27,7 @@
 				animation-duration: 0.4s;
 
 				@include breakpoint(tablet) {width: calc(50% - 4px);}
-				// @include breakpoint(laptop) {width: calc(33.333% - 4px);}
+				// @include breakpoint(laptop) {width: calc(33.333% - 4px);} - Uncomment for 3 per line on desktop
 				
 				.skill-content{
 					max-width: 100%;
@@ -62,10 +62,14 @@
 					p{
 						margin: 0 20px;
 						font-family: $font-sans;
-						font-size: 1.4rem;
+						font-size: 1.2rem;
 						text-align: center;
 						font-weight: $font-light;
 						color: $white;
+
+						@include breakpoint(phone-lg) {
+						    font-size: 1.4rem;
+						}
 
 						span{
 							color: $yellow;

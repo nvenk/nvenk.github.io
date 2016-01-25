@@ -1,8 +1,9 @@
 .projects{
 	.pr-topbar{
 		height: 50px;
-		// background-color: rgba(27,39,55,0.8);
-		background-color: rgba(255,255,255,0.8);
+		background-color: rgba(46,65,106,0.9); //Blue
+		// background-color: rgba(27,39,55,0.9); //Black 
+		// background-color: rgba(255,255,255,0.8); //White
 		width: 100%;
 		position: fixed;
 		top:0;
@@ -21,7 +22,7 @@
 				height: 30px;
 				padding: 10px 20px;
 				display: inline-block;
-				opacity: 0.6;
+				opacity: 0.9;
 				transition: all 0.2s ease-in-out;
 
 				&:hover{
@@ -34,15 +35,22 @@
 				height: 100%;
 				width: 100%;
 				font-family: $font-sans;
-				color: $blue;
-				font-size: 1rem;
+				color: $white;
+				font-size: 0.8rem;
 				font-weight: $font-bold;
-				text-align: center;
+				text-align: left;
 				padding: 0;
+				padding-left: 70px;
 				position:absolute;
 				top:0;
 				left:0;
 				display: table;
+
+				@include breakpoint(phone-lg) {
+				    font-size: 1rem;
+				    padding-left: 0;
+				    text-align: center;
+				}
 
 				@include breakpoint(tablet) {
 					font-size: 1.1rem;
@@ -87,7 +95,7 @@
 	// top HEADER
 	section.fixed-header{
 		background: $blue;
-		padding: 40px;
+		padding: 20px 10px;
 
 		.pr-header{
 			width: 100%;

@@ -15,13 +15,16 @@
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
-			padding: 0 5%;
-			padding-bottom: 50px;
+			padding: 0 5% 90px;
+
+            @include breakpoint(tablet) {
+                padding-bottom: 50px;
+            }
 
   			.logo{
   				display: block;
-  				width: 64px;
-  				height: 64px;
+  				width: 48px;
+  				height: 48px;
   				margin: 20px auto;
                 animation-duration: 1.5s;
 
@@ -34,7 +37,7 @@
   			.nametag{
                 display: block;
   				font-family: $font-sans;
-  				font-size: 2.5rem; 
+  				font-size: 2.3rem; 
   				color: $white;
                 font-weight: $font-light;
                 animation-delay: 0.5s;
@@ -53,10 +56,10 @@
   			.about-text{
   				color: $white;
   				font-weight: $font-light;
-  				font-size: 1.3rem;
+  				font-size: 1.2rem;
   				max-width: 500px;
   				margin: 0 auto;
-  				padding: 10px 10%; 
+  				padding: 10px 10px; 
                 animation-delay: 0.8s;
                 animation-duration: 0.5s;
 
@@ -64,6 +67,10 @@
   					color: $yellow;
   					font-weight: $font-light;
   				}
+
+                @include breakpoint(phone-lg) {
+                    padding: 10px 15%;
+                }
 
                 @include breakpoint(tablet) {
                     font-size: 1.7rem;

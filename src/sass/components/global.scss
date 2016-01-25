@@ -35,12 +35,20 @@ body *{
 
 .section-title{
 	font-family: $font-sans;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-weight: $font-light;
 	margin: 0 auto;
 	color: $black;
 	text-align: center;
 	padding: 50px 10px 10px;
+
+	@include breakpoint(phone-lg) {
+	    font-size: 2rem;
+	}
+
+	@include breakpoint(tablet) {
+	    font-size: 2.2rem;
+	}
 }
 //-----------------------------------------------
 // Button Style
@@ -107,9 +115,14 @@ a.button{
 //-----------------------------------------------
 
 .cols_4_25  {
-	width: calc(100% - 60px); 
-	margin: 0 30px;
+	width: 100%; 
+	margin: 0;
 	display: inline-block;
+
+	@include breakpoint(phone-lg) {
+	    width: calc(100% - 60px); 
+		margin: 0 30px;
+	}
 
 	@include breakpoint(tablet) {
 		width: calc(50% - 64px);

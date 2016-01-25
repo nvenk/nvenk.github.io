@@ -5,7 +5,7 @@
 
 	.container{
 		.project-card-container{
-			padding:0;	
+			padding:0;
 		}
 
 		@for $i from 1 to 10 {
@@ -50,8 +50,7 @@
 		top:0;
 		left:0;
 		border-radius: 3px;
-		background-clip: padding-box; 
-		-webkit-background-clip: padding-box; 
+
 
 	}
 	.project-info{
@@ -74,8 +73,12 @@
 			padding: 10px 15px;
 			padding-top: 20px;
 			margin: 0px;
-			font-weight: 400;
-			font-size: 1.3rem;
+			font-weight: $font-reg;
+			font-size: 1.1rem;
+
+			@include breakpoint(phone-lg) {
+			    font-size: 1.3rem;
+			}
 		}
 
 		p{
