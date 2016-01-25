@@ -66,6 +66,15 @@ With our high fidelity mockup, we wanted to get a sense of what exactly the app 
 3. Using the University of Washington NetID sign-in to ensure that all users were registered students with the university.
 4. Using internationally understandable icons and labels.
 
+## Takeaways
+
+This project has been amazing to work on, and has helped me understand how to design with the user in mind. I learnt a great deal from it, but to list my top takeaways from working on this project:
+
+1. Research is the key! It is important to take your time and do it right.
+2. Keep the users close to the design process, and keep testing with them every step of the way.
+3. When designing for an international audience, it is important to talk to users from different demographics and make sure the solution would work just as well for all of them.
+4. Listen closely to what everybody has to say. Sometimes, ideas come out of the most unexpected places.
+
 ## Team
 
 <div class="team">
@@ -76,12 +85,3 @@ With our high fidelity mockup, we wanted to get a sense of what exactly the app 
 <li><a target="_blank" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
 </ul>
 </div>
-
-## Takeaways
-
-This project has been amazing to work on, and has helped me understand how to design with the user in mind. I learnt a great deal from it, but to list my top takeaways from working on this project:
-
-1. Research is the key! It is important to take your time and do it right.
-2. Keep the users close to the design process, and keep testing with them every step of the way.
-3. When designing for an international audience, it is important to talk to users from different demographics and make sure the solution would work just as well for all of them.
-4. Listen closely to what everybody has to say. Sometimes, ideas come out of the most unexpected places.
