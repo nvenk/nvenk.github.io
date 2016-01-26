@@ -42,9 +42,9 @@
 				</div>
 				<div class="title wow fadeInUp">PuppyHarmony</div>
 				<ul class="tags">
-					<li class="wow fadeInUp">Business Plan</li>
-					<li class="wow fadeInUp">Wireframe</li>
-					<li class="wow fadeInUp">Prototype</li>
+					<li class="wow fadeInUp"><a href="#research">Research</a></li>
+					<li class="wow fadeInUp"><a href="#wireframes">Wireframe</a></li>
+					<li class="wow fadeInUp"><a href="#interactive-prototype">Prototype</a></li>
 				</ul>
 			</section>
 			<div class="container">
@@ -160,25 +160,41 @@
 				return $root.animate(
 				{
 					scrollTop: 0
-				}, 500), !1
+				}, 900, "swing"), !1
 			}
 			$(document).on("ready", function()
 			{
 				var o, t, n = $(window).height(),
 					r = $(document).height(),
-					a = $("progress");
-				o = r - n, a.attr("max", o), $(document).on("scroll", function()
+					e = $("progress");
+				o = r - n, e.attr("max", o), $(document).on("scroll", function()
 				{
-					t = $(window).scrollTop(), a.attr("value", t)
+					t = $(window).scrollTop(), e.attr("value", t)
 				}), $(window).on("resize", function()
 				{
-					n = $(window).height(), r = $(document).height(), o = r - n, a.attr("max", o), t = $(window).scrollTop(), a.attr("value", t)
+					n = $(window).height(), r = $(document).height(), o = r - n, e.attr("max", o), t = $(window).scrollTop(), e.attr("value", t)
 				})
 			}), $(window).scroll(function()
 			{
 				$(this).scrollTop() > 200 ? $(".pr-topbar").fadeIn() : $(".pr-topbar").fadeOut()
 			});
 			var $root = $("html, body");
+			$(document).ready(function()
+			{
+				return $("a[href*=#]:not([href=#])").on("click", function(o)
+				{
+					o.preventDefault();
+					var t = this.hash,
+						n = $(t);
+					$root.stop().animate(
+					{
+						scrollTop: n.offset().top - 70
+					}, 900, "swing", function()
+					{
+						window.location.hash = t
+					})
+				}), !1
+			});
 		</script>
 		<script>
 			(function(i, s, o, g, r, a, m)

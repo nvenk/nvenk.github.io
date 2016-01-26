@@ -47,10 +47,30 @@ $(window).scroll(function() {
 //-------------------------------------
 
 var $root = $('html, body');
+
 function backtotop() {
     $root.animate({
         scrollTop: 0
-    }, 500);
+    }, 900, 'swing');
     return false;
 }
 
+//-------------------------------------
+// Smooth Scroll links to top
+//-------------------------------------
+
+$(document).ready(function(){
+	$('a[href*=#]:not([href=#])').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $root.stop().animate({
+	        scrollTop: $target.offset().top - 70
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+	return false;
+});
