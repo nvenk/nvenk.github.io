@@ -142,7 +142,7 @@
 			var $root = $("html, body");
 			$(document).ready(function()
 			{
-				return $("a[href*=#]:not([href=#])").on("click", function(o)
+				return $("a[href^=#]:not([href=#])").on("click", function(o)
 				{
 					o.preventDefault();
 					var t = this.hash,

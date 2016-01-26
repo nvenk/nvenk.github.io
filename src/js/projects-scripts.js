@@ -60,7 +60,7 @@ function backtotop() {
 //-------------------------------------
 
 $(document).ready(function(){
-	$('a[href*=#]:not([href=#])').on('click',function (e) {
+	$('a[href^=#]:not([href=#])').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash;
