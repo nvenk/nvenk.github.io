@@ -1,24 +1,5 @@
 .projects{
-	.home-btn{
-		width: 30px;
-		height: 30px;
-		padding: 10px 20px 10px 5px;
-		display: block;
-		position: fixed;
-		transition: all 0.2s ease-in-out;
-		z-index: 10;
 
-		img{
-			height: 30px;
-			width: 30px;
-			transform: rotate(90deg);
-		}
-
-		&:hover{
-			opacity: 1;
-			transform: scale(1.1);
-		}
-	}
 	.pr-topbar{
 		height: 50px;
 		background-color: rgba(46,65,106,0.9); //Blue
@@ -42,24 +23,31 @@
 				width: 30px;
 				height: 30px;
 				padding: 10px 20px;
-				display: block;
+				display: inline-block;
 				transition: all 0.2s ease-in-out;
+				opacity: 0.8;
+				z-index: 10;
+
+				&:hover{
+					opacity: 1;
+					transform: scale(1.1);
+				}
 			}
 
 			.pr-title{
 				height: 100%;
-				width: 100%;
+				width: calc(100% - 70px);
 				font-family: $font-sans;
 				color: $white;
-				font-size: 0.8rem;
+				font-size: 1rem;
 				font-weight: $font-bold;
 				text-align: left;
 				padding: 0;
-				padding-left: 70px;
-				position:absolute;
+				position: absolute;
 				top:0;
-				left:0;
+				left: 70px;
 				display: table;
+				z-index: 1;
 
 				@include breakpoint(phone-lg) {
 				    font-size: 1rem;
