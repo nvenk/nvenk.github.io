@@ -50,8 +50,8 @@
 			<div class="container">
 				<h2 id="introduction">Introduction</h2>
 				<p>PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise and socialization. </p>
-				<p>This was a class project as part of the &#39;Design in an Organization&#39; program at the University of Washington. This course was great in preparing us to influence design in a business world and how to design while keeping the business goals in
-					mind. We worked with a client team, who oversaw the development of the business and product.</p>
+				<p>This was a class project as part of the &#39;Design in an Organization&#39; program at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked
+					with a client team who oversaw the development of the business model and product design.</p>
 				<h2 id="my-role">My Role</h2>
 				<p>I was the interaction / visual designer in our team of four. My responsibilities included visual design, wireframing and prototyping. I was involved in the entire project cycle from brainstorming &amp; ideating features, developing a business plan
 					to creating documentation.</p>
@@ -60,13 +60,13 @@
 					vision for the product on paper. </p>
 				<p>We then worked on building a functional business model and an interactive prototype.</p>
 				<h2 id="research">Research</h2>
-				<p>Since we were developing a completely new product, we needed to research into multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strenghts. To understand this,
-					the researchers conducted extensive competitive analysis to get a sense of what user-needs were not being met. Analysis revealed that there weren&#39;t many products that had the same value proposition as puppyHarmony.</p>
-				<p>From a design angle, we interviewed several dog owners to get a better understanding of how puppyHarmony could benifit them.</p>
-				<p>Once we were sure that puppyHarmony would be useful and would make for a profitable business, we began deciding which features needed to be in the first version.</p>
+				<p>Since we were developing a completely new product, we needed to research on multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strenghts. In order to do this,
+					our researchers conducted an extensive competitive analysis to identify the needs that were not being met. Analysis revealed that there weren&#39;t many products that had the same value proposition as puppyHarmony.</p>
+				<p>From a design perspective, we interviewed several dog owners to get a better understanding of how puppyHarmony could benefit them.</p>
+				<p>Once we were sure that puppyHarmony would be useful and would make for a profitable business, we started putting together features to be incorporated into the first version.</p>
 				<h2 id="wireframes">Wireframes</h2>
-				<p>The most challenging aspect of this phase was deciding which features should make it to version 1 and which ones should be backlogged for version 2. Ultimately we looked at the business goals and chose only those features that were absolutely essential
-					to fill the user&#39;s needs.</p>
+				<p>The most challenging aspect of this phase was deciding on which features that should make it to version 1 and which ones should be backlogged for version 2. Ultimately we looked at the business goals and chose only those features that were absolutely
+					essential to fill the user&#39;s needs.</p>
 				<p>I created wireframes to show how users would interact with puppyHarmony.</p>
 				<p><img src="assets/img/projects/puppyharmony/wireframes-1.jpg" alt="User Sign-Up Wireframes"> <img src="assets/img/projects/puppyharmony/wireframes-2.jpg" alt="Puppy Harmony Screen Wireframes"> <img src="assets/img/projects/puppyharmony/wireframes-3.jpg"
 					alt="User Profile Wireframes"> <img src="assets/img/projects/puppyharmony/wireframes-4.jpg" alt="Dog Profile Wireframes"></p>
@@ -78,13 +78,13 @@
 				</p>
 				<div class="ext-link"> <a role="button" class="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="_blank">Open Live Prototype</a> </div>
 				<h2 id="results">Results</h2>
-				<p>The clients were very happy with the overall work! The research findings showed that puppyHarmony would be a viable and profitable business. The wireframes did a good job in showing what features would be essential for the first version of the product.
-					The clients immediately understood how the user would use the app and what needs it would fulfill. They were very happy with the way the prototype showed how the user would interact with puppyHarmony.</p>
+				<p>The clients were very happy with the overall work! The research findings showed that puppyHarmony would be a viable and profitable business. The wireframes did a good job in highlighting essential features for the first version. The clients immediately
+					understood how the user would use the app and the needs it would fulfill. They were very happy with the way the prototype showed how the user would interact with puppyHarmony.</p>
 				<h2 id="takeaways">Takeaways</h2>
 				<ol>
 					<li>Always keep the goals of the business in mind, every step of the process.</li>
 					<li>It is equally important to research the business prospects of a product and understand how the business works and where the revenue comes from.</li>
-					<li>Understand what features are absolutely essential for your product and build the Minimum Viable Product to test the waters first.</li>
+					<li>Understand which features are absolutely essential for the product and build a Minimum Viable Product to test the waters first.</li>
 				</ol>
 				<h2 id="the-team">The Team</h2>
 				<div class="team">
@@ -145,7 +145,7 @@
 					</ul>
 					<div class="resume-email"> <a href="mailto:me@nvenk.com" role="button" class="button">Email Me</a> <a href="/assets/NikhilVenkatesh_Resume_UX.pdf" role="button" target="_blank" class="button">Resume</a> </div>
 					<div class="copyright">
-						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backtotop();" class="back-to-top button"><span>Take me back up!</span></a> </div>
+						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backtotop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
 				</div>
 			</footer>
 		</div>
@@ -184,15 +184,11 @@
 				return $("a[href^=#]:not([href=#])").on("click", function(o)
 				{
 					o.preventDefault();
-					var t = this.hash,
-						n = $(t);
+					var t = $(this.hash);
 					$root.stop().animate(
 					{
-						scrollTop: n.offset().top - 70
-					}, 900, "swing", function()
-					{
-						window.location.hash = t
-					})
+						scrollTop: t.offset().top - 70
+					}, 900, "swing")
 				}), !1
 			});
 		</script>

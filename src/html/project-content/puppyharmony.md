@@ -2,7 +2,7 @@
 
 PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise and socialization. 
 
-This was a class project as part of the 'Design in an Organization' program at the University of Washington. This course was great in preparing us to influence design in a business world and how to design while keeping the business goals in mind. We worked with a client team, who oversaw the development of the business and product.
+This was a class project as part of the 'Design in an Organization' program at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
 
 ## My Role
 
@@ -16,15 +16,15 @@ We then worked on building a functional business model and an interactive protot
 
 ## Research
 
-Since we were developing a completely new product, we needed to research into multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strenghts. To understand this, the researchers conducted extensive competitive analysis to get a sense of what user-needs were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
+Since we were developing a completely new product, we needed to research on multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strenghts. In order to do this, our researchers conducted an extensive competitive analysis to identify the needs that were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
 
-From a design angle, we interviewed several dog owners to get a better understanding of how puppyHarmony could benifit them.
+From a design perspective, we interviewed several dog owners to get a better understanding of how puppyHarmony could benefit them.
 
-Once we were sure that puppyHarmony would be useful and would make for a profitable business, we began deciding which features needed to be in the first version.
+Once we were sure that puppyHarmony would be useful and would make for a profitable business, we started putting together features to be incorporated into the first version.
 
 ## Wireframes
 
-The most challenging aspect of this phase was deciding which features should make it to version 1 and which ones should be backlogged for version 2. Ultimately we looked at the business goals and chose only those features that were absolutely essential to fill the user's needs.
+The most challenging aspect of this phase was deciding on which features that should make it to version 1 and which ones should be backlogged for version 2. Ultimately we looked at the business goals and chose only those features that were absolutely essential to fill the user's needs.
 
 I created wireframes to show how users would interact with puppyHarmony.
 
@@ -49,13 +49,13 @@ Go ahead! Give it a try...
 
 ## Results
 
-The clients were very happy with the overall work! The research findings showed that puppyHarmony would be a viable and profitable business. The wireframes did a good job in showing what features would be essential for the first version of the product. The clients immediately understood how the user would use the app and what needs it would fulfill. They were very happy with the way the prototype showed how the user would interact with puppyHarmony.
+The clients were very happy with the overall work! The research findings showed that puppyHarmony would be a viable and profitable business. The wireframes did a good job in highlighting essential features for the first version. The clients immediately understood how the user would use the app and the needs it would fulfill. They were very happy with the way the prototype showed how the user would interact with puppyHarmony.
 
 ## Takeaways
 
 1. Always keep the goals of the business in mind, every step of the process.
 2. It is equally important to research the business prospects of a product and understand how the business works and where the revenue comes from.
-3. Understand what features are absolutely essential for your product and build the Minimum Viable Product to test the waters first.
+3. Understand which features are absolutely essential for the product and build a Minimum Viable Product to test the waters first.
 
 ## The Team
 

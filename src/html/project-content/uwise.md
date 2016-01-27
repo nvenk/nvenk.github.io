@@ -10,21 +10,21 @@ This project was a part of the 'User Centered Design' class at the University of
 
 ## Research
 
-Our research group consisted of international students from the University of Washington, Bellevue College and Seattle Central College, who recently relocated to the United States. We also interviewed several students who have been living in the USA for the recent few years.
+Our research group consisted of international students from the University of Washington, Bellevue College and Seattle Central College, who recently relocated to the United States. We also interviewed several students who have been in America for a few years.
 
-Our surveys comprised of students from over 11 countries and we interviewed students from over 4 countries.
+We surveyed students from over 11 countries and interviewed students from 4 countries.
 
 ![Survey Word Cloud](assets/img/projects/uwise/research-1.png)
 
-Our research findings allowed us to narrow down our focus to the top problems that our target users faced. The research data showed us that finding good, affordable housing and like-minded roommates were the biggest problems that they faced. A lot of our participants also expressed that they would like to have had a point of contact before they arrived so that they could have access to information to help them plan their trips better.
+Our research findings allowed us to narrow our focus to top problems faced by our target users. The research data showed us that finding good, affordable housing and like-minded roommates are the biggest problems they face. A lot of our participants also expressed that they would like to have had a point of contact before they arrived so that they could have access to information to help them plan their trips better.
 
-We also identified and understood the workings of a student body that was providing a similar solution by helping new students who are moving to Seattle. They provided temporary housing, airport pick-ups, information and mentorship for everyday life activities.
+We also identified and understood the workings of a student body that was providing a similar solution by helping new students moving to Seattle. They provided temporary housing, airport pick-ups, information and mentorship with regards to everyday activities.
 
 ## Personas
 
 ![Personas](assets/img/projects/uwise/personas-2.png)
 
-Using the data gathered from our research, we went on to create personas. We identified that there were two distinct roles that would need to be filled. We have students who are outside the country who need help and students who are already in the country who could provide help and information.
+Using the data gathered from our research, we went on to create personas. We identified two distinct roles - students who are outside the country looking for help and students already in the country, who are in a position to offer help and information.
 
 We designed two primary personas, Satish and Amira, who were students starting their programs this year and a secondary persona, Hari, who has been at the University of Washington for a year now, and is willing to help new students transition.
 
@@ -34,7 +34,7 @@ We put our heads together to come up with a list of design requirements to make 
 
 1. The solution should be internationally available and easily accessible.
 2. It should connect new students to each other.
-3. It should connect new students with existing students who had moved to the United States before them.
+3. It should connect new students with existing students already studying in the United States.
 4. It should be a secure platform with some form of verification to make sure that the information posted is legitimate.
 
 ## Brainstorming & Sketching
@@ -53,15 +53,15 @@ We converted our wireframes into paper prototypes and created a task flow. We te
 
 We conducted usability tests with four users and got some very valuable feedback about the information architecture and the interface flow. We were also able to deduce what sort of icons worked for an international audience and what didn't.
 
-After a few iterations and loads of feedback, we were ready to come up with a more high fidelity mockup.
+After a few iterations and rounds of feedback, we came up with a hi-fidelity mockup.
 
 ## Visual Design
 
 ![Visual Design](assets/img/projects/uwise/hi-fidelity-1.png)
 
-With our high fidelity mockup, we wanted to get a sense of what exactly the app would look like. We created a mockup of the android application. A few things we wanted to focus on when creating this were:
+With our high fidelity mockup, we wanted to get a sense of what exactly the android app would look like. A few things we focused on while creating this were:
 
-1. Following the material design guidelines, so the applications would have a native feel on android.
+1. Following the material design guidelines so the applications would have a native feel on android.
 2. Using the University of Washington colors and branding to give users a sense of familiarity with the app.
 3. Using the University of Washington NetID sign-in to ensure that all users were registered students with the university.
 4. Using internationally understandable icons and labels.

@@ -63,14 +63,13 @@ $(document).ready(function(){
 	$('a[href^=#]:not([href=#])').on('click',function (e) {
 	    e.preventDefault();
 
-	    var target = this.hash;
-	    var $target = $(target);
+	    var $target = $(this.hash);
+	    // var $target = $(target);
+	    // console.log(target);
 
 	    $root.stop().animate({
 	        scrollTop: $target.offset().top - 70
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+	    }, 900, 'swing');
+	})
 	return false;
 });
