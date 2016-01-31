@@ -1,8 +1,7 @@
 //-------------------------------------
 // Scroll Position calculation & Progress Bar
 //-------------------------------------
-
-$(document).on('ready', function() {  
+function progressBar() {
 	var winHeight = $(window).height(), 
 	docHeight = $(document).height(),
 	progressBar = $('progress'), max, value;
@@ -24,7 +23,7 @@ $(document).on('ready', function() {
 		value =  $(window).scrollTop();
 		progressBar.attr('value', value);
 	});
-});
+}
 
 //-------------------------------------
 // Fade-In Topbar
@@ -48,28 +47,36 @@ $(window).scroll(function() {
 
 var $root = $('html, body');
 
-function backtotop() {
-    $root.animate({
-        scrollTop: 0
-    }, 900, 'swing');
+function backToTop() {
+	$(this).on('click',function(e){
+		e.preventDefault();
+
+		$root.animate({
+	        scrollTop: 0
+	    }, 900, 'swing');
+	})
     return false;
 }
 
 //-------------------------------------
-// Smooth Scroll links to top
+// Smooth Scroll links to href
 //-------------------------------------
 
-$(document).ready(function(){
+function scrollTo() {
 	$('a[href^=#]:not([href=#])').on('click',function (e) {
 	    e.preventDefault();
 
 	    var $target = $(this.hash);
-	    // var $target = $(target);
-	    // console.log(target);
 
 	    $root.stop().animate({
 	        scrollTop: $target.offset().top - 70
 	    }, 900, 'swing');
 	})
 	return false;
+}
+
+
+$(document).ready(function() {  
+	progressBar();
+	scrollTo();
 });

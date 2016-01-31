@@ -22,6 +22,17 @@
 		<meta name="twitter:title" content="Nikhil Venkatesh - UX Portfolio">
 		<meta name="twitter:description" content="Hi! I'm a UX Designer and I love innovating new experiences. I specialize in interaction, motion and visual design.">
 		<meta name="twitter:image" content="/">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/img/favicon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/img/favicon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/img/favicon/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+		<meta name="application-name" content="Nikhil Venkatesh - UX Portfolio " />
+		<meta name="msapplication-TileColor" content="#EF5350" />
+		<meta name="msapplication-TileImage" content="/assets/img/favicon/mstile-144x144.png" />
 		<title> Nikhil Venkatesh - UX Portfolio </title>
 		<link rel="stylesheet" href="assets/css/project.css"> </head>
 
@@ -106,7 +117,7 @@
 					</ul>
 					<div class="resume-email"> <a href="mailto:me@nvenk.com" role="button" class="button">Email Me</a> <a href="/assets/NikhilVenkatesh_Resume_UX.pdf" role="button" target="_blank" class="button">Resume</a> </div>
 					<div class="copyright">
-						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backtotop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
+						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
 				</div>
 			</footer>
 		</div>
@@ -116,14 +127,7 @@
 			new WOW().init();
 		</script>
 		<script type="text/javascript">
-			function backtotop()
-			{
-				return $root.animate(
-				{
-					scrollTop: 0
-				}, 900, "swing"), !1
-			}
-			$(document).on("ready", function()
+			function progressBar()
 			{
 				var o, t, n = $(window).height(),
 					r = $(document).height(),
@@ -135,12 +139,20 @@
 				{
 					n = $(window).height(), r = $(document).height(), o = r - n, e.attr("max", o), t = $(window).scrollTop(), e.attr("value", t)
 				})
-			}), $(window).scroll(function()
+			}
+
+			function backToTop()
 			{
-				$(this).scrollTop() > 200 ? $(".pr-topbar").fadeIn() : $(".pr-topbar").fadeOut()
-			});
-			var $root = $("html, body");
-			$(document).ready(function()
+				return $(this).on("click", function(o)
+				{
+					o.preventDefault(), $root.animate(
+					{
+						scrollTop: 0
+					}, 900, "swing")
+				}), !1
+			}
+
+			function scrollTo()
 			{
 				return $("a[href^=#]:not([href=#])").on("click", function(o)
 				{
@@ -151,6 +163,15 @@
 						scrollTop: t.offset().top - 70
 					}, 900, "swing")
 				}), !1
+			}
+			$(window).scroll(function()
+			{
+				$(this).scrollTop() > 200 ? $(".pr-topbar").fadeIn() : $(".pr-topbar").fadeOut()
+			});
+			var $root = $("html, body");
+			$(document).ready(function()
+			{
+				progressBar(), scrollTo()
 			});
 		</script>
 		<script>

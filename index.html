@@ -22,6 +22,17 @@
 		<meta name="twitter:title" content="Nikhil Venkatesh - UX Portfolio">
 		<meta name="twitter:description" content="Hi! I'm a UX Designer and I love innovating new experiences. I specialize in interaction, motion and visual design.">
 		<meta name="twitter:image" content="/">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/img/favicon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/img/favicon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/img/favicon/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+		<meta name="application-name" content="Nikhil Venkatesh - UX Portfolio " />
+		<meta name="msapplication-TileColor" content="#EF5350" />
+		<meta name="msapplication-TileImage" content="/assets/img/favicon/mstile-144x144.png" />
 		<title> Nikhil Venkatesh - UX Portfolio </title>
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -35,7 +46,7 @@
 					<div class="nametag wow fadeInUp">Hi! I'm <span> Nikhil</span></div>
 					<div class="about-text wow fadeInAbout">I'm a UX Designer and I love designing innovative experiences. I specialize in <span>Interaction</span>, <span>Motion</span> and <span>Visual</span> design.</div>
 					<div class="pointer-container hidden-phone-landscape">
-						<a class="projects-link" href="#projects">
+						<a class="projects-link" href="#project-section">
 							<div class="pointer"></div>
 						</a>
 					</div>
@@ -269,7 +280,7 @@
 				</ul>
 				<div class="resume-email"> <a href="mailto:me@nvenk.com" role="button" class="button">Email Me</a> <a href="/assets/NikhilVenkatesh_Resume_UX.pdf" role="button" target="_blank" class="button">Resume</a> </div>
 				<div class="copyright">
-					<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backtotop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
+					<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
 			</div>
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -278,19 +289,19 @@
 			new WOW().init();
 		</script>
 		<script type="text/javascript">
-			function backtotop()
+			function backToTop()
 			{
-				return $root.animate(
+				return $(this).on("click", function(o)
 				{
-					scrollTop: 0
-				}, 500), !1
+					o.preventDefault(), $root.animate(
+					{
+						scrollTop: 0
+					}, 900, "swing")
+				}), !1
 			}
-			var $winHeight = $(window).height(),
-				$logoTrigger = .55 * $winHeight,
-				$projPos = $("#project-section").position();
 			$(window).scroll(function()
 			{
-				$(this).scrollTop() > 0 ? $(".pointer").fadeOut() : $(".pointer").fadeIn()
+				$(this).scrollTop() > 5 ? $(".pointer").fadeOut() : $(".pointer").fadeIn()
 			});
 			var $root = $("html, body");
 			$(".projects-link").click(function()

@@ -2,13 +2,9 @@
 // Fade Out Pointer on Scroll
 //-------------------------------------
 
-var $winHeight = $(window).height();
-var $logoTrigger = $winHeight * 0.55;
-var $projPos = $('#project-section').position();
-
 $(window).scroll(function() {
 
-    if ($(this).scrollTop()>0)
+    if ($(this).scrollTop() > 5)
      {
         $('.pointer').fadeOut();
      }
@@ -24,7 +20,9 @@ $(window).scroll(function() {
 //-------------------------------------
 
 var $root = $('html, body');
+
 $('.projects-link').click(function() {
+    
     $root.animate({
         scrollTop: $('#project-section').offset().top
     }, 500);
@@ -32,33 +30,18 @@ $('.projects-link').click(function() {
 });
 
 //-------------------------------------
-// Fade-In Topbar
-//-------------------------------------
-
-// var $triggerHeight = $winHeight * 0.65;
-// $(window).scroll(function() {
-
-//     if ($(this).scrollTop() > $triggerHeight)
-//      {
-//         $('header').fadeIn();
-//      }
-//     else
-//      {
-//       $('header').fadeOut();
-//      }
-//  });
-
-//-------------------------------------
 // Back To Top
 //-------------------------------------
 
-function backtotop() {
-    $root.animate({
-        scrollTop: 0
-    }, 500);
+function backToTop() {
+    $(this).on('click',function(e){
+        e.preventDefault();
+
+        $root.animate({
+            scrollTop: 0
+        }, 900, 'swing');
+    })
     return false;
 }
-
-
 
 

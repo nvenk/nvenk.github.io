@@ -33,19 +33,19 @@
 			new WOW().init();
 		</script>
 		<script type="text/javascript">
-			function backtotop()
+			function backToTop()
 			{
-				return $root.animate(
+				return $(this).on("click", function(o)
 				{
-					scrollTop: 0
-				}, 500), !1
+					o.preventDefault(), $root.animate(
+					{
+						scrollTop: 0
+					}, 900, "swing")
+				}), !1
 			}
-			var $winHeight = $(window).height(),
-				$logoTrigger = .55 * $winHeight,
-				$projPos = $("#project-section").position();
 			$(window).scroll(function()
 			{
-				$(this).scrollTop() > 0 ? $(".pointer").fadeOut() : $(".pointer").fadeIn()
+				$(this).scrollTop() > 5 ? $(".pointer").fadeOut() : $(".pointer").fadeIn()
 			});
 			var $root = $("html, body");
 			$(".projects-link").click(function()
