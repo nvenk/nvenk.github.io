@@ -43,5 +43,3 @@ function backToTop() {
     })
     return false;
 }
-
-
