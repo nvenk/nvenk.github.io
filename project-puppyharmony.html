@@ -61,7 +61,7 @@
 			<div class="container">
 				<h2 id="introduction">Introduction</h2>
 				<p>PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise and socialization. </p>
-				<p>This was a class project as part of the &#39;Design in an Organization&#39; program at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked
+				<p>This was a class project as part of the &#39;Design in an Organization&#39; class at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked
 					with a client team who oversaw the development of the business model and product design.</p>
 				<h2 id="my-role">My Role</h2>
 				<p>I was the interaction / visual designer in our team of four. My responsibilities included visual design, wireframing and prototyping. I was involved in the entire project cycle from brainstorming &amp; ideating features, developing a business plan
@@ -160,7 +160,7 @@
 				</div>
 			</footer>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>
 			new WOW().init();
@@ -182,18 +182,15 @@
 
 			function backToTop()
 			{
-				return $(this).on("click", function(o)
+				return $root.animate(
 				{
-					o.preventDefault(), $root.animate(
-					{
-						scrollTop: 0
-					}, 900, "swing")
-				}), !1
+					scrollTop: 0
+				}, 900, "swing"), !1
 			}
 
 			function scrollTo()
 			{
-				return $("a[href^=#]:not([href=#])").on("click", function(o)
+				return $('a[href^="#"]:not([href="#"])').on("click", function(o)
 				{
 					o.preventDefault();
 					var t = $(this.hash);
@@ -203,6 +200,14 @@
 					}, 900, "swing")
 				}), !1
 			}
+
+			function disableLinks()
+			{
+				return $(".team>ul li a").on("click", function(o)
+				{
+					o.preventDefault(), console.log("Hello, World!")
+				}), !1
+			}
 			$(window).scroll(function()
 			{
 				$(this).scrollTop() > 200 ? $(".pr-topbar").fadeIn() : $(".pr-topbar").fadeOut()
@@ -210,7 +215,7 @@
 			var $root = $("html, body");
 			$(document).ready(function()
 			{
-				progressBar(), scrollTo()
+				progressBar(), scrollTo(), disableLinks()
 			});
 		</script>
 		<script>

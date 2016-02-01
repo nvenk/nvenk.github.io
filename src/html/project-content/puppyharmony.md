@@ -2,7 +2,7 @@
 
 PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise and socialization. 
 
-This was a class project as part of the 'Design in an Organization' program at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
+This was a class project as part of the 'Design in an Organization' class at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
 
 ## My Role
 

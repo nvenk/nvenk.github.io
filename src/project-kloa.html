@@ -7,27 +7,27 @@
 	<body>
 		<div class="projects">
 			@@include('src/html/project/_header.html', {
-				"title" : "PuppyHarmony",
+				"title" : "KLOA",
 				"tags" : {
-					"1" : "Research",
-					"2" : "Wireframe",
-					"3" : "Prototype"
+					"1" : "Interaction Map",
+					"2" : "Usability Testing",
+					"3" : " "
 				},
 				"links" : {
-					"1" : "#research",
-					"2" : "#wireframes",
-					"3" : "#interactive-prototype"
+					"1" : "#interaction-map",
+					"2" : "",
+					"3" : ""
 				}
 			})
 
 			<div class="container">
-				@@include(markdown('src/html/project-content/puppyharmony.md'))
+				@@include(markdown('src/html/project-content/kloa.md'))
 			</div>
-
+			
 			@@include('src/html/project/_footer.html', {
 				"next" : {
-					"title" : "3D Animation Showreel",
-					"link" : "/project-animation.html"
+					"title" : "PuppyHarmony",
+					"link" : "/project-puppyharmony.html"
 				}
 			})
 		</div>

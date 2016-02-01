@@ -34,12 +34,8 @@ $('.projects-link').click(function() {
 //-------------------------------------
 
 function backToTop() {
-    $(this).on('click',function(e){
-        e.preventDefault();
-
-        $root.animate({
-            scrollTop: 0
-        }, 900, 'swing');
-    })
+    $root.animate({
+        scrollTop: 0
+    }, 900, 'swing');
     return false;
 }

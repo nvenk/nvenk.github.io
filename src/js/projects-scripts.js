@@ -48,13 +48,9 @@ $(window).scroll(function() {
 var $root = $('html, body');
 
 function backToTop() {
-	$(this).on('click',function(e){
-		e.preventDefault();
-
-		$root.animate({
-	        scrollTop: 0
-	    }, 900, 'swing');
-	})
+	$root.animate({
+        scrollTop: 0
+    }, 900, 'swing');
     return false;
 }
 
@@ -63,7 +59,7 @@ function backToTop() {
 //-------------------------------------
 
 function scrollTo() {
-	$('a[href^=#]:not([href=#])').on('click',function (e) {
+	$('a[href^="#"]:not([href="#"])').on('click',function (e) {
 	    e.preventDefault();
 
 	    var $target = $(this.hash);
@@ -75,8 +71,25 @@ function scrollTo() {
 	return false;
 }
 
+//-------------------------------------
+// Disable Team Links
+//-------------------------------------
+
+function disableLinks(){
+	$('.team>ul li a').on('click',function(e){
+		e.preventDefault();
+		console.log('Hello, World!');
+	})
+	return false;
+}
+//-------------------------------------
+// Execute on Document Ready
+//-------------------------------------
 
 $(document).ready(function() {  
 	progressBar();
 	scrollTo();
+	disableLinks();
 });
+
+

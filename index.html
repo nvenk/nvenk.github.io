@@ -281,7 +281,7 @@
 					<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
 			</div>
 		</footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<script>
 			new WOW().init();
@@ -289,13 +289,10 @@
 		<script type="text/javascript">
 			function backToTop()
 			{
-				return $(this).on("click", function(o)
+				return $root.animate(
 				{
-					o.preventDefault(), $root.animate(
-					{
-						scrollTop: 0
-					}, 900, "swing")
-				}), !1
+					scrollTop: 0
+				}, 900, "swing"), !1
 			}
 			$(window).scroll(function()
 			{
