@@ -30,6 +30,8 @@
 		h2{
 			font-family: $font-sans;
 			font-size: 2rem;
+			font-weight: $font-light;
+			text-transform: uppercase;
 			margin: 45px 0 10px;
 			padding: 0px;
 			padding-left: 0px;
@@ -38,7 +40,6 @@
 
 			@include breakpoint(tablet) {
 			    text-align: center;
-			    font-size: 2.2rem;
 			}
 		}
 

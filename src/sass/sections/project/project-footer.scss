@@ -116,13 +116,17 @@
 					height:0;
 					position: absolute;
 					bottom: 15px;
-					left: 10px;
+					left: -30px;
 					opacity: 0;
 					border-bottom: 10px solid transparent;
 					border-left: 10px solid $red;
 					border-top: 10px solid transparent;
 					transition: 0.3s all ease-in-out;
 					transition-delay: 0.1s;
+
+					@include breakpoint(tablet) {
+					    left: 10px;
+					}
 				}
 
 				a{
@@ -164,8 +168,11 @@
 
 				&:hover{
 					&:after{
-						left:61px;
+						left:10px;
 						opacity: 1;
+						@include breakpoint(tablet) {
+						    left: 61px;
+						}
 					}
 					a{
 						h3{
