@@ -23,16 +23,15 @@
 //Content Styling
 	.container{
 		color: $black;
-		padding-top: 30px;
+		// padding-top: 30px;
 		max-width: 800px;
 		padding-bottom: 60px;
 
 		h2{
 			font-family: $font-sans;
 			font-size: 2rem;
-			font-weight: $font-light;
-			text-transform: uppercase;
-			margin: 45px 0 10px;
+			font-weight: $font-reg;
+			margin: 80px 0 40px;
 			padding: 0px;
 			padding-left: 0px;
 			text-align: left;
@@ -116,6 +115,7 @@
 						position: relative;
 						padding-bottom: 10px;
 						width: 150px;
+						cursor: default;
 
 						&:before{
 							content: "";

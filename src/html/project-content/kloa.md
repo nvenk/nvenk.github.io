@@ -26,6 +26,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nam cumque ips
 <ul>
 <li><a target="_blank" href="https://www.linkedin.com/in/sahil-anand-a420b314">Sahil Anand</a></li>
 <li><a target="_blank" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
-<li><a target="_blank" href="">Hong Zhu</a></li>
+<li><a target="_blank" href="https://www.linkedin.com/in/zhuhongzhu">Hong Zhu</a></li>
 </ul>
 </div>
