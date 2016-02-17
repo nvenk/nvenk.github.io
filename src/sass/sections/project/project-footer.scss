@@ -114,17 +114,21 @@
 					width:0;
 					height:0;
 					position: absolute;
-					bottom: 15px;
+					bottom: 18px;
 					left: -30px;
 					opacity: 0;
-					border-bottom: 10px solid transparent;
-					border-left: 10px solid $red;
-					border-top: 10px solid transparent;
+					border-bottom: 7px solid transparent;
+					border-left: 7px solid $red;
+					border-top: 7px solid transparent;
 					transition: 0.5s all ease-in-out;
-					transition-delay: 0.1s;
+					transition-delay: 0.05s;
 
 					@include breakpoint(tablet) {
 					    left: 10px;
+					    bottom: 15px;
+					    border-bottom: 10px solid transparent;
+						border-left: 10px solid $red;
+						border-top: 10px solid transparent;
 					}
 				}
 
@@ -169,6 +173,7 @@
 					&:after{
 						left:10px;
 						opacity: 1;
+
 						@include breakpoint(tablet) {
 						    left: 61px;
 						}
