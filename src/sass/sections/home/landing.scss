@@ -1,114 +1,100 @@
-.landing{
+.landing {
 	height: 100vh;
-    min-height: 380px;
+	min-height: 380px;
 	width: 100%;
-    background: $black;
-    background-size: cover;
-
-	.container{
+	background: $black;
+	background-size: cover;
+	.container {
 		margin: 0 auto;
 		height: 100vh;
-        min-height: 380px;
+		min-height: 380px;
 		display: table;
-
-		.content{
+		.content {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
 			padding: 0 5% 90px;
-
-            @include breakpoint(tablet) {
-                padding-bottom: 50px;
-            }
-
-  			.logo{
-  				display: block;
-  				width: 48px;
-  				height: 48px;
-  				margin: 20px auto;
-                animation-duration: 1.5s;
-
-                @include breakpoint(tablet) {
-                    height: 96px;
-                    width: 96px;
-                }
-  			}
-
-  			.nametag{
-                display: block;
-  				font-family: $font-sans;
-  				font-size: 2.3rem; 
-  				color: $white;
-                font-weight: $font-light;
-                animation-delay: 0.5s;
-                animation-duration: 0.7s;
-
-  				span{
-  					color: $red;
-  					font-weight: $font-bold;
-  				}
-
-                @include breakpoint(tablet) {
-                    font-size: 3.4rem;
-                }
-  			}
-
-  			.about-text{
-  				color: $white;
-  				font-weight: $font-light;
-  				font-size: 1.2rem;
-  				max-width: 500px;
-  				margin: 0 auto;
-  				padding: 10px 10px; 
-                animation-delay: 0.8s;
-                animation-duration: 0.5s;
-
-  				span{
-  					color: $yellow;
-  					font-weight: $font-light;
-  				}
-
-                @include breakpoint(phone-lg) {
-                    padding: 10px 15%;
-                }
-
-                @include breakpoint(tablet) {
-                    font-size: 1.7rem;
-                }
-  			}
-  			.pointer-container{
-  				display: block;
-  				height: 48px;
-	  			width: 100%;
-	  			margin: 0 auto;
-	  			position: absolute;
-	  			bottom: 1%;
-                left:0;
-                right:0;
-	  			animation: arrow-reveal 2.5s ease-in;
-
-                @include breakpoint(tablet) {
-                    bottom: 3%;
-                }
-
-	  			.pointer{
-	  				display: block;
-	  				height: 24px;
-	  				width: 24px;
-	  				margin: 0 auto;
-	  				background: transparent url(/assets/img/arrow.svg);
-                    background-size: contain;
-                    animation: arrow-translate 4s ease-in-out infinite 2s;
-
-                    @include breakpoint(tablet) {
-                        height: 48px;
-                        width: 48px;
-                    }
-	  			}
-	  		}
-            .social-container{
-                padding-top: 40px;
-            }
+			@include breakpoint(tablet) {
+				padding-bottom: 50px;
+			}
+			.logo {
+				display: block;
+				width: 48px;
+				height: 48px;
+				margin: 20px auto;
+				animation-duration: 0.4s;
+				animation-timing-function: cubic-bezier(.87,1.54,.78,1.01);
+				@include breakpoint(tablet) {
+					height: 96px;
+					width: 96px;
+				}
+			}
+			.nametag {
+				display: block;
+				font-family: $font-sans;
+				font-size: 2.3rem;
+				color: $white;
+				font-weight: $font-light;
+				animation-delay: 0.5s;
+				animation-duration: 0.7s;
+				span {
+					color: $red;
+					font-weight: $font-bold;
+				}
+				@include breakpoint(tablet) {
+					font-size: 3.4rem;
+				}
+			}
+			.about-text {
+				color: $white;
+				font-weight: $font-light;
+				font-size: 1.2rem;
+				max-width: 500px;
+				margin: 0 auto;
+				padding: 10px 10px;
+				animation-delay: 0.8s;
+				animation-duration: 0.5s;
+				span {
+					color: $yellow;
+					font-weight: $font-light;
+				}
+				@include breakpoint(phone-lg) {
+					padding: 10px 15%;
+				}
+				@include breakpoint(tablet) {
+					font-size: 1.7rem;
+				}
+			}
+			.pointer-container {
+				display: block;
+				height: 48px;
+				width: 100%;
+				margin: 0 auto;
+				position: absolute;
+				bottom: 1%;
+				left: 0;
+				right: 0;
+				animation: arrow-reveal 2.5s ease-in;
+				@include breakpoint(tablet) {
+					bottom: 3%;
+				}
+				.pointer {
+					display: block;
+					height: 24px;
+					width: 24px;
+					margin: 0 auto;
+					background: transparent url(/assets/img/arrow.svg);
+					background-size: contain;
+					animation: arrow-translate 4s ease-in-out infinite 2s;
+					@include breakpoint(tablet) {
+						height: 48px;
+						width: 48px;
+					}
+				}
+			}
+			.social-container {
+				padding-top: 40px;
+			}
 		}
 	}
 }

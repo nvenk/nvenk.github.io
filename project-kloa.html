@@ -54,28 +54,23 @@
 				<div class="title wow fadeInUp">KLOA</div>
 				<ul class="tags">
 					<li class="wow fadeInUp"><a href="#interaction-map">Interaction Map</a></li>
-					<li class="wow fadeInUp"><a href="">Usability Testing</a></li>
 					<li class="wow fadeInUp">
-						<a href=""> </a>
+						<a href=""></a>
 					</li>
+					<li class="wow fadeInUp"><a href="">Usability Testing</a></li>
 				</ul>
 			</section>
 			<div class="container">
 				<h2 id="introduction">Introduction</h2>
-				<p>KLOA is a startup that is developing a new gesture-based input method for mobile devices. The keyboard focuses on making text inputs faster and more accurate by making the keys larger and easier to hit. Pairing the larger touch targets with their
-					error correction algorithm ensures that users always type what they want to, and spend less time in correcting typos.</p>
-				<p>This input method, while theoratically more efficient than QWERTY, was completely new. For Kloa to be successful, users have to be able to learn and adopt it without any difficulty. Our team was tasked with conducting usability testing to assess Kloa&#39;s
-					adoption rate and learnability, and suggest changes to help users get used to Kloa faster.</p>
+				<p>Mobile typing is an area that hasn&#39;t changed much at since the dawn of the smartphone. QWERTY was adopted as the standard english keyboard layout because people were already used to it. It is definitely not the simplest way to type on the small
+					screen, and Kloa is trying to change that. </p>
+				<p>Kloa is a new input method for mobile devices. Using bigger keys and some interesting math, it aims to help people spend less time typing on small screens.While this seems awesome in theory, everything about Kloa is completely new and different.</p>
+				<p>Our team took up the challenge of running usability studies on Kloa, to see if people would be able to learn to use it easily, and learn what challenges they would have to overcome to adopt it as their default input method.</p>
 				<p>This project was part of the &#39;Usability Studies&#39; class at the University of Washington.</p>
 				<h2 id="interaction-map">Interaction Map</h2>
 				<p>To fully understand Kloa and how it worked, we used Kloa ourselves for a few weeks and created an interaction map. This helped us map out all the functions of the product in one view. We also planned on using the interaction map as an onboarding tool
 					for our test participants. This would provide a graphical way to explain how the keybaord and it&#39;s gestures work, and could also serve as a reference sheet for users to look at, until they got accustomed to the interactions.</p>
 				<p><img src="assets/img/projects/kloa/interaction-map-1.jpg" alt="Kloa Interaction Map"></p>
-				<h2 id="test-structure">Test Structure</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit beatae tempore quod, debitis reiciendis ducimus alias impedit, aut illo, ipsam optio, quis aliquid officia dicta qui similique voluptas numquam incidunt perferendis a! Explicabo non, perspiciatis
-					est sint fuga, dignissimos distinctio delectus sapiente autem tenetur iste vel libero unde ducimus quaerat.</p>
-				<h2 id="test-participants">Test Participants</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nam cumque ipsam harum sit esse voluptates accusamus quo, perspiciatis commodi.</p>
 				<h2 id="team">Team</h2>
 				<div class="team">
 					<ul>
@@ -84,6 +79,9 @@
 						<li><a target="_blank" href="https://www.linkedin.com/in/zhuhongzhu">Hong Zhu</a></li>
 					</ul>
 				</div>
+			</div>
+			<div class="WIP">
+				<p>This Project is a work-in-progress! <span>Check back soon!</span> </p>
 			</div>
 			<div class="footer-navigate">
 				<div class="container">
@@ -134,7 +132,8 @@
 					</ul>
 					<div class="resume-email"> <a href="mailto:nikhil@nvenk.com" role="button" class="button">Email Me</a> <a href="/assets/NikhilVenkatesh_Resume_UX.pdf" role="button" target="_blank" class="button">Resume</a> </div>
 					<div class="copyright">
-						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
+						<div class="wip-text">This website is a constant work in progress!</div>
+						<div class="cprt-text">Built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
 				</div>
 			</footer>
 		</div>
@@ -143,6 +142,8 @@
 		<script>
 			new WOW().init();
 		</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 		<script type="text/javascript">
 			function progressBar()
 			{
@@ -193,7 +194,7 @@
 			var $root = $("html, body");
 			$(document).ready(function()
 			{
-				progressBar(), scrollTo(), disableLinks()
+				scrollTo(), disableLinks(), setTimeout(progressBar, 1e3)
 			});
 		</script>
 		<script>

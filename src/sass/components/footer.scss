@@ -1,41 +1,35 @@
-footer{
+footer {
 	width: 100%;
 	background-color: $black;
 	display: table;
 	padding: 0;
 	margin: 0;
 	padding-bottom: 0px;
-	box-shadow: 0 -1px 2px rgba(0,0,0,0.15);
-
-	.footer-container{
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.15);
+	.footer-container {
 		display: table-cell;
 		vertical-align: middle;
 		padding: 30px;
-
-		.button{
+		.button {
 			background: transparent;
 			border: 1px solid white;
-
-			&:hover{
+			&:hover {
 				background: $red;
 				color: $white;
 				border-color: $red;
 			}
 		}
-
-		.back-to-top{
+		.back-to-top {
 			position: relative;
 			overflow: hidden;
-			transition: 0.5s;
-
-			span{
+			transition: 0.4s cubic-bezier(.6,.56,.39,1);
+			span {
 				position: relative;
-				top:0;
+				top: 0;
 				opacity: 1;
 				transition: 0.4s all;
 			}
-
-			&:after{
+			&:after {
 				content: '';
 				width: 0;
 				height: 0;
@@ -48,49 +42,47 @@ footer{
 				border-right: 8px solid transparent;
 				transition: 0.4s all;
 			}
-
-			&:hover{
+			&:hover {
 				transform: translateY(-5px) scale(1.03);
-				&:after{
+				&:after {
 					bottom: 15px;
 					opacity: 1;
 				}
-
-				span{
+				span {
 					top: -20px;
 					opacity: 0;
 				}
 			}
 		}
-
-		.social-container{
+		.social-container {
 			padding: 20px 0;
-			li{
-				a{
+			li {
+				a {
 					height: 42px;
 					width: 42px;
 				}
 			}
 		}
-		
-		.resume-email, .copyright{
+		.resume-email,
+		.copyright {
 			display: block;
 			margin: 10px;
 			text-align: center;
 		}
-
-		.copyright{
+		.copyright {
 			padding-top: 0px;
-
-			.cprt-text{
-				padding: 10px 0 20px;
+			.wip-text {
+				padding: 10px 0;
 				color: $white;
 				font-weight: $font-light;
-
-				span{
+			}
+			.cprt-text {
+				padding: 0 0 20px;
+				color: $white;
+				font-weight: $font-light;
+				span {
 					color: $red;
 					font-weight: $font-bold;
-
 				}
 			}
 		}

@@ -137,9 +137,9 @@
 					</div>
 					<div class="divider hidden-phone"></div>
 					<div class="navigate-next">
-						<a href="/project-puppyharmony.html">
+						<a href="/project-telegram.html">
 							<h3>Next Up</h3>
-							<h4>PuppyHarmony</h4> </a>
+							<h4>Moving Interfaces - Telegram</h4> </a>
 					</div>
 				</div>
 			</div>
@@ -172,7 +172,8 @@
 					</ul>
 					<div class="resume-email"> <a href="mailto:nikhil@nvenk.com" role="button" class="button">Email Me</a> <a href="/assets/NikhilVenkatesh_Resume_UX.pdf" role="button" target="_blank" class="button">Resume</a> </div>
 					<div class="copyright">
-						<div class="cprt-text">This site was built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
+						<div class="wip-text">This website is a constant work in progress!</div>
+						<div class="cprt-text">Built one pixel at a time by <span>Nikhil Venkatesh</span></div> <a href="#" onclick="backToTop();" class="back-to-top button"><span>Go back to the top!</span></a> </div>
 				</div>
 			</footer>
 		</div>
@@ -181,6 +182,8 @@
 		<script>
 			new WOW().init();
 		</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 		<script type="text/javascript">
 			function progressBar()
 			{
@@ -231,7 +234,7 @@
 			var $root = $("html, body");
 			$(document).ready(function()
 			{
-				progressBar(), scrollTo(), disableLinks()
+				scrollTo(), disableLinks(), setTimeout(progressBar, 1e3)
 			});
 		</script>
 		<script>

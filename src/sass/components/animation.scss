@@ -63,6 +63,7 @@
     opacity:0;
     animation-name: fadeIn;
     animation-fill-mode:forwards;
+    animation-timing-function: cubic-bezier(.09,.57,0,.99);
 }
 
 @keyframes fadeInUp {
@@ -91,30 +92,30 @@
     animation-fill-mode:forwards;
 }
 
-@keyframes fadeInUpLeft {
+@keyframes projectCardAnim {
     0% {
         visibility: hidden;
         opacity: 0;
-        transform: translate(-3%, 20%);
+        transform: translate(0, -20%) rotate(-1deg);
     }
 
     1% {
         visibility: visible;
         opacity: 0;
-        transform: translate(-3%, 20%);
+        transform: translate(0, -20%) rotate(-1deg);
     }
 
     100% {
-        visibility: visible;
         opacity: 1;
         transform: none;
     }
 }
 
-.fadeInUpLeft {
+.projectCardAnim {
     opacity:0;
-    animation-name: fadeInUpLeft;
+    animation-name: projectCardAnim;
     animation-fill-mode:forwards;
+    animation-timing-function: cubic-bezier(.33,.84,.27,1);
 }
 
 //--------------------------------

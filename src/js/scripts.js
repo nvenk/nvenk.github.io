@@ -22,7 +22,6 @@ $(window).scroll(function() {
 var $root = $('html, body');
 
 $('.projects-link').click(function() {
-    
     $root.animate({
         scrollTop: $('#project-section').offset().top
     }, 500);

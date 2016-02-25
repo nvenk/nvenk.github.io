@@ -1,9 +1,7 @@
 @charset "UTF-8";
-
 // Vendor
 // ---------------------------------
 @import "vendor/normalize";
-
 // Components
 // ---------------------------------
 @import "components/variables";
@@ -12,36 +10,29 @@
 @import "components/global";
 @import "components/social-icons";
 @import "components/footer";
-
 // Page Sections
 // ---------------------------------
 @import "sections/project/*";
-
 .projects{
 	background: white;
-
-//Content Styling
+	// Content Styling
 	.container{
 		color: $black;
-		// padding-top: 30px;
 		max-width: 800px;
 		padding-bottom: 60px;
-
 		h2{
 			font-family: $font-sans;
 			font-size: 2rem;
 			font-weight: $font-reg;
-			margin: 80px 0 40px;
+			margin: 50px 0 20px;
 			padding: 0px;
 			padding-left: 0px;
 			text-align: left;
 			color: $red;
-
 			@include breakpoint(tablet) {
 			    text-align: center;
 			}
 		}
-
 		p, li{
 			font-size: 1.3rem;
 			font-family: $font-serif;
@@ -49,14 +40,11 @@
 			font-weight: $font-reg;
 			list-style: none;
 		}
-
 		ol{
 			padding-left: 20px;
-
 			li{
 				padding-top: 10px;
 				position: relative;
-
 				&:after{
 					content:'~';
 					position: absolute;
@@ -66,35 +54,29 @@
 				}
 			}
 		}
-		
 		img{
 			width: 100%;
 			margin: 0px;
 			border-radius: 5px;
-
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 			@include breakpoint(tablet) {
 				width: calc(100% - 30px);
 			    margin: 15px;
 			}
 		}
-
 		.ext-link{
 			text-align: center;
 			padding-bottom: 30px;
-
 			.button{
 				margin: 0;
 			}
 		}
-
 		.team{
-
 			ul{
 				margin: 0;
-				padding: 30px 0 0;
+				padding: 0;
 				display: table;
 				width: 100%;
-
 				li{
 					display: block;
 					padding: 15px;
@@ -102,13 +84,11 @@
 					font-weight: $font-bold;
 					text-align: center;
 					font-size: 1.5rem;
-
 					@include breakpoint(tablet) {
 					    font-size: 1.4rem;
 					    display: table-cell;
 					    padding: 20px;
 					}
-
 					a{
 						text-decoration: none;
 						color: $blue-alt;
@@ -116,7 +96,6 @@
 						padding-bottom: 10px;
 						width: 150px;
 						cursor: default;
-
 						&:before{
 							content: "";
 							position: absolute;
@@ -129,10 +108,8 @@
 							transform: scaleX(0);
 							transition: all 0.3s ease-in-out 0s;
 						}
-
 						&:hover{
 							color: $blue-alt;
-
 							&:before{
 								visibility: visible;
 								transform: scaleX(1);
@@ -142,7 +119,6 @@
 				}
 			}
 		}
-
 		.videoWrapper {
 			position: relative;
 			padding-bottom: 56%; /* 16:9 */
@@ -150,12 +126,10 @@
 			margin: 0px;
 			height: 0;
 			box-shadow: 0px 10px 50px rgba(0,0,0,0.15);
-
 			@include breakpoint(tablet) {
 				padding-bottom: calc(56% - 15px); /* 16:9 */
 			    margin: 15px;
 			}
-
 		}
 		.videoWrapper iframe {
 			position: absolute;
@@ -166,4 +140,268 @@
 			border: 0;
 		}
 	}
+	
+	.WIP{
+		background: $blue-alt;
+		text-align: center;
+		color: white;
+		padding: 20px 0;
+
+		p{
+			font-family: $font-sans;
+			font-weight: $font-reg;
+			font-size: 1.2rem;
+
+			@include breakpoint(tablet) {
+			    font-size: 1.6rem;
+			}
+
+			span{
+				display: block;
+				padding-top: 15px;
+			}
+		}
+	}
 }
+
+
+
+
+
+
+
+
+// New Content Styling
+// .projects {
+// 	background: white;
+// 	.container {
+// 		color: $black;
+// 		max-width: 800px;
+// 		padding-bottom: 60px;
+// 		//-------------------------
+// 		// Common Styling
+// 		//-------------------------
+// 		// Section Headers
+// 		.section {
+// 			padding-top: 20px;
+// 		}
+// 		h2 {
+// 			font-family: $font-sans;
+// 			font-size: 2rem;
+// 			font-weight: $font-reg;
+// 			margin: 0;
+// 			padding: 20px;
+// 			padding-left: 0px;
+// 			text-align: left;
+// 			color: $red;
+// 			@include breakpoint(tablet) {
+// 				text-align: center;
+// 			}
+// 		}
+// 		// Paragraphs and list items
+// 		p,
+// 		li {
+// 			font-size: 1.3rem;
+// 			font-family: $font-sans;
+// 			line-height: 1.6;
+// 			font-weight: $font-light;
+// 			list-style: none;
+// 			@include breakpoint(tablet) {
+// 				font-size: 1.3rem;
+// 			}
+// 		}
+// 		// ordered lists
+// 		ol {
+// 			padding-left: 20px;
+// 			li {
+// 				padding-top: 10px;
+// 				position: relative;
+// 				&:after {
+// 					content: '~';
+// 					position: absolute;
+// 					top: 10px;
+// 					left: -20px;
+// 					color: $red;
+// 				}
+// 			}
+// 			.emphasis {
+// 				font-weight: $font-bold;
+// 				font-style: $font-italic;
+// 				margin-left: -20px;
+// 				color: $blue-alt;
+// 				&:after {
+// 					content: '';
+// 				}
+// 			}
+// 		}
+// 		// Images
+// 		img {
+// 			width: 100%;
+// 			margin: 0px;
+// 			border-radius: 5px;
+// 			@include breakpoint(tablet) {
+// 				width: calc(100% - 30px);
+// 				margin: 15px;
+// 			}
+// 		}
+// 		// External Links
+// 		.ext-link {
+// 			text-align: center;
+// 			padding-bottom: 30px;
+// 			.button {
+// 				margin: 0;
+// 			}
+// 		}
+// 		// Team Section
+// 		.team {
+// 			ul {
+// 				margin: 0;
+// 				padding: 30px 0 0;
+// 				display: table;
+// 				width: 100%;
+// 				li {
+// 					display: block;
+// 					padding: 15px;
+// 					font-family: $font-sans;
+// 					font-weight: $font-bold;
+// 					text-align: center;
+// 					font-size: 1.5rem;
+// 					@include breakpoint(tablet) {
+// 						font-size: 1.4rem;
+// 						display: table-cell;
+// 						padding: 20px;
+// 					}
+// 					a {
+// 						text-decoration: none;
+// 						color: $blue;
+// 						position: relative;
+// 						padding-bottom: 10px;
+// 						width: 150px;
+// 						cursor: default;
+// 						&:before {
+// 							content: "";
+// 							position: absolute;
+// 							width: 100%;
+// 							height: 2px;
+// 							bottom: 0;
+// 							left: 0;
+// 							background-color: $blue-alt;
+// 							visibility: hidden;
+// 							transform: scaleX(0);
+// 							transition: all 0.3s ease-in-out 0s;
+// 						}
+// 						&:hover {
+// 							color: $blue-alt;
+// 							&:before {
+// 								visibility: visible;
+// 								transform: scaleX(1);
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 		// Videos
+// 		.videoWrapper {
+// 			position: relative;
+// 			padding-bottom: 56%;
+// 			/* 16:9 */
+// 			padding-top: 0px;
+// 			margin: 0px;
+// 			height: 0;
+// 			box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+// 			@include breakpoint(tablet) {
+// 				padding-bottom: calc(56% - 15px);
+// 				/* 16:9 */
+// 				margin: 15px;
+// 			}
+// 		}
+// 		.videoWrapper iframe {
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 			border: 0;
+// 		}
+// 		// Icons
+// 		.icon {
+// 			height: 128px;
+// 			width: 128px;
+// 			display: block;
+// 			background: $blue-alt;
+// 			margin: 0 auto;
+// 			@include breakpoint(tablet) {
+// 				height: 150px;
+// 				width: 150px;
+// 			}
+// 		}
+// 		// Section Specific
+// 		// Introduction
+// 		#introduction {
+// 			padding-top: 30px;
+// 			.img {
+// 				@include aspect-ratio(1, 1.0667);
+// 				@extend .img-shadow;
+// 				display: block;
+// 				margin: 10px auto;
+// 				max-height: 500px;
+// 				max-width: 468.73px;
+// 				background: $red;
+// 				background: url('/assets/img/projects/kloa/placeholder.jpg') no-repeat center center;
+// 				background-size: cover;
+// 				border-radius: 5px;
+// 				@include breakpoint(tablet) {
+// 					display: inline-block;
+// 					margin: 0;
+// 				}
+// 			}
+// 			.content {
+// 				vertical-align: top;
+// 				h2 {
+// 					padding: 0 10px;
+// 					margin: 10px;
+// 					text-align: left;
+// 					padding-bottom: 5px;
+// 				}
+// 				ol {
+// 					padding-left: 70px;
+// 					li {
+// 						padding: 15px 0;
+// 						&:after {
+// 							top: 15px;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 		//Challenge
+// 		#challenge {
+// 			p {
+// 				padding: 0;
+// 				margin: 0;
+// 				text-align: center;
+// 				font-size: 1.3rem;
+// 				@include breakpoint(tablet) {
+// 					text-align: left;
+// 				}
+// 			}
+// 			.invert {
+// 				.icns_66 {
+// 					order: 2;
+// 				}
+// 				.icns_33 {
+// 					order: 1;
+// 				}
+// 				@include breakpoint(tablet) {
+// 					.icns_66 {
+// 						order: 1;
+// 					}
+// 					.icns_33 {
+// 						order: 2;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

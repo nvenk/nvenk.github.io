@@ -1,21 +1,18 @@
-.projects{
+.projects {
 	background-color: white;
 	padding: 10px 0px 100px;
 	// min-height: calc(100vh - 130px);
-
-	.container{
-		.project-card-container{
-			padding:0;
+	.container {
+		.project-card-container {
+			padding: 0;
 		}
-
 		@for $i from 1 to 10 {
 			.project-card-container li:nth-child(#{$i}) {
 				animation-delay: $i * 0.15s;
 			}
 		}
-
-		.col{
-			padding: 20px 0px;
+		.col {
+			padding: 0px;
 		}
 	}
 }
@@ -23,65 +20,64 @@
 //-----------------------------------------------
 // Project Card Styles
 //-----------------------------------------------
-.project-card{
-	@include aspect-ratio(1,1.0667);
+.project-card {
+	@include aspect-ratio(1, 1.0667);
 	max-width: 450px;
 	display: block;
-	margin: 25px auto;
+	margin: 0 auto;
 	position: relative;
 	border-radius: 3px;
-	overflow:hidden;
-	transition: all 0.4s ease-in-out;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-
+	overflow: visible;
+	transition: all 0.3s cubic-bezier(.42, .02, .09, .97);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 	@include breakpoint(tablet) {
 		max-width: 400px;
 	}
-
 	@include breakpoint(laptop) {
-	    max-width: 375px;
+		max-width: 375px;
 	}
-
-	img{
+	&:before{
+		content:'';
+		background-color:red;
+		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+		transition: all 0.3s cubic-bezier(.42, .02, .09, .97);
+		opacity: 0;
+	}
+	img {
 		width: 100%;
 		z-index: 1;
 		overflow: hidden;
 		position: absolute;
-		top:0;
-		left:0;
+		top: 0;
+		left: 0;
 		border-radius: 3px;
-
-
 	}
-	.project-info{
+	.project-info {
 		background: $white;
 		z-index: 2;
 		width: 100%;
 		display: block;
+		overflow: hidden;
 		position: absolute;
 		bottom: 0px;
-		height: 70px; 
+		height: 70px;
 		opacity: 1;
 		transition: all 0.3s ease-in-out;
-
-		*{
-			transition: all 0.5s ease-in-out 0.1s;
+		* {
+			transition: all 0.3s 0.1s cubic-bezier(.78, .01, .5, 1);
 		}
-
-		h2{
+		h2 {
 			color: $black;
 			padding: 10px 15px;
 			padding-top: 20px;
 			margin: 0px;
 			font-weight: $font-reg;
 			font-size: 1.1rem;
-
 			@include breakpoint(phone-lg) {
-			    font-size: 1.3rem;
+				font-size: 1.3rem;
 			}
 		}
-
-		p{
+		p {
 			color: $black;
 			margin: 0;
 			padding: 0 15px;
@@ -92,10 +88,10 @@
 			transform: translateY(10px);
 			white-space: nowrap;
 		}
-
-		.tag{
+		.tag {
 			position: absolute;
-			left:0; top:0;
+			left: 0;
+			top: 0;
 			display: block;
 			height: 3px;
 			width: 100%;
@@ -107,26 +103,28 @@
 	}
 }
 
-.project-card:hover{
-	.project-info{
+.project-card:hover {
+	transform: translateY(-6px);
+
+	&:before{
+		opacity: 1;
+	}
+	.project-info {
 		height: 110px;
 		opacity: 1;
 		background: $black;
-
-		h2{
+		h2 {
 			padding-top: 13px;
 			color: $white;
 		}
-
-		p{
+		p {
 			opacity: 1;
 			transform: translateY(0px);
 			color: $white;
 		}
-
-		.tag{
-			opacity:0.9;
-			background:$yellow;
+		.tag {
+			opacity: 0.9;
+			background: $yellow;
 		}
 	}
 }

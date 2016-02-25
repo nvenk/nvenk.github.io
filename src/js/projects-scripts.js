@@ -87,9 +87,23 @@ function disableLinks(){
 //-------------------------------------
 
 $(document).ready(function() {  
-	progressBar();
 	scrollTo();
 	disableLinks();
+	setTimeout(progressBar,1000);
 });
 
+//-------------------------------------
+// ScrollMagic
+//-------------------------------------
+// var controller = new ScrollMagic.Controller();
 
+// // Sticky Header
+
+// new ScrollMagic.Scene({
+// 	triggerElement: ".fixed-header",
+// 	offset: $('.fixed-header').height() - 50,
+// 	triggerHook: "onLeave",
+// })
+// .setPin('.fixed-header')
+// .addIndicators()
+// .addTo(controller);
