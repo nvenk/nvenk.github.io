@@ -10,24 +10,24 @@ I began redesigning the android version of telegram with a few goals in mind. I 
 
 ![Telegram Inspiration](assets/img/projects/telegram/inspiration-1.png)
 
-For the animation style, I chose to take inspiration from their logo, a paper airplane. I wanted the moving elements to feel light and fast, so they don't slow down the user's task. Adding a little playfulness would give the it more personality and create a memorable experience. With these in mind, I started creating my first set of mockups.
+For the animation style, I chose to take inspiration from their logo, a paper airplane. I wanted the moving elements to feel light and fast, so they don't slow down the user's task. Adding a little playfulness would give it more personality and create a memorable experience. With these in mind, I started creating my first set of mockups.
 
 ## Mockups
 
 ![Telegram Inital Mockup](assets/img/projects/telegram/mockup-1.jpg)
 
-Because this was a personal project I decided to go with a fast and light approach. Minimal mockups allowed me to make changes on the fly. The first pass focuses on the splash screen, layout of messages, the message tiles and the fab button. 
+Since this was a personal project I decided to go with a fast and light approach. Minimal mockups allowed me to make changes on the fly. On the first pass, I focused on the splash screen, layout of messages, the message tiles and the fab button. 
 
 ## The Prototype
 
 Following the mockups, I began creating a prototype on Framer. 
 
-<a role="button" href="/assets/framer/telegram.Framer/index.html" target="_blank">
+<a role="button" href="http://share.framerjs.com/uqy49xt8q2sp/" target="_blank">
     <img src="assets/img/projects/telegram/prototype-1.jpg" alt="Prototype Link">
 </a>
 
 <div class="ext-link">
-    <a role="button" class="button" href="/assets/framer/telegram.Framer/index.html" target="_blank">Open Live Prototype</a>
+    <a role="button" class="button" href="http://share.framerjs.com/uqy49xt8q2sp/" target="_blank">Open Live Prototype</a>
 </div>
 
 ## Reflections
