@@ -88,7 +88,7 @@ a.button {
 // Top Border (add with '@extend .img-shadow')
 //-----------------------------------------------
 .noshadow {
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: none;
 }
 
 //-----------------------------------------------

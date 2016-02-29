@@ -33,7 +33,7 @@ I created wireframes to show how users would interact with puppyHarmony.
 ![User Profile Wireframes](assets/img/projects/puppyharmony/wireframes-3.jpg)
 ![Dog Profile Wireframes](assets/img/projects/puppyharmony/wireframes-4.jpg)
 
-## Interactive Prototype
+## Prototype
 
 I built an interactive prototype to show the clients how puppyHarmony would work and to give them an understanding of how users would interact with the app. 
 
