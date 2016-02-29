@@ -34,20 +34,20 @@
 			}
 		}
 		// If Serif
-		p, li{
-			font-size: 1.3rem;
-			font-family: $font-serif;
-			line-height: 1.6;
-			font-weight: $font-reg;
-			list-style: none;
-		}
+		// p, li{
+		// 	font-size: 1.3rem;
+		// 	font-family: $font-serif;
+		// 	line-height: 1.6;
+		// 	font-weight: $font-reg;
+		// 	list-style: none;
+		// }
 
 		// If Sans Serif
 
 		p, li{
 			font-size: 1.2rem;
 			font-family: $font-serif;
-			line-height: 1.6;
+			line-height: 1.8;
 			font-weight: $font-reg;
 			list-style: none;
 		}
