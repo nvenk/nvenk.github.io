@@ -6,20 +6,24 @@ Kloa is a new input method for mobile devices. Using bigger keys and some intere
 
 Our team took up the challenge of running usability studies on Kloa, to see if people would be able to learn to use it easily, and learn what challenges they would have to overcome to adopt it as their default input method.
 
-This project was part of the 'Usability Studies' class at the University of Washington.
-
 ## Interaction Map
 
 To fully understand how Kloa works, we used it ourselves for a few weeks and created an interaction map. This helped us map out all the functions of the product in one view. We also planned on using the interaction map as a tool to teach our test participants how to use Kloa. This would provide a graphical way to explain how the keybaord and its gestures work and could also serve as a reference sheet for users to look at until they got accustomed to the interactions.
 
 ![Kloa Interaction Map](assets/img/projects/kloa/interaction-map-1.jpg)
 
-## Team
+## Roles
 
-<div class="team">
-<ul>
-<li><a target="_blank" href="https://www.linkedin.com/in/sahil-anand-a420b314">Sahil Anand</a></li>
-<li><a target="_blank" href="https://www.linkedin.com/in/nvenk">Nikhil Venkatesh</a></li>
-<li><a target="_blank" href="https://www.linkedin.com/in/zhuhongzhu">Hong Zhu</a></li>
-</ul>
-</div>
+![Kloa Team Members](assets/img/projects/kloa/team-1.jpg)
+
+This project was part of the 'Usability Studies' class at the University of Washington.
+
+Our Team of three included: 
+
+> __Hong Zhu__ - The Scheduling and Communications Expert
+
+> __Nikhil Venkatesh__ - The Technical Guy and Visual Designer
+
+> __Sahil Anand__ - The Moderator and Client Relationships
+
+Each of us got a chance to moderate atleast two sessions, with Sahil moderating the remaining tests. We ensured that all members of the team were present for each test, and both members who were not moderating were taking notes to be sure that we covered everything. 
