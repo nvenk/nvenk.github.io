@@ -1,12 +1,12 @@
 ## Introduction
 
-PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise and socialization. 
+PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise, and socialization. 
 
-This was a class project as part of the 'Design in an Organization' class at the University of Washington. This course helped us grasp the essence of influencing design in a business world, while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
+This was a class project as part of the 'Design in an Organization' class at the University of Washington. This course helped us grasp the essence of influencing design in a business world while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
 
 ## My Role
 
-I was the interaction / visual designer in our team of four. My responsibilities included visual design, wireframing and prototyping. I was involved in the entire project cycle from brainstorming & ideating features, developing a business plan to creating documentation.
+I was the interaction / visual designer in our team of four. My responsibilities included visual design, wireframing and prototyping. I was involved in the entire project cycle from brainstorming & ideating features, developing a business plan, to creating documentation.
 
 ## Design Process
 
@@ -16,7 +16,7 @@ We then worked on building a functional business model and an interactive protot
 
 ## Research
 
-Since we were developing a completely new product, we needed to research on multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strenghts. In order to do this, our researchers conducted an extensive competitive analysis to identify the needs that were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
+Since we were developing a completely new product, we needed to research on multiple aspects. To find out if it would work as a business, we needed to know who the competitors were and understand their weaknesses and strengths. In order to do this, our researchers conducted an extensive competitive analysis to identify the needs that were not being met. Analysis revealed that there weren't many products that had the same value proposition as puppyHarmony.
 
 From a design perspective, we interviewed several dog owners to get a better understanding of how puppyHarmony could benefit them.
 

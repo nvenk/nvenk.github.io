@@ -26,7 +26,7 @@ We also identified and understood the workings of a student body that was provid
 
 Using the data gathered from our research, we went on to create personas. We identified two distinct roles - students who are outside the country looking for help and students already in the country, who are in a position to offer help and information.
 
-We designed two primary personas, Satish and Amira, who were students starting their programs this year and a secondary persona, Hari, who has been at the University of Washington for a year now, and is willing to help new students transition.
+We designed two primary personas, Satish, and Amira, who were students starting their programs this year and a secondary persona, Hari, who has been at the University of Washington for a year now, and is willing to help new students transition.
 
 ## Design Requirements
 
@@ -63,12 +63,12 @@ With our high fidelity mockup, we wanted to get a sense of what exactly the andr
 
 1. Following the material design guidelines so the applications would have a native feel on android.
 2. Using the University of Washington colors and branding to give users a sense of familiarity with the app.
-3. Using the University of Washington NetID sign-in to ensure that all users were registered students with the university.
+3. Using the University of Washington NetID sign-in to ensure that all users were registered students at the university.
 4. Using internationally understandable icons and labels.
 
 ## Takeaways
 
-This project has been amazing to work on, and has helped me understand how to design with the user in mind. I learnt a great deal from it, but to list my top takeaways from working on this project:
+This project has been amazing to work on and has helped me understand how to design with the user in mind. I learnt a great deal from it, but to list my top takeaways from working on this project:
 
 1. Research is the key! It is important to take your time and do it right.
 2. Keep the users close to the design process, and keep testing with them every step of the way.
