@@ -8,9 +8,38 @@ Our team took up the challenge of running usability studies on Kloa, to see if p
 
 ## Interaction Map
 
-To fully understand how Kloa works, we used it ourselves for a few weeks and created an interaction map. This helped us map out all the functions of the product in one view. We also planned on using the interaction map as a tool to teach our test participants how to use Kloa. This would provide a graphical way to explain how the keyboard and its gestures work and could also serve as a reference sheet for users to look at until they get accustomed to the interactions.
+Before testing the product with users, we had to understand everything about it ourselves. We spent a week using Kloa, and mapped out the interactions in a way that could be easily understood. 
+
+Since there was no on-boarding process for Kloa, we decided to use the interaction map as a teaching tool for out participants. The team sat together to decide what information should be on the map, and how it should be laid out. I then created it with the visual style that I've been developing for this project.
 
 ![Kloa Interaction Map](assets/img/projects/kloa/interaction-map-1.jpg)
+
+<!-- ## Who are the Users?
+
+> Image Here
+
+We wanted to recruit participants who are more likely to try new technologies and apps, and are willing to stick to an unfinished product for the duration of the test. We chose to test an equal number of male and female participants.
+
+## Test Structure
+
+> Image here
+
+## A User-Centered Test Design
+
+> Talk about the pilot test, and using the results to improved the test results.
+
+## Hiccups and Limitations
+
+> Crazy updates
+> typing tool
+
+## Next Time Around
+
+> Feature Freeze
+> Better recruiting
+> Planning to get the right results - Checklists for questions, 
+> Know the product roadmap, know what features are in the pipeline. -->
+
 
 ## Roles
 
@@ -26,4 +55,6 @@ Our Team of three included:
 
 > __Sahil Anand__ - The Moderator and Client Relationships
 
-Each of us got a chance to moderate at least two sessions, with Sahil moderating the remaining tests. We ensured that all members of the team were present for each test, and both members who were not moderating were taking notes to be sure that we covered everything. 
+The overall test design and participant recrutitng was a combined effort. Each of us got a chance to moderate at least two sessions, with Sahil moderating the remaining tests. We ensured that all members of the team were present for each test, and both members who were not moderating were taking notes to be sure that we covered everything. 
+
+My responsibilities included handling the technical equipment for the tests, and recording the quantitative data that we collected.

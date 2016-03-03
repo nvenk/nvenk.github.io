@@ -21,10 +21,9 @@ Since this was a personal project I decided to go with a fast and light approach
 ## The Prototype
 
 Following the mockups, I began creating a prototype on Framer. 
-
-<a role="button" href="http://share.framerjs.com/uqy49xt8q2sp/" target="_blank">
-    <img src="assets/img/projects/telegram/prototype-1.jpg" alt="Prototype Link">
-</a>
+<div class="videoWrapper">
+<iframe src="https://player.vimeo.com/video/157643696?autoplay=1&loop=1&automute=0"  width="500" height="999" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 <div class="ext-link">
     <a role="button" class="button" href="http://share.framerjs.com/uqy49xt8q2sp/" target="_blank">Open Live Prototype</a>
