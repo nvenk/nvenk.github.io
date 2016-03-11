@@ -49,11 +49,11 @@ This project was part of the 'Usability Studies' class at the University of Wash
 
 Our Team of three included: 
 
-> __Hong Zhu__ - The Scheduling and Communications Expert
+> __Hong Zhu__ - The Scheduling and Communication Expert
 
 > __Nikhil Venkatesh__ - The Technical Guy and Visual Designer
 
-> __Sahil Anand__ - The Moderator and Client Relationships
+> __Sahil Anand__ - The Moderator and Client Relations
 
 The overall test design and participant recrutitng was a combined effort. Each of us got a chance to moderate at least two sessions, with Sahil moderating the remaining tests. We ensured that all members of the team were present for each test, and both members who were not moderating were taking notes to be sure that we covered everything. 
 
