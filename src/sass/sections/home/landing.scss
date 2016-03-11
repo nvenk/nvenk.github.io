@@ -74,9 +74,10 @@
 				bottom: 1%;
 				left: 0;
 				right: 0;
-				animation: arrow-reveal 2.5s ease-in;
+				opacity: 0.5;
+				animation: arrow-reveal 8s ease-in;
 				@include breakpoint(tablet) {
-					bottom: 3%;
+					bottom: 1%;
 				}
 				.pointer {
 					display: block;
@@ -85,11 +86,7 @@
 					margin: 0 auto;
 					background: transparent url(/assets/img/arrow.svg);
 					background-size: contain;
-					animation: arrow-translate 4s ease-in-out infinite 2s;
-					@include breakpoint(tablet) {
-						height: 48px;
-						width: 48px;
-					}
+					animation: arrow-translate 4s ease-in-out infinite 3.5s;
 				}
 			}
 			.social-container {
