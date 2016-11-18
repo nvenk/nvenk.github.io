@@ -98,5 +98,18 @@
 				fill: $red;
 			}
 		}
+
+		// Dribbble
+
+		.db{
+			.bg{
+				fill: $dribbble;
+				stroke: $dribbble;
+			}
+
+			&:hover svg .icon{
+				fill: $red;
+			}
+		}
 	}
 }

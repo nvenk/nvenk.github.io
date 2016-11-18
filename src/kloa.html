@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('src/html/_meta.html')
+		<link rel="stylesheet" href="assets/css/project.css">
+	</head>
+	<body>
+		<div class="projects">
+			@@include('src/html/project/_header.html', {
+				"title" : "KLOA",
+				"tags" : {
+					"1" : "Interaction Map",
+					"2" : "",
+					"3" : "Usability Testing"
+				},
+				"links" : {
+					"1" : "#interaction-map",
+					"2" : "",
+					"3" : ""
+				}
+			})
+			
+			<div class="container">
+				@@include(markdown('src/html/project-content/kloa.md'))
+			</div>
+
+			<!-- WIP -->
+			<div class="WIP" id="kloa-wip">
+			    <p>This Project is a <emphasis>Work In Progress</emphasis> <span>Check back soon!</span> </p>
+			</div>
+			<!-- End WIP -->
+
+			@@include('src/html/project/_footer.html', {
+				"next" : {
+					"title" : "UW-ISE",
+					"link" : "/project-uwise.html"
+				}
+			})
+		</div>
+		@@include('src/html/_references.html')
+		<script type="text/javascript">
+			@@include('assets/js/projects-scripts.js')
+		</script>
+		@@include('src/html/_analytics.html')
+	</body>
+</html>

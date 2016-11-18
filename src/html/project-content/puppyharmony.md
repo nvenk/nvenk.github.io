@@ -1,6 +1,6 @@
 ## Introduction
 
-PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise, and socialization. 
+PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise, and socialization.
 
 This was a class project as part of the 'Design in an Organization' class at the University of Washington. This course helped us grasp the essence of influencing design in a business world while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
 
@@ -10,7 +10,7 @@ I was the interaction / visual designer in our team of four. My responsibilities
 
 ## Design Process
 
-This class encouraged us to take on a very different approach to designing a product. Viewing things from a business standpoint, we began brainstorming features for the product. By writing a press release before building the product, we put the team's vision for the product on paper. 
+This class encouraged us to take on a very different approach to designing a product. Viewing things from a business standpoint, we began brainstorming features for the product. By writing a press release before building the product, we put the team's vision for the product on paper.
 
 We then worked on building a functional business model and an interactive prototype.
 

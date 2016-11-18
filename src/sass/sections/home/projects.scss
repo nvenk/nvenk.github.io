@@ -59,21 +59,30 @@
 		overflow: hidden;
 		position: absolute;
 		bottom: 0px;
-		height: 70px;
+		height: 110px;
 		opacity: 1;
 		transition: all 0.3s ease-in-out;
+		transform: translateY(0px);
+
+		@include breakpoint(laptop) { // Disable hiding on Smaller Devices
+			height: 70px;
+		}
+
 		* {
 			transition: all 0.3s 0.1s cubic-bezier(.78, .01, .5, 1);
 		}
 		h2 {
 			color: $black;
 			padding: 10px 15px;
-			padding-top: 20px;
+			padding-top: 13px;
 			margin: 0px;
 			font-weight: $font-reg;
 			font-size: 1.1rem;
 			@include breakpoint(phone-lg) {
 				font-size: 1.3rem;
+			}
+			@include breakpoint(laptop) { // Disable hiding on Smaller Devices
+				padding-top: 20px;
 			}
 		}
 		p {
@@ -83,9 +92,14 @@
 			font-weight: $font-light;
 			font-size: 1.1rem;
 			line-height: 1.5;
-			opacity: 0;
-			transform: translateY(10px);
-			white-space: nowrap;
+			opacity: 1;
+			transform: translateY(0px);
+
+			@include breakpoint(laptop){ // Disable hiding on Smaller Devices
+				opacity: 0;
+				transform: translateY(10px);
+			}
+
 		}
 		.tag {
 			position: absolute;

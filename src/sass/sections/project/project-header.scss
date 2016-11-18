@@ -1,8 +1,8 @@
 .projects {
     .pr-topbar {
         height: 50px;
-        background-color: rgba(46, 65, 106, 0.9); //Blue
-        // background-color: rgba(27,39,55,0.9); //Black 
+        // background-color: rgba(46, 65, 106, 0.9); //Blue
+        background-color: rgba(27,39,55,0.8); //Black
         // background-color: rgba(255,255,255,0.8); //White
         width: 100%;
         position: fixed;
@@ -80,7 +80,7 @@
     }
     // top HEADER
     section.fixed-header {
-        background: $blue;
+        background: $black;
         padding: 20px 10px;
         .pr-header {
             width: 100%;
@@ -108,12 +108,23 @@
             font-family: $font-title;
             font-weight: $font-reg;
             text-align: center;
+            width: auto;
             color: $white;
             text-shadow: 0px 1px 0px $black;
             animation-delay: 0.2s;
+
             @include breakpoint(tablet) {
                 font-size: 2.4rem;
             }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                display: inline-block;
+                list-style: none;
+            }
+
+
         }
         .tags {
             font-size: 1rem;
