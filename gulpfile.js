@@ -11,8 +11,8 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	include = require('gulp-file-include'),
 	prettify = require('gulp-prettify'),
-	removeComment = require('gulp-remove-html-comments'),
-	cmq = require('gulp-combine-media-queries'); // Browse to project dir and install each package with npm install <package-name> --save-dev
+	removeComment = require('gulp-remove-html-comments');
+	// cmq = require('gulp-combine-media-queries'); // Browse to project dir and install each package with npm install <package-name> --save-dev
 
 var browsersync = require('browser-sync').create(); // Different install command: npm install browser-sync gulp --save-dev
 
@@ -66,7 +66,7 @@ gulp.task('css', function(){
 	gulp.src('src/sass/*.scss')
 	.pipe(globbing({extensions: '.scss'})) // Glob all SASS files
 	.pipe(sass()) // SASS Preprocessor
-	.pipe(cmq()) // Combine all Media Queries
+	// .pipe(cmq()) // Combine all Media Queries
 	.pipe(autoprefixer({browsers: ['last 4 versions'], cascade: false})) // Auto-Prefix
 	.pipe(minifycss()) // Minify css
 	.pipe(gulp.dest('assets/css'))
@@ -87,7 +87,6 @@ gulp.task('img', function(){
 	.pipe(newer('assets/img'))
 	.pipe(imagemin({
 		optimizationLevel: 5,
-      	progressive: true, 
       	interlaced: true,
       	svgoPlugins: [{
         	collapseGroups: false,
@@ -101,7 +100,7 @@ gulp.task('img', function(){
 // Watch Function
 gulp.task('watch', function() {
 	gulp.watch('src/**/*.html', ['html']);
-	// gulp.watch('src/style/**/*.scss', ['css']);
+	gulp.watch('src/style/**/*.scss', ['css']);
 	gulp.watch('src/js/**/*.js', ['js']);
 	gulp.watch('src/img/**/*', ['img']);
 	gulp.watch('src/**/*.md',['html']);
@@ -109,5 +108,3 @@ gulp.task('watch', function() {
 
 // Default Function
 gulp.task('default', ['serve', 'watch'], function(){});
-
-

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('src/html/_meta.html')
+		<link rel="stylesheet" href="assets/css/project.css">
+	</head>
+	<body>
+		<div class="projects">
+			@@include('src/html/project/_header.html', {
+				"title" : "Central Cinema - Website Redesign",
+				"tags" : {
+					"1" : "Research",
+					"2" : "Information Architecture",
+					"3" : "Prototyping"
+				},
+				"links" : {
+					"1" : "#research",
+					"2" : "#ideation",
+					"3" : "#prototyping"
+				}
+			})
+
+			<div class="container">
+				@@include(markdown('src/html/project-content/central-cinema.md'))
+			</div>
+
+			@@include('src/html/project/_footer.html', {
+				"next" : {
+					"title" : "PuppyHarmony - Puppy Play Dates",
+					"link" : "puppyHarmony.html"
+				}
+			})
+		</div>
+		@@include('src/html/_references.html')
+		<script type="text/javascript">
+			@@include('assets/js/projects-scripts.js')
+		</script>
+		@@include('src/html/_analytics.html')
+	</body>
+</html>

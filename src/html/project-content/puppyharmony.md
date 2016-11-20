@@ -1,6 +1,6 @@
 ## Introduction
 
-PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise, and socialization. 
+PuppyHarmony is an app that enables dog owners to easily find and connect with other dog owners to bring their pets together for play-dates, exercise, and socialization.
 
 This was a class project as part of the 'Design in an Organization' class at the University of Washington. This course helped us grasp the essence of influencing design in a business world while keeping the business goals in mind. We worked with a client team who oversaw the development of the business model and product design.
 
@@ -10,7 +10,7 @@ I was the interaction / visual designer in our team of four. My responsibilities
 
 ## Design Process
 
-This class encouraged us to take on a very different approach to designing a product. Viewing things from a business standpoint, we began brainstorming features for the product. By writing a press release before building the product, we put the team's vision for the product on paper. 
+This class encouraged us to take on a very different approach to designing a product. Viewing things from a business standpoint, we began brainstorming features for the product. By writing a press release before building the product, we put the team's vision for the product on paper.
 
 We then worked on building a functional business model and an interactive prototype.
 
@@ -35,16 +35,16 @@ I created wireframes to show how users would interact with puppyHarmony.
 
 ## Prototype
 
-I built an interactive prototype to show the clients how puppyHarmony would work and to give them an understanding of how users would interact with the app. 
+I built an interactive prototype to show the clients how puppyHarmony would work and to give them an understanding of how users would interact with the app.
 
 Go ahead! Give it a try...
 
-<a role="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="_blank">
+<a class="no-shadow" role="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="blank">
     <img src="assets/img/projects/puppyharmony/prototype-1.jpg" alt="Prototype Link">
 </a>
 
 <div class="ext-link">
-    <a role="button" class="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="_blank">Open Live Prototype</a>
+    <a role="button" class="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="blank">Open Live Prototype</a>
 </div>
 
 ## Results

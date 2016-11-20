@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('src/html/_meta.html')
+		<link rel="stylesheet" href="assets/css/project.css">
+	</head>
+	<body>
+		<div class="projects">
+			@@include('src/html/project/_header.html', {
+				"title" : "Pet Dragons, Cats with Swords &amp; Ninja Turtles ",
+				"tags" : {
+					"1" : "Character Animation",
+					"2" : "Storytelling",
+					"3" : "Motion"
+				},
+				"links" : {
+					"1" : "#the-story",
+					"2" : "#the-story",
+					"3" : "#the-story"
+				}
+			})
+			<div class="container">
+				@@include(markdown('src/html/project-content/animation.md'))
+			</div>
+
+			@@include('src/html/project/_footer.html', {
+				"next" : {
+					"title" : "2016 Summer Internship @ Xactly Corp.",
+					"link" : "/xactly.html"
+				}
+			})
+		</div>
+		@@include('src/html/_references.html')
+		<script type="text/javascript">
+			@@include('assets/js/projects-scripts.js')
+		</script>
+		@@include('src/html/_analytics.html')
+	</body>
+</html>
