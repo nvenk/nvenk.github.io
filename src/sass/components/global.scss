@@ -35,11 +35,13 @@ body * {
 .section-title {
 	font-family: $font-sans;
 	font-size: 1.6rem;
-	font-weight: $font-light;
+	font-weight: $font-bold;
 	margin: 0 auto;
 	color: $black;
 	text-align: center;
 	padding: 50px 10px 10px;
+	position: relative;
+
 	@include breakpoint(phone-lg) {
 		font-size: 2rem;
 	}
@@ -92,7 +94,7 @@ a.button {
 }
 
 //-----------------------------------------------
-// Aspect-Ratio Mixin from 
+// Aspect-Ratio Mixin from
 // https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
 //-----------------------------------------------
 @mixin aspect-ratio($width, $height) {

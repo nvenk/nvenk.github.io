@@ -1,8 +1,21 @@
 .projects {
+    .back-icon{
+        .logo {
+            width: 30px;
+            height: 30px;
+            padding: 10px 20px;
+            position: fixed;
+            transition: all 0.2s ease-in-out;
+            z-index: 10;
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
     .pr-topbar {
         height: 50px;
         // background-color: rgba(46, 65, 106, 0.9); //Blue
-        background-color: rgba(27,39,55,0.8); //Black
+        background-color: rgba(38,50,56,0.8); //Black
         // background-color: rgba(255,255,255,0.8); //White
         width: 100%;
         position: fixed;
@@ -15,17 +28,6 @@
             height: 50px;
         }
         .pr-navigate {
-            .logo {
-                width: 30px;
-                height: 30px;
-                padding: 10px 20px;
-                display: inline-block;
-                transition: all 0.2s ease-in-out;
-                z-index: 10;
-                &:hover {
-                    transform: scale(1.15);
-                }
-            }
             .pr-title {
                 height: 100%;
                 width: calc(100% - 140px);

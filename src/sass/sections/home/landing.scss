@@ -80,7 +80,7 @@
 				animation-duration: 0.5s;
 				position: relative;
 				span {
-					color: $yellow;
+					color: $red;
 					font-weight: $font-light;
 				}
 				@include breakpoint(phone-lg) {
@@ -118,7 +118,7 @@
 				bottom: 1%;
 				left: 0;
 				right: 0;
-				opacity: 0.5;
+				opacity: 0.75;
 				animation: arrow-reveal 8s ease-in;
 				@include breakpoint(tablet) {
 					bottom: 1%;

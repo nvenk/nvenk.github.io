@@ -87,10 +87,7 @@ gulp.task('img', function(){
 	.pipe(newer('assets/img'))
 	.pipe(imagemin({
 		optimizationLevel: 5,
-<<<<<<< Updated upstream
-=======
       	progressive: true,
->>>>>>> Stashed changes
       	interlaced: true,
       	svgoPlugins: [{
         	collapseGroups: false,

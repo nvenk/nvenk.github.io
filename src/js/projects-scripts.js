@@ -2,7 +2,7 @@
 // Scroll Position calculation & Progress Bar
 //-------------------------------------
 function progressBar() {
-	var winHeight = $(window).height(), 
+	var winHeight = $(window).height(),
 	docHeight = $(document).height(),
 	progressBar = $('progress'), max, value;
 
@@ -86,24 +86,8 @@ function disableLinks(){
 // Execute on Document Ready
 //-------------------------------------
 
-$(document).ready(function() {  
+$(document).ready(function() {
 	scrollTo();
 	disableLinks();
-	setTimeout(progressBar,1000);
+	setTimeout(progressBar(),1000);
 });
-
-//-------------------------------------
-// ScrollMagic
-//-------------------------------------
-// var controller = new ScrollMagic.Controller();
-
-// // Sticky Header
-
-// new ScrollMagic.Scene({
-// 	triggerElement: ".fixed-header",
-// 	offset: $('.fixed-header').height() - 50,
-// 	triggerHook: "onLeave",
-// })
-// .setPin('.fixed-header')
-// .addIndicators()
-// .addTo(controller);
