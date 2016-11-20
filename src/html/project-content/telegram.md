@@ -14,13 +14,13 @@ For the animation style, I chose to take inspiration from their logo, a paper ai
 
 ## Mockups
 
-![Telegram Inital Mockup](assets/img/projects/telegram/mockup-1.jpg)
+![Telegram Initial Mockup](assets/img/projects/telegram/mockup-1.jpg)
 
-Since this was a personal project I decided to go with a fast and light approach. Minimal mockups allowed me to make changes on the fly. On the first pass, I focused on the splash screen, the layout of messages, the message tiles, and the fab button. 
+Since this was a personal project I decided to go with a fast and light approach. Minimal mockups allowed me to make changes on the fly. On the first pass, I focused on the splash screen, the layout of messages, the message tiles, and the fab button.
 
 ## The Prototype
 
-Following the mockups, I began creating a prototype on Framer. 
+Following the mockups, I began creating a prototype on Framer.
 <div class="videoWrapper">
 <iframe src="https://player.vimeo.com/video/157643696?autoplay=1&loop=1&automute=0"  width="500" height="999" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
@@ -31,15 +31,15 @@ Following the mockups, I began creating a prototype on Framer.
 
 ## Reflections
 
-Since I've only just started using Framer, this was my opportunity to experiment and discover what it could do. I also wanted to use SVGs in my prototype, so I used the snapSVG library to give me more control over shapes and elements. I tried experimenting a lot with animation curves to give the prototype a playful feel. 
+Since I've only just started using Framer, this was my opportunity to experiment and discover what it could do. I also wanted to use SVGs in my prototype, so I used the snapSVG library to give me more control over shapes and elements. I tried experimenting a lot with animation curves to give the prototype a playful feel.
 
 The hardest part about making this prototype was the fact that this was the first full-blown project that I’ve worked on in Framer. I began the process with beginner-level knowledge of Javascript and no knowledge of CoffeeScript. Even still, I’m very happy with my efforts - especially the look and feel of the Splash screen and the animations on the message view screen.
 
 ## Going Forward
 
-Far from being over, my work in this project so far has inspired me to extend the prototype to include interactions for the settings screen, individual messages view, and the create new message view. 
+Far from being over, my work in this project so far has inspired me to extend the prototype to include interactions for the settings screen, individual messages view, and the create new message view.
 
-Learning from this iteration, however, I will plan the interactions much better, to give me a clear picture as to what I am working towards. I also have a much more solid understanding of CoffeeScript, Framer and how extensible and flexible it is. 
+Learning from this iteration, however, I will plan the interactions much better, to give me a clear picture as to what I am working towards. I also have a much more solid understanding of CoffeeScript, Framer and how extensible and flexible it is.
 
 I'm looking forward to the hours of code to take this project forward.
 

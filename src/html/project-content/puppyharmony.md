@@ -35,16 +35,16 @@ I created wireframes to show how users would interact with puppyHarmony.
 
 ## Prototype
 
-I built an interactive prototype to show the clients how puppyHarmony would work and to give them an understanding of how users would interact with the app. 
+I built an interactive prototype to show the clients how puppyHarmony would work and to give them an understanding of how users would interact with the app.
 
 Go ahead! Give it a try...
 
-<a role="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="_blank">
+<a class="no-shadow" role="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="blank">
     <img src="assets/img/projects/puppyharmony/prototype-1.jpg" alt="Prototype Link">
 </a>
 
 <div class="ext-link">
-    <a role="button" class="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="_blank">Open Live Prototype</a>
+    <a role="button" class="button" href="https://indigodesigned.com/share/run/rv0hkyqf4jzb" target="blank">Open Live Prototype</a>
 </div>
 
 ## Results

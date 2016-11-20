@@ -21,7 +21,7 @@
 		max-width: 800px;
 		padding-bottom: 60px;
 		h2{
-			font-family: $font-sans;
+			font-family: $font-title;
 			font-size: 2rem;
 			font-weight: $font-reg;
 			margin: 50px 0 20px;
@@ -65,6 +65,29 @@
 				}
 			}
 		}
+		em{
+			font-size: 1em;
+			font-family: $font-title;
+			font-weight: $font-light;
+			font-style: $font-italic;
+			color: $blue;
+		}
+
+		blockquote{
+			display: block;
+			margin-top: 0;
+			position: relative;
+			top: -30px;
+
+			p{
+				font-size: 0.98em;
+				text-align: center;
+				color: $blue;
+				font-family: $font-title;
+				font-weight: $font-light;
+				font-style: $font-italic;
+			}
+		}
 		img{
 			width: 100%;
 			margin: 0px;
@@ -76,7 +99,7 @@
 			}
 		}
 
-		a > img{
+		a.no-shadow > img{
 			box-shadow: none;
 		}
 		.ext-link{
@@ -156,7 +179,7 @@
 			border: 0;
 		}
 	}
-	
+
 	.WIP{
 		background: $blue;
 		text-align: center;
