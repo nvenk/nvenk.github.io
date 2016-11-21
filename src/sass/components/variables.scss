@@ -2,12 +2,10 @@
 // Color Palette
 //-----------------------------------------------
 
-// $black: 	#1b2737; // #27303c; // Almost Black
 $black:     #263238; // MATERIAL BlueGrey900
 $white: 	#ECEFF1; // ALmost White
-// $blue: 		#2e416a;
 $blue:      #1b2737;
-$blue-alt:	#0277BD; // (TEAM-LINKS)
+$blue-alt:	#1976D2; // MATERIAL Blue700   - Team Links, Emphasis on project pages
 $red:       #ef5350; // MATERIAL Red400
 $yellow: 	#FDD835;
 
@@ -24,9 +22,8 @@ $dribbble: 	#ea4c89;
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700|Ovo:400|Muli:300);
 
 $font-sans:   'Source Sans Pro', helvetica, arial, sans-serif;
-// $font-serif:  'Alegreya','Georgia', 'Times New Roman', serif;
 $font-serif:  'Muli', helvetica, arial, sans-serif;
-$font-title: 'Ovo', 'Open Sans', helvetica, sans-serif;
+$font-title:  'Ovo', 'Open Sans', helvetica, sans-serif;
 $font-light:   300;
 $font-reg:     500;
 $font-bold:    700;
@@ -38,4 +35,4 @@ $font-italic:  italic;
 //-----------------------------------------------
 
 $container-width-tab: calc(100% - 60px);
-$container-width: calc(100% - 60px);
+$container-width:     calc(100% - 60px);

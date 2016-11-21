@@ -33,6 +33,21 @@
 			    text-align: center;
 			}
 		}
+		h3{
+			font-family: $font-serif;
+			font-size: 1.4rem;
+			font-weight: $font-reg;
+			margin: 0px 0 20px;
+			padding: 0px;
+			padding-left: 0px;
+			text-align: left;
+			color: $red;
+			position: relative;
+			top: -10px;
+			@include breakpoint(tablet) {
+			    text-align: center;
+			}
+		}
 
 		p, li{
 			font-size: 1.2rem;
@@ -60,7 +75,12 @@
 			font-family: $font-title;
 			font-weight: $font-light;
 			font-style: $font-italic;
-			color: $blue;
+			color: $blue-alt;
+		}
+
+		strong{
+			font-weight: $font-bold;
+			color: $blue-alt;
 		}
 
 		blockquote{
@@ -72,7 +92,7 @@
 			p{
 				font-size: 0.98em;
 				text-align: center;
-				color: $blue;
+				color: $blue-alt;
 				font-family: $font-title;
 				font-weight: $font-light;
 				font-style: $font-italic;
