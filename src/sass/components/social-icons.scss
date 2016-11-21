@@ -111,5 +111,18 @@
 				fill: $red;
 			}
 		}
+
+		// 500PX
+
+		.p500{
+			.bg{
+				fill: $px500;
+				stroke: $px500;
+			}
+
+			&:hover svg .icon{
+				fill: $red;
+			}
+		}
 	}
 }
