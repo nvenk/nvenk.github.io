@@ -20,7 +20,7 @@ I was the primary designer on the team, and dealt with:
 
 ## What is Central Cinema?
 
-Central Cinema is not a regular cinema theatre. It is an off-beat retro theatre that plays cult classics on the big screen while serving some great food and drinks during the movie. Our team loved the in-person experience, but saw that their online presence needed much work. This is the story of how we went from their current website...
+Central Cinema is not a regular cinema theatre. It is an off-beat retro theatre that plays cult classics on the big screen while serving great food and drinks during the movie. Our team loved the in-person experience, but we noticed that their online presence needed much work. This is the story of how we went from their current website...
 
 ![Current Central Cinema Homepage](assets/img/projects/centralCinema/cc_existing.png)
 > The current Central Cinema homepage.
@@ -49,10 +49,10 @@ To kick off the redesign, we met with the owner of Central Cinema to determine b
 ## Research
 
 We approached the research phase from various angles, each of us taking charge of a different method. Some of the primary research methods we used included:
-1. Performing a __Heuristic Evaluations__ of the existing website.
-2. __Interviewing__ current customers to get an idea of what their top tasks on the website were.
-3. __Interviewing__ stakeholders(Central Cinema staff) to get an idea of business operations and customer feedback.
-4. __Surveying__ Central Cinema customers and email newsletter subscribers about their online experience.
+1. Performing a __Heuristic Evaluation__ of the existing website.
+2. __Interviewing__ current customers to get an idea of what their top tasks on the website are.
+3. __Interviewing__ stakeholders (Central Cinema staff) to get an idea of business operations and customer feedback.
+4. __Surveying__ Central Cinema customers and newsletter subscribers to gauge their online experience.
 5. __Competitive Analysis__ of other similar venues with ticket booking experiences.
 
 From our findings we synthesized two personas and a task matrix outlining their primary and secondary tasks.
@@ -71,7 +71,7 @@ From our findings we synthesized two personas and a task matrix outlining their 
 ![Whiteboarding session photograph](assets/img/projects/centralCinema/cc_whiteboard2.jpg)
 > Finding common themes and deciding the direction of the website design.
 
-Individually, we came up with sketches of what our ideal solution to the problem would be. We then met as a team to discuss various points like content strategy, interaction maps, and the pros and cons of each design.
+Individually, we came up with sketches of what our ideal solution to the problem would be. We met as a team to discuss various points like content strategy, interaction maps, and the pros and cons of each design.
 
 We then conducted a card sort with 20 participants to determine a simplified information architecture and top-level navigation.
 
@@ -106,11 +106,11 @@ We tested the prototype to assess the efficiency and usability of our design. Th
 Some wins for us were:
 
 1. The usability test using the prototype showed a much higher success rate when performing top tasks, as compared to the existing website.
-2. The improved information architecture caused a lot less confusing and frustration when performing the top tasks.
+2. The improved information architecture caused a lot less confusion and frustration when performing the top tasks.
 
 ## Iteration
 
-A lot of usability testing and team meetings later, I had enough data to create a high fidelity prototype. I found Atomic a bit limiting when I created the mid-fidelity prototype, so I decided to move to __Framer Studio__ so I could explore better interactions and a bit of motion design.
+A lot of usability tests and team meetings later, I had enough data to create a high fidelity prototype. I found Atomic.io a bit limiting when I created the first prototype, so I decided to move to __Framer Studio__ so I could explore better interactions and a bit of motion design.
 
 I also took this opportunity to create a visual language for the website to try and reflect what central cinema represented. I redesigned the logo and overall color scheme to be more in line with the feeling of nostalgia that Central Cinema instills.
 
@@ -126,6 +126,6 @@ I also took this opportunity to create a visual language for the website to try 
 
 I loved working on this project. A fantastic team, and a subject that we were all passionate about. We had some incredible design conversations and I learnt a lot from this experience.
 
-1. It was an interesting experience working with a local business. We got very different perspectives of the business when we spoke to the owner and the people who worked there. This prompted us to get a solid answer by actually visiting the venue and experiencing it for ourselves.
-2. I had a lot of fun working on the visual design and branding. It was challenging to create a style that reflected central cinema's physical location, as well as their 'style'. Collaborating with others really helped to get an overall understanding of how that 'nostalgia' could be represented in terms of visual design.
-3. It becomes incredibly hard to design for a business without knowing the business goals. As important as it is for the website to give it's users an incredible user experience, it's equally important to know the business priorities and talk to stakeholders often to see if we're aligned.
+1. It was an interesting experience working with a local business. We got very different perspectives of the business in our interactions with the owner and the people who worked there. This prompted us to get a solid answer by actually visiting the venue and experiencing it for ourselves.
+2. I had a lot of fun working on the visual design and branding. It was challenging to create a style that reflected central cinema's physical location, as well as their 'style'. Collaborating with others really helped me understand how that 'nostalgia' could be represented in terms of visual design.
+3. It is really hard to design for a business without knowing the business goals. As important as it is for the website to give it's users an incredible user experience, it's equally important to know the business priorities and talk to stakeholders often to see if we're aligned.
