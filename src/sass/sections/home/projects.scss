@@ -7,7 +7,7 @@
 		}
 		@for $i from 1 to 10 {
 			.project-card-container li:nth-child(#{$i}) {
-				animation-delay: $i * 0.15s;
+				animation-delay: $i * 0.08s;
 			}
 		}
 		.col {
