@@ -22,8 +22,8 @@ Coming out of that meeting, I wasn't sure what to think, but the PM gave me anot
 
 **"Don't wait for a pat on the back. When you get people excited and talking, that's when you know you've done a good job."**
 
-![Xactly Connect Squiggly Sketches](assets/img/projects/xactly/xc-sketch.jpg)
-> My wonderfully squiggly sketch.
+<!-- ![Xactly Connect Squiggly Sketches](assets/img/projects/xactly/xc-sketch.jpg) -->
+<!-- > My wonderfully squiggly sketch. -->
 
 ## Xactly Incent Android
 ### User Centered Workflow
