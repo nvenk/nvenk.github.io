@@ -1,0 +1,22 @@
+{% set meta = {
+        url: 'http://nvenk.com',
+        site: 'Nikhil Venkatesh - UX Designer'
+}%}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "partials/meta.njk" %}
+
+        <title> {{ var.title }} </title>
+        <link rel="stylesheet" type="text/css" href="{{ var.styles }}"/>
+    </head>
+
+    <body>
+        {% block content %}{% endblock %}
+
+        {% block scripts %}{% endblock %}
+
+        <script src="{{ var.scripts }}"></script>
+    </body>
+</html>
