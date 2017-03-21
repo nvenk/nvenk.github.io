@@ -29,71 +29,11 @@
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil | SIM</title>
-    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
     <script>
-      try
-      {
-        var AG_onLoad = function(func)
-        {
-          if (document.readyState === "complete" || document.readyState === "interactive") func();
-          else if (document.addEventListener) document.addEventListener("DOMContentLoaded", func);
-          else if (document.attachEvent) document.attachEvent("DOMContentLoaded", func)
-        };
-        var AG_removeElementById = function(id)
-        {
-          var element = document.getElementById(id);
-          if (element && element.parentNode)
-          {
-            element.parentNode.removeChild(element);
-          }
-        };
-        var AG_removeElementBySelector = function(selector)
-        {
-          if (!document.querySelectorAll)
-          {
-            return;
-          }
-          var nodes = document.querySelectorAll(selector);
-          if (nodes)
-          {
-            for (var i = 0; i < nodes.length; i++)
-            {
-              if (nodes[i] && nodes[i].parentNode)
-              {
-                nodes[i].parentNode.removeChild(nodes[i]);
-              }
-            }
-          }
-        };
-        var AG_each = function(selector, fn)
-        {
-          if (!document.querySelectorAll) return;
-          var elements = document.querySelectorAll(selector);
-          for (var i = 0; i < elements.length; i++)
-          {
-            fn(elements[i]);
-          };
-        };
-        var AG_removeParent = function(el, fn)
-        {
-          while (el && el.parentNode)
-          {
-            if (fn(el))
-            {
-              el.parentNode.removeChild(el);
-              return;
-            }
-            el = el.parentNode;
-          }
-        };
-        window.uabInject = function() {};
-      }
-      catch (ex)
-      {
-        console.error('Error executing AG js: ' + ex);
-      }
+      history.scrollRestoration = 'manual';
     </script>
-  </head>
+    <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
   <body class="sim"> <pre class="nametag">
     <div class="container">
         <h6 class="fade-in">Nikhil Venkatesh<span class="divider">&nbsp;</span><span class="title">Product Designer</span></h6>
@@ -103,8 +43,8 @@
       <div class="container">
         <div class="feature">
           <div class="container-inner">
-            <h2>SIM: The Social Robot</h2>
-            <h3>Pastry gingerbread jelly gingerbread pie. Sugar plum jelly-o ice cream carrot cake lemon drops bear claw fruixcake croissant.</h3>
+            <h1>SIM: The Social Robot</h1>
+            <h3>Designing for affective Human-Robot Interaction.</h3>
             <div class="button-container">
               <a href="sim.html" class="trigger--sim">Read About It</a>
             </div>

@@ -6,6 +6,12 @@
 // Home Page
 body {
 
+    &.home{
+        section{
+            transition-duration: 0.2s;
+        }
+    }
+
     #tempScroller{
         width: 100%;
         height: 1000px;
@@ -77,14 +83,21 @@ body {
             height: 350px;
 
             .container {
+
+                .info{
+                    h1{
+                        padding-top: 160px;
+                    }
+                    .button-container{
+                        opacity:0;
+                        height: 0;
+                    }
+                }
                 .image {
                     .image-container {
                         width: 300px;
                         top: 150px;
                     }
-                }
-                .aboutMe{
-                    opacity:0;
                 }
             }
         }
@@ -93,159 +106,226 @@ body {
         }
     }
 
-    #sim{
-        padding-bottom: 560px;
+    // Transition duration for all pages that aren't active (fade-out when transitioning)
 
-        .trigger--sim:hover{
-            color: $orange;
-        }
-
-        .container{
-            .feature{
-                background: $orange;
-                background: url('../img/sim/gradient.png');
-                background-size: cover;
-                margin: 78px 32.59% 78px 7%;
+    // Default Styles for all projects, transition styles
+    @mixin project-defaults($name, $color: $black, $margin-right: 25%, $margin-left: 25%){
+        ##{$name}{
+            position: relative;
+            .trigger--#{$name}:hover {
+                color: $color;
             }
 
-            .feature-image{
-                top: 80px;
-
-                .container-inner{
-                    height:700px;
-
-                    img{
-                        height: 100%;
+            .container{
+                .feature{
+                    background: $color url('../img/#{$name}/gradient.jpg');
+                    background-size: cover;
+                    margin: 78px $margin-right 78px $margin-left;
+                }
+                .feature-image{
+                    .container-inner{
+                        img{
+                            height:100%;
+                            border-radius: 4px;
+                        }
                     }
                 }
+            }
+        }
+
+        &.#{$name}, &.home.transition--#{$name} {
+            section##{$name}{
+                .container{
+                    max-width: 100%;
+                    padding: 0;
+
+                    .feature{
+                        border-radius: 0;
+                        margin: 0;
+                        padding: 200px 90px 0;
+
+                        .container-inner{
+                            width: 90%;
+
+                            h1, h2{
+                                padding-top: 200px;
+
+                            }
+
+                            .button-container{
+                                opacity: 0;
+                                height: 0;
+                            }
+                        }
+                    }
+
+                    .feature-image{
+                        .container-inner{
+
+                        }
+                    }
+                }
+            }
+
+            section:not(##{$name}){
+                opacity: 0;
             }
         }
     }
 
-    &.sim, &.home.transition--sim {
-        section#sim {
-            .container {
-                max-width: 100%;
-                padding: 0;
 
-                .feature {
-                    border-radius: 0;
-                    margin: 0;
-                    padding-top: 200px;
+    // Initializing Each project
+    @include project-defaults('sim',$orange, 32.5%, 7%);
+    @include project-defaults('xtly', $blue, 12%, 20%);
+    @include project-defaults('central', $red, 35%, 8%);
+    @include project-defaults('puppy', $green, 24%, 18%);
 
-                    .container-inner{
-                        padding: 0 60px;
+    #sim{
+        padding-bottom: 560px;
+        .container .feature-image{
+            top: 80px;
 
-                        h2 {
-                            padding-top: 200px;
-                        }
-
-                        .button-container{
-                            opacity:0;
-                            height:0;
-                        }
-                    }
-                }
-
-                .feature-image{
-                    top: 360px;
-
-                    .container-inner{
-                        height:500px;
-                    }
-                }
+            .container-inner{
+                height:600px;
             }
         }
+    }
+    &.sim, &.home.transition--sim {
+        section#sim {
+            .container .feature-image {
+                top: 360px;
 
-        section:not(#sim){
-            opacity:0;
+                .container-inner{
+                    height:500px;
+                }
+            }
         }
     }
 
     #xtly{
-        position: relative;
+        padding-bottom: 100px;
+        .container .feature-image{
+            bottom: 40px;
 
-        .trigger--xtly:hover{
-            color: $blue;
-        }
+            .container-inner{
+                height:550px;
 
-        .container{
-            .feature{
-                background: $blue;
-                background: url('../img/xactly/gradient.png');
-                background-size: cover;
-                margin: 78px 12% 78px 20%;
-            }
-
-            .feature-image{
-                bottom: 40px;
-
-                .container-inner{
-                    height:550px;
-
-                    img{
-                        height: 100%;
-                        margin-left: 12%;
-                        border-radius: 4px;
-                        transition-delay: 0.18s;
-                        transition-duration: 0.6s;
-                    }
+                img{
+                    margin-left: 12%;
                 }
             }
         }
     }
-
     &.xtly, &.home.transition--xtly {
         section#xtly {
-            .container {
-                max-width: 100%;
-                padding: 0;
+            .container .feature-image{
+                bottom: -260px;
 
-                .feature {
-                    border-radius: 0;
-                    margin: 0;
-                    padding: 0 60px;
-                    padding-top: 200px;
+                .container-inner{
+                    height: 600px;
 
-                    .container-inner{
-                        padding: 0;
-
-                        h2 {
-                            padding-top: 200px;
-                        }
-
-                        .button-container{
-                            opacity:0;
-                            height:0;
-                        }
-                    }
-                }
-
-                .feature-image{
-                    bottom: -300px;
-
-                    .container-inner{
-                        height:600px;
-
-                        img{
-                            margin-left: 0;
-                        }
+                    img{
+                        margin: 0;
                     }
                 }
             }
         }
+    }
 
-        section:not(#xtly){
-            opacity:0;
+    #central{
+        padding-bottom: 180px;
+
+        .container .feature-image{
+            top: 120px;
+            right: 140px;
+
+            .container-inner{
+                height:300px;
+            }
+        }
+    }
+    &.central, &.home.transition--central {
+        section#central {
+
+            .container .feature-image{
+                top: 300px;
+
+                .container-inner{
+                    height:420px;
+
+                    img{
+                        transform: translateX(200px);
+                    }
+                }
+            }
         }
     }
 
-}
+    #puppy{
+        padding-bottom: 180px;
+        .container .feature-image{
+            bottom:20px;
+            left: 8%;
 
-body.home{
-    section{
-        transition-duration: 0.2s;
+            .container-inner{
+                height:480px;
+            }
+        }
     }
+    &.puppy, &.home.transition--puppy {
+        section#puppy {
+            .container .feature-image{
+                bottom: -340px;
+                left: 0;
+
+                .container-inner{
+                    height: 680px;
+                }
+            }
+        }
+    }
+
+    #gallery{
+        background: $purple;
+        height: 100%;
+
+        @extend .soft-shadow;
+    }
+
+    footer{
+        height: 90px;
+        display: flex;
+        background: $black;
+        padding: 60px 0 100px 0;
+
+        h4#email{
+            color: white;
+            font-size: 2em;
+            font-weight: $light;
+            text-align: center;
+            width: 100%;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left:0; bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: white;
+                transform: scaleX(0);
+                transition: 0.3s all ease-in-out;
+
+            }
+
+            &:hover{
+                color: $blue;
+                &::before{
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
 }
 
 // About Page

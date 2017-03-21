@@ -29,71 +29,11 @@
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil Venkatesh | Product Designer</title>
-    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
     <script>
-      try
-      {
-        var AG_onLoad = function(func)
-        {
-          if (document.readyState === "complete" || document.readyState === "interactive") func();
-          else if (document.addEventListener) document.addEventListener("DOMContentLoaded", func);
-          else if (document.attachEvent) document.attachEvent("DOMContentLoaded", func)
-        };
-        var AG_removeElementById = function(id)
-        {
-          var element = document.getElementById(id);
-          if (element && element.parentNode)
-          {
-            element.parentNode.removeChild(element);
-          }
-        };
-        var AG_removeElementBySelector = function(selector)
-        {
-          if (!document.querySelectorAll)
-          {
-            return;
-          }
-          var nodes = document.querySelectorAll(selector);
-          if (nodes)
-          {
-            for (var i = 0; i < nodes.length; i++)
-            {
-              if (nodes[i] && nodes[i].parentNode)
-              {
-                nodes[i].parentNode.removeChild(nodes[i]);
-              }
-            }
-          }
-        };
-        var AG_each = function(selector, fn)
-        {
-          if (!document.querySelectorAll) return;
-          var elements = document.querySelectorAll(selector);
-          for (var i = 0; i < elements.length; i++)
-          {
-            fn(elements[i]);
-          };
-        };
-        var AG_removeParent = function(el, fn)
-        {
-          while (el && el.parentNode)
-          {
-            if (fn(el))
-            {
-              el.parentNode.removeChild(el);
-              return;
-            }
-            el = el.parentNode;
-          }
-        };
-        window.uabInject = function() {};
-      }
-      catch (ex)
-      {
-        console.error('Error executing AG js: ' + ex);
-      }
+      history.scrollRestoration = 'manual';
     </script>
-  </head>
+    <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
   <body class="home">
     <header id="about">
       <div class="container">
@@ -114,7 +54,7 @@
         <div class="feature">
           <div class="container-inner">
             <h2>SIM: The Social Robot</h2>
-            <h3>Pastry gingerbread jelly gingerbread pie. Sugar plum jelly-o ice cream carrot cake lemon drops bear claw fruixcake croissant.</h3>
+            <h3>Designing for affective Human-Robot Interaction.</h3>
             <div class="button-container">
               <a href="sim.html" class="trigger--sim">Read About It</a>
             </div>
@@ -131,7 +71,7 @@
         <div class="feature">
           <div class="container-inner">
             <h2>Xactly Incent</h2>
-            <h3>Pastry gingerbread jelly gingerbread pie. Sugar plum jelly-o ice cream carrot cake lemon drops bear claw fruixcake croissant.</h3>
+            <h3>Helping Sales people stay informed about their goals.</h3>
             <div class="button-container">
               <a href="xactly.html" class="trigger--xtly">Read About It</a>
             </div>
@@ -139,11 +79,54 @@
         </div>
         <div class="feature-image">
           <div class="container-inner">
-            <img src="img/xactly/feature.png" alt="" class="soft-shadow" /> </div>
+            <img src="img/xtly/feature.png" alt="" class="soft-shadow" /> </div>
         </div>
       </div>
     </section>
-    <section id="tempScroller"> </section>
+    <section id="central" class="r">
+      <div class="container">
+        <div class="feature">
+          <div class="container-inner">
+            <h2>Central Cinema</h2>
+            <h3>Redesigning the ticket booking experience for a theatre.</h3>
+            <div class="button-container">
+              <a href="central-cinema.html" class="trigger--central">Read About It</a>
+            </div>
+          </div>
+        </div>
+        <div class="feature-image">
+          <div class="container-inner">
+            <img src="img/central/feature.jpg" alt="" class="soft-shadow" /> </div>
+        </div>
+      </div>
+    </section>
+    <section id="puppy" class="l">
+      <div class="container">
+        <div class="feature">
+          <div class="container-inner">
+            <h2>PuppyHarmony</h2>
+            <h3>A platform to find the perfect playdate for your furry friend.</h3>
+            <div class="button-container">
+              <a href="puppy.html" class="trigger--puppy">Read About It</a>
+            </div>
+          </div>
+        </div>
+        <div class="feature-image">
+          <div class="container-inner">
+            <img src="img/puppy/feature.png" alt="" /> </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="container"> </div>
+    </section>
+    <footer>
+      <div class="container">
+        <a href="mailto:nikhilv.13@gmail.com">
+          <h4 id="email">nikhilv.13@gmail.com</h4>
+        </a>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

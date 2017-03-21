@@ -3,12 +3,12 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/home.css',
-
-        bodyClass: 'xtly'
+        scripts: 'js/scripts.js',
+        bodyClass: 'puppy'
 }%}
 
 {% set meta2 = {
-        title: 'Nikhil | Xactly Incent',
+        title: 'Nikhil | PuppyHarmony',
         desc: 'I’m a UX Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.',
         image: ''
 }%}
@@ -18,25 +18,23 @@
 
 {% include "partials/nametag.njk" %}
 
-<section id="xtly" class="l">
+<section id="puppy" class="l">
     <div class="container">
         <div class="feature">
             <div class="container-inner">
-                <h1>Xactly Incent</h1>
-                <h3>Helping Sales people stay informed about their goals.</h3>
+                <h2>PuppyHarmony</h2>
+                <h3>A platform to find the perfect playdate for your furry friend.</h3>
                 <div class="button-container">
-                    <a href="xactly.html" class="trigger--xtly">Read About It</a>
+                    <a href="puppy.html" class="trigger--puppy">Read About It</a>
                 </div>
             </div>
         </div>
         <div class="feature-image">
             <div class="container-inner">
-                <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
+                <img src="img/puppy/feature.png" alt="" />
             </div>
         </div>
     </div>
 </section>
-
-<section id="tempScroller"></section>
 
 {% endblock %}
