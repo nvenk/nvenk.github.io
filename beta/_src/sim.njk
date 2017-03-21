@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{# ----- Variables ----- #}
+{% set var = {
+        styles: 'css/home.css',
+        scripts: 'js/scripts.js',
+        bodyClass: 'sim'
+}%}
+
+{% set meta2 = {
+        title: 'Nikhil | SIM',
+        desc: 'I’m a UX Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.',
+        image: ''
+}%}
+
+{# ----- Content ----- #}
+{% block content %}
+
+{% include "partials/nametag.njk" %}
+
+<section id="sim" class="r">
+    <div class="container">
+        <div class="feature">
+            <div class="container-inner">
+                <h2>SIM: The Social Robot</h2>
+                <h3>Pastry gingerbread jelly gingerbread pie. Sugar plum jelly-o ice cream carrot cake lemon drops bear claw fruixcake croissant.</h3>
+                <div class="button-container">
+                    <a href="sim.html" class="trigger--sim">Read About It</a>
+                </div>
+            </div>
+        </div>
+        <div class="feature-image">
+            <div class="container-inner">
+                <img src="img/sim/feature.png" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

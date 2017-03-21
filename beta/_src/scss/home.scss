@@ -1,3 +1,271 @@
-body{
-    background: red;
+@import "vendor/normalize";
+@import "components/variables";
+@import "components/breakpoints";
+@import "components/global";
+
+// Home Page
+body {
+
+    #tempScroller{
+        width: 100%;
+        height: 1000px;
+    }
+
+    #about {
+        background: $black;
+        position: relative;
+        height: 100%;
+
+        .container{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            position: relative;
+            margin: 0 auto;
+
+            .info {
+                height: 100%;
+                width: 50%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    display: block;
+                    color: $white;
+                    text-align: center;
+                    margin:0;
+                    font-size: 2.2em;
+                }
+
+                h3 {
+                    display: block;
+                    color: $red;
+                    text-align: center;
+                    font-weight: $regular;
+                }
+
+                .trigger--about:hover{
+                    color: $black;
+                }
+
+            }
+
+            .image {
+                height: inherit;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .image-container {
+                    @include aspect-ratio(1,1)
+                    width: 350px;
+                    border-radius: 50%;
+                    background: $white;
+                    position: relative;
+                    top: 0;
+                }
+            }
+        }
+    }
+    &.transition--about{
+        #about{
+            height: 350px;
+
+            .container {
+                .image {
+                    .image-container {
+                        width: 300px;
+                        top: 150px;
+                    }
+                }
+                .aboutMe{
+                    opacity:0;
+                }
+            }
+        }
+        section#sim{
+            opacity: 0;
+        }
+    }
+
+    #sim{
+        padding-bottom: 560px;
+
+        .trigger--sim:hover{
+            color: $orange;
+        }
+
+        .container{
+            .feature{
+                background: $orange;
+                background: url('../img/sim/gradient.png');
+                background-size: cover;
+                margin: 78px 32.59% 78px 7%;
+            }
+
+            .feature-image{
+                top: 80px;
+
+                .container-inner{
+                    height:700px;
+
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sim, &.home.transition--sim {
+        section#sim {
+            .container {
+                max-width: 100%;
+                padding: 0;
+
+                .feature {
+                    border-radius: 0;
+                    margin: 0;
+                    padding-top: 200px;
+
+                    .container-inner{
+                        padding: 0 60px;
+
+                        h2 {
+                            padding-top: 200px;
+                        }
+
+                        .button-container{
+                            opacity:0;
+                            height:0;
+                        }
+                    }
+                }
+
+                .feature-image{
+                    top: 360px;
+
+                    .container-inner{
+                        height:500px;
+                    }
+                }
+            }
+        }
+
+        section:not(#sim){
+            opacity:0;
+        }
+    }
+
+    #xtly{
+        position: relative;
+
+        .trigger--xtly:hover{
+            color: $blue;
+        }
+
+        .container{
+            .feature{
+                background: $blue;
+                background: url('../img/xactly/gradient.png');
+                background-size: cover;
+                margin: 78px 12% 78px 20%;
+            }
+
+            .feature-image{
+                bottom: 40px;
+
+                .container-inner{
+                    height:550px;
+
+                    img{
+                        height: 100%;
+                        margin-left: 12%;
+                        border-radius: 4px;
+                        transition-delay: 0.18s;
+                        transition-duration: 0.6s;
+                    }
+                }
+            }
+        }
+    }
+
+    &.xtly, &.home.transition--xtly {
+        section#xtly {
+            .container {
+                max-width: 100%;
+                padding: 0;
+
+                .feature {
+                    border-radius: 0;
+                    margin: 0;
+                    padding: 0 60px;
+                    padding-top: 200px;
+
+                    .container-inner{
+                        padding: 0;
+
+                        h2 {
+                            padding-top: 200px;
+                        }
+
+                        .button-container{
+                            opacity:0;
+                            height:0;
+                        }
+                    }
+                }
+
+                .feature-image{
+                    bottom: -300px;
+
+                    .container-inner{
+                        height:600px;
+
+                        img{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        section:not(#xtly){
+            opacity:0;
+        }
+    }
+
+}
+
+body.home{
+    section{
+        transition-duration: 0.2s;
+    }
+}
+
+// About Page
+
+body.about {
+    header#about{
+        height: 350px;
+        .container {
+            .image {
+                .image-container {
+                    width: 300px;
+                    top: 150px;
+                }
+            }
+            .aboutMe{
+                opacity:0;
+            }
+        }
+    }
+    section#sim{
+        opacity: 0;
+    }
 }

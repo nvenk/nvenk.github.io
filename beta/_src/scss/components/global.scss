@@ -1,0 +1,211 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400i,900');
+
+
+body,
+html {
+    height: 100%;
+}
+
+body * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+    font-family: $sans;
+    transition: $default-trns;
+}
+
+.container, .container-inner{
+    color: white;
+    max-width: $site-width-max;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+// Utility Classes
+.button-container{
+    height: 48px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-align: center;
+
+    a[class^="trigger--"]{
+        border: 1px solid white;
+        border-radius: 50px;
+        text-align: center;
+        padding: 12px 18px;
+        padding-right: 20px;
+        position: relative;
+        top: 7px;
+        color: white;
+        text-decoration: none;
+        opacity: 1;
+        transition: 0.2s all cubic-bezier(.42,0,.58,1) !important;
+
+        &::after{
+            content: '›';
+            font-size: 1.6em;
+            position: relative;
+            top: 2px;
+            left:0;
+            padding-left: 12px;
+        }
+
+        &:hover{
+            background: $white;
+            border: 1px solid $white;
+        }
+    }
+}
+
+.soft-shadow{
+    box-shadow: 0px 0px 32px rgba(0,0,0,0.28);
+}
+
+// Feature Sections Styles
+section, header {
+    .container{
+        transition-delay: 0.18s;
+        transition-duration: 0.52s;
+
+        .feature{
+            padding-right: 104px;
+            padding-left: 86px;
+            border-radius: 8px;
+            background-size: cover;
+            @extend .soft-shadow;
+
+            .container-inner{
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+                transition-delay: 0.18s;
+                transition-duration: 0.42s;
+
+                h1, h2{
+                    padding-top: 64px;
+                    font-size: 2em;
+                    text-transform: uppercase;
+                    margin: 0;
+                    transition-duration: 0.4s;
+                }
+
+                h3{
+                    padding-top: 32px;
+                    font-weight: $regular;
+                    font-size: 1.1em;
+                    max-width: 540px;
+                    margin: 0;
+                    transition-duration: 0.4s;
+                }
+
+                .button-container{
+                    padding-top: 24px;
+                    padding-bottom: 52px;
+                    text-align: left;
+                }
+            }
+        }
+
+        .feature-image{
+            pointer-events: none;
+            position: absolute;
+            width: calc(100% - 120px);
+            padding: 0 60px;
+            text-align: right;
+        }
+    }
+
+
+    // Left Aligned Projects
+    &.l{
+
+        .feature{
+            padding-right: 104px;
+            padding-left: 86px;
+            text-align: right;
+
+            .container-inner{
+                align-items: flex-end;
+
+                .button-container{
+                    text-align: right;
+                }
+            }
+        }
+
+        .feature-image{
+            text-align: left;
+        }
+    }
+}
+
+
+// Mixins
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+// Project Page
+
+.nametag{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 9999;
+
+    h6{
+        font-weight: $regular;
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 6px;
+        animation-duration: 1s;
+        animation-delay: 0.4s;
+        opacity: 0;
+
+        .divider{
+            background: white;
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            font-size: 0.79em;
+            width: 1px;
+            height: 100%;
+            margin: 0 24px 0 20px;
+        }
+    }
+}
+
+// Animation
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation: fade-in;
+    animation-fill-mode: forwards;
+}

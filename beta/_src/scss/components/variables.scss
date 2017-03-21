@@ -1,0 +1,49 @@
+/* ---------
+Colors
+--------- */
+$black     : #303030;
+$black-g1  : #151515;
+$white     : #fcfcfc;
+// SIM
+$orange    : #f76b1c;
+$orange-g1 : #ecaf50;
+
+// Xactly
+$blue      : #0092FF;
+$blue-g1   : #326EC1;
+
+// Puppy Harmony
+$green     : #4bc388;
+$green-g1  : #6dc3b1;
+// Central Cinema
+$red       : #ea4335;
+$red-g1    : #ae2e5c;
+// Galleries
+$purple    : #7415ce;
+$purple-g1 : #26072f;
+
+/* ----------------
+Screen Sizes
+---------------- */
+$screen-mob-sm:      20em;
+$screen-mob:         22em;
+$screen-tablet:      62em;
+$screen-laptop:      80em;
+$screen-desktop:     86em;
+
+/* ----------------
+Content Container
+---------------- */
+$site-width-max: 1440px;
+
+/* ----------------
+Fonts
+---------------- */
+
+$sans: 'Source Sans Pro', 'helvetica', sans-serif;
+$bold: 900;
+$regular: 400;
+$light: 200;
+
+
+$default-trns: 0.5s all ease-in-out;

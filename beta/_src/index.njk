@@ -1,18 +1,77 @@
 {% extends "layout.njk" %}
 
+{# ----- Variables ----- #}
 {% set var = {
         styles: 'css/home.css',
         scripts: 'js/scripts.js',
-        title: 'Hello, World!'
+        bodyClass: 'home'
 }%}
 
-
 {% set meta2 = {
-        title: 'Hello World',
-        desc: 'I’m a UX Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.',
+        title: 'Nikhil Venkatesh | Product Designer',
+        desc: 'I’m a Product Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.',
         image: ''
 }%}
 
+{# ----- Content ----- #}
 {% block content %}
-<h1>This is the index page. Deal with it!</h1>
+<header id="about">
+    <div class="container">
+        <div class="info">
+                <h1>Nikhil Venkatesh</h1>
+                <h3>Design - Animate - Code</h3>
+                <div class="button-container">
+                    <a href="about.html" class="trigger--about">Read More</a>
+                </div>
+        </div>
+        <div class="image">
+            <div class="image-container"></div>
+        </div>
+    </div>
+</header>
+
+<section id="sim" class="r">
+    <div class="container">
+        <div class="feature">
+            <div class="container-inner">
+                <h2>SIM: The Social Robot</h2>
+                <h3>Pastry gingerbread jelly gingerbread pie. Sugar plum jelly-o ice cream carrot cake lemon drops bear claw fruixcake croissant.</h3>
+                <div class="button-container">
+                    <a href="sim.html" class="trigger--sim">Read About It</a>
+                </div>
+            </div>
+        </div>
+        <div class="feature-image">
+            <div class="container-inner">
+                <img src="img/sim/feature.png" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="xtly" class="l">
+    <div class="container">
+        <div class="feature">
+            <div class="container-inner">
+                <h2>Xactly Incent</h2>
+                <h3>Pastry gingerbread jelly gingerbread pie. Sugar plum jelly-o ice cream carrot cake lemon drops bear claw fruixcake croissant.</h3>
+                <div class="button-container">
+                    <a href="xactly.html" class="trigger--xtly">Read About It</a>
+                </div>
+            </div>
+        </div>
+        <div class="feature-image">
+            <div class="container-inner">
+                <img src="img/xactly/feature.png" alt="" class="soft-shadow" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tempScroller">
+
+</section>
+
+
 {% endblock %}

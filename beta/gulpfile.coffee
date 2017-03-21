@@ -8,6 +8,8 @@ gulp = require 'gulp'
 plumber = require 'gulp-plumber'
 stripComments = require 'gulp-strip-comments'
 notify = require 'gulp-notify'
+newer = require 'gulp-newer'
+dSync = require 'gulp-directory-sync'
 
 browserSync = require 'browser-sync'
 bSync = browserSync.create()
@@ -20,11 +22,14 @@ mediaQuery = require 'gulp-combine-mq'
 
 ## Scripts
 uglify = require 'gulp-uglify'
-newer = require 'gulp-newer'
 
 ## Content
 nunjucks = require 'gulp-nunjucks-render'
 prettify = require 'gulp-prettify'
+
+## images
+imagemin = require 'gulp-imagemin'
+pngquant = require 'imagemin-pngquant'
 
 # Variables
 sync =
@@ -35,7 +40,8 @@ sources =
     content: '_src/*.njk'
     templates: '_src/templates'
     styles: '_src/scss/*.scss'
-    images: '_src/img/**/*.*'
+    allScss: '_src/scss/**/*.scss'
+    images: '_src/img/**/*.+(png|jpg|jpeg|gif|svg)'
     scripts: '_src/js/**/*.js'
 
 dests =
@@ -113,15 +119,42 @@ gulp.task 'scripts-task', ->
     return gulp.src(sources.scripts)
     .pipe plumber({ errorHandler: onError })
     .pipe newer(dests.scripts)
-    .pipe uglify()
+    .pipe uglify({ mangle: false })
     .pipe gulp.dest(dests.scripts)
+    .pipe bSync.stream()
+
+## Images
+gulp.task 'images-task', ->
+    onError = (err) ->
+        notify.onError({
+            title: 'Image Error',
+            message: "<%= error.message %>",
+            open: 'file://<%= error.file %>',
+            onLast: true,
+            sound: "Beep"
+        })(err);
+        this.emit('end')
+
+    return gulp.src(sources.images)
+    .pipe plumber({ errorHandler: onError })
+    .pipe newer(dests.images)
+    # .pipe imagemin({
+    #     progressive: true,
+    #     optimizationLevel: 3,
+    #     interlaced: true,
+    #     svgoPlugins: [{ removeViewBox: false, collapseGroups: false }],
+    #     use:[pngquant()]
+    # })
+    .pipe gulp.dest(dests.images)
+    .pipe dSync('_src/img', dests.images, { printSummary: true })
     .pipe bSync.stream()
 
 ## Watch
 gulp.task 'watch', ->
-    gulp.watch([sources.content,sources.templates+'/**/*.njk'],['content-task'])
-    gulp.watch(sources.styles, ['styles-task'])
+    gulp.watch([sources.content, sources.templates+'/**/*.njk'],['content-task'])
+    gulp.watch(sources.allScss, ['styles-task'])
     gulp.watch(sources.scripts, ['scripts-task'])
+    gulp.watch(sources.images, ['images-task'])
 
 ## Default
-gulp.task 'default', ['content-task', 'styles-task','scripts-task','sync-task','watch'], ->
+gulp.task 'default', ['content-task', 'styles-task','sync-task','watch'], ->
