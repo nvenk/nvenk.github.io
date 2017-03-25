@@ -1,0 +1,198 @@
+@import "vendor/normalize";
+@import "components/variables";
+@import "components/breakpoints";
+@import "components/global";
+
+// Project Page
+body {
+    .nametag{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        padding: 0;
+        z-index: 9999;
+
+        .container{
+            width: 90%;
+
+            h6{
+                font-weight: $regular;
+                text-transform: uppercase;
+                font-size: 0.8em;
+                letter-spacing: 6px;
+                animation-duration: 1s;
+                animation-delay: 0.4s;
+                opacity: 0;
+
+                .divider{
+                    background: white;
+                    display: inline-block;
+                    position: relative;
+                    top: -1px;
+                    font-size: 0.79em;
+                    width: 1px;
+                    height: 100%;
+                    margin: 0 24px 0 20px;
+                }
+            }
+        }
+    }
+
+    @include project-defaults('sim',$orange);
+    &.sim, &.puppy.transition--sim {
+        .next-up section#sim, header#sim {
+            .container .feature-image {
+                top: 360px;
+                .container-inner{
+                    height:500px;
+                }
+            }
+        }
+
+        // FOOTER STYLES
+        .next-up section#xtly {
+            .container .feature-image{
+                bottom: 40px;
+
+
+                .container-inner{
+                    height: 600px;
+
+                    img{
+                        margin: 0;
+                        margin-left: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include project-defaults('xtly', $blue, 4%, 38%);
+    &.xtly, &.sim.transition--xtly{
+        .next-up section#xtly, header#xtly {
+            .container .feature-image{
+                bottom: -260px;
+
+                .container-inner{
+                    height: 600px;
+
+                    img{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include project-defaults('central', $red);
+    &.central, &.xtly.transition--central {
+        .next-up section#central, header#central {
+
+            .container .feature-image{
+                top: 300px;
+
+                .container-inner{
+                    height:420px;
+
+                    img{
+                        transform: translateX(100px);
+                    }
+                }
+            }
+        }
+    }
+
+    @include project-defaults('puppy', $green);
+    &.puppy, &.central.transition--puppy {
+        .next-up section#puppy, header#puppy {
+            .container .feature-image{
+                bottom: -340px;
+                left: 0;
+
+                .container-inner{
+                    height: 680px;
+                }
+            }
+        }
+    }
+
+    // CONTENT
+
+    .container{
+        max-width: calc($site-width-max - 60px);
+        padding: 0 30px;
+    }
+
+    p{
+        color: $black;
+        font-size: 1em;
+        letter-spacing: 0.02em;
+        line-height: 1.7;
+        padding-bottom: 20px;
+    }
+
+    section.project-content{
+        display: flex;
+        opacity: 0;
+        @extend .fade-in;
+        animation-delay: 0.4s;
+        padding: 100px 0;
+
+        .the-problem{
+            width: 50%;
+            padding-right: 40px;
+
+        }
+    }
+
+    section.project-content.alt{
+        background: $gray;
+    }
+
+    // FOOTER
+
+    .next-up{
+        padding-top: 250px;
+
+        .label{
+            padding-left: 150px;
+            font-size: 2em;
+            width: auto;
+            font-weight: bold;
+            position: relative;
+            display: inline;
+            top: -140px;
+            left:0;
+            opacity: 1;
+            transition: 0.3s all ease-in-out;
+
+            &:before{
+                content: '';
+                background-color: $blue;
+                height: 5px;
+                position: absolute;
+                bottom: -8px;
+                left:0;
+                width: 106%;
+            }
+            &:after{
+                content: '';
+                background-color: $blue;
+                height: 12px;
+                position: absolute;
+                bottom: -11px;
+                right:-6%;
+                width: 12px;
+            }
+        }
+    }
+
+    @at-root {
+        body[class^="transition--"]{
+            .next-up{
+                padding: 200px;
+            }
+        }
+    }
+}

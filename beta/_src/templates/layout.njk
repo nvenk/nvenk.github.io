@@ -11,20 +11,25 @@
 
         <title>{{ meta2.title }}</title>
         <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
-        <script>
-            history.scrollRestoration = 'manual';
-        </script>
         <link rel="stylesheet" type="text/css" href="{{ var.styles }}" />
     </head>
 
-    <body class="{{ var.bodyClass }}">
+    <body class="{{ var.bodyClass }} my-scrollbar">
+        <script>
+            if(document.getElementsByTagName('body')[0].className == "home") {
+                history.scrollRestoration = 'auto';
+            }
+            else {
+                history.scrollRestoration = 'manual';
+            }
+        </script>
 
-            {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
 
-            {% block scripts %}{% endblock %}
+        {% block scripts %}{% endblock %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
+        <script src="js/vendor/gemini-scrollbars.js"></script>
         <script src="{{ var.scripts }}"></script>
     </body>
 </html>

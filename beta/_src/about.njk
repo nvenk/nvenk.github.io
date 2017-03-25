@@ -3,12 +3,11 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/home.css',
-        scripts: 'js/scripts.js',
-        title: 'Hello, World!',
+        scripts: '',
         bodyClass: 'about'
 }%}
 {% set meta2 = {
-        title: 'Hello World',
+        title: 'Nikhil Venkatesh | Product Designer',
         desc: 'I’m a UX Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.',
         image: ''
 }%}
@@ -16,20 +15,17 @@
 {# ----- Content ----- #}
 {% block content %}
 
-<header id="about">
+<section id="about">
     <div class="container">
         <div class="info">
                 <h1>Nikhil Venkatesh</h1>
                 <h3>Design - Animate - Code</h3>
-                <div class="button-container">
-                    <a href="about.html" class="trigger--about">Read More</a>
-                </div>
         </div>
         <div class="image">
             <div class="image-container"></div>
         </div>
     </div>
-</header>
+</section>
 
 <section id="tempScroller"></section>
 

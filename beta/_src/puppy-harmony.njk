@@ -2,7 +2,7 @@
 
 {# ----- Variables ----- #}
 {% set var = {
-        styles: 'css/home.css',
+        styles: 'css/project.css',
         scripts: 'js/scripts.js',
         bodyClass: 'puppy'
 }%}
@@ -18,14 +18,14 @@
 
 {% include "partials/nametag.njk" %}
 
-<section id="puppy" class="l">
+<header id="puppy" class="l">
     <div class="container">
         <div class="feature">
             <div class="container-inner">
-                <h2>PuppyHarmony</h2>
+                <h1>PuppyHarmony</h1>
                 <h3>A platform to find the perfect playdate for your furry friend.</h3>
                 <div class="button-container">
-                    <a href="puppy.html" class="trigger--puppy">Read About It</a>
+                    <a href="puppy-harmony.html" class="trigger--puppy">Read About It</a>
                 </div>
             </div>
         </div>
@@ -35,6 +35,6 @@
             </div>
         </div>
     </div>
-</section>
+</header>
 
 {% endblock %}

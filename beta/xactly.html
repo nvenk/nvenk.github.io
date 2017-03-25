@@ -20,26 +20,33 @@
     <meta name="twitter:title" content="Nikhil | Xactly Incent">
     <meta name="twitter:description" content="I’m a UX Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.">
     <meta name="twitter:image" content="">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/img/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/img/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/img/favicon/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil | Xactly Incent</title>
     <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/project.css" /> </head>
+  <body class="xtly my-scrollbar">
     <script>
-      history.scrollRestoration = 'manual';
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
-  <body class="xtly"> <pre class="nametag">
+      if (document.getElementsByTagName('body')[0].className == "home")
+      {
+        history.scrollRestoration = 'auto';
+      }
+      else
+      {
+        history.scrollRestoration = 'manual';
+      }
+    </script> <pre class="nametag">
     <div class="container">
         <h6 class="fade-in">Nikhil Venkatesh<span class="divider">&nbsp;</span><span class="title">Product Designer</span></h6>
     </div>
 </pre>
-    <section id="xtly" class="l">
+    <header id="xtly" class="l">
       <div class="container">
         <div class="feature">
           <div class="container-inner">
@@ -55,9 +62,10 @@
             <img src="img/xtly/feature.png" alt="" class="soft-shadow" /> </div>
         </div>
       </div>
-    </section>
+    </header>
     <section id="tempScroller"></section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src=""></script>
+    <script src="js/vendor/gemini-scrollbars.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

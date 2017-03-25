@@ -55,7 +55,8 @@ dests =
 gulp.task 'sync-task', ->
     bSync.init({
         server: './',
-        browser: 'google chrome'
+        browser: 'google chrome',
+        ghostMode: false
     })
     gulp.watch(dests.scripts).on('change', bSync.reload)
 

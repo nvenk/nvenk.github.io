@@ -2,7 +2,7 @@
 
 {# ----- Variables ----- #}
 {% set var = {
-        styles: 'css/home.css',
+        styles: 'css/project.css',
         scripts: 'js/scripts.js',
         bodyClass: 'sim'
 }%}
@@ -18,7 +18,7 @@
 
 {% include "partials/nametag.njk" %}
 
-<section id="sim" class="r">
+<header id="sim" class="r">
     <div class="container">
         <div class="feature">
             <div class="container-inner">
@@ -35,6 +35,49 @@
             </div>
         </div>
     </div>
+</header>
+
+<section class="project-content">
+    <div class="container">
+        <div class="the-problem">
+            <p>Robots have penetrated into our society at an astonishing rate over the past  fifteen years. What started as machines performing repetitive tasks in industrial settings evolved into single-purpose machines for households tasks, and has more recently turned into dozens of different variations of robots that aim to closely integrate into our daily lives.</p>
+
+            <p>We thought it was important to re-examine our interactions with these technologies and understand how we can design more natural and intuitive interactions.</p>
+        </div>
+    </div>
 </section>
+
+<section class="project-content alt">
+    <div class="container">
+        <div class="videoWrapper">
+            <iframe src="https://player.vimeo.com/video/207216272" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<div class="next-up">
+    <div class="label">NEXT UP</div>
+    <section id="xtly" class="l">
+        <div class="container">
+            <div class="feature">
+                <div class="container-inner">
+                    <h2>Xactly Incent</h2>
+                    <h3>Helping Sales people stay informed about their goals.</h3>
+                    <div class="button-container">
+                        <a href="xactly.html" class="trigger--xtly">Read About It</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-image">
+                <div class="container-inner">
+                    <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include "partials/footer.njk" %}
 
 {% endblock %}

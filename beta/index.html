@@ -20,21 +20,28 @@
     <meta name="twitter:title" content="Nikhil Venkatesh | Product Designer">
     <meta name="twitter:description" content="I’m a Product Designer with an incredible passion for interaction design and animation and love finding ways to create delightful experiences.">
     <meta name="twitter:image" content="">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/img/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/img/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/img/favicon/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil Venkatesh | Product Designer</title>
     <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
-    <script>
-      history.scrollRestoration = 'manual';
-    </script>
     <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
-  <body class="home">
+  <body class="home my-scrollbar">
+    <script>
+      if (document.getElementsByTagName('body')[0].className == "home")
+      {
+        history.scrollRestoration = 'auto';
+      }
+      else
+      {
+        history.scrollRestoration = 'manual';
+      }
+    </script>
     <header id="about">
       <div class="container">
         <div class="info">
@@ -49,74 +56,78 @@
         </div>
       </div>
     </header>
-    <section id="sim" class="r">
-      <div class="container">
-        <div class="feature">
-          <div class="container-inner">
-            <h2>SIM: The Social Robot</h2>
-            <h3>Designing for affective Human-Robot Interaction.</h3>
-            <div class="button-container">
-              <a href="sim.html" class="trigger--sim">Read About It</a>
+    <div class="projects">
+      <section id="sim" class="r">
+        <div class="container">
+          <div class="feature">
+            <div class="container-inner">
+              <h2>SIM: The Social Robot</h2>
+              <h3>Designing for affective Human-Robot Interaction.</h3>
+              <div class="button-container">
+                <a href="sim.html" class="trigger--sim">Read About It</a>
+              </div>
+            </div>
+          </div>
+          <div class="feature-image">
+            <div class="container-inner">
+              <img src="img/sim/feature.png" alt="" />
+              <div class="image-spacer"></div>
             </div>
           </div>
         </div>
-        <div class="feature-image">
-          <div class="container-inner">
-            <img src="img/sim/feature.png" alt="" /> </div>
-        </div>
-      </div>
-    </section>
-    <section id="xtly" class="l">
-      <div class="container">
-        <div class="feature">
-          <div class="container-inner">
-            <h2>Xactly Incent</h2>
-            <h3>Helping Sales people stay informed about their goals.</h3>
-            <div class="button-container">
-              <a href="xactly.html" class="trigger--xtly">Read About It</a>
+      </section>
+      <section id="xtly" class="l">
+        <div class="container">
+          <div class="feature">
+            <div class="container-inner">
+              <h2>Xactly Incent</h2>
+              <h3>Helping Sales people stay informed about their goals.</h3>
+              <div class="button-container">
+                <a href="xactly.html" class="trigger--xtly">Read About It</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="feature-image">
-          <div class="container-inner">
-            <img src="img/xtly/feature.png" alt="" class="soft-shadow" /> </div>
-        </div>
-      </div>
-    </section>
-    <section id="central" class="r">
-      <div class="container">
-        <div class="feature">
-          <div class="container-inner">
-            <h2>Central Cinema</h2>
-            <h3>Redesigning the ticket booking experience for a theatre.</h3>
-            <div class="button-container">
-              <a href="central-cinema.html" class="trigger--central">Read About It</a>
-            </div>
+          <div class="feature-image">
+            <div class="container-inner">
+              <img src="img/xtly/feature.png" alt="" class="soft-shadow" /> </div>
           </div>
         </div>
-        <div class="feature-image">
-          <div class="container-inner">
-            <img src="img/central/feature.jpg" alt="" class="soft-shadow" /> </div>
-        </div>
-      </div>
-    </section>
-    <section id="puppy" class="l">
-      <div class="container">
-        <div class="feature">
-          <div class="container-inner">
-            <h2>PuppyHarmony</h2>
-            <h3>A platform to find the perfect playdate for your furry friend.</h3>
-            <div class="button-container">
-              <a href="puppy.html" class="trigger--puppy">Read About It</a>
+      </section>
+      <section id="central" class="r">
+        <div class="container">
+          <div class="feature">
+            <div class="container-inner">
+              <h2>Central Cinema</h2>
+              <h3>Redesigning the ticket booking experience for a theatre.</h3>
+              <div class="button-container">
+                <a href="central-cinema.html" class="trigger--central">Read About It</a>
+              </div>
             </div>
           </div>
+          <div class="feature-image">
+            <div class="container-inner">
+              <img src="img/central/feature.jpg" alt="" class="soft-shadow" /> </div>
+          </div>
         </div>
-        <div class="feature-image">
-          <div class="container-inner">
-            <img src="img/puppy/feature.png" alt="" /> </div>
+      </section>
+      <section id="puppy" class="l">
+        <div class="container">
+          <div class="feature">
+            <div class="container-inner">
+              <h2>PuppyHarmony</h2>
+              <h3>A platform to find the perfect playdate for your furry friend.</h3>
+              <div class="button-container">
+                <a href="puppy.html" class="trigger--puppy">Read About It</a>
+              </div>
+            </div>
+          </div>
+          <div class="feature-image">
+            <div class="container-inner">
+              <img src="img/puppy/feature.png" alt="" /> </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <section id="gallery">
       <div class="container"> </div>
     </section>
@@ -128,6 +139,7 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/vendor/gemini-scrollbars.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
