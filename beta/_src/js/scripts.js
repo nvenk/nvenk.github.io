@@ -30,14 +30,15 @@
 // Nvenk Specific functions
 var DEBUG = true;
 
-function checkSize(){
-    var prop = $(".responsive-beacon").css("width");
-    if (prop == "1px") { size = "mobile"; }
-    else if (prop == "2px") { size = "tablet";}
-    else if (prop == "3px") { size = "laptop";}
-    else if (prop == "4px") { size = "desktop";}
-    return size;
-};
+// function checkSize(){
+//     var size = "";
+//     var prop = $(".responsive-beacon").css("width");
+//     if (prop == "1px") { size = "mobile"; }
+//     else if (prop == "2px") { size = "tablet";}
+//     else if (prop == "3px") { size = "laptop";}
+//     else if (prop == "4px") { size = "desktop";}
+//     return size;
+// };
 
 // Trigger Transitions
 
@@ -64,10 +65,13 @@ function trigger(id, scrollOffset){
 tList = ['about','sim','xtly','central','puppy'];
 
 $(document).ready(function() {
-    // Initial Run
-    cSize = checkSize();
+    console.log('triggered');
+    $(this).scrollTop(0);
 
-    if(DEBUG == true) { console.log("Media = " + cSize); };
+    // Initial Run
+    // cSize = checkSize();
+
+    // if(DEBUG == true) { console.log("Media = " + cSize); };
 
     for (i=0; i < tList.length; i++){
         trigger(tList[i], 78);
@@ -90,13 +94,14 @@ $(document).ready(function() {
 
     // ON RESIZE
 
-    $(window).smartresize(function(){
-        newSize = checkSize();
-
-        // Trigger Code only when size changes.
-        if (newSize != cSize) {
-            cSize = newSize;
-            if(DEBUG == true) { console.log("Media = " + cSize); };
-        };
-    });
+    // $(window).smartresize(function(){
+    //     newSize = checkSize();
+    //
+    //     // Trigger Code only when size changes.
+    //     if (newSize != cSize) {
+    //         cSize = newSize;
+    //         if(DEBUG == true) { console.log("Media = " + cSize); };
+    //     };
+    // });
+    //
  });

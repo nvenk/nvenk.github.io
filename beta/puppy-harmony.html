@@ -32,7 +32,17 @@
     <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
     <link rel="stylesheet" type="text/css" href="css/project.css" /> </head>
   <body class="puppy my-scrollbar">
-    <div class="responsive-beacon"></div> <pre class="nametag">
+    <div class="responsive-beacon"></div>
+    <script>
+      if (document.getElementsByTagName('body')[0].className == "home")
+      {
+        history.scrollRestoration = 'auto';
+      }
+      else
+      {
+        history.scrollRestoration = 'manual';
+      }
+    </script> <pre class="nametag">
     <div class="container">
         <a href="/"><h6 class="fade-in">Nikhil Venkatesh<span class="divider hidden-phone">&nbsp;</span><span class="title hidden-phone">Product Designer</span></h6></a>
     </div>
@@ -54,8 +64,9 @@
         </div>
       </div>
     </header>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/vendor/gemini-scrollbars.js"></script>
+    <script src="js/vendor/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="js/vendor/ScrollMagic.min.js" charset="utf-8"></script>
+    <script src="js/vendor/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

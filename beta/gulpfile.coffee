@@ -120,7 +120,7 @@ gulp.task 'scripts-task', ->
     return gulp.src(sources.scripts)
     .pipe plumber({ errorHandler: onError })
     .pipe newer(dests.scripts)
-    .pipe uglify({ mangle: false })
+    # .pipe uglify({ mangle: false })
     .pipe gulp.dest(dests.scripts)
     .pipe bSync.stream()
 
