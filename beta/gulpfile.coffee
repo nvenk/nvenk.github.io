@@ -58,7 +58,7 @@ gulp.task 'sync-task', ->
         browser: 'google chrome',
         ghostMode: false
     })
-    gulp.watch(dests.scripts).on('change', bSync.reload)
+    # gulp.watch(dests.scripts).on('change', bSync.reload)
 
 ## Content
 gulp.task 'content-task', ->
@@ -152,10 +152,10 @@ gulp.task 'images-task', ->
 
 ## Watch
 gulp.task 'watch', ->
-    gulp.watch([sources.content, sources.templates+'/**/*.njk'],['content-task'])
+    gulp.watch([sources.content, sources.templates+'/**/*.njk'],['content-task']);
     gulp.watch(sources.allScss, ['styles-task'])
     gulp.watch(sources.scripts, ['scripts-task'])
     gulp.watch(sources.images, ['images-task'])
 
 ## Default
-gulp.task 'default', ['content-task', 'styles-task','sync-task','watch'], ->
+gulp.task 'default', ['content-task', 'styles-task', 'sync-task', 'watch'], ->

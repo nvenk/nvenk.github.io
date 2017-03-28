@@ -5,10 +5,16 @@
 @import "components/variables";
 @import "components/breakpoints";
 
+#tempScroller{
+    width: 100%;
+    height: 1000px;
+}
+
 body,
 html {
     height: 100%;
     background: $white;
+    font-size: 18px;
 }
 
 body * {
@@ -18,13 +24,32 @@ body * {
     font-family: $sans;
 }
 
+// Communicate with jQuery
+.responsive-beacon{
+    position: fixed;
+    height: 0;
+    width: 1px;
+    background: transparent;
+    top: -100px;
+
+    @include breakpoint(tablet){
+        width: 2px;
+    }
+
+    @include breakpoint(laptop){
+        width: 3px;
+    }
+    @include breakpoint(desktop){
+        width: 4px;
+    }
+
+}
+
 .container, .container-inner{
     color: white;
-    width: 100%;
     max-width: $site-width-max;
     position: relative;
     margin: 0 auto;
-    padding: 0;
 
     *{
         transition: $default-trns;
@@ -50,12 +75,24 @@ body * {
 	}
 }
 
+// Clip Path Rectangle
+@mixin clip-rect($vert, $horz, $debug: 'no') {
+    opacity: 1;
+
+    clip-path: polygon(0 0, $vert 0, $vert $horz, 0 $horz);
+
+    @if $debug == 'debug' {
+        background: red;
+    }
+}
+
 // Default Styles for all projects, transition styles
 @mixin project-defaults($name, $color: $black, $margin-right: 25%, $margin-left: 25%){
 
     // Home page projects, Project page headers
     section##{$name}, &.#{$name} header{
         position: relative;
+        z-index: 10;
 
         .trigger--#{$name}:hover {
             color: $color;
@@ -64,14 +101,21 @@ body * {
         .container{
             transition-delay: 0.18s;
             transition-duration: 0.52s;
+            max-width: 1280px;
+            overflow: hidden;
+
+            @include breakpoint(tablet){
+                overflow: visible;
+            }
 
             .feature{
                 background: $color url('../img/#{$name}/gradient.jpg');
                 background-size: cover;
                 padding: 0 64px 300px;
-                margin: 78px 0;
+                margin: 0;
                 border-radius: 0;
                 @extend .soft-shadow;
+                max-height: 100vh;
 
                 @include breakpoint(tablet){
                     margin: 78px $margin-right 78px $margin-left;
@@ -80,15 +124,15 @@ body * {
                 }
 
                 .container-inner{
-                    width: 100%;
                     display: flex;
                     flex-flow: column;
                     transition-delay: 0.18s;
                     transition-duration: 0.42s;
+                    z-index: 100;
 
                     h1, h2{
                         padding-top: 64px;
-                        font-size: 1.5em;
+                        font-size: 1.8em;
                         font-weight: $bold;
                         text-transform: uppercase;
                         margin: 0;
@@ -103,15 +147,16 @@ body * {
                     h3{
                         padding-top: 32px;
                         font-weight: $regular;
-                        font-size: 1em;
+                        font-size: 1.1em;
                         letter-spacing: 1.5px;
-                        width: 70%;
-                        max-width: 380px;
+                        width: 100%;
                         margin: 0;
                         transition-duration: 0.4s;
 
                         @include breakpoint(tablet){
-                            font-size: 1.1em;
+                            font-size: 1.2em;
+                            width: 70%;
+                            max-width: 380px;
                         }
                     }
 
@@ -126,24 +171,32 @@ body * {
             .feature-image{
                 pointer-events: none;
                 position: absolute;
-                text-align: right;
                 transition-duration: 0.4s;
-
-                @include breakpoint(tablet){
-                    width: calc(100% - 120px);
-                    padding: 0 60px;
-                }
+                width: 100%;
 
                 .container-inner{
+                    position: relative;
                     width: 100%;
 
-                    @include breakpoint(tablet){
-                        width: 90%;
-                    }
-
                     img{
-                        max-height: 100%;
+                        height: 100%;
                         border-radius: 4px;
+                        position: absolute;
+
+                        &.clip{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.r{
+            .feature-image{
+                text-align: right;
+                .container-inner{
+                    img{
+                        right:0;
                     }
                 }
             }
@@ -151,9 +204,11 @@ body * {
 
         &.l{
             .feature{
-                padding-right: 104px;
-                padding-left: 86px;
                 text-align: right;
+
+                @include breakpoint(tablet){
+                    padding: 0 86px 0 104px;
+                }
 
                 .container-inner{
                     align-items: flex-end;
@@ -166,6 +221,12 @@ body * {
 
             .feature-image{
                 text-align: left;
+
+                .container-inner{
+                    img{
+                        left: 0;
+                    }
+                }
             }
         }
     }
@@ -180,14 +241,24 @@ body * {
                 .feature{
                     border-radius: 0;
                     margin: 0;
-                    padding: 200px 90px 0;
+                    margin-bottom: 80px;
+                    padding: 200px 30px 0;
+
+                    @include breakpoint(tablet){
+                        padding: 200px 60px 0;
+
+                    }
+                    @include breakpoint(laptop){
+                        padding: 200px 90px 0;
+                    }
 
                     .container-inner{
-                        width: 90%;
-
                         h1, h2{
-                            padding-top: 200px;
+                            padding-top: 0px;
 
+                            @include breakpoint(tablet){
+                                padding-top: 200px;
+                            }
                         }
 
                         .button-container{
@@ -200,6 +271,18 @@ body * {
                 .feature-image{
                     .container-inner{
                         width: 90%;
+
+                        img{
+                            opacity: 0.1;
+
+                            @include breakpoint(mobile){
+                                opacity: 0.3;
+                            }
+
+                            @include breakpoint(tablet){
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
@@ -215,6 +298,7 @@ body * {
 }
 
 // Utility Classes
+
 .button-container{
     height: 48px;
     width: 100%;
@@ -252,6 +336,14 @@ body * {
         }
     }
 }
+.overlay-trigger{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0; left:0;
+    z-index: 999;
+}
 .soft-shadow{
     box-shadow: 0px 0px 32px rgba(0,0,0,0.28);
 }
@@ -264,12 +356,17 @@ a{
         color: inherit;
     }
 }
+
+.video.container{
+    width: 100%;
+}
 .videoWrapper {
     position: relative;
     padding-bottom: 56%; /* 16:9 */
     padding-top: 0px;
     margin: 0 auto;
     height: 0;
+    width: 100%;
     max-width: 100%;
     box-shadow: 0px 10px 50px rgba(0,0,0,0.15);
 
@@ -286,6 +383,44 @@ a{
     border: 0;
 }
 
+.grid{
+    display: flex;
+
+    .col-50.l{
+        width: 100%;
+        max-width: $content-width;
+        padding-top: 0;
+        margin: 0 auto;
+
+        @include breakpoint(tablet){
+            padding-top: 150px;
+        }
+
+        @include breakpoint(laptop){
+            width: calc(50% - 120px);
+            padding-right: 120px;
+            max-width: 100%;
+            margin: 0 ;
+            padding-top: 0;
+        }
+    }
+    .col-50.r{
+        width: 100%;
+        max-width: 40em;
+        padding-top: 0;
+
+        @include breakpoint(tablet){
+            padding-top: 150px;
+        }
+
+        @include breakpoint(laptop){
+            width: calc(50% - 120px);
+            padding-left: 120px;
+            max-width: 100%;
+            padding-top: 0;
+        }
+    }
+}
 
 // Project Page
 
@@ -336,6 +471,7 @@ footer{
         opacity: 1;
     }
 }
+
 .fade-in{
     animation: fade-in;
     animation-fill-mode: forwards;

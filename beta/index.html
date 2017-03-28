@@ -32,16 +32,7 @@
     <script src="js/vendor/scroll-restoration-polyfill.browser.js"></script>
     <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
   <body class="home my-scrollbar">
-    <script>
-      if (document.getElementsByTagName('body')[0].className == "home")
-      {
-        history.scrollRestoration = 'auto';
-      }
-      else
-      {
-        history.scrollRestoration = 'manual';
-      }
-    </script>
+    <div class="responsive-beacon"></div>
     <header id="about">
       <div class="container">
         <div class="info">
@@ -64,16 +55,16 @@
               <h2>SIM: The Social Robot</h2>
               <h3>Designing for affective Human-Robot Interaction.</h3>
               <div class="button-container">
-                <a href="sim.html" class="trigger--sim">Read About It</a>
+                <a href="sim.html" class="trigger--sim hidden-phone">Read About It</a>
               </div>
             </div>
           </div>
           <div class="feature-image">
             <div class="container-inner">
               <img src="img/sim/feature.png" alt="" />
-              <div class="image-spacer"></div>
-            </div>
+              <img src="img/sim/feature_b.png" alt="" class="clip" /> </div>
           </div>
+          <a href="sim.html" class="trigger--sim overlay-trigger visible-phone"></a>
         </div>
       </section>
       <section id="xtly" class="l">
@@ -83,7 +74,7 @@
               <h2>Xactly Incent</h2>
               <h3>Helping Sales people stay informed about their goals.</h3>
               <div class="button-container">
-                <a href="xactly.html" class="trigger--xtly">Read About It</a>
+                <a href="xactly.html" class="trigger--xtly hidden-phone">Read About It</a>
               </div>
             </div>
           </div>
@@ -91,6 +82,7 @@
             <div class="container-inner">
               <img src="img/xtly/feature.png" alt="" class="soft-shadow" /> </div>
           </div>
+          <a href="xactly.html" class="trigger--xtly overlay-trigger visible-phone"></a>
         </div>
       </section>
       <section id="central" class="r">
@@ -100,7 +92,7 @@
               <h2>Central Cinema</h2>
               <h3>Redesigning the ticket booking experience for a theatre.</h3>
               <div class="button-container">
-                <a href="central-cinema.html" class="trigger--central">Read About It</a>
+                <a href="central-cinema.html" class="trigger--central hidden-phone">Read About It</a>
               </div>
             </div>
           </div>
@@ -108,6 +100,7 @@
             <div class="container-inner">
               <img src="img/central/feature.jpg" alt="" class="soft-shadow" /> </div>
           </div>
+          <a href="central-cinema.html" class="trigger--central overlay-trigger visible-phone"></a>
         </div>
       </section>
       <section id="puppy" class="l">
@@ -117,7 +110,7 @@
               <h2>PuppyHarmony</h2>
               <h3>A platform to find the perfect playdate for your furry friend.</h3>
               <div class="button-container">
-                <a href="puppy.html" class="trigger--puppy">Read About It</a>
+                <a href="puppy.html" class="trigger--puppy hidden-phone">Read About It</a>
               </div>
             </div>
           </div>
@@ -125,6 +118,7 @@
             <div class="container-inner">
               <img src="img/puppy/feature.png" alt="" /> </div>
           </div>
+          <a href="puppy-harmony.html" class="trigger--puppy overlay-trigger visible-phone"></a>
         </div>
       </section>
     </div>

@@ -5,7 +5,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-{# <html manifest="nvenk.appcache"> #}
     <head>
         {% include "partials/meta.njk" %}
 
@@ -15,14 +14,15 @@
     </head>
 
     <body class="{{ var.bodyClass }} my-scrollbar">
-        <script>
+        <div class="responsive-beacon"></div>
+        {# <script>
             if(document.getElementsByTagName('body')[0].className == "home") {
                 history.scrollRestoration = 'auto';
             }
             else {
                 history.scrollRestoration = 'manual';
             }
-        </script>
+        </script> #}
 
         {% block content %}{% endblock %}
 

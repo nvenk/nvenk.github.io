@@ -26,16 +26,17 @@ $purple-g1 : #26072f;
 /* ----------------
 Screen Sizes
 ---------------- */
-$screen-mob-sm:      20em;
-$screen-mob:         22em;
-$screen-tablet:      62em;
-$screen-laptop:      80em;
-$screen-desktop:     86em;
+// $screen-mob-sm:      18em;
+$screen-mob:         40em;
+$screen-tablet:      60em;
+$screen-laptop:      64em;
+$screen-desktop:     80em;
 
 /* ----------------
 Content Container
 ---------------- */
-$site-width-max: 1280px;
+$site-width-max: 1400px;
+$content-width: 36em;
 
 /* ----------------
 Fonts
