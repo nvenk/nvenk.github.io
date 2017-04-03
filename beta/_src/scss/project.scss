@@ -1,144 +1,152 @@
-@import "vendor/normalize";
-@import "components/variables";
-@import "components/breakpoints";
-@import "components/global";
+@import "partials/_base";
 
-// Project Page
-body {
-    .nametag{
-        position: absolute;
-        top:0;
-        left:0;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        z-index: 9999;
+// Nametag Styles
+.nametag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px 0 30px;
+    margin: 0;
+    z-index: 9999;
 
-        .container{
-            padding: 0 30px;
+    .container{
+
+        h6{
+            display: inline-block;
+            color: $white;
+            font-weight: $reg;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 6px;
+            animation-duration: 1s;
+            animation-delay: 0.4s;
+            opacity: 0;
+            text-align: left;
+            padding: 12px 12px 12px 0;
+            margin: 0;
+            position: relative;
 
             @include breakpoint(tablet){
-                padding: 0 60px;
-            }
-
-            @include breakpoint(laptop){
-                padding: 0 90px;
-            }
-
-            h6{
-                font-weight: $regular;
-                text-transform: uppercase;
-                font-size: 0.8em;
-                letter-spacing: 6px;
-                animation-duration: 1s;
-                animation-delay: 0.4s;
-                opacity: 0;
                 text-align: left;
-                padding: 12px 0;
-                margin: 0;
+                padding: 30px 12px 30px 0;
+            }
+
+            .divider{
+                background: white;
+                display: inline-block;
                 position: relative;
+                top: -1px;
+                font-size: 0.79em;
+                width: 1px;
+                height: 100%;
+                margin: 0 24px 0 20px;
+            }
+
+            &::after{
+                content: '‹ Go Home';
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 12px 0;
+                background: $black;
+                transition: 0.4s all ease-in-out 0.1s;
+                width: 0;
+                overflow:hidden;
+                white-space: nowrap;
+                z-index: 99;
 
                 @include breakpoint(tablet){
-                    text-align: left;
                     padding: 30px 0;
                 }
+            }
 
-                .divider{
-                    background: white;
-                    display: inline-block;
-                    position: relative;
-                    top: -1px;
-                    font-size: 0.79em;
-                    width: 1px;
-                    height: 100%;
-                    margin: 0 24px 0 20px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 12px 0;
+                background: $black;
+                transition: 0.4s all ease-in-out;
+                width: 0;
+                height: 1.1em;
+                overflow: hidden;
+                opacity: 0.3;
+                z-index: 99;
+
+                @include breakpoint(tablet){
+                    padding: 30px 0;
+                }
+            }
+
+            &:hover{
+                opacity: 0.4;
+
+                &::before{
+                    width: 100%;
+                    padding: 12px 0 12px 12px;
+
+                    @include breakpoint(tablet){
+                        padding: 30px 0 30px 12px;
+                    }
                 }
 
                 &::after{
-                    content: '‹ Go Home';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 12px 0;
-                    background: $black;
-                    transition: 0.4s all ease-in-out 0.1s;
-                    width: 0;
-                    overflow: hidden;
-                    z-index: 99;
-
-                    @include breakpoint(tablet){
-                        padding: 30px 0;
-                    }
-                }
-
-                &::before{
-                    content: ' ';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 12px 0;
-                    background: $black;
-                    transition: 0.4s all ease-in-out;
-                    width: 0;
-                    overflow: hidden;
-                    opacity: 0.3;
-                    z-index: 99;
-
-                    @include breakpoint(tablet){
-                        padding: 30px 0;
-                    }
-                }
-
-                &:hover{
-                    opacity: 0.4;
-
-                    &::before{
-                        width: 230px;
-
-                        @include breakpoint(tablet){
-                            width: 500px;
-                        }
-                    }
-
-                    &::after{
-                        width: 112px;
-                        padding-left: 24px;
-                        padding-right: 48px;
-                    }
+                    width: 120px;
+                    padding-left: 24px;
+                    padding-right: 48px;
                 }
             }
         }
     }
+}
 
-    // CONTENT
-
-    .container{
-        padding: 0 30px;
-
-        @include breakpoint(tablet){
-            padding: 0 60px;
-        }
-
-        @include breakpoint(laptop){
-            padding: 0 90px;
-        }
+// Project Page
+body {
+    header{
+        color: $white;
     }
-
-    p{
+    p, li{
         color: $black;
         font-size: 1em;
         letter-spacing: 0.02em;
         line-height: 1.9;
         padding-bottom: 20px;
+        max-width: $content-width;
+
+        &.heading-1{
+            font-size: 1.6em;
+            font-family: $heading;
+            font-weight: $bold;
+        }
+    }
+
+    picture{
+        padding: 20px;
+        img{
+            border-radius: 4px;
+            @include soft-shadow(32,0.6);
+        }
+        .picture-tag{
+            text-align: center;
+            font-size: 0.9em;
+            font-family: $heading;
+            font-weight: $thin;
+            color: $central;
+            padding-top: 10px;
+        }
+
     }
 
     section.content{
         @extend .fade-in;
         opacity: 0;
-        animation-delay: 0.4s;
         padding: 40px 0;
         position: relative;
         background: $white;
+        transition: $default-transition;
+        color: $black;
 
         &.alt{
             background: $gray;
@@ -172,6 +180,7 @@ body {
                 }
                 div{
                     margin: 0 auto;
+                    max-width: $content-width;
 
                     @include breakpoint(tablet){
                         margin: 0;
@@ -183,7 +192,7 @@ body {
                         line-height: 1.4;
                         font-style: italic;
                         transition-delay: 0.1s;
-                        max-width: $content-width;
+
 
                         @include breakpoint(tablet){
                             color: $white;
@@ -211,9 +220,16 @@ body {
                 }
             }
         }
+
+        &.quote{
+            .quote-text{
+                font-size: 2em;
+                font-style: italic;
+            }
+        }
     }
 
-    @include project-defaults('sim',$orange);
+    @include project-defaults('sim',$sim);
     &.sim, &.puppy.transition--sim {
         .next-up section#sim, header#sim {
             .container .feature-image {
@@ -252,7 +268,7 @@ body {
         }
     }
 
-    @include project-defaults('xtly', $blue, 4%, 38%);
+    @include project-defaults('xtly', $xtly, 4%, 38%);
     &.xtly, &.sim.transition--xtly{
         .next-up section#xtly, header#xtly {
             .container .feature-image{
@@ -269,14 +285,8 @@ body {
         }
     }
 
-    @include project-defaults('central', $red);
+    @include project-defaults('central', $central);
     &.central, &.xtly.transition--central {
-
-        .parallax#scope {
-            .parallax-img{
-                background: url('../img/central/scope.jpg');
-            }
-        }
 
         // Header / Footer Styles
         .next-up section#central, header#central {
@@ -312,7 +322,7 @@ body {
         }
     }
 
-    @include project-defaults('puppy', $green);
+    @include project-defaults('puppy', $puppy);
     &.puppy, &.central.transition--puppy {
         .next-up section#puppy, header#puppy {
             .container .feature-image{
@@ -344,7 +354,7 @@ body {
 
             &:before{
                 content: '';
-                background-color: $blue;
+                background-color: $xtly;
                 height: 5px;
                 position: absolute;
                 bottom: -8px;
@@ -353,7 +363,7 @@ body {
             }
             &:after{
                 content: '';
-                background-color: $blue;
+                background-color: $xtly;
                 height: 12px;
                 position: absolute;
                 bottom: -11px;

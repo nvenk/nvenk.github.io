@@ -29,19 +29,21 @@
 
 // Nvenk Specific functions
 var DEBUG = true;
+var size = "";
 
-// function checkSize(){
-//     var size = "";
-//     var prop = $(".responsive-beacon").css("width");
-//     if (prop == "1px") { size = "mobile"; }
-//     else if (prop == "2px") { size = "tablet";}
-//     else if (prop == "3px") { size = "laptop";}
-//     else if (prop == "4px") { size = "desktop";}
-//     return size;
-// };
+function checkSize(){
+    var prop = $(".responsive-beacon").css("width");
+
+    if (prop == "10px") { size = "mobile"; }
+    else if (prop == "20px") { size = "tablet"; }
+    else if (prop == "30px") { size = "laptop"; }
+    else if (prop == "40px") { size = "desktop"; }
+
+    if(DEBUG == true) { console.log ("Media = " + size); };
+    return size;
+};
 
 // Trigger Transitions
-
 function trigger(id, scrollOffset){
     var btn = '.trigger--' + id;
 
@@ -58,50 +60,69 @@ function trigger(id, scrollOffset){
 
         if(DEBUG == true) { console.log(href);};
 
-        setTimeout(function() {window.location = href}, 800);
+        setTimeout(function() {window.location = href}, 900);
     });
 };
 
 tList = ['about','sim','xtly','central','puppy'];
 
+
 $(document).ready(function() {
-    console.log('triggered');
-    $(this).scrollTop(0);
+
+    // Add Media Tag
+    if(DEBUG == true) {
+        $('body').prepend('<div class="media-tag"></div>');
+    };
 
     // Initial Run
-    // cSize = checkSize();
-
-    // if(DEBUG == true) { console.log("Media = " + cSize); };
+    var cSize = checkSize();
 
     for (i=0; i < tList.length; i++){
         trigger(tList[i], 78);
     };
 
-
     // ScrollMagic
     var SMcontroller = new ScrollMagic.Controller();
 
     // SM - Background Image Fade In
-    var bgFade = new ScrollMagic.Scene({
+    var bgImage = new ScrollMagic.Scene({
         triggerElement: '.background-image',
         offset : 100,
         triggerHook: 0.3
     })
     .setClassToggle('.background-image', 'scrollfX')
-    .addIndicators()
     .addTo(SMcontroller);
 
+    if(DEBUG == true) {bgImage.addIndicators()};
 
     // ON RESIZE
 
-    // $(window).smartresize(function(){
-    //     newSize = checkSize();
-    //
-    //     // Trigger Code only when size changes.
-    //     if (newSize != cSize) {
-    //         cSize = newSize;
-    //         if(DEBUG == true) { console.log("Media = " + cSize); };
-    //     };
-    // });
-    //
+    $(window).smartresize(function(){
+        newSize = checkSize();
+
+        // Trigger Code only when size changes.
+        if (newSize != cSize) {
+            cSize = newSize;
+            if(DEBUG == true) { console.log("Media = " + cSize); };
+        };
+    });
+ });
+
+
+// Konami Keys
+ var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+
+ $(document).keydown(function(e) {
+
+   kkeys.push( e.keyCode );
+
+   if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+
+     $(document).unbind('keydown',arguments.callee);
+
+     // do something awesome
+     $("body").addClass("konami");
+
+   }
+
  });

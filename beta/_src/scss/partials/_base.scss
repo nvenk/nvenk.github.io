@@ -1,0 +1,54 @@
+// Google Fonts
+// -------------
+// @import url('https ://fonts.googleapis.com/css?family =Roboto+Slab:300,400|Source+Sans+Pro:400,900');
+
+// Utilities
+// -------------
+@import "vendor/normalize";
+
+// Screen Sizes
+$screen-mob-sm:      18em;
+$screen-mob:         40em;
+$screen-tablet:      60em;
+$screen-laptop:      64em;
+$screen-desktop:     80em;
+@import "partials/breakpoints";
+
+// Colors
+$black       : #303030;
+$white       : #fcfcfc;
+$gray        : #f8f8f8;
+    //// SIM
+    $sim         : #f76b1c;
+    $sim-alt     : #ecaf50;
+    //// Xactly
+    $xtly        : #0092FF;
+    $xtly-alt    : #326EC1;
+    //// Puppy Harmony
+    $puppy       : #4bc388;
+    $puppy-alt   : #6dc3b1;
+    //// Central Cinema
+    $central     : #ea4335;
+    $central-alt : #ae2e5c;
+    //// Galleries
+    $gallery     : #7415ce;
+    $gallery-alt : #26072f;
+
+// Typography
+$sans-serif        : 'Source Sans Pro', helvetica, sans-serif;
+$heading           : 'Roboto Slab', garamond, serif;
+    //// Weights & styles
+    $bold              : 900;
+    $reg               : 400;
+    $thin              : 300;
+
+// Default Tranisitions & Animations
+$default-transition: 0.2s all ease-in-out;
+
+// Default Widths
+$content-width     : 36em;
+$site-width-max    : 1400px;
+
+@import "partials/_mixins";
+@import "partials/_utils";
+@import "partials/_animation";
