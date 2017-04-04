@@ -42,13 +42,13 @@ sources =
     styles: '_src/scss/*.scss'
     allScss: '_src/scss/**/*.scss'
     images: '_src/img/**/*.+(png|jpg|jpeg|gif|svg)'
-    scripts: '_src/js/**/*.js'
+    scripts: '_src/scripts/**/*.js'
 
 dests =
     content: './'
     styles: 'css'
     images: 'img'
-    scripts: 'js'
+    scripts: 'scripts'
 
 # Tasks
 ## Sync Browser

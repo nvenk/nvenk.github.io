@@ -7,12 +7,12 @@
 @import "vendor/normalize";
 
 // Screen Sizes
-$screen-mob-sm:      18em;
-$screen-mob:         40em;
-$screen-tablet:      60em;
-$screen-laptop:      64em;
+$screen-mob-sm:      20em;
+$screen-mob:         22.5em;
+$screen-tablet:      48em;
+$screen-laptop:      60em;
 $screen-desktop:     80em;
-@import "partials/breakpoints";
+@import "partials/_breakpoints";
 
 // Colors
 $black       : #303030;
@@ -44,10 +44,11 @@ $heading           : 'Roboto Slab', garamond, serif;
 
 // Default Tranisitions & Animations
 $default-transition: 0.2s all ease-in-out;
-
+// $project-easing: cubic-bezier(.32,.01,.19,1);
+$project-easing: ease-in-out;
 // Default Widths
 $content-width     : 36em;
-$site-width-max    : 1400px;
+$site-width-max    : 1440px;
 
 @import "partials/_mixins";
 @import "partials/_utils";

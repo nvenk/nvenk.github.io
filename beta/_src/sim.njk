@@ -3,7 +3,7 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
-        scripts: 'js/scripts.js',
+        scripts: 'scripts/main.js',
         bodyClass: 'sim'
 }%}
 
@@ -19,19 +19,19 @@
 {% include "partials/nametag.njk" %}
 
 <header id="sim" class="r">
-    <div class="container">
-        <div class="feature">
-            <div class="container-inner">
-                <h1>SIM: The Social Robot</h1>
-                <h3>Designing for affective Human-Robot Interaction.</h3>
-                <div class="button-container">
-                    <a href="sim.html" class="trigger--sim">Read About It</a>
-                </div>
+    <div class="feature-container">
+        <div class="feature-desc">
+            <h1>SIM: The Social Robot</h1>
+            <h3>Designing for affective Human-Robot Interaction.</h3>
+            <div class="button-container">
+                {# <a href="sim.html" class="trigger--sim hidden-phone">Read About It</a> #}
             </div>
         </div>
         <div class="feature-image">
-            <div class="container-inner">
-                <img src="img/sim/feature.png" alt="" />
+            <div class="image-container">
+                <picture>
+                    <img src="img/sim/feature.png" alt="" />
+                </picture>
             </div>
         </div>
     </div>

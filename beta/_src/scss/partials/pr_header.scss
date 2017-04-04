@@ -1,0 +1,412 @@
+body{
+    // Default Project Styles
+    .projects section, header{
+        z-index: 1;
+        color: $white;
+
+        *{
+            transition: 0.8s all $project-easing;
+        }
+
+        .feature-container{
+            @extend .container;
+            position: relative;
+            overflow: hidden;
+
+            @include breakpoint(tablet){
+                overflow: visible;
+            }
+
+            .feature-desc{
+                padding: 0 64px 300px;
+                border-radius: 0;
+                @include soft-shadow();
+                max-height: 100vh;
+                display: flex;
+                flex-flow: column wrap;
+
+                @include breakpoint(tablet){
+                    padding: 0 104px 0 86px;
+                    border-radius: 8px;
+                }
+
+                h1, h2{
+                    padding-top: 64px;
+					font-family: $heading;
+					font-size: 1.8em;
+					font-weight: $bold;
+					text-transform: uppercase;
+					margin: 0;
+					letter-spacing: 2px;
+                    z-index: 10;
+                    @include transition-curving();
+
+					@include breakpoint(tablet){
+						font-size: 2em;
+					}
+                }
+
+                h3{
+					padding-top: 32px;
+					font-weight: $reg;
+					font-size: 1.1em;
+					letter-spacing: 1.5px;
+					width: 100%;
+					margin: 0;
+                    z-index: 10;
+                    @include transition-curving();
+
+					@include breakpoint(tablet){
+						font-size: 1.2em;
+						width: 70%;
+						max-width: 380px;
+					}
+				}
+
+                .button-container{
+					padding-top: 24px;
+					padding-bottom: 52px;
+					text-align: left;
+				}
+            }
+
+            .feature-image{
+                position: absolute;
+                bottom: 0; left: 0;
+                width: 100%;
+                z-index: 0;
+
+                .image-container{
+                    display: inline-block;
+                    position: relative;
+                    top: 0; left: 0;
+                    @extend .container;
+                    @include transition-curving();
+
+                    picture{
+                        width: 100%;
+                        img, source{
+                            width: 100%;
+                            border-radius: 4px;
+                            z-index: 100;
+                            transform-origin: center bottom;
+                        }
+                    }
+                }
+            }
+        }
+        // Right Aligned Image Projects
+        &.r{
+            .feature-image{
+                text-align: right;
+            }
+        }
+        // Left Aligned Image Projects
+
+        &.l{
+            .feature-desc{
+                text-align: right;
+                align-items: flex-end;
+
+                @include breakpoint(tablet){
+                    padding: 0 86px 0 104px;
+                }
+
+                .button-container{
+                    text-align: right;
+                }
+            }
+
+            .feature-image{
+                text-align: left;
+            }
+        }
+    }
+
+    @mixin work-transition() {  // Add all project classes here
+        .feature-container{
+            max-width: 100%;
+            padding: 0;
+
+            .feature-desc{
+                border-radius: 0;
+                margin: 0 !important;
+                padding: 200px 30px 0;
+
+                @include breakpoint(tablet){
+                    padding: 200px 60px 0;
+
+                }
+                @include breakpoint(laptop){
+                    padding: 200px 90px 0;
+                }
+
+                h1, h2{
+                    padding-top: 100px;
+
+                    @include breakpoint(tablet){
+                        padding-top: 200px;
+                    }
+                }
+
+                .button-container{
+                    opacity: 0;
+                    height: 0;
+                }
+            }
+
+            .feature-image{
+                .image-container{
+                    max-width: 100%;
+                    picture{
+                        opacity: 0.1;
+
+                        @include breakpoint(mobile){
+                            opacity: 0.3;
+                        }
+
+                        @include breakpoint(tablet){
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //// SIM Styles
+    @include work('sim',$sim, 32%, 8%);
+    #sim{
+        @include breakpoint(tablet){
+            padding-bottom: 480px;
+        }
+        .feature-image{
+            .image-container{
+                right: auto; top: auto;
+                left: 25%; bottom: -50px;
+                @include breakpoint(tablet){
+                    left: -40px; bottom: -200px;
+                }
+                @include breakpoint(laptop){
+                    left: -10%; bottom: -220px;
+                }
+                @include breakpoint(desktop){
+                    left: -10%; bottom: -220px;
+                }
+                img{
+                    @include breakpoint(laptop){
+                        transform:scale(1.05);
+                    }
+                    @include breakpoint(desktop){
+                        transform:scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    &.transition--sim #sim, &.sim header#sim{
+        @include work-transition();
+
+        .feature-image{
+            .image-container{
+                left: 25%; bottom: -60px;
+                @include breakpoint(tablet){
+                    left: 20%; bottom: -160px;
+                }
+                @include breakpoint(laptop){
+                    left: 0;
+                }
+                @include breakpoint(desktop){
+                    bottom: -200px;
+                }
+            }
+            img{
+                @include breakpoint(tablet){
+                    transform: scale(0.8);
+                }
+                @include breakpoint(laptop){
+                    transform: scale(0.8);
+                }
+                @include breakpoint(desktop){
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    @include work('xtly', $xtly, 16%, 24%);
+    #xtly{
+        @include breakpoint(tablet){
+            padding-bottom: 100px;
+        }
+        .feature-image{
+            .image-container{
+                width: 300px;
+                right: auto; top: auto;
+                left: -60px; bottom: -200px;
+                @include breakpoint(tablet){
+                    left: 30px; bottom: 30px;
+                }
+                @include breakpoint(laptop){
+                    left: 15%; bottom: 30px;
+                }
+                img{
+                    @include breakpoint(laptop){
+                        transform:scale(1.05);
+                    }
+                    @include breakpoint(desktop){
+                        transform:scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    &.transition--xtly #xtly, &.xtly header#xtly{
+        @include work-transition();
+        .feature-image{
+            .image-container{
+                left: -90px; bottom: -200px;
+                @include breakpoint(tablet){
+                    left: 0; bottom: -250px;
+                }
+                @include breakpoint(laptop){
+                    left: 0; bottom: -300px;
+                }
+                @include breakpoint(desktop){
+                    left: 0; bottom: -300px;
+                }
+            }
+            img{
+                @include breakpoint(tablet){
+                    transform: scale(0.8);
+                }
+                @include breakpoint(laptop){
+                    transform: scale(1.00);
+                }
+                @include breakpoint(desktop){
+                    transform: scale(1.00);
+                }
+            }
+        }
+    }
+
+    @include work('central', $central, 32%, 8%);
+    #central{
+        @include breakpoint(tablet){
+            padding-bottom: 360px;
+        }
+        .feature-image{
+            .image-container{
+                width: 600px;
+                left: auto; top: auto;
+                right: -100px; bottom: -100px;
+                @include breakpoint(tablet){
+                    right: -25%; bottom: -180px;
+                }
+                @include breakpoint(laptop){
+                    right: -140px;
+                }
+                @include breakpoint(desktop){
+                    right: 20px;
+                }
+                img{
+                    @include breakpoint(laptop){
+                        transform:scale(1.05);
+                    }
+                    @include breakpoint(desktop){
+                        transform:scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    &.transition--central #central, &.central header#central{
+        @include work-transition();
+        .feature-image{
+            .image-container{
+                right: 0; bottom: -16vw;
+                @include breakpoint(tablet){
+                    right: -280px; bottom: -200px;
+                }
+                @include breakpoint(laptop){
+                    right: -180px;
+                }
+                @include breakpoint(desktop){
+                    right:0;
+                }
+            }
+            img{
+                transform: scale(1.2);
+                @include breakpoint(tablet){
+                    transform: scale(1);
+                }
+                @include breakpoint(laptop){
+                    transform: scale(1.00);
+                }
+                @include breakpoint(desktop){
+                    transform: scale(1.00);
+                }
+            }
+        }
+    }
+
+    @include work('puppy', $puppy, 24%, 16%);
+    #puppy{
+        @include breakpoint(tablet){
+            padding-bottom: 100px;
+        }
+        .feature-image{
+            .image-container{
+                width: 240px;
+                right: auto; top: auto;
+                left: -60px; bottom: -140px;
+
+                @include breakpoint(tablet){
+                    left: 30px; bottom: 30px;
+                }
+                @include breakpoint(laptop){
+                    left: 0; bottom: 30px;
+                }
+                @include breakpoint(desktop){
+                    left: 6%;
+                }
+                img{
+                    @include breakpoint(laptop){
+                        transform:scale(1.05);
+                    }
+                    @include breakpoint(desktop){
+                        transform:scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    &.transition--puppy #puppy, &.puppy header#puppy{
+        @include work-transition();
+        .feature-image{
+            .image-container{
+                left: -90px; bottom: -200px;
+                @include breakpoint(tablet){
+                    left: 0; bottom: -250px;
+                }
+                @include breakpoint(laptop){
+                    left: 0; bottom: -300px;
+                }
+                @include breakpoint(desktop){
+                    left: 0; bottom: -300px;
+                }
+            }
+            img{
+                @include breakpoint(tablet){
+                    transform: scale(0.8);
+                }
+                @include breakpoint(laptop){
+                    transform: scale(1.00);
+                }
+                @include breakpoint(desktop){
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

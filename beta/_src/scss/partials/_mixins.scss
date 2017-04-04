@@ -21,7 +21,7 @@
 
 //// Soft Shadows
 @mixin soft-shadow($blur: 32, $opacity: 0.28) {
-    box-shadow: 0px 0px $blur rgba(0,0,0,$opacity);
+    box-shadow: 0px 0px $blur + px rgba(0,0,0, $opacity);
 }
 
 //// Video Embeds
@@ -62,213 +62,36 @@
   @return 0 $primary-offset $blur $color;
 }
 
+@mixin transition-curving(){
+	transition-duration: 0.6s;
+}
 
-@mixin project-defaults($name, $color: $black, $margin-right: 25%, $margin-left: 25%){
+//// Project Tiles Header
+@mixin work($name, $color: $black, $margin-right: 24%, $margin-left: 24%){
+	// Button Color
+	.trigger--#{$name}:hover {
+		color: $color;
+	}
 
-    // Home page projects, Project page headers
-    section##{$name}, &.#{$name} header{
-        position: relative;
-        z-index: 10;
+	// Styling for Home page [section#name] and Project page [body#name header]
+	section##{$name}, &.#{$name} header {
+		.feature-container{
+			padding: 0;
 
-        .trigger--#{$name}:hover {
-            color: $color;
-        }
-
-        .container{
-            transition-delay: 0.18s;
-            transition-duration: 0.52s;
-            max-width: 1280px;
-            overflow: hidden;
-
-            @include breakpoint(tablet){
-                overflow: visible;
-            }
-
-            .feature{
-                background: $color url('../img/#{$name}/gradient.jpg');
+			.feature-desc{
+				background: $color url('../img/#{$name}/gradient.jpg') no-repeat;
                 background-size: cover;
-                padding: 0 64px 300px;
                 margin: 0;
-                border-radius: 0;
-                @include soft-shadow;
-                max-height: 100vh;
 
-                @include breakpoint(tablet){
+				@include breakpoint(tablet){
                     margin: 78px $margin-right 78px $margin-left;
-                    padding: 0 104px 0 86px;
-                    border-radius: 8px;
                 }
+			}
+		}
+	}
 
-                .container-inner{
-                    display: flex;
-                    flex-flow: column;
-                    transition-delay: 0.18s;
-                    transition-duration: 0.42s;
-                    z-index: 100;
-
-                    h1, h2{
-                        padding-top: 64px;
-                        font-size: 1.8em;
-                        font-weight: $bold;
-                        text-transform: uppercase;
-                        margin: 0;
-                        letter-spacing: 2px;
-                        transition-duration: 0.4s;
-
-                        @include breakpoint(tablet){
-                            font-size: 2em;
-                        }
-                    }
-
-                    h3{
-                        padding-top: 32px;
-                        font-weight: $reg;
-                        font-size: 1.1em;
-                        letter-spacing: 1.5px;
-                        width: 100%;
-                        margin: 0;
-                        transition-duration: 0.4s;
-
-                        @include breakpoint(tablet){
-                            font-size: 1.2em;
-                            width: 70%;
-                            max-width: 380px;
-                        }
-                    }
-
-                    .button-container{
-                        padding-top: 24px;
-                        padding-bottom: 52px;
-                        text-align: left;
-                    }
-                }
-            }
-
-            .feature-image{
-                pointer-events: none;
-                position: absolute;
-                transition-duration: 0.4s;
-                width: 100%;
-
-                .container-inner{
-                    position: relative;
-                    width: 100%;
-
-                    img{
-                        height: 100%;
-                        border-radius: 4px;
-                        position: absolute;
-
-                        &.clip{
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.r{
-            .feature-image{
-                text-align: right;
-                .container-inner{
-                    img{
-                        right:0;
-                    }
-                }
-            }
-        }
-
-        &.l{
-            .feature{
-                text-align: right;
-
-                @include breakpoint(tablet){
-                    padding: 0 86px 0 104px;
-                }
-
-                .container-inner{
-                    align-items: flex-end;
-
-                    .button-container{
-                        text-align: right;
-                    }
-                }
-            }
-
-            .feature-image{
-                text-align: left;
-
-                .container-inner{
-                    img{
-                        left: 0;
-                    }
-                }
-            }
-        }
+	&.transition--#{$name} section:not(##{$name}), footer{
+        opacity: 0;
     }
 
-    // Transition & Next Page
-    &.transition--#{$name}, &.#{$name} {
-        section##{$name}, header##{$name} {
-            .container{
-                max-width: 100%;
-                padding: 0;
-
-                .feature{
-                    border-radius: 0;
-                    margin: 0;
-                    // margin-bottom: 80px;
-                    padding: 200px 30px 0;
-
-                    @include breakpoint(tablet){
-                        padding: 200px 60px 0;
-
-                    }
-                    @include breakpoint(laptop){
-                        padding: 200px 90px 0;
-                    }
-
-                    .container-inner{
-                        h1, h2{
-                            padding-top: 0px;
-
-                            @include breakpoint(tablet){
-                                padding-top: 200px;
-                            }
-                        }
-
-                        .button-container{
-                            opacity: 0;
-                            height: 0;
-                        }
-                    }
-                }
-
-                .feature-image{
-                    .container-inner{
-                        width: 90%;
-
-                        img{
-                            opacity: 0.1;
-
-                            @include breakpoint(mobile){
-                                opacity: 0.3;
-                            }
-
-                            @include breakpoint(tablet){
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // Homepage specific - hide all other sections when transitioning
-    &.transition--#{$name}{
-        section:not(##{$name}), footer{
-            opacity: 0;
-        }
-    }
 }

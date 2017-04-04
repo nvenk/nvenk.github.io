@@ -1,19 +1,12 @@
-@import "partials/global";
+@import "partials/_base";
+@import "partials/pr_header";
 
 // Home Page
-body {
 
+body{
     &.home{
-        section:not(#about){
+        section:not(#about){ // Default transition for sections that are disappearing.
             transition-duration: 0.2s;
-        }
-
-        .projects{
-            padding:0;
-
-            @include breakpoint(tablet){
-                padding-top: 80px;
-            }
         }
 
         #about {
@@ -49,9 +42,9 @@ body {
 
                     h3 {
                         display: block;
-                        color: $red;
+                        color: $central;
                         text-align: center;
-                        font-weight: $regular;
+                        font-weight: $reg;
                     }
 
                     .trigger--about:hover{
@@ -67,7 +60,7 @@ body {
                     align-items: center;
 
                     .image-container {
-                        @include aspect-ratio(1,1)
+                        @include aspect-ratio(1 1)
                         width: 350px;
                         border-radius: 50%;
                         background: $white;
@@ -105,251 +98,40 @@ body {
             }
         }
 
-    }
-
-    // Initializing Each project
-    @include project-defaults('sim',$orange, 32%, 8%);
-    #sim{
-        @include breakpoint(tablet){
-            padding-bottom: 300px;
-        }
-        .container .feature-image{
-            bottom: -60px;
+        .projects{
+            padding:0;
 
             @include breakpoint(tablet){
-                bottom: -230px;
-            }
-
-            @include breakpoint(laptop){
-                bottom: -250px;
-            }
-
-            .container-inner{
-                height: 600px;
-
-                @include breakpoint(tablet){
-                    height:550px;
-                }
-
-                @include breakpoint(laptop){
-                    height:600px;
-                }
-
-                img{
-                    transform: translateX(200px);
-
-                    @include breakpoint(tablet){
-                        transform: translateX(-16%);
-                    }
-
-                    @include breakpoint(laptop){
-                        transform: translateX(-26%);
-                    }
-                }
+                padding-top: 78px;
             }
         }
-    }
-    &.home.transition--sim {
-        section#sim {
-            .container .feature-image {
-                bottom: -100px;
-                right: -100px;
 
-                @include breakpoint(tablet){
-                    bottom: -180px;
-                    right: 0;
-                }
+        #gallery{
+            background: $gallery;
+            height: 100%;
 
-                .container-inner{
-                    height: 550px;
-
-                    img{
-                        transform: translateX(0);
-                    }
-                }
-            }
+            @include soft-shadow();
         }
-    }
-
-    @include project-defaults('xtly', $blue, 16%, 24%);
-    #xtly{
-        @include breakpoint(tablet){
-            padding-bottom: 100px;
-        }
-
-        .container .feature-image{
-            bottom: -150px;
-
-            @include breakpoint(tablet){
-                bottom: 40px;
-            }
-
-            .container-inner{
-                height: 550px;
-
-                img{
-                    margin: 0;
-                    transform: translateX(-20px);
-
-                    @include breakpoint(tablet){
-                        transform: translateX(0);
-                        margin-left: 12%;
-                    }
-
-                }
-            }
-        }
-    }
-    &.home.transition--xtly {
-        section#xtly {
-            .container .feature-image{
-                bottom: -260px;
-
-                .container-inner{
-                    height: 600px;
-
-                    img{
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    @include project-defaults('central', $red, 32%, 8%);
-    #central{
-        @include breakpoint(tablet){
-            padding-bottom: 180px;
-        }
-
-        .container .feature-image{
-            bottom: 0;
-
-            @include breakpoint(tablet){
-                bottom: -120px;
-            }
-
-            .container-inner{
-                height: 400px;
-
-                @include breakpoint(tablet){
-                    height: 300px;
-                }
-
-                img{
-                    transform: translateX(54%);
-
-                    @include breakpoint(tablet){
-                        transform: translateX(-16%);
-                    }
-                }
-            }
-        }
-    }
-    &.home.transition--central {
-        section#central {
-            .container .feature-image{
-                bottom: -200px;
-                right: 0;
-                overflow: hidden;
-
-                .container-inner{
-                    height:420px;
-
-                    img{
-                        transform: translateX(10%);
-
-                        @include breakpoint(mobile){
-                            transform: translateX(50%);
-                        }
-
-                        @include breakpoint(tablet){
-                            transform: translateX(30%);
-                        }
-
-                        @include breakpoint(laptop){
-                            transform: translateX(20%);
-                        }
-
-                        @include breakpoint(desktop){
-                            transform: translateX(0);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @include project-defaults('puppy', $green, 24%, 16%);
-    #puppy{
-        @include breakpoint(tablet){
-            padding-bottom: 180px;
-        }
-
-        .container .feature-image{
-            bottom: -140px;
-
-            @include breakpoint(tablet){
-                bottom: 20px;
-            }
-
-            .container-inner{
-                height:540px;
-
-                @include breakpoint(tablet){
-                    height:480px;
-                }
-
-                img{
-                    padding:0;
-                    transform: translateX(-40px);
-
-                    @include breakpoint(tablet){
-                        padding-left: 15%;
-                        transform: translateX(0);
-                    }
-                }
-            }
-        }
-    }
-    &.home.transition--puppy {
-        section#puppy {
-            .container .feature-image{
-                bottom: -340px;
-                left: 0;
-
-                .container-inner{
-                    height: 680px;
-                }
-            }
-        }
-    }
-
-    #gallery{
-        background: $purple;
-        height: 100%;
-
-        @extend .soft-shadow;
     }
 }
 
-// About Page
-body.about {
-    header#about{
-        height: 350px;
-        .container {
-            .image {
-                .image-container {
-                    width: 300px;
-                    top: 150px;
-                }
-            }
-            .aboutMe{
-                opacity:0;
-            }
-        }
-    }
-    section#sim{
-        opacity: 0;
-    }
-}
+// // About Page
+// body.about {
+//     header#about{
+//         height: 350px;
+//         .container {
+//             .image {
+//                 .image-container {
+//                     width: 300px;
+//                     top: 150px;
+//                 }
+//             }
+//             .aboutMe{
+//                 opacity:0;
+//             }
+//         }
+//     }
+//     section#sim{
+//         opacity: 0;
+//     }
+// }

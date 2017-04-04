@@ -15,39 +15,7 @@ body * {
 
 #temp{
     height: 1000px;
-}
-
-.media-tag{
-    position: fixed;
-    height: 20px;
-    top:0; left:0;
-    z-index: 9999;
-
-    &:after{
-        content: 'Mobile';
-        display: block;
-        color: $white;
-        font-family: $heading;
-        padding: 8px;
-        background: $central;
-        top:0; left:0;
-        border-radius: 0 0 4px 0;
-        opacity: 0.8;
-
-        @include breakpoint(tablet){
-            content: 'Tablet';
-            background: $sim;
-        }
-
-        @include breakpoint(laptop){
-            content: 'Laptop';
-            background: $puppy;
-        }
-        @include breakpoint(desktop){
-            content: 'Desktop';
-            background: $xtly;
-        }
-    }
+    background: transparent;
 }
 
 a{
@@ -63,20 +31,17 @@ a{
 .container{
     margin: 0 auto;
     padding: 0 30px;
+    max-width: $site-width-max;
     @include breakpoint(tablet){
         padding: 0 60px;
     }
-    @include breakpoint(tablet){
+    @include breakpoint(laptop){
         padding: 0 90px;
     }
 }
 
 .content--text{
     max-width: $content-width;
-}
-
-.video-embed--16-9{
-    @include video-embed(16 9);
 }
 
 .flex-grid{
@@ -112,6 +77,52 @@ a{
     }
 }
 
+.button-container{
+    height: 48px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    z-index: 9;
+
+    a[class^="trigger--"]{
+        border: 1px solid white;
+        border-radius: 50px;
+        text-align: center;
+        padding: 12px 18px;
+        padding-right: 20px;
+        position: relative;
+        top: 7px;
+        color: white;
+        text-decoration: none;
+        opacity: 1;
+        transition: 0.2s all cubic-bezier(.42,0,.58,1) !important;
+
+        &::after{
+            content: '›';
+            font-size: 1.6em;
+            position: relative;
+            top: 2px;
+            left:0;
+            padding-left: 12px;
+        }
+
+        &:hover{
+            background: $white;
+            border: 1px solid $white;
+        }
+    }
+}
+
+.soft-shadow{
+    @include soft-shadow();
+}
+
+.video-embed--16-9{
+    @include video-embed(16 9);
+}
+
 // Communicate media queries with javascript
 .responsive-beacon{
     position: fixed;
@@ -128,5 +139,39 @@ a{
     }
     @include breakpoint(desktop){
         width: 40px !important;
+    }
+}
+
+// Debug Media Tag
+.media-tag{
+    position: fixed;
+    height: 20px;
+    top:0; left:0;
+    z-index: 999;
+
+    &:after{
+        content: 'Mobile';
+        display: block;
+        color: $white;
+        font-family: $heading;
+        padding: 8px;
+        background: $central;
+        top:0; left:0;
+        border-radius: 0 0 4px 0;
+        opacity: 0.8;
+
+        @include breakpoint(tablet){
+            content: 'Tablet';
+            background: $sim;
+        }
+
+        @include breakpoint(laptop){
+            content: 'Laptop';
+            background: $puppy;
+        }
+        @include breakpoint(desktop){
+            content: 'Desktop';
+            background: $xtly;
+        }
     }
 }

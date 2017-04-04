@@ -1,4 +1,5 @@
 @import "partials/_base";
+@import "partials/pr_header";
 
 // Nametag Styles
 .nametag{
@@ -104,9 +105,6 @@
 
 // Project Page
 body {
-    header{
-        color: $white;
-    }
     p, li{
         color: $black;
         font-size: 1em;
@@ -122,7 +120,7 @@ body {
         }
     }
 
-    picture{
+    picture.content-image{
         padding: 20px;
         img{
             border-radius: 4px;
@@ -144,7 +142,6 @@ body {
         opacity: 0;
         padding: 40px 0;
         position: relative;
-        background: $white;
         transition: $default-transition;
         color: $black;
 
@@ -225,113 +222,6 @@ body {
             .quote-text{
                 font-size: 2em;
                 font-style: italic;
-            }
-        }
-    }
-
-    @include project-defaults('sim',$sim);
-    &.sim, &.puppy.transition--sim {
-        .next-up section#sim, header#sim {
-            .container .feature-image {
-                bottom: -100px;
-                right: -100px;
-
-                @include breakpoint(tablet){
-                    bottom: -180px;
-                    right: 0;
-                }
-
-                .container-inner{
-                    height: 550px;
-
-                    img{
-                        transform: translateX(0);
-                    }
-                }
-            }
-        }
-
-        // FOOTER STYLES
-        .next-up section#xtly {
-            .container .feature-image{
-                bottom: 40px;
-
-                .container-inner{
-                    height: 600px;
-
-                    img{
-                        margin: 0;
-                        margin-left: 20%;
-                    }
-                }
-            }
-        }
-    }
-
-    @include project-defaults('xtly', $xtly, 4%, 38%);
-    &.xtly, &.sim.transition--xtly{
-        .next-up section#xtly, header#xtly {
-            .container .feature-image{
-                bottom: -260px;
-
-                .container-inner{
-                    height: 600px;
-
-                    img{
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    @include project-defaults('central', $central);
-    &.central, &.xtly.transition--central {
-
-        // Header / Footer Styles
-        .next-up section#central, header#central {
-            .container .feature-image{
-                bottom: -200px;
-                right: 0;
-                overflow: hidden;
-
-                .container-inner{
-                    height:420px;
-
-                    img{
-                        transform: translateX(10%);
-
-                        @include breakpoint(mobile){
-                            transform: translateX(50%);
-                        }
-
-                        @include breakpoint(tablet){
-                            transform: translateX(30%);
-                        }
-
-                        @include breakpoint(laptop){
-                            transform: translateX(20%);
-                        }
-
-                        @include breakpoint(desktop){
-                            transform: translateX(0);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @include project-defaults('puppy', $puppy);
-    &.puppy, &.central.transition--puppy {
-        .next-up section#puppy, header#puppy {
-            .container .feature-image{
-                bottom: -340px;
-                left: 0;
-
-                .container-inner{
-                    height: 680px;
-                }
             }
         }
     }

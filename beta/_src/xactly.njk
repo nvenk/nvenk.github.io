@@ -3,7 +3,7 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
-        scripts: 'js/scripts.js',
+        scripts: 'scripts/main.js',
         bodyClass: 'xtly'
 }%}
 
@@ -19,19 +19,19 @@
 {% include "partials/nametag.njk" %}
 
 <header id="xtly" class="l">
-    <div class="container">
-        <div class="feature">
-            <div class="container-inner">
-                <h1>Xactly Incent</h1>
-                <h3>Helping Sales people stay informed about their goals.</h3>
-                <div class="button-container">
-                    <a href="xactly.html" class="trigger--xtly">Read About It</a>
-                </div>
+    <div class="feature-container">
+        <div class="feature-desc">
+            <h1>Xactly Incent</h1>
+            <h3>Helping Sales people stay informed about their goals.</h3>
+            <div class="button-container">
             </div>
         </div>
+
         <div class="feature-image">
-            <div class="container-inner">
-                <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
+            <div class="image-container">
+                <picture>
+                    <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
+                </picture>
             </div>
         </div>
     </div>

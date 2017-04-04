@@ -3,7 +3,7 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
-        scripts: 'js/scripts.js',
+        scripts: 'scripts/main.js',
         bodyClass: 'central'
 }%}
 
@@ -17,21 +17,19 @@
 {% block content %}
 
 {% include "partials/nametag.njk" %}
-
 <header id="central" class="r">
-    <div class="container">
-        <div class="feature">
-            <div class="container-inner">
-                <h1>Central Cinema</h1>
-                <h3>Redesigning the ticket booking experience for a theatre.</h3>
-                <div class="button-container">
-                    <a href="central-cinema.html" class="trigger--central">Read About It</a>
-                </div>
-            </div>
+    <div class="feature-container">
+        <div class="feature-desc">
+            <h1>Central Cinema</h1>
+            <h3>Redesigning the ticket booking experience for a theatre.</h3>
+            <div class="button-container"></div>
         </div>
+
         <div class="feature-image">
-            <div class="container-inner">
-                <img src="img/central/feature.jpg" alt="" class="soft-shadow" />
+            <div class="image-container">
+                <picture>
+                    <img src="img/central/feature.jpg" alt="" class="soft-shadow" />
+                </picture>
             </div>
         </div>
     </div>
