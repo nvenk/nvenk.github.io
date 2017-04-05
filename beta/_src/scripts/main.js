@@ -28,7 +28,7 @@
 })(jQuery,'smartresize');
 
 // Nvenk Specific functions
-var DEBUG = false;
+var DEBUG = true;
 var size = "";
 
 function checkSize(){

@@ -40,13 +40,10 @@ a{
     }
 }
 
-.content--text{
-    max-width: $content-width;
-}
-
 .flex-grid{
     display: block;
     align-items: center;
+    justify-content: space-between;
 
     @include breakpoint(tablet){
         display: flex;

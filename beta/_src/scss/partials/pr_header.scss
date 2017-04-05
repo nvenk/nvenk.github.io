@@ -1,4 +1,5 @@
 body{
+    overflow-x: hidden !important;
     // Default Project Styles
     .projects section, header{
         z-index: 1;
@@ -39,7 +40,6 @@ body{
 					margin: 0;
 					letter-spacing: 2px;
                     z-index: 10;
-                    @include transition-curving();
 
 					@include breakpoint(tablet){
 						font-size: 2em;
@@ -54,7 +54,6 @@ body{
 					width: 100%;
 					margin: 0;
                     z-index: 10;
-                    @include transition-curving();
 
 					@include breakpoint(tablet){
 						font-size: 1.2em;
@@ -81,7 +80,6 @@ body{
                     position: relative;
                     top: 0; left: 0;
                     @extend .container;
-                    @include transition-curving();
 
                     picture{
                         width: 100%;
@@ -123,63 +121,13 @@ body{
         }
     }
 
-    @mixin work-transition() {  // Add all project classes here
-        .feature-container{
-            max-width: 100%;
-            padding: 0;
-
-            .feature-desc{
-                border-radius: 0;
-                margin: 0 !important;
-                padding: 200px 30px 0;
-
-                @include breakpoint(tablet){
-                    padding: 200px 60px 0;
-
-                }
-                @include breakpoint(laptop){
-                    padding: 200px 90px 0;
-                }
-
-                h1, h2{
-                    padding-top: 100px;
-
-                    @include breakpoint(tablet){
-                        padding-top: 200px;
-                    }
-                }
-
-                .button-container{
-                    opacity: 0;
-                    height: 0;
-                }
-            }
-
-            .feature-image{
-                .image-container{
-                    max-width: 100%;
-                    picture{
-                        opacity: 0.1;
-
-                        @include breakpoint(mobile){
-                            opacity: 0.3;
-                        }
-
-                        @include breakpoint(tablet){
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     //// SIM Styles
     @include work('sim',$sim, 32%, 8%);
     #sim{
         @include breakpoint(tablet){
             padding-bottom: 480px;
         }
+
         .feature-image{
             .image-container{
                 right: auto; top: auto;
@@ -205,8 +153,7 @@ body{
         }
     }
     &.transition--sim #sim, &.sim header#sim{
-        @include work-transition();
-
+        @include work-transition-defaults();
         .feature-image{
             .image-container{
                 left: 25%; bottom: -60px;
@@ -214,7 +161,7 @@ body{
                     left: 20%; bottom: -160px;
                 }
                 @include breakpoint(laptop){
-                    left: 0;
+                    left: 100px;
                 }
                 @include breakpoint(desktop){
                     bottom: -200px;
@@ -262,7 +209,7 @@ body{
         }
     }
     &.transition--xtly #xtly, &.xtly header#xtly{
-        @include work-transition();
+        @include work-transition-defaults();
         .feature-image{
             .image-container{
                 left: -90px; bottom: -200px;
@@ -321,7 +268,7 @@ body{
         }
     }
     &.transition--central #central, &.central header#central{
-        @include work-transition();
+        @include work-transition-defaults();
         .feature-image{
             .image-container{
                 right: 0; bottom: -16vw;
@@ -329,10 +276,14 @@ body{
                     right: -280px; bottom: -200px;
                 }
                 @include breakpoint(laptop){
-                    right: -180px;
+                    right: -220px;
                 }
                 @include breakpoint(desktop){
-                    right:0;
+                    right: -20px;
+                }
+
+                @include breakpoint(98em){
+                    right: 0;
                 }
             }
             img{
@@ -382,7 +333,7 @@ body{
         }
     }
     &.transition--puppy #puppy, &.puppy header#puppy{
-        @include work-transition();
+        @include work-transition-defaults();
         .feature-image{
             .image-container{
                 left: -90px; bottom: -200px;

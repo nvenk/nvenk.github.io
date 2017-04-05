@@ -97,41 +97,20 @@ body{
                 opacity: 0;
             }
         }
-
-        .projects{
-            padding:0;
-
-            @include breakpoint(tablet){
-                padding-top: 78px;
-            }
-        }
-
-        #gallery{
-            background: $gallery;
-            height: 100%;
-
-            @include soft-shadow();
-        }
     }
 }
 
-// // About Page
-// body.about {
-//     header#about{
-//         height: 350px;
-//         .container {
-//             .image {
-//                 .image-container {
-//                     width: 300px;
-//                     top: 150px;
-//                 }
-//             }
-//             .aboutMe{
-//                 opacity:0;
-//             }
-//         }
-//     }
-//     section#sim{
-//         opacity: 0;
-//     }
-// }
+.projects{
+    padding:0;
+
+    @include breakpoint(tablet){
+        padding-top: 78px;
+    }
+}
+
+#gallery{
+    background: $gallery;
+    height: 100%;
+
+    @include soft-shadow();
+}

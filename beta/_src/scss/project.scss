@@ -12,7 +12,6 @@
     z-index: 9999;
 
     .container{
-
         h6{
             display: inline-block;
             color: $white;
@@ -104,170 +103,254 @@
 }
 
 // Project Page
-body {
-    p, li{
-        color: $black;
-        font-size: 1em;
-        letter-spacing: 0.02em;
-        line-height: 1.9;
-        padding-bottom: 20px;
+
+header{
+    padding-bottom: 50px !important;
+}
+
+em{
+    font-family: $heading;
+    font-size: 0.95em;
+}
+
+p, li{
+    color: $black;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    line-height: 1.9;
+    padding-bottom: 20px;
+    max-width: $content-width;
+
+    &.heading-1{
+        font-size: 1.6em;
+        font-family: $heading;
+        font-weight: $bold;
+        margin-bottom: 20px;
+        text-align: center;
+        @include breakpoint(laptop){
+            text-align: left;
+        }
+    }
+}
+li{
+    list-style: none;
+    position: relative;
+    padding-left: 0;
+
+    &::before{
+        content: '›';
+        position: absolute;
+        left: -1.2em; top: -4px;
+        font-size: 1.2em;
+        font-weight: $bold;
+    }
+}
+
+picture.content-image{
+    padding: 0;
+    width: 100%;
+    @include breakpoint(laptop){
+        padding: 20px;
+    }
+    img{
+        border-radius: 4px;
+        width: 100%;
+        @include soft-shadow(32,0.6);
+    }
+    .picture-tag{
+        text-align: center;
+        font-size: 0.9em;
+        font-family: $heading;
+        font-weight: $thin;
+        padding: 16px 0 20px;
+        @include breakpoint(laptop){
+            padding: 16px 20px 20px 40px;
+        }
+    }
+}
+
+section.content{
+    @extend .fade-in;
+    opacity: 0;
+    padding: 40px 0;
+    position: relative;
+    transition: $default-transition;
+    color: $black;
+
+    @include breakpoint(tablet){
+        padding: 40px 0 80px;
+    }
+
+    .content--text{
         max-width: $content-width;
 
-        &.heading-1{
-            font-size: 1.6em;
-            font-family: $heading;
-            font-weight: $bold;
+        &.center{
+            margin: 0 auto;
+            @include breakpoint(laptop){
+                margin: 0;
+            }
         }
     }
 
-    picture.content-image{
-        padding: 20px;
+    &.alt{
+        background: $gray;
+    }
+
+    &.background-image{
+        background: transparent;
+        padding: 0;
+
+        *{
+            transition: 0.4s all ease-in-out;
+        }
+
         img{
-            border-radius: 4px;
-            @include soft-shadow(32,0.6);
-        }
-        .picture-tag{
-            text-align: center;
-            font-size: 0.9em;
-            font-family: $heading;
-            font-weight: $thin;
-            color: $central;
-            padding-top: 10px;
+            width: 100%;
+            max-width: 100%;
+            z-index: 1;
         }
 
-    }
+        .text{
+            display: flex;
+            align-items: flex-end;
+            z-index: 2;
 
-    section.content{
-        @extend .fade-in;
-        opacity: 0;
-        padding: 40px 0;
-        position: relative;
-        transition: $default-transition;
-        color: $black;
+            @include breakpoint(tablet){
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+            }
+            div{
+                margin: 0 auto;
+                max-width: $content-width;
 
-        &.alt{
-            background: $gray;
-        }
+                @include breakpoint(tablet){
+                    margin: 0;
+                }
 
-        &.background-image{
-            background: transparent;
-            padding: 0;
+                p{
+                    color: $black;
+                    font-size: 1em;
+                    line-height: 1.4;
+                    font-style: italic;
+                    transition-delay: 0.1s;
 
-            *{
-                transition: 0.4s all ease-in-out;
+
+                    @include breakpoint(tablet){
+                        color: $white;
+                        font-size: 1.2em;
+                        opacity: 0;
+                        filter: blur(3px);
+                    }
+                }
             }
 
+        }
+
+        &.scrollfX, &.scrollfX-mob{
             img{
-                width: 100%;
-                max-width: 100%;
-                z-index: 1;
+                @include breakpoint(tablet){
+                    filter: brightness(0.3);
+                }
             }
 
             .text{
-                display: flex;
-                align-items: flex-end;
-                z-index: 2;
-
-                @include breakpoint(tablet){
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    height: 100%;
+                p{
+                    opacity:1;
+                    filter:blur(0);
                 }
-                div{
-                    margin: 0 auto;
-                    max-width: $content-width;
-
-                    @include breakpoint(tablet){
-                        margin: 0;
-                    }
-
-                    p{
-                        color: $black;
-                        font-size: 1em;
-                        line-height: 1.4;
-                        font-style: italic;
-                        transition-delay: 0.1s;
-
-
-                        @include breakpoint(tablet){
-                            color: $white;
-                            font-size: 1.2em;
-                            opacity: 0;
-                            filter: blur(3px);
-                        }
-                    }
-                }
-
-            }
-
-            &.scrollfX, &.scrollfX-mob{
-                img{
-                    @include breakpoint(tablet){
-                        filter: brightness(0.3);
-                    }
-                }
-
-                .text{
-                    p{
-                        opacity:1;
-                        filter:blur(0);
-                    }
-                }
-            }
-        }
-
-        &.quote{
-            .quote-text{
-                font-size: 2em;
-                font-style: italic;
             }
         }
     }
 
-    // FOOTER
-    .next-up{
-        padding-top: 250px;
-
-        .label{
-            padding-left: 150px;
+    &.quote{
+        .quote-text{
             font-size: 2em;
-            width: auto;
-            font-weight: bold;
-            position: relative;
-            display: inline;
-            top: -140px;
-            left:0;
-            opacity: 1;
-            transition: 0.3s all ease-in-out;
+            font-style: italic;
+        }
+    }
+}
 
-            &:before{
-                content: '';
-                background-color: $xtly;
-                height: 5px;
-                position: absolute;
-                bottom: -8px;
-                left:0;
-                width: 106%;
-            }
-            &:after{
-                content: '';
-                background-color: $xtly;
-                height: 12px;
-                position: absolute;
-                bottom: -11px;
-                right:-6%;
-                width: 12px;
+#intro{
+    .flex-grid{
+        align-items: flex-end;
+    }
+
+    .content--text{
+        padding-right: 30px;
+    }
+}
+
+@mixin project-defaults($project){
+    em{
+        color: $project;
+    }
+
+    li::before{
+        color: $project;
+    }
+
+    .content-image .picture-tag{
+        color: $project;
+    }
+}
+
+// Project Specific
+@include project-defaults($central);
+body.central{
+    #users, #personas{
+        .flex-grid .fg--cell--custom{
+            max-width: 100%;
+            @include breakpoint(laptop){
+                flex: 1;
+                max-width: 50%;
             }
         }
     }
+}
 
-    @at-root {
-        body[class^="transition--"]{
-            .next-up{
-                padding: 200px;
-            }
+
+// FOOTER
+.next-up{
+    padding-top: 250px;
+
+    .label{
+        padding-left: 150px;
+        font-size: 2em;
+        width: auto;
+        font-weight: bold;
+        position: relative;
+        display: inline;
+        top: -140px;
+        left:0;
+        opacity: 1;
+        transition: 0.3s all ease-in-out;
+
+        &:before{
+            content: '';
+            background-color: $xtly;
+            height: 5px;
+            position: absolute;
+            bottom: -8px;
+            left:0;
+            width: 106%;
         }
+        &:after{
+            content: '';
+            background-color: $xtly;
+            height: 12px;
+            position: absolute;
+            bottom: -11px;
+            right:-6%;
+            width: 12px;
+        }
+    }
+}
+
+body[class^="transition--"]{
+    .next-up{
+        padding: 200px;
     }
 }

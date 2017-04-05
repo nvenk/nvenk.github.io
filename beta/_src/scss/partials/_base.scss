@@ -12,6 +12,7 @@ $screen-mob:         22.5em;
 $screen-tablet:      48em;
 $screen-laptop:      60em;
 $screen-desktop:     80em;
+$screen-superhuge:   160em;
 @import "partials/_breakpoints";
 
 // Colors
@@ -48,7 +49,7 @@ $default-transition: 0.2s all ease-in-out;
 $project-easing: ease-in-out;
 // Default Widths
 $content-width     : 36em;
-$site-width-max    : 1440px;
+$site-width-max    : 160em;
 
 @import "partials/_mixins";
 @import "partials/_utils";

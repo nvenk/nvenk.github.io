@@ -34,38 +34,6 @@
     }
 }
 
-//// Material Shadows
-@mixin material-shadow($depth:0) {
-     @if $depth < 1{
-        box-shadow: none;
-    }
-    @else if $depth > 5 {
-         @warn"Invalid $depth `#{$depth}` for mixin `card`.";
-    }
-    @else {
-        box-shadow: bottom-shadow($depth), top-shadow($depth);
-    }
-}
-////// Dependent Functions
-@function top-shadow($depth) {
-  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
-  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
-  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
-
-  @return 0 $primary-offset $blur $color;
-}
-@function bottom-shadow($depth) {
-  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
-  $blur: nth(1 3 3 5 6, $depth) * 4px;
-  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
-
-  @return 0 $primary-offset $blur $color;
-}
-
-@mixin transition-curving(){
-	transition-duration: 0.6s;
-}
-
 //// Project Tiles Header
 @mixin work($name, $color: $black, $margin-right: 24%, $margin-left: 24%){
 	// Button Color
@@ -77,6 +45,7 @@
 	section##{$name}, &.#{$name} header {
 		.feature-container{
 			padding: 0;
+			max-width: 1440px;
 
 			.feature-desc{
 				background: $color url('../img/#{$name}/gradient.jpg') no-repeat;
@@ -94,4 +63,56 @@
         opacity: 0;
     }
 
+}
+
+@mixin work-transition-defaults() {
+    .feature-container{
+        max-width: 100%;
+        padding: 0;
+
+        .feature-desc{
+            border-radius: 0;
+            margin: 0 !important;
+            padding: 200px 30px 0;
+
+            @include breakpoint(tablet){
+                padding: 200px 60px 0;
+
+            }
+            @include breakpoint(laptop){
+                padding: 200px 90px 0;
+            }
+
+            h1, h2{
+                padding-top: 100px;
+
+                @include breakpoint(tablet){
+                    padding-top: 200px;
+                }
+            }
+
+            .button-container{
+                opacity: 0;
+                height: 0;
+            }
+        }
+
+        .feature-image{
+            .image-container{
+                max-width: 100%;
+
+                picture{
+                    opacity: 0.1;
+
+                    @include breakpoint(mobile){
+                        opacity: 0.3;
+                    }
+
+                    @include breakpoint(tablet){
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
