@@ -10,12 +10,28 @@ body{
         }
 
         #about {
-            background: $black url('../img/about/background.jpg');
+            background: $black url('/img/about/background.jpg');
             background-size: cover;
             position: relative;
             height: 100%;
 
+            overflow: hidden;
+
+            svg{
+                position: absolute;
+                top:0; left:0;
+                height: 100%;
+                width: 100%;
+                opacity: 0.75;
+
+                polygon{
+                  @extend .fade-in;
+                  opacity: 0;
+                }
+            }
+
             .container{
+                z-index: 1;
                 height: 100%;
                 display: flex;
                 justify-content: center;

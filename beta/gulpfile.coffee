@@ -1,6 +1,7 @@
 # Nikhil Venkatesh
 # 20 Feb 2017
 # ----------------
+# Install gulp and then run `npm i -D`
 
 # Packages
 ## Utility
@@ -22,6 +23,7 @@ mediaQuery = require 'gulp-combine-mq'
 
 ## Scripts
 uglify = require 'gulp-uglify'
+concat = require 'gulp-concat'
 
 ## Content
 nunjucks = require 'gulp-nunjucks-render'
@@ -56,8 +58,9 @@ gulp.task 'sync-task', ->
     bSync.init({
         server: './',
         browser: 'google chrome',
-        ghostMode: false
+        ghostMode: false,
     })
+    bSync.scrollRestoreTechnique= 'cookie';
     # gulp.watch(dests.scripts).on('change', bSync.reload)
 
 ## Content
@@ -119,8 +122,9 @@ gulp.task 'scripts-task', ->
 
     return gulp.src(sources.scripts)
     .pipe plumber({ errorHandler: onError })
-    .pipe newer(dests.scripts)
-    # .pipe uglify({ mangle: false })
+    # .pipe newer(dests.scripts)
+    .pipe concat('all.js')
+    # .pipe uglify()
     .pipe gulp.dest(dests.scripts)
     .pipe bSync.stream()
 

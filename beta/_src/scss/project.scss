@@ -1,107 +1,6 @@
 @import "partials/_base";
 @import "partials/pr_header";
-
-// Nametag Styles
-.nametag{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 60px 0 30px;
-    margin: 0;
-    z-index: 9999;
-
-    .container{
-        h6{
-            display: inline-block;
-            color: $white;
-            font-weight: $reg;
-            text-transform: uppercase;
-            font-size: 0.8em;
-            letter-spacing: 6px;
-            animation-duration: 1s;
-            animation-delay: 0.4s;
-            opacity: 0;
-            text-align: left;
-            padding: 12px 12px 12px 0;
-            margin: 0;
-            position: relative;
-
-            @include breakpoint(tablet){
-                text-align: left;
-                padding: 30px 12px 30px 0;
-            }
-
-            .divider{
-                background: white;
-                display: inline-block;
-                position: relative;
-                top: -1px;
-                font-size: 0.79em;
-                width: 1px;
-                height: 100%;
-                margin: 0 24px 0 20px;
-            }
-
-            &::after{
-                content: '‹ Go Home';
-                position: absolute;
-                top: 0;
-                left: 0;
-                padding: 12px 0;
-                background: $black;
-                transition: 0.4s all ease-in-out 0.1s;
-                width: 0;
-                overflow:hidden;
-                white-space: nowrap;
-                z-index: 99;
-
-                @include breakpoint(tablet){
-                    padding: 30px 0;
-                }
-            }
-
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                padding: 12px 0;
-                background: $black;
-                transition: 0.4s all ease-in-out;
-                width: 0;
-                height: 1.1em;
-                overflow: hidden;
-                opacity: 0.3;
-                z-index: 99;
-
-                @include breakpoint(tablet){
-                    padding: 30px 0;
-                }
-            }
-
-            &:hover{
-                opacity: 0.4;
-
-                &::before{
-                    width: 100%;
-                    padding: 12px 0 12px 12px;
-
-                    @include breakpoint(tablet){
-                        padding: 30px 0 30px 12px;
-                    }
-                }
-
-                &::after{
-                    width: 120px;
-                    padding-left: 24px;
-                    padding-right: 48px;
-                }
-            }
-        }
-    }
-}
-
+@import "partials/_nav.scss";
 // Project Page
 
 header{
@@ -146,16 +45,24 @@ li{
     }
 }
 
+section.content{
+    opacity: 0;
+    @extend .fade-in;
+}
+
 picture.content-image{
     padding: 0;
     width: 100%;
+    position: relative;
     @include breakpoint(laptop){
         padding: 20px;
     }
+
     img{
         border-radius: 4px;
         width: 100%;
         @include soft-shadow(32,0.6);
+        transition: $default-transition;
     }
     .picture-tag{
         text-align: center;
@@ -167,11 +74,38 @@ picture.content-image{
             padding: 16px 20px 20px 40px;
         }
     }
+
+    .prototype-tag{
+        position: relative;
+        &::after{
+            transition: $default-transition;
+            content: 'Live Prototype';
+            position: absolute;
+            bottom:0; right:0;
+            padding: 10px;
+            margin-bottom: 4px;
+            border-radius: 4px 0 4px 0;
+            color: $white;
+            font-weight: $bold;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+        &:hover{
+            img{
+                filter: brightness(40%);
+            }
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
 }
 
 section.content{
-    @extend .fade-in;
     opacity: 0;
+    @extend .fade-in;
+
     padding: 40px 0;
     position: relative;
     transition: $default-transition;
@@ -204,16 +138,18 @@ section.content{
             transition: 0.4s all ease-in-out;
         }
 
-        img{
+        img.bg-image{
             width: 100%;
             max-width: 100%;
             z-index: 1;
+            object-fit: cover;
         }
 
         .text{
             display: flex;
             align-items: flex-end;
             z-index: 2;
+            flex: 1;
 
             @include breakpoint(tablet){
                 position: absolute;
@@ -249,8 +185,8 @@ section.content{
 
         }
 
-        &.scrollfX, &.scrollfX-mob{
-            img{
+        &.scrollfX{
+            img.bg-image{
                 @include breakpoint(tablet){
                     filter: brightness(0.3);
                 }
@@ -262,6 +198,29 @@ section.content{
                     filter:blur(0);
                 }
             }
+        }
+    }
+
+    .buffer-laptop{
+        display:none;
+
+        @include breakpoint(laptop){
+            display:block;
+        }
+    }
+
+    &.image-rt{
+        position: relative;
+        top: 0%;
+        z-index: 20;
+
+        @include breakpoint(laptop){
+            padding-top: 0; padding-bottom: 0;
+            top: -20%;
+        }
+
+        .flex-grid{
+            justify-content: flex-end;
         }
     }
 
@@ -295,17 +254,33 @@ section.content{
     .content-image .picture-tag{
         color: $project;
     }
+
+    .prototype-tag::after{
+        background: $project;
+    }
 }
 
 // Project Specific
 @include project-defaults($central);
 body.central{
-    #users, #personas{
+    section{
         .flex-grid .fg--cell--custom{
             max-width: 100%;
             @include breakpoint(laptop){
                 flex: 1;
                 max-width: 50%;
+            }
+        }
+
+        &#design-01{
+            max-height: 800px;
+            overflow: hidden;
+        }
+
+        &#design-02{
+            padding-bottom: 0;
+            @include breakpoint(laptop){
+                height: 0%;
             }
         }
     }

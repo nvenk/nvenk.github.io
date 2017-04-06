@@ -33,16 +33,6 @@
     <link rel="stylesheet" type="text/css" href="css/project.css" /> </head>
   <body class="central">
     <div class="responsive-beacon"></div>
-    <script>
-      if (document.getElementsByTagName('body')[0].className == "home")
-      {
-        history.scrollRestoration = 'auto';
-      }
-      else
-      {
-        history.scrollRestoration = 'manual';
-      }
-    </script>
     <div class="nametag">
       <div class="container">
         <a href="/">
@@ -53,11 +43,12 @@
         </a>
       </div>
     </div>
+    <nav> hello World! </nav>
     <header id="central" class="r">
       <div class="feature-container">
         <div class="feature-desc">
           <h1>Central Cinema</h1>
-          <h3>Redesigning the ticket booking experience for a theatre.</h3>
+          <h3>Redesigning the web experience for a local beer-theatre</h3>
           <div class="button-container"></div>
         </div>
         <div class="feature-image">
@@ -76,13 +67,14 @@
           <p>While the service they offer is enticing, their website doesn't quite reflect the Central Cinema experience. We took this as an opportunity and set out to design their new website.</p>
           <p>I was the
             <em>primary designer</em> on the team. While my main responsibilities were
-            <em>UX design, visual design and prototyping</em>, we all assisted in every phase of the project.</p>
+            <em>UX design, visual design and prototyping</em>, we all assisted in every phase of the project. This project ran for
+            <em>10 weeks</em>.</p>
         </div>
         <div class="fg--cell buffer"></div>
       </div>
     </section>
     <section class="content background-image" id="scope">
-      <img src="img/central/scope.jpg" alt="" />
+      <img class="bg-image" src="img/central/scope.jpg" alt="" />
       <div class="container text">
         <div>
           <p>Before jumping in, we wanted to understand the business, identify the business goals and define our scope.</p>
@@ -111,7 +103,7 @@
         </div>
         <div class="fg--cell--custom">
           <picture class="content-image">
-            <img src="img/central/cc_existing.png" alt="Existing Central Cinema Website" />
+            <img src="img/central/existing.png" alt="Existing Central Cinema Website" />
             <div class="picture-tag">Central Cinema's current website</div>
           </picture>
         </div>
@@ -143,10 +135,98 @@
         <div class="fg--cell--custom buffer"> </div>
       </div>
     </section>
+    <section class="content alt">
+      <p class="heading-1 container">Design & Prototyping</p>
+      <p> Add image here about the design process </p>
+    </section>
+    <section class="content background-image" id="design-01">
+      <img class="bg-image" src="img/central/whiteboard01.jpg" alt="" />
+      <div class="flex-grid container text">
+        <div class="fg--cell content--text">
+          <p>We took the results from the card sort and created a Sitemap to guide our initial designs. It was time to pick up the sharpies!</p>
+          <p>As an ideation exercise, we each decided to sketch out with what our vision for the website design was. Keeping some key areas in mind - like the calendar, the homepage and the ticket booking experience, we each created what were essentially
+            paper prototypes.</p>
+          <p>Having these sketches gave us a great platform to build upon. We picked out specific features from each prototype that we all thought worked best - these would make it to our first test-ready prototype.</p>
+        </div>
+        <div class="fg--cell buffer-laptop"></div>
+      </div>
+    </section>
+    <section class="content image-rt" id="design-02">
+      <div class="flex-grid container">
+        <div class="fg--cell--custom">
+          <picture class="content-image prototype">
+            <div class="prototype-tag">
+              <a href="https://app.atomic.io/d/MDLT290nAzUp" target="_blank">
+                <img src="img/central/firstPrototype.jpg" alt="Our first Central Cinema prototype" />
+              </a>
+            </div>
+            <div class="picture-tag">A preview of our first prototype - build in Atomic.io</div>
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="design-03">
+      <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+          <p>I used
+            <em>Atomic.io</em> to create a prototype that demonstrates the basic features of our redesign. We wanted to know if our users had any trouble with the
+            <em>essential tasks</em> - Looking up show timings, checking out the food and drinks menu, and booking tickets online.</p>
+          <p>At this point, we were running short on time. We decided to test our prototype with a few users to get a quick round of feedback and see what we were doing right. Our
+            <em>usability tests</em> threw up a mixed bag of results. We did a lot of things right, but there was definitely room for improvement!</p>
+          <ul class="content--list">
+            <li>All of our users were able to successfully book a ticket on the new website!</li>
+            <li>The
+              <em>infromation architecture</em> was already much better than the previous website.</li>
+            <li>
+              <em>Details about the ticket pricing</em> weren't communicated effectively, leading to some confusion.</li>
+            <li>Some users expressed concern about using a
+              <em>modal window</em> to book tickets, as it felt insecure.</li>
+          </ul>
+        </div>
+        <div class="fg--cell buffer-laptop"></div>
+      </div>
+    </section>
+    <section class="content alt" id="design-04">
+      <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+          <p>I used
+            <em>Atomic.io</em> to create a prototype that demonstrates the basic features of our redesign. We wanted to know if our users had any trouble with the
+            <em>essential tasks</em> - Looking up show timings, checking out the food and drinks menu, and booking tickets online.</p>
+          <p>At this point, we were running short on time. We decided to test our prototype with a few users to get a quick round of feedback and see what we were doing right. Our
+            <em>usability tests</em> threw up a mixed bag of results. We did a lot of things right, but there was definitely room for improvement!</p>
+          <ul class="content--list">
+            <li>All of our users were able to successfully book a ticket on the new website!</li>
+            <li>The
+              <em>infromation architecture</em> was already much better than the previous website.</li>
+            <li>
+              <em>Details about the ticket pricing</em> weren't communicated effectively, leading to some confusion.</li>
+            <li>Some users expressed concern about using a
+              <em>modal window</em> to book tickets, as it felt insecure.</li>
+          </ul>
+        </div>
+        <div class="fg--cell buffer-laptop"></div>
+      </div>
+    </section>
     <div id="temp"></div>
     <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
     <script src="scripts/lib/ScrollMagic.min.js" charset="utf-8"></script>
     <script src="scripts/lib/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/all.js"></script>
+    <script id="scrollInit">
+      var SMcontroller = new ScrollMagic.Controller(
+      {
+        addIndicators: true
+      });
+      var imageSegments = ["scope", "design-01"];
+      $.each(imageSegments, function()
+      {
+        new ScrollMagic.Scene(
+        {
+          triggerElement: '#' + this,
+          offset: 10,
+          triggerHook: 0.3
+        }).setClassToggle('#' + this, 'scrollfX').addTo(SMcontroller);
+      });
+    </script>
   </body>
 </html>

@@ -1,32 +1,3 @@
-// SmartResize Function from Paul Irish
-// https://www.paulirish.com/2009/throttled-smartresize-jquery-event-handler/
-(function($,sr){
-  // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-  var debounce = function (func, threshold, execAsap) {
-      var timeout;
-
-      return function debounced () {
-          var obj = this, args = arguments;
-          function delayed () {
-              if (!execAsap)
-                  func.apply(obj, args);
-              timeout = null;
-          };
-
-          if (timeout)
-              clearTimeout(timeout);
-          else if (execAsap)
-              func.apply(obj, args);
-
-          timeout = setTimeout(delayed, threshold || 100);
-      };
-  }
-  // smartresize
-  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-
-})(jQuery,'smartresize');
-
 // Nvenk Specific functions
 var DEBUG = true;
 var size = "";
@@ -43,13 +14,6 @@ function checkSize(){
 
     return size;
 };
-
-// Force reload cached back button press - Safari Fix
-$(window).bind("pageshow", function(event) {
-    if (event.originalEvent.persisted) {
-        window.location.reload()
-    }
-});
 
 // Trigger Transitions
 function trigger(id, scrollOffset){
@@ -76,7 +40,6 @@ function trigger(id, scrollOffset){
 tList = ['about','sim','xtly','central','puppy'];
 
 $(document).ready(function() {
-
     // Add Media Tag
     if(DEBUG) $('body').prepend('<div class="media-tag"></div>');
 
@@ -86,20 +49,6 @@ $(document).ready(function() {
     for (i=0; i < tList.length; i++){
         trigger(tList[i], 78);
     };
-
-    // ScrollMagic
-    var SMcontroller = new ScrollMagic.Controller();
-
-    // SM - Background Image Fade In
-    var bgImage = new ScrollMagic.Scene({
-        triggerElement: '.background-image',
-        offset : 100,
-        triggerHook: 0.3
-    })
-    .setClassToggle('.background-image', 'scrollfX')
-    .addTo(SMcontroller);
-
-    if(DEBUG) bgImage.addIndicators();
 
     // ON RESIZE
 

@@ -44,13 +44,6 @@ function checkSize(){
     return size;
 };
 
-// Force reload cached back button press - Safari Fix
-$(window).bind("pageshow", function(event) {
-    if (event.originalEvent.persisted) {
-        window.location.reload()
-    }
-});
-
 // Trigger Transitions
 function trigger(id, scrollOffset){
     var btn = '.trigger--' + id;
@@ -88,18 +81,18 @@ $(document).ready(function() {
     };
 
     // ScrollMagic
-    var SMcontroller = new ScrollMagic.Controller();
+    // var SMcontroller = new ScrollMagic.Controller({addIndicators: true});
 
     // SM - Background Image Fade In
-    var bgImage = new ScrollMagic.Scene({
-        triggerElement: '.background-image',
-        offset : 100,
-        triggerHook: 0.3
-    })
-    .setClassToggle('.background-image', 'scrollfX')
-    .addTo(SMcontroller);
+    // var bgImage = new ScrollMagic.Scene({
+    //     triggerElement: '#scope',
+    //     offset : 100,
+    //     triggerHook: 0.3
+    // })
+    // .setClassToggle('#scope', 'scrollfX')
+    // .addTo(SMcontroller);
 
-    if(DEBUG) bgImage.addIndicators();
+    // if(DEBUG) bgImage.addIndicators();
 
     // ON RESIZE
 
