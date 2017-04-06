@@ -58,6 +58,10 @@ picture.content-image{
         padding: 20px;
     }
 
+    .no-shadow{
+        box-shadow: none;
+    }
+
     img{
         border-radius: 4px;
         width: 100%;
@@ -281,6 +285,12 @@ body.central{
             padding-bottom: 0;
             @include breakpoint(laptop){
                 height: 0%;
+            }
+        }
+
+        &#design-04{
+            .prototype-tag::after{
+                margin-bottom: 3px;
             }
         }
     }
