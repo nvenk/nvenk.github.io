@@ -17,7 +17,7 @@
     <body class="{{ var.bodyClass }}">
         <div class="responsive-beacon"></div>
         {# Set Scroll Restoration to 'manual' on Project pages #}
-        {# <script>
+        <script>
             if(document.getElementsByTagName('body')[0].className == "home") {
                 history.scrollRestoration = 'auto';
                 // Force reload cached back button press - Safari Fix
@@ -30,7 +30,7 @@
                 }
             }
             else { history.scrollRestoration = 'manual'; }
-        </script> #}
+        </script>
 
 
         {% block content %}{% endblock %}

@@ -9,6 +9,14 @@ body{
             transition-duration: 0.2s;
         }
 
+        .image-me{
+            margin: 90px;
+            width: calc(100% - 180px);
+            margin-bottom: 0;
+            padding-bottom: 0;
+            align-self: flex-end;
+        }
+
         #about {
             background: $black url('/img/about/background.jpg');
             background-size: cover;

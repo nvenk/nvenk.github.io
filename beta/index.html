@@ -33,6 +33,27 @@
     <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
   <body class="home">
     <div class="responsive-beacon"></div>
+    <script>
+      if (document.getElementsByTagName('body')[0].className == "home")
+      {
+        history.scrollRestoration = 'auto';
+        // Force reload cached back button press - Safari Fix
+        if (isSafari)
+        {
+          $(window).bind("pageshow", function(event)
+          {
+            if (event.originalEvent.persisted)
+            {
+              window.location.reload()
+            }
+          });
+        }
+      }
+      else
+      {
+        history.scrollRestoration = 'manual';
+      }
+    </script>
     <header id="about">
       <div class="container">
         <div class="info">
@@ -43,6 +64,7 @@
           </div>
         </div>
         <div class="image">
+          <img class="image-me" src="img/about/poly_me.png" alt="">
           <div class="image-container"></div>
         </div>
       </div>
