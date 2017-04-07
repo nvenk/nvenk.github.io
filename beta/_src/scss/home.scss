@@ -1,5 +1,6 @@
 @import "partials/_base";
 @import "partials/pr_header";
+@import "partials/_nav.scss";
 
 // Home Page
 
@@ -22,7 +23,6 @@ body{
             background-size: cover;
             position: relative;
             height: 100%;
-
             overflow: hidden;
 
             svg{
@@ -30,7 +30,7 @@ body{
                 top:0; left:0;
                 height: 100%;
                 width: 100%;
-                opacity: 0.75;
+                opacity: 0.85;
 
                 polygon{
                   @extend .fade-in;
@@ -43,32 +43,47 @@ body{
                 height: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: flex-start;
-                height: 100%;
+                align-items: flex-end;
                 position: relative;
                 margin: 0 auto;
+                flex-direction: column;
+
+                @include breakpoint(laptop){
+                    flex-direction: row;
+                }
 
                 .info {
-                    height: 100%;
-                    width: 50%;
-                    align-items: center;
-                    justify-content: center;
+                    width: 100%;
+                    align-items: left;
+                    justify-content: flex-end;
                     display: flex;
                     flex-direction: column;
+                    padding-bottom: 60px;
+
+                    .heading{
+                        font-size: 10em;
+                    }
+
+                    em{
+                        font-family: $heading;
+                        font-style: normal;
+                        font-weight: $bold;
+                        color: $xtly;
+                    }
 
                     h1 {
                         display: block;
                         color: $white;
                         text-align: center;
                         margin:0;
-                        font-size: 2.2em;
+                        font-size: 4em;
                     }
 
                     h3 {
                         display: block;
-                        color: $central;
-                        text-align: center;
                         font-weight: $reg;
+                        max-width: $content-width;
+                        font-size: 1.8em;
                     }
 
                     .trigger--about:hover{
@@ -78,7 +93,7 @@ body{
 
                 .image {
                     height: inherit;
-                    width: 50%;
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -89,7 +104,7 @@ body{
                         border-radius: 50%;
                         background: $white;
                         position: relative;
-                        top: 0;
+                        bottom: 0;
                     }
                 }
             }
@@ -127,9 +142,9 @@ body{
 .projects{
     padding:0;
 
-    @include breakpoint(tablet){
-        padding-top: 78px;
-    }
+    // @include breakpoint(tablet){
+    //     padding-top: 78px;
+    // }
 }
 
 #gallery{

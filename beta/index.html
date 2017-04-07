@@ -30,7 +30,11 @@
     <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil Venkatesh | Product Designer</title>
     <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/all.js"></script>
+  </head>
   <body class="home">
     <div class="responsive-beacon"></div>
     <script>
@@ -38,16 +42,13 @@
       {
         history.scrollRestoration = 'auto';
         // Force reload cached back button press - Safari Fix
-        if (isSafari)
-        {
-          $(window).bind("pageshow", function(event)
-          {
-            if (event.originalEvent.persisted)
-            {
-              window.location.reload()
-            }
-          });
-        }
+        // if(isSafari){
+        //     $(window).bind("pageshow", function(event) {
+        //         if (event.originalEvent.persisted) {
+        //             window.location.reload()
+        //         }
+        //     });
+        // }
       }
       else
       {
@@ -57,11 +58,15 @@
     <header id="about">
       <div class="container">
         <div class="info">
-          <h1>Nikhil Venkatesh</h1>
-          <h3>Design - Animate - Code</h3>
-          <div class="button-container">
-            <a href="about.html" class="trigger--about">Read More</a>
+          <div class="heading">
+            <em>Hi!</em>
           </div>
+          <h1>I'm
+            <em>Nikhil!</em>
+          </h1>
+          <h3>I’m a
+            <em>product designer</em> and
+            <em>animator</em> with a passion for coding. I enjoy solving problems with technology, and believe that a little bit of delight in design goes a long way!</h3>
         </div>
         <div class="image">
           <img class="image-me" src="img/about/poly_me.png" alt="">
@@ -146,7 +151,6 @@
     <section id="gallery">
       <div class="container"> </div>
     </section>
-    <div id="temp"></div>
     <footer>
       <div class="container">
         <a href="mailto:nikhilv.13@gmail.com">
@@ -154,9 +158,7 @@
         </a>
       </div>
     </footer>
-    <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
     <script src="scripts/lib/ScrollMagic.min.js" charset="utf-8"></script>
     <script src="scripts/lib/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
-    <script src="scripts/all.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 body{
     overflow-x: hidden !important;
     // Default Project Styles
-    .projects section, header{
+    .projects section, header, .next-up section{
         z-index: 1;
         color: $white;
 
@@ -27,6 +27,9 @@ body{
                 flex-flow: column wrap;
 
                 @include breakpoint(tablet){
+                    padding: 0 104px 50px 86px;
+                }
+                @include breakpoint(laptop){
                     padding: 0 104px 0 86px;
                     border-radius: 8px;
                 }
@@ -100,13 +103,15 @@ body{
             }
         }
         // Left Aligned Image Projects
-
         &.l{
             .feature-desc{
                 text-align: right;
                 align-items: flex-end;
 
                 @include breakpoint(tablet){
+                    padding: 0 86px 50px 104px;
+                }
+                @include breakpoint(laptop){
                     padding: 0 86px 0 104px;
                 }
 
@@ -125,6 +130,9 @@ body{
     @include work('sim',$sim, 32%, 8%);
     #sim{
         @include breakpoint(tablet){
+            padding-bottom: 330px;
+        }
+        @include breakpoint(laptop){
             padding-bottom: 480px;
         }
 
@@ -133,10 +141,10 @@ body{
                 right: auto; top: auto;
                 left: 25%; bottom: -50px;
                 @include breakpoint(tablet){
-                    left: -40px; bottom: -200px;
+                    left: 25%; bottom: -200px;
                 }
                 @include breakpoint(laptop){
-                    left: -10%; bottom: -220px;
+                    left: -3%; bottom: -220px;
                 }
                 @include breakpoint(desktop){
                     left: -10%; bottom: -220px;
@@ -158,24 +166,24 @@ body{
             .image-container{
                 left: 25%; bottom: -60px;
                 @include breakpoint(tablet){
-                    left: 20%; bottom: -160px;
+                    left: 20%; bottom: -220px;
                 }
                 @include breakpoint(laptop){
-                    left: 100px;
+                    left: 60px;
                 }
                 @include breakpoint(desktop){
-                    bottom: -200px;
+                    left: 0;
                 }
             }
             img{
                 @include breakpoint(tablet){
-                    transform: scale(0.8);
+                    transform: scale(1);
                 }
                 @include breakpoint(laptop){
-                    transform: scale(0.8);
+                    transform: scale(1);
                 }
                 @include breakpoint(desktop){
-                    transform: scale(1);
+                    transform: scale(1.1);
                 }
             }
         }
@@ -184,6 +192,9 @@ body{
     @include work('xtly', $xtly, 16%, 24%);
     #xtly{
         @include breakpoint(tablet){
+            padding-bottom: 200px;
+        }
+        @include breakpoint(laptop){
             padding-bottom: 100px;
         }
         .feature-image{
@@ -192,10 +203,14 @@ body{
                 right: auto; top: auto;
                 left: -60px; bottom: -200px;
                 @include breakpoint(tablet){
-                    left: 30px; bottom: 30px;
+                    left: -80px; bottom: 30px;
                 }
                 @include breakpoint(laptop){
-                    left: 15%; bottom: 30px;
+                    left: 2%; bottom: 30px;
+                }
+
+                @include breakpoint(desktop){
+                    left: 15%;
                 }
                 img{
                     @include breakpoint(laptop){
@@ -313,7 +328,7 @@ body{
                 left: -60px; bottom: -140px;
 
                 @include breakpoint(tablet){
-                    left: 30px; bottom: 30px;
+                    left: -100px; bottom: 30px;
                 }
                 @include breakpoint(laptop){
                     left: 0; bottom: 30px;

@@ -12,6 +12,8 @@
         {# Scroll Restoration PolyFill #}
         <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
         <link rel="stylesheet" type="text/css" href="{{ var.styles }}" />
+        <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
+        <script src="{{ var.scripts }}"></script><script src="{{ var.scripts }}"></script>
     </head>
 
     <body class="{{ var.bodyClass }}">
@@ -21,13 +23,13 @@
             if(document.getElementsByTagName('body')[0].className == "home") {
                 history.scrollRestoration = 'auto';
                 // Force reload cached back button press - Safari Fix
-                if(isSafari){
-                    $(window).bind("pageshow", function(event) {
-                        if (event.originalEvent.persisted) {
-                            window.location.reload()
-                        }
-                    });
-                }
+                // if(isSafari){
+                //     $(window).bind("pageshow", function(event) {
+                //         if (event.originalEvent.persisted) {
+                //             window.location.reload()
+                //         }
+                //     });
+                // }
             }
             else { history.scrollRestoration = 'manual'; }
         </script>
@@ -42,11 +44,11 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> #}
 
         {# <script data-main="scripts/main" src="scripts/require.js"></script> #}
-        <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
+        {# <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script> #}
         <script src="scripts/lib/ScrollMagic.min.js" charset="utf-8"></script>
         <script src="scripts/lib/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
 
-        <script src="{{ var.scripts }}"></script>
+        {# <script src="{{ var.scripts }}"></script> #}
 
         {% block scripts %}{% endblock %}
 

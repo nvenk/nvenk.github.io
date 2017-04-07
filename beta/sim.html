@@ -30,7 +30,11 @@
     <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil | SIM</title>
     <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/project.css" /> </head>
+    <link rel="stylesheet" type="text/css" href="css/project.css" />
+    <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/all.js"></script>
+  </head>
   <body class="sim">
     <div class="responsive-beacon"></div>
     <script>
@@ -38,16 +42,13 @@
       {
         history.scrollRestoration = 'auto';
         // Force reload cached back button press - Safari Fix
-        if (isSafari)
-        {
-          $(window).bind("pageshow", function(event)
-          {
-            if (event.originalEvent.persisted)
-            {
-              window.location.reload()
-            }
-          });
-        }
+        // if(isSafari){
+        //     $(window).bind("pageshow", function(event) {
+        //         if (event.originalEvent.persisted) {
+        //             window.location.reload()
+        //         }
+        //     });
+        // }
       }
       else
       {
@@ -70,7 +71,7 @@
         <div class="feature-desc">
           <h1>SIM: The Social Robot</h1>
           <h3>Designing for affective Human-Robot Interaction.</h3>
-          <div class="button-container"> </div>
+          <div class="button-container"></div>
         </div>
         <div class="feature-image">
           <div class="image-container">
@@ -80,22 +81,51 @@
         </div>
       </div>
     </header>
-    <section class="project-content">
-      <div class="container">
-        <div class="the-problem">
-          <p>Robots have penetrated into our society at an astonishing rate over the past fifteen years. What started as machines performing repetitive tasks in industrial settings evolved into single-purpose machines for households tasks, and has more recently
-            turned into dozens of different variations of robots that aim to closely integrate into our daily lives.</p>
-          <p>We thought it was important to re-examine our interactions with these technologies and understand how we can design more natural and intuitive interactions.</p>
+    <section class="content" id="intro">
+      <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+          <p>Many of us have grown up watching movies and cartoons with robot companions. Robots like R2-D2, Rosie, and Wall-E all have such incredible personality that we start
+            <em>forming bonds</em> with these characters. However, in real life, robots have typically been industrial machines, built to perform very specific tasks, and handled by trained operators.</p>
+          <p>All that is about to change. Over the last few years, we have seen a rise in popularity of
+            <em>intelligent systems</em>. Software like Alexa and Google Assistant serve as general assistants, able to handle a
+            <em>variety of everyday tasks</em>. As a logical progression, we saw a whole bunch of
+            <em>robot helpers</em> being announced at CES 2017, and this got us thinking about these software assistants and how they can be integrated into our lives more easily.</p>
+          <p>We thought it was important to
+            <em>re-examine our interactions</em> with these technologies and understand how we can design more
+            <em>natural and intuitive</em> interactions.</p>
         </div>
+        <div class="fg--cell buffer"></div>
       </div>
     </section>
-    <section class="project-content alt">
-      <div class="container video">
-        <div class="videoWrapper">
+    <section class="content alt" id="video">
+      <div class="container">
+        <p class="heading-1">The Process Video</p>
+        <div class="video">
           <iframe src="https://player.vimeo.com/video/207216272" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
     </section>
+    <div class="next-up">
+      <div class="label">NEXT UP</div>
+      <section id="xtly" class="l">
+        <div class="feature-container">
+          <div class="feature-desc">
+            <h2>Xactly Incent</h2>
+            <h3>Helping Sales people stay informed about their goals</h3>
+            <div class="button-container">
+              <a href="xactly.html" class="trigger--xtly hidden-phone">Read About It</a>
+            </div>
+          </div>
+          <div class="feature-image">
+            <div class="image-container">
+              <picture>
+                <img src="img/xtly/feature.png" alt="" class="soft-shadow" /> </picture>
+            </div>
+          </div>
+          <a href="xactly.html" class="trigger--xtly overlay-trigger visible-phone"></a>
+        </div>
+      </section>
+    </div>
     <footer>
       <div class="container">
         <a href="mailto:nikhilv.13@gmail.com">
@@ -103,9 +133,7 @@
         </a>
       </div>
     </footer>
-    <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
     <script src="scripts/lib/ScrollMagic.min.js" charset="utf-8"></script>
     <script src="scripts/lib/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
-    <script src="scripts/main.js"></script>
   </body>
 </html>

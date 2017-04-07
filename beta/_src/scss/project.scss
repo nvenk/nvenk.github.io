@@ -6,12 +6,10 @@
 header{
     padding-bottom: 50px !important;
 }
-
 em{
     font-family: $heading;
     font-size: 0.95em;
 }
-
 p, li{
     color: $black;
     font-size: 1em;
@@ -44,12 +42,10 @@ li{
         font-weight: $bold;
     }
 }
-
 section.content{
     opacity: 0;
     @extend .fade-in;
 }
-
 picture.content-image{
     padding: 0;
     width: 100%;
@@ -105,7 +101,6 @@ picture.content-image{
         }
     }
 }
-
 section.content{
     opacity: 0;
     @extend .fade-in;
@@ -235,7 +230,6 @@ section.content{
         }
     }
 }
-
 #intro{
     .flex-grid{
         align-items: flex-end;
@@ -245,7 +239,6 @@ section.content{
         padding-right: 30px;
     }
 }
-
 @mixin project-defaults($project){
     em{
         color: $project;
@@ -265,8 +258,29 @@ section.content{
 }
 
 // Project Specific
-@include project-defaults($central);
+body.sim{
+    @include project-defaults($sim);
+    #video{
+        .video{
+            @include video-embed(16 9);
+            margin: 0 auto;
+            max-width: 1080px;
+        }
+    }
+    .next-up{
+        .label::before, .label::after{
+            @include breakpoint(tablet){
+                background-color: $xtly;
+            }
+        }
+        section{
+            margin-top: 200px;
+        }
+    }
+
+}
 body.central{
+    @include project-defaults($central);
     section{
         .flex-grid .fg--cell--custom{
             max-width: 100%;
@@ -294,28 +308,57 @@ body.central{
             }
         }
     }
+    .next-up{
+        .label::before, .label::after{
+            @include breakpoint(tablet){
+                background-color: $puppy;
+            }
+        }
+        section{
+            margin-top: 200px;
+        }
+    }
 }
-
 
 // FOOTER
 .next-up{
-    padding-top: 250px;
+    padding-top: 0;
+    @include breakpoint(tablet){
+        padding-top: 200px;
+    }
+
+    section{
+        .feature-container .feature-desc{
+            margin: 0;
+            @include breakpoint(laptop){
+                margin: 0 10% !important;
+            }
+        }
+    }
 
     .label{
-        padding-left: 150px;
+        padding-left: 60px;
         font-size: 2em;
         width: auto;
         font-weight: bold;
         position: relative;
         display: inline;
-        top: -140px;
-        left:0;
+        top: 60px;
+        left: 0;
         opacity: 1;
         transition: 0.3s all ease-in-out;
+        z-index: 1;
+        color: $white;
+
+        @include breakpoint(tablet){
+            padding-left: 150px;
+            top: -140px;
+            color: $black;
+        }
 
         &:before{
             content: '';
-            background-color: $xtly;
+            background-color: $white;
             height: 5px;
             position: absolute;
             bottom: -8px;
@@ -324,7 +367,7 @@ body.central{
         }
         &:after{
             content: '';
-            background-color: $xtly;
+            background-color: $white;
             height: 12px;
             position: absolute;
             bottom: -11px;
@@ -333,7 +376,6 @@ body.central{
         }
     }
 }
-
 body[class^="transition--"]{
     .next-up{
         padding: 200px;

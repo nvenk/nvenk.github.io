@@ -198,7 +198,7 @@ $(document).ready(function() {
     var cSize = checkSize();
 
     for (i=0; i < tList.length; i++){
-        trigger(tList[i], 78);
+        trigger(tList[i], 0);
     };
 
     // ON RESIZE

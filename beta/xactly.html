@@ -30,7 +30,11 @@
     <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil | Xactly Incent</title>
     <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/project.css" /> </head>
+    <link rel="stylesheet" type="text/css" href="css/project.css" />
+    <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
   <body class="xtly">
     <div class="responsive-beacon"></div>
     <script>
@@ -38,16 +42,13 @@
       {
         history.scrollRestoration = 'auto';
         // Force reload cached back button press - Safari Fix
-        if (isSafari)
-        {
-          $(window).bind("pageshow", function(event)
-          {
-            if (event.originalEvent.persisted)
-            {
-              window.location.reload()
-            }
-          });
-        }
+        // if(isSafari){
+        //     $(window).bind("pageshow", function(event) {
+        //         if (event.originalEvent.persisted) {
+        //             window.location.reload()
+        //         }
+        //     });
+        // }
       }
       else
       {
@@ -81,9 +82,7 @@
       </div>
     </header>
     <section id="tempScroller"></section>
-    <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
     <script src="scripts/lib/ScrollMagic.min.js" charset="utf-8"></script>
     <script src="scripts/lib/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
-    <script src="scripts/main.js"></script>
   </body>
 </html>
