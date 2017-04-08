@@ -219,7 +219,7 @@ section.content{
         }
 
         .flex-grid{
-            justify-content: flex-end;
+            justify-content: flex-start;
         }
     }
 
@@ -293,12 +293,34 @@ body.central{
         &#design-01{
             max-height: 800px;
             overflow: hidden;
+
+            .content--text{
+
+                @include breakpoint(laptop){
+                    order:2;
+                }
+            }
+
+            .buffer-laptop{
+                padding-right: 60px;
+                @include breakpoint(laptop){
+                    order: 1;
+                }
+            }
         }
 
         &#design-02{
             padding-bottom: 0;
             @include breakpoint(laptop){
                 height: 0%;
+            }
+        }
+
+        &#design-03{
+            .buffer-laptop{
+                @include breakpoint(laptop){
+                    padding-right: 60px;
+                }
             }
         }
 
