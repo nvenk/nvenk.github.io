@@ -293,6 +293,12 @@ body.central{
         &#design-01{
             max-height: 800px;
             overflow: hidden;
+            @include breakpoint(laptop){
+                max-height: 750px;
+            }
+            @include breakpoint(desktop){
+                max-height: 630px;
+            }
 
             .content--text{
 
