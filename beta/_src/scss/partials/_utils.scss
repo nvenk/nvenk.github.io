@@ -61,6 +61,14 @@ a{
         flex-flow: row wrap;
     }
 
+    .fg--cell--custom{
+        max-width: 100%;
+        @include breakpoint(laptop){
+            flex: 1;
+            max-width: 50%;
+        }
+    }
+
     .fg--cell{
         width: 100%;
 

@@ -190,6 +190,11 @@ function trigger(id, scrollOffset){
 
 tList = ['about','sim','xtly','central','puppy'];
 
+// window.onpopstate = function(event) {
+//   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+//   event.preventDefault();
+// };
+
 $(document).ready(function() {
     // Add Media Tag
     if(DEBUG) $('body').prepend('<div class="media-tag"></div>');
