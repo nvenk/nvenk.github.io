@@ -34,7 +34,7 @@
 //// Project Tiles Header
 @mixin work($name, $color: $black, $margin-right: 24%, $margin-left: 24%){
 	// Button Color
-	.trigger--#{$name}:hover {
+	a.trigger--#{$name}:hover {
 		color: $color !important;
 	}
 

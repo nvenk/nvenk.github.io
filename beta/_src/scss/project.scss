@@ -1,7 +1,29 @@
 @import "partials/_base";
 @import "partials/pr_header";
-@import "partials/_nav.scss";
+
+
 // Project Page
+@mixin project-defaults($project){
+    em{
+        color: $project;
+    }
+
+    li::before{
+        color: $project;
+    }
+
+    // .project-details div{
+    //     background: $project;
+    // }
+
+    .content-image .picture-tag{
+        color: $project;
+    }
+
+    .prototype-tag::after{
+        background: $project;
+    }
+}
 
 header{
     padding-bottom: 50px !important;
@@ -41,10 +63,6 @@ li{
         font-size: 1.2em;
         font-weight: $bold;
     }
-}
-section.content{
-    opacity: 0;
-    @extend .fade-in;
 }
 picture.content-image{
     padding: 0;
@@ -236,30 +254,74 @@ section.content{
             font-style: italic;
         }
     }
+
+    .project-details{
+        align-self: flex-end;
+        @include breakpoint(tablet){
+            padding-top: 200px;
+            margin-left: 60px;
+        }
+        div{
+            background: $gray;
+            padding: 30px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            @include breakpoint(desktop){
+                max-width: 600px;
+            }
+            p{
+                font-size: 1.1em;
+                padding-bottom: 0;
+                // color: $white;
+                em{
+                    display: block;
+                    font-style: normal;
+                    font-weight: $bold;
+                    padding-right: 20px;
+                    // color: $white;
+                }
+            }
+        }
+    }
+
+    &.l .project-details{
+        order: 2;
+        @include breakpoint(tablet){
+            order: 1;
+        }
+        div{
+            margin-left: 0;
+        }
+    }
 }
+
 img, picture source{
     width: 100%;
 }
 #intro{
     .flex-grid{
         align-items: flex-end;
-    }
-}
-@mixin project-defaults($project){
-    em{
-        color: $project;
+
+        .content--text{
+            align-self: flex-start;
+        }
     }
 
-    li::before{
-        color: $project;
-    }
-
-    .content-image .picture-tag{
-        color: $project;
-    }
-
-    .prototype-tag::after{
-        background: $project;
+    &.l{
+        .content--text{
+            @include breakpoint(tablet){
+                order: 2;
+                margin-right: 0;
+            }
+        }
+        .project-details{
+            margin-right: auto;
+            margin-left: 0;
+            @include breakpoint(tablet){
+                order: 1;
+                margin-right: 60px;
+            }
+        }
     }
 }
 
@@ -284,6 +346,12 @@ body.sim{
 }
 body.xtly{
     @include project-defaults($xtly);
+
+    .project-details{
+        @include breakpoint(tablet){
+            padding-top: 300px;
+        }
+    }
 
     .next-up{
         .label::before, .label::after{
@@ -362,6 +430,12 @@ body.central{
 body.puppy{
     @include project-defaults($puppy);
 
+    .project-details{
+        @include breakpoint(tablet){
+            padding-top: 300px;
+        }
+    }
+
     .next-up{
         .label::before, .label::after{
             background-color: $sim;
@@ -376,7 +450,10 @@ body.puppy{
         }
     }
 
-    #design-01{
+    #design-02{
+        .content--text{
+            padding-right: 30px;
+        }
         .content-image{
             max-width: 320px !important;
         }

@@ -54,3 +54,7 @@ $site-width-max    : 160em;
 @import "partials/_mixins";
 @import "partials/_utils";
 @import "partials/_animation";
+
+// Global Files
+@import "partials/_footer";
+@import "partials/_nav.scss";

@@ -182,6 +182,8 @@ function trigger(id, scrollOffset){
 
         var href = $(btn).attr('href');
 
+        if(href == undefined) href = $(btn).attr('data-href');
+
         if(DEBUG) console.log(href);
 
         setTimeout(function() {window.location = href}, 900);
