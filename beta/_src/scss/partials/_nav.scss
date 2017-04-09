@@ -114,7 +114,8 @@ nav{
 footer{
     height: 40%;
     display: flex;
-    background: $black;
+    background: $black url('/img/about/background.jpg');
+    background-size: cover;
     padding: 60px 0;
     opacity: 1;
     z-index: -99;

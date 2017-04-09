@@ -32,8 +32,8 @@
     <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
     <link rel="stylesheet" type="text/css" href="css/project.css" />
     <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/all.js"></script>
   </head>
   <body class="puppy">
     <div class="responsive-beacon"></div>
@@ -92,9 +92,9 @@
             <em>company of other dogs</em> helps them grow up to be social and well rounded animals. Enter - PuppyHarmony. With PuppyHarmony, you can easily find and connect with other like-minded dog owners in your area to bring your dogs together to exercise,
             socialize and have fun!</p>
           <p>I was the
-            <em>primary designer</em> on the team. I was responsible for
+            <em>primary designer</em> on the team, working alongside a project manager, a researcher and another designer. I was responsible for
             <em>screen flows, wireframes, prototypes</em> and
-            <em>visual design</em>.</p>
+            <em>visual design</em>. This project was part of the HCDE Masters program at UW.</p>
         </div>
       </div>
     </section>
@@ -127,13 +127,12 @@
         </div>
       </div>
     </section>
-    <section class="content" id="design">
-      <div class="flex-grid container">
-        <div class="fg--cell">
-          <p class="heading-1">Thinking about Doggy Stats</p>
-        </div>
-      </div>
-      <img class="perspective" src="img/puppy/wireframes.png" alt="">
+    <section class="content" id="design-01">
+      <p class="heading-1 container">Thinking about Dog Stats</p>
+      <picture>
+        <source srcset="img/puppy/wireframes-mobile.png" media="(max-width: 480px)" />
+        <source srcset="img/puppy/wireframes.png" />
+        <img srcset="img/puppy/wireframes.png" alt="" /> </picture>
       <div class="flex-grid container">
         <div class="fg--cell content--text center">
           <p>At this point, PuppyHarmony was essentially a matchmaking service for pets. Our research with customers and competitors showed us that the
@@ -148,7 +147,7 @@
         <div class="fg--cell--custom">
           <picture class="content-image prototype">
             <div class="prototype-tag">
-              <a href="http://share.framerjs.com/om3n2a5zwl70/" target="_blank">
+              <a href="https://indigodesigned.com/share/run/rv0hkyqf4jzb#f=Phone/Home-notSignedIn" target="_blank">
                 <img src="img/puppy/prototype.jpg" alt="The first prototype" />
               </a>
             </div>
@@ -157,6 +156,62 @@
         </div>
       </div>
     </section>
+    <section class="content alt" id="design-02">
+      <p class="heading-1 container">Next Steps</p>
+      <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+          <p>asa</p>
+          <p>To figure all this out, we followed a number of steps:</p>
+          <ul class="content--list">
+            <li>We created a
+              <em>Business Model Canvas</em> to clearly define our product - Our value proposition, who our key partners would be, what resources we would need, how much it would cost to build and run this business, and how we would make money out of it.</li>
+            <li>We then brainstormed a
+              <em>feature list</em> - What features did we need to offer to actually provide the value we intend to?</li>
+            <li>From that feature list, we eliminated the ones that were not necessary for the
+              <em>Minimum Viable Product</em>, and created a business plan.</li>
+            <li>To find out more about our users, and our business space, we conducted
+              <em>interviews</em> with dog owners and potential users, and we did an extensive
+              <em>competitive analysis</em> to see who we would be competing against.</li>
+          </ul>
+          <p>At this point, we had a business model, we learned that there was very little competition and
+            <em>a lot of opportunity</em> in this space, and our potential users were excited about this idea - so were we!</p>
+        </div>
+        <div class="fg--cell--custom">
+          <picture class="content-image">
+            <img class="no-shadow" src="img/puppy/businessModelCanvas.png" alt="Our Business Model Canvas" />
+            <div class="picture-tag">The Business Model Canvas</div>
+          </picture>
+        </div>
+      </div>
+    </section>
+    <div class="next-up">
+      <div class="label">NEXT UP</div>
+      <section id="sim" class="r">
+        <div class="feature-container">
+          <div class="feature-desc">
+            <h2>SIM: The Social Robot</h2>
+            <h3>Designing for affective Human-Robot Interaction</h3>
+            <div class="button-container">
+              <a href="sim.html" class="trigger--sim hidden-phone">Read About It</a>
+            </div>
+          </div>
+          <div class="feature-image">
+            <div class="image-container">
+              <picture>
+                <img src="img/sim/feature.png" alt="" /> </picture>
+            </div>
+          </div>
+        </div>
+        <a href="sim.html" class="trigger--sim overlay-trigger visible-phone"></a>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <a href="mailto:nikhilv.13@gmail.com">
+          <h4 id="email">nikhilv.13@gmail.com</h4>
+        </a>
+      </div>
+    </footer>
     <script src="scripts/lib/ScrollMagic.min.js" charset="utf-8"></script>
     <script src="scripts/lib/plugins/debug.addIndicators.min.js" charset="utf-8"></script>
   </body>

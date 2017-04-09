@@ -141,15 +141,62 @@ body{
 
 .projects{
     padding:0;
-
-    // @include breakpoint(tablet){
-    //     padding-top: 78px;
-    // }
 }
 
 #gallery{
-    background: $gallery;
+    background: $gallery url('/img/gallery/gradient.jpg') center 60%;
     height: 100%;
-
     @include soft-shadow();
+
+    .heading{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .container{
+        padding-top: 100px;
+        position: relative;
+
+        .label{
+            top: -40px; left: auto; right:auto;
+            padding:0;
+            display: block;
+            text-align: center;
+            color: $white;
+            font-family: $heading;
+            opacity: 0.9;
+            @include breakpoint(laptop){
+                display: inline;
+                font-size: 1.6em;
+                padding-left: 90px;
+                top: 40px; left: auto; right: -55%;
+            }
+
+            &::before, &::after{
+                opacity:0;
+                background-color: $central;
+
+                @include breakpoint(laptop){
+                    opacity:1;
+                }
+            }
+        }
+
+        .video{
+            @include video-embed(16 9);
+            @include soft-shadow();
+            margin: 0;
+            max-width: 1080px;
+            @include breakpoint(laptop){
+                margin: 0 45% 0 0;
+            }
+            @include breakpoint(desktop){
+                margin: 0 45% 0 10%;
+            }
+
+            iframe{
+                z-index: 10;
+            }
+        }
+    }
 }

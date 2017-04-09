@@ -60,9 +60,8 @@ picture.content-image{
         box-shadow: none;
     }
 
-    img, img{
+    img, source{
         border-radius: 4px;
-        width: 100%;
         @include soft-shadow(48,0.2);
         transition: $default-transition;
     }
@@ -238,16 +237,12 @@ section.content{
         }
     }
 }
-img{
+img, picture source{
     width: 100%;
 }
 #intro{
     .flex-grid{
         align-items: flex-end;
-    }
-
-    .content--text{
-        padding-right: 30px;
     }
 }
 @mixin project-defaults($project){
@@ -280,20 +275,33 @@ body.sim{
     }
     .next-up{
         .label::before, .label::after{
-            @include breakpoint(tablet){
-                background-color: $xtly;
-            }
+            background-color: $xtly;
         }
         section{
             margin-top: 200px;
         }
     }
+}
+body.xtly{
+    @include project-defaults($xtly);
 
+    .next-up{
+        .label::before, .label::after{
+            background-color: $central;
+        }
+        section{
+            @include breakpoint(tablet){
+                margin-top: -80px;
+            }
+            .feature-container{
+                padding-top: 0;
+            }
+        }
+    }
 }
 body.central{
     @include project-defaults($central);
     section{
-
         &#design-01{
             max-height: 800px;
             overflow: hidden;
@@ -342,26 +350,38 @@ body.central{
     }
     .next-up{
         .label::before, .label::after{
-            @include breakpoint(tablet){
-                background-color: $puppy;
-            }
+            background-color: $puppy;
         }
         section{
-            margin-top: 200px;
+            @include breakpoint(tablet){
+                margin-top: 120px;
+            }
         }
     }
 }
-
 body.puppy{
     @include project-defaults($puppy);
 
-    #design{
+    .next-up{
+        .label::before, .label::after{
+            background-color: $sim;
+        }
+        section{
+            @include breakpoint(tablet){
+                margin-top: -80px;
+            }
+            .feature-container{
+                padding-top: 0;
+            }
+        }
+    }
+
+    #design-01{
         .content-image{
-            max-width: 360px !important;
+            max-width: 320px !important;
         }
     }
 }
-
 
 // FOOTER
 .next-up{
@@ -371,6 +391,8 @@ body.puppy{
     }
 
     section{
+        margin-top: 60px;
+        position: relative;
         .feature-container .feature-desc{
             margin: 0;
             @include breakpoint(laptop){
@@ -378,44 +400,12 @@ body.puppy{
             }
         }
     }
-
-    .label{
-        padding-left: 60px;
-        font-size: 2em;
-        width: auto;
-        font-weight: bold;
-        position: relative;
-        display: inline;
-        top: 60px;
-        left: 0;
-        opacity: 1;
-        transition: 0.3s all ease-in-out;
-        z-index: 1;
-        color: $white;
-
-        @include breakpoint(tablet){
-            padding-left: 150px;
-            top: -140px;
-            color: $black;
-        }
-
-        &:before{
-            content: '';
-            background-color: $white;
-            height: 5px;
-            position: absolute;
-            bottom: -8px;
-            left:0;
-            width: 106%;
-        }
-        &:after{
-            content: '';
-            background-color: $white;
-            height: 12px;
-            position: absolute;
-            bottom: -11px;
-            right:-6%;
-            width: 12px;
+}
+body.transition{
+    .next-up{
+        .label{
+            left: -200px;
+            opacity:0;
         }
     }
 }

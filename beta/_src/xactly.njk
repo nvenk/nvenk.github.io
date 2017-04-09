@@ -3,7 +3,7 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
-        scripts: 'scripts/main.js',
+        scripts: 'scripts/all.js',
         bodyClass: 'xtly'
 }%}
 
@@ -37,6 +37,32 @@
     </div>
 </header>
 
-<section id="tempScroller"></section>
+<div id="temp"></div>
+
+<div class="next-up">
+    <div class="label">NEXT UP</div>
+    <section id="central" class="r">
+        <div class="feature-container">
+            <div class="feature-desc">
+                <h2>Central Cinema</h2>
+                <h3>Redesigning the web experience for a local beer-theatre</h3>
+                <div class="button-container">
+                    <a href="central-cinema.html" class="trigger--central hidden-phone">Read About It</a>
+                </div>
+            </div>
+
+            <div class="feature-image">
+                <div class="image-container">
+                    <picture>
+                        <img src="img/central/feature.jpg" alt="" class="soft-shadow" />
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <a href="central-cinema.html" class="trigger--central overlay-trigger visible-phone"></a>
+    </section>
+</div>
+
+{% include "partials/footer.njk" %}
 
 {% endblock %}

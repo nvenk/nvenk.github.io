@@ -39,11 +39,6 @@ function trigger(id, scrollOffset){
 
 tList = ['about','sim','xtly','central','puppy'];
 
-// window.onpopstate = function(event) {
-//   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
-//   event.preventDefault();
-// };
-
 $(document).ready(function() {
     // Add Media Tag
     if(DEBUG) $('body').prepend('<div class="media-tag"></div>');
@@ -67,22 +62,3 @@ $(document).ready(function() {
         };
     });
  });
-
-
-// Konami Keys
- // var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
- //
- // $(document).keydown(function(e) {
- //
- //   kkeys.push( e.keyCode );
- //
- //   if ( kkeys.toString().indexOf( konami ) >= 0 ) {
- //
- //     $(document).unbind('keydown',arguments.callee);
- //
- //     // do something awesome
- //     $("body").addClass("konami");
- //
- //   }
- //
- // });
