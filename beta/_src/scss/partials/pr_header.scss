@@ -1,3 +1,55 @@
+@mixin work-transition-defaults() {
+    .feature-container{
+        max-width: 100%;
+        padding: 0;
+
+        .feature-desc{
+            border-radius: 0;
+            margin: 0 !important;
+            padding: 200px 30px 0;
+
+            @include breakpoint(tablet){
+                padding: 200px 60px 0;
+
+            }
+            @include breakpoint(laptop){
+                padding: 200px 90px 0;
+            }
+
+            h1, h2{
+                padding-top: 100px;
+
+                @include breakpoint(tablet){
+                    padding-top: 200px;
+                }
+            }
+
+            .button-container{
+                opacity: 0;
+                height: 0;
+            }
+        }
+
+        .feature-image{
+            .image-container{
+                max-width: 100%;
+
+                picture{
+                    opacity: 0.1;
+
+                    @include breakpoint(mobile){
+                        opacity: 0.3;
+                    }
+
+                    @include breakpoint(tablet){
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
 body{
     overflow-x: hidden !important;
     // Default Project Styles

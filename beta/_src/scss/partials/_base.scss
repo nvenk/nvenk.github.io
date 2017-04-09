@@ -35,6 +35,13 @@ $gray        : #f8f8f8;
     $gallery     : #7415ce;
     $gallery-alt : #26072f;
 
+    //// Social Icons
+    $twitter: 	#28AAE2;
+    $facebook: 	#3C5A98;
+    $email:		#DD4B38;
+    $linkedin: 	#047CB7;
+    $dribbble: 	#ea4c89;
+    $px500:     #0099e5;
 // Typography
 $sans-serif        : 'Source Sans Pro', helvetica, sans-serif;
 $heading           : 'Roboto Slab', garamond, serif;
@@ -56,5 +63,5 @@ $site-width-max    : 160em;
 @import "partials/_animation";
 
 // Global Files
-@import "partials/_footer";
 @import "partials/_nav.scss";
+@import "partials/_footer";

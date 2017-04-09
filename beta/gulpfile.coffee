@@ -104,7 +104,7 @@ gulp.task 'styles-task', ->
     .pipe sass()
     .pipe mediaQuery()
     .pipe prefix({ browsers: ['last 4 versions'] })
-    .pipe cssNano({ reduceIdents: false, zindex: false})
+    .pipe cssNano()
     .pipe gulp.dest(dests.styles)
     .pipe bSync.stream()
 
@@ -124,7 +124,7 @@ gulp.task 'scripts-task', ->
     .pipe plumber({ errorHandler: onError })
     # .pipe newer(dests.scripts)
     .pipe concat('all.js')
-    # .pipe uglify()
+    .pipe uglify()
     .pipe gulp.dest(dests.scripts)
     .pipe bSync.stream()
 
