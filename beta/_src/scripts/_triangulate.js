@@ -1,5 +1,3 @@
-/*
-
 var refreshDuration = 10000;
 var refreshTimeout;
 var numPointsX;
@@ -14,7 +12,7 @@ function onLoad(){
     svg.setAttribute('height',window.innerHeight);
     document.querySelector('#about').appendChild(svg);
 
-    var unitSize = (window.innerWidth+window.innerHeight)/20;
+    var unitSize = (window.innerWidth+window.innerHeight)/15;
     numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
     numPointsY = Math.ceil(window.innerHeight/unitSize)+1;
     unitWidth = Math.ceil(window.innerWidth/(numPointsX-1));
@@ -118,8 +116,3 @@ function onResize() {
     clearTimeout(refreshTimeout);
     onLoad();
 }
-
-window.onload = onLoad;
-window.onresize = onResize;
-
-*/

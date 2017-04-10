@@ -1,0 +1,11 @@
+linters:
+  Indentation:
+    enabled: false
+  SpaceBeforeBrace:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  # StringQuotes:
+  #   enabled: false
+  # UrlQuotes:
+  #   enabled: false

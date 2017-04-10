@@ -2,24 +2,29 @@
 var DEBUG = true;
 var size = "";
 
-function checkSize(){
+function checkSize() {
     var prop = $(".responsive-beacon").css("width");
 
-    if (prop == "10px") { size = "mobile"; }
-    else if (prop == "20px") { size = "tablet"; }
-    else if (prop == "30px") { size = "laptop"; }
-    else if (prop == "40px") { size = "desktop"; }
+    if (prop == "10px") {
+        size = "mobile";
+    } else if (prop == "20px") {
+        size = "tablet";
+    } else if (prop == "30px") {
+        size = "laptop";
+    } else if (prop == "40px") {
+        size = "desktop";
+    }
 
-    if(DEBUG) console.log ("Media = " + size);
+    if (DEBUG) console.log("Media = " + size);
 
     return size;
 };
 
 // Trigger Transitions
-function trigger(id, scrollOffset){
+function trigger(id, scrollOffset) {
     var btn = '.trigger--' + id;
 
-    $(btn).click(function(e){
+    $(btn).click(function(e) {
         e.preventDefault();
 
         $('body').addClass('transition');
@@ -31,53 +36,62 @@ function trigger(id, scrollOffset){
 
         var href = $(btn).attr('href');
 
-        if(href == undefined) href = $(btn).attr('data-href');
+        if (href == undefined) href = $(btn).attr('data-href');
 
-        if(DEBUG) console.log(href);
+        if (DEBUG) console.log(href);
 
-        setTimeout(function() {window.location = href}, 900);
+        setTimeout(function() {
+            window.location = href
+        }, 900);
     });
 };
-tList = ['about','sim','xtly','central','puppy'];
+tList = ['about', 'sim', 'xtly', 'central', 'puppy'];
 
 // jQuery SmoothScroll
 $(function() {
-  $('.nav-menu a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-      }, 600);
-      setTimeout(function(){
-        $('#nav').removeClass('nav-is-visible')},100
-      );
-        return false;
-      }
-    }
-  });
+    $('.nav-menu a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 600);
+                setTimeout(function() {
+                    $('#nav').removeClass('nav-is-visible')
+                }, 100);
+                return false;
+            }
+        }
+    });
 });
 
 $(document).ready(function() {
     // Add Media Tag
-    if(DEBUG) $('body').prepend('<div class="media-tag"></div>');
+    if (DEBUG) $('body').prepend('<div class="media-tag"></div>');
+
+    // Triangle BG
+
+    // if($('body').hasClass('home')) {
+    //     window.onload = onLoad;
+    //     window.onresize = onResize;
+    // }
 
     // Initial Run
     var cSize = checkSize();
 
-    for (i=0; i < tList.length; i++){
+    for (i = 0; i < tList.length; i++) {
         trigger(tList[i], 0);
     };
 
     // ON RESIZE
-    $(window).smartresize(function(){
+    $(window).smartresize(function() {
         newSize = checkSize();
 
         // Trigger Code only when size changes.
         if (newSize != cSize) {
             cSize = newSize;
-            if(DEBUG) console.log("Media = " + cSize);
+            if (DEBUG) console.log("Media = " + cSize);
         };
     });
 
@@ -85,34 +99,33 @@ $(document).ready(function() {
     var nav = $('#nav');
     var navTrigger = $('.nav-trigger');
 
-    navTrigger.on('click', function(event){
+    navTrigger.on('click', function(event) {
         event.preventDefault();
         nav.toggleClass("nav-is-visible");
     });
-    // $(document).on('click', function(event){
-    //     ( !$(event.target).is('.nav-trigger') && !$(event.target).is('.nav-trigger span') &&
-    //     !$(event.target).is('.nav-menu')) && nav.removeClass('nav-is-visible');
-    // });
 
-    if($(window).scrollTop() < 100) {
-        nav.addClass('nav-at-top nav-is-visible');
-    } else { nav.addClass('nav-not-at-top'); }
+    if ($(window).scrollTop() < 100) {
+        nav.addClass('nav-at-top');
+    } else {
+        nav.addClass('nav-not-at-top');
+    }
 
     // Scroll Triggers
 
-    $(window).on('scroll',
-    	{
-    	    previousTop: 0
-    	},
-    	function () {
-    	    var currentTop = $(window).scrollTop();
+    $(window).on('scroll', {
+            previousTop: 0
+        },
+        function() {
+            var currentTop = $(window).scrollTop();
 
-            if(currentTop < 100) {
-                nav.addClass('nav-at-top nav-is-visible');
+            if (currentTop < 100) {
+                nav.addClass('nav-at-top');
                 nav.removeClass('nav-not-at-top');
-            }
-            else{
-                nav.removeClass('nav-at-top nav-is-visible');
+                if (cSize != "mobile") {
+                    nav.removeClass('nav-is-visible');
+                }
+            } else {
+                nav.removeClass('nav-at-top');
                 nav.addClass('nav-not-at-top');
             }
             /*
@@ -130,9 +143,9 @@ $(document).ready(function() {
     	    }
 
             */
-    	    // set previousTop for the next iteration
-    	    this.previousTop = currentTop;
-    	}
+            // set previousTop for the next iteration
+            this.previousTop = currentTop;
+        }
     );
 
- });
+});

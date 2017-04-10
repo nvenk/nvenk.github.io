@@ -1,5 +1,5 @@
 //// Aspect Ratio
-@mixin aspect-ratio($ratio: 1 1, $selector: "> :first-child") {
+@mixin aspect-ratio($ratio: 1 1, $selector: '> :first-child') {
 	$selector: unquote($selector);
 	position: relative;
 
@@ -19,47 +19,42 @@
 	}
 }
 //// Soft Shadows
-@mixin soft-shadow($blur: 32, $opacity: 0.28) {
-    box-shadow: 0px 0px $blur + px rgba(0,0,0, $opacity);
+@mixin soft-shadow($blur: 32, $opacity: .28) {
+    box-shadow: 0 0 $blur + px rgba(0, 0, 0, $opacity);
 }
 //// Video Embeds
 @mixin video-embed($ratio: 16 9) {
     @include aspect-ratio($ratio, 'iframe');
     iframe{
-        border:0;
-        height:100%;
+        border: 0;
+        height: 100%;
         width: 100%;
     }
 }
 
 //// Center mixin for nav
 @mixin center($xy:xy) {
-  @if $xy == xy {
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    // @include transform(translateX(-50%) translateY(-50%));
-	transform: translate(-50%, -50%);
-  }
-  @else if $xy == x {
-    left: 50%;
-    right: auto;
-    // @include transform(translateX(-50%));
-	transform: translateX(-50%);
-  }
-  @else if $xy == y {
-    top: 50%;
-    bottom: auto;
-    // @include transform(translateY(-50%));
-	transform: translateY(-50%);
-  }
+	 @if $xy == xy{
+		left: 50%;
+		top: 50%;
+		bottom: auto;
+		right: auto;
+		transform: translate(-50%, -50%);
+	} @else if $xy == x {
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+	} @else if $xy == y {
+		top: 50%;
+		bottom: auto;
+		transform: translateY(-50%);
+	}
 }
 //// Project Tiles Header
 @mixin work($name, $color: $black, $margin-right: 24%, $margin-left: 24%){
 	// Button Color
 	a.trigger--#{$name}:hover {
-		color: $color !important;
+		color: $color;
 	}
 
 	// Styling for Home page [section#name] and Project page [body#name header]
@@ -70,7 +65,7 @@
 			max-width: 1440px;
 
 			@include breakpoint(laptop){
-			    padding-top:78px;
+			    padding-top: 78px;
 			}
 
 			.feature-desc{

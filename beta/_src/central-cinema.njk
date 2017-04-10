@@ -222,6 +222,7 @@
 <script id="scrollInit">
     var SMcontroller = new ScrollMagic.Controller({}); // addIndicators: true
     var imageSegments = ["scope", "design-01"];
+    if(DEBUG) {SMcontroller.addIndicators(true);}
 
     $.each(imageSegments, function() {
         new ScrollMagic.Scene({
