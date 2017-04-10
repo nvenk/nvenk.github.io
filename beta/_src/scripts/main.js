@@ -38,8 +38,28 @@ function trigger(id, scrollOffset){
         setTimeout(function() {window.location = href}, 900);
     });
 };
-
 tList = ['about','sim','xtly','central','puppy'];
+
+// jQuery SmoothScroll
+$(function() {
+  $('.nav-menu a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+      }, 600);
+      setTimeout(function(){
+        $('#nav').removeClass('nav-is-visible')},100
+      );
+        return false;
+      }
+    }
+  });
+});
+
+
 
 $(document).ready(function() {
     // Add Media Tag
@@ -53,7 +73,6 @@ $(document).ready(function() {
     };
 
     // ON RESIZE
-
     $(window).smartresize(function(){
         newSize = checkSize();
 
@@ -63,4 +82,57 @@ $(document).ready(function() {
             if(DEBUG) console.log("Media = " + cSize);
         };
     });
+
+    // Navigation
+    var nav = $('#nav');
+    var navTrigger = $('.nav-trigger');
+
+    navTrigger.on('click', function(event){
+        event.preventDefault();
+        nav.toggleClass("nav-is-visible");
+    });
+    $(document).on('click', function(event){
+        ( !$(event.target).is('.nav-trigger') && !$(event.target).is('.nav-trigger span') &&
+        !$(event.target).is('.nav-menu')) && nav.removeClass('nav-is-visible');
+    });
+
+    if($(window).scrollTop() > 100) {
+        nav.addClass('nav-unpinned');
+    }
+
+    // Scroll Triggers
+
+    $(window).on('scroll',
+    	{
+    	    previousTop: 0
+    	},
+    	function () {
+    	    var currentTop = $(window).scrollTop();
+
+            if(currentTop > 100) {
+                nav.addClass('nav-unpinned');
+            }
+            else{
+                nav.removeClass('nav-unpinned');
+            }
+            /*
+
+            //check if user is scrolling up
+    	     if (currentTop < this.previousTop ) {
+    	    	//if scrolling up...
+    	    	//add class 'is-visible' to the main navigation
+    	    	//if currentTop == 0, remove 'is-fixed' and 'is-visible' classes
+    	    } else {
+    	    	//if scrolling down...
+                console.log('down');
+    	    	//add the 'is-fixed' class to the main navigation as soon as it is no longer visible
+    	    	//add class 'is-visible' to the main navigation
+    	    }
+
+            */
+    	    // set previousTop for the next iteration
+    	    this.previousTop = currentTop;
+    	}
+    );
+
  });

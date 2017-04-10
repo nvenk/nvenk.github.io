@@ -5,6 +5,10 @@
 
 body{
     &.home{
+        section{
+            position: relative;
+        }
+
         section:not(#about){ // Default transition for sections that are disappearing.
             transition-duration: 0.2s;
         }
@@ -139,7 +143,7 @@ body{
 }
 
 .projects{
-    padding:0;
+    padding: 0;
 }
 
 #gallery{

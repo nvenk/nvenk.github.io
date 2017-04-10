@@ -4,6 +4,7 @@
 
 // Project Page
 @mixin project-defaults($project){
+
     em{
         color: $project;
     }
@@ -32,7 +33,7 @@ em{
     font-family: $heading;
     font-size: 0.95em;
 }
-p, li{
+p, section li{
     color: $black;
     font-size: 1em;
     letter-spacing: 0.02em;
@@ -51,7 +52,7 @@ p, li{
         }
     }
 }
-li{
+section li{
     list-style: none;
     position: relative;
     padding-left: 0;

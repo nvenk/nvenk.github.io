@@ -124,7 +124,7 @@ gulp.task 'scripts-task', ->
     .pipe plumber({ errorHandler: onError })
     # .pipe newer(dests.scripts)
     .pipe concat('all.js')
-    .pipe uglify()
+    .pipe uglify({ mangle: false})
     .pipe gulp.dest(dests.scripts)
     .pipe bSync.stream()
 
