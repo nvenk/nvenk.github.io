@@ -78,7 +78,6 @@ body{
                 max-height: 100vh;
                 display: flex;
                 flex-flow: column wrap;
-                cursor: pointer;
 
                 @include breakpoint(tablet){
                     padding: 0 104px 50px 86px;

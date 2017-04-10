@@ -220,7 +220,7 @@
 
 {% block scripts %}
 <script id="scrollInit">
-    var SMcontroller = new ScrollMagic.Controller({addIndicators: true});
+    var SMcontroller = new ScrollMagic.Controller({}); // addIndicators: true
     var imageSegments = ["scope", "design-01"];
 
     $.each(imageSegments, function() {

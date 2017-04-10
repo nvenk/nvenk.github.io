@@ -59,8 +59,6 @@ $(function() {
   });
 });
 
-
-
 $(document).ready(function() {
     // Add Media Tag
     if(DEBUG) $('body').prepend('<div class="media-tag"></div>');
@@ -91,14 +89,14 @@ $(document).ready(function() {
         event.preventDefault();
         nav.toggleClass("nav-is-visible");
     });
-    $(document).on('click', function(event){
-        ( !$(event.target).is('.nav-trigger') && !$(event.target).is('.nav-trigger span') &&
-        !$(event.target).is('.nav-menu')) && nav.removeClass('nav-is-visible');
-    });
+    // $(document).on('click', function(event){
+    //     ( !$(event.target).is('.nav-trigger') && !$(event.target).is('.nav-trigger span') &&
+    //     !$(event.target).is('.nav-menu')) && nav.removeClass('nav-is-visible');
+    // });
 
-    if($(window).scrollTop() > 100) {
-        nav.addClass('nav-unpinned');
-    }
+    if($(window).scrollTop() < 100) {
+        nav.addClass('nav-at-top nav-is-visible');
+    } else { nav.addClass('nav-not-at-top'); }
 
     // Scroll Triggers
 
@@ -109,11 +107,13 @@ $(document).ready(function() {
     	function () {
     	    var currentTop = $(window).scrollTop();
 
-            if(currentTop > 100) {
-                nav.addClass('nav-unpinned');
+            if(currentTop < 100) {
+                nav.addClass('nav-at-top nav-is-visible');
+                nav.removeClass('nav-not-at-top');
             }
             else{
-                nav.removeClass('nav-unpinned');
+                nav.removeClass('nav-at-top nav-is-visible');
+                nav.addClass('nav-not-at-top');
             }
             /*
 

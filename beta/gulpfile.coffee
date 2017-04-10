@@ -104,7 +104,7 @@ gulp.task 'styles-task', ->
     .pipe sass()
     .pipe mediaQuery()
     .pipe prefix({ browsers: ['last 4 versions'] })
-    .pipe cssNano()
+    .pipe cssNano({zindex: false})
     .pipe gulp.dest(dests.styles)
     .pipe bSync.stream()
 
