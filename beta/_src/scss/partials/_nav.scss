@@ -226,6 +226,74 @@ nav{
     }
 }
 
+// Display only on home screen
+.nav-menu-static{
+    display: none;
+    height: 0;
+}
+
+.home .nav-at-top .nav-menu-static{
+
+    @include breakpoint(tablet){
+        display: flex;
+
+        a{
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+.home .nav-menu-static{
+    display: flex;
+
+    a{
+        padding: 8px 12px;
+        margin: 0 6px;
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover{
+            li{
+                color: $primary;
+            }
+
+            li::before{
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    li{
+        color: $white;
+        display: block;
+        padding: 14px 18px;
+        text-transform: uppercase;
+        font-weight: $bold;
+        transition: .2s all ease-in-out;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 16px;
+            bottom: 4px;
+            width: calc(100% - 32px);
+            height: 2px;
+            background: $white;
+            transform: scaleX(0);
+            transition: .2s all ease-in-out;
+        }
+    }
+
+    @for $i from 1 to 10 {
+        a:nth-child(#{$i}) {
+            transform: translateX(30px * (5 - $i));
+        }
+    }
+}
+
 .nav-menu{
     @include soft-shadow();
     position: fixed;

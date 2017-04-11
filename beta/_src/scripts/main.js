@@ -18,7 +18,7 @@ function checkSize() {
     if (DEBUG) console.log("Media = " + size);
 
     return size;
-};
+}
 
 // Trigger Transitions
 function trigger(id, scrollOffset) {
@@ -36,29 +36,30 @@ function trigger(id, scrollOffset) {
 
         var href = $(btn).attr('href');
 
-        if (href == undefined) href = $(btn).attr('data-href');
+        if (href === undefined) href = $(btn).attr('data-href');
 
         if (DEBUG) console.log(href);
 
         setTimeout(function() {
-            window.location = href
+            window.location = href;
         }, 900);
     });
-};
+}
+
 tList = ['about', 'sim', 'xtly', 'central', 'puppy'];
 
-// jQuery SmoothScroll
+// jQuery SmoothScroll for Nav Links
 $(function() {
-    $('.nav-menu a[href*="#"]:not([href="#"])').click(function() {
+    $('nav a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 600);
+                }, 800);
                 setTimeout(function() {
-                    $('#nav').removeClass('nav-is-visible')
+                    $('#nav').removeClass('nav-is-visible');
                 }, 100);
                 return false;
             }

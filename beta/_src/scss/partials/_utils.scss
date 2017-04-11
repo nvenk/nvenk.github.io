@@ -5,7 +5,9 @@ html {
     font-size: 1em;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -24,7 +26,8 @@ html {
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0; left:0;
+    top: 0;
+    left: 0;
     z-index: 999;
 }
 
@@ -42,7 +45,9 @@ a{
     color: inherit;
     text-decoration: none;
 
-    &:visited, &:active, &:hover{
+    &:visited,
+    &:active,
+    &:hover{
         text-decoration: none;
         color: inherit;
     }
@@ -52,9 +57,11 @@ a{
     margin: 0 auto;
     padding: 0 30px;
     max-width: $site-width-max;
+
     @include breakpoint(tablet){
         padding: 0 60px;
     }
+
     @include breakpoint(laptop){
         padding: 0 90px;
     }
@@ -72,6 +79,7 @@ a{
 
     .fg--cell--custom{
         max-width: 100%;
+
         @include breakpoint(laptop){
             flex: 1;
             max-width: 50%;
@@ -81,15 +89,16 @@ a{
     .fg--cell{
         width: 100%;
 
+        @include breakpoint(tablet){
+            flex: 1;
+        }
+
         &:first-child{
             margin-right: 0;
+
             @include breakpoint(tablet){
                 margin-right: 30px;
             }
-        }
-
-        @include breakpoint(tablet){
-            flex: 1;
         }
 
         &--2x{
@@ -102,6 +111,7 @@ a{
 
         &--3x{
             width: 100%;
+
             @include breakpoint(tablet){
                 flex: 3;
             }
@@ -120,7 +130,7 @@ a{
     top: 60px;
     left: 0;
     opacity: 1;
-    transition: 0.3s all ease-in-out;
+    transition: .3s all ease-in-out;
     z-index: 1;
     color: $black;
 
@@ -129,22 +139,23 @@ a{
         top: -140px;
     }
 
-    &:before{
+    &::before{
         content: '';
         background-color: $white;
         height: 3px;
         position: absolute;
         bottom: -8px;
-        left:0;
+        left: 0;
         width: 106%;
     }
-    &:after{
+
+    &::after{
         content: '';
         background-color: $white;
         height: 12px;
         position: absolute;
         bottom: -12px;
-        right:-6%;
+        right: -6%;
         width: 12px;
     }
 }
@@ -158,25 +169,25 @@ a{
     text-align: center;
     z-index: 9;
 
-    a[class^="trigger--"]{
-        border: 1px solid white;
+    [class^="trigger--"]{
+        border: 1px solid $white;
         border-radius: 50px;
         text-align: center;
         padding: 12px 18px;
         padding-right: 20px;
         position: relative;
         top: 7px;
-        color: white;
+        color: $white;
         text-decoration: none;
         opacity: 1;
-        transition: 0.2s all cubic-bezier(.42,0,.58,1) !important;
+        transition: .2s all cubic-bezier(.42, 0, .58, 1);
 
         &::after{
             content: '›';
             font-size: 1.6em;
             position: relative;
             top: 2px;
-            left:0;
+            left: 0;
             padding-left: 12px;
         }
 
@@ -199,18 +210,20 @@ a{
 .responsive-beacon{
     position: fixed;
     height: 0;
-    width: 10px !important;
-    visibility: hidden !important;
+    width: 10px;
+    visibility: hidden;
     top: -9999px;
 
     @include breakpoint(tablet){
-        width: 20px !important;
+        width: 20px;
     }
+
     @include breakpoint(laptop){
-        width: 30px !important;
+        width: 30px;
     }
+
     @include breakpoint(desktop){
-        width: 40px !important;
+        width: 40px;
     }
 }
 
@@ -218,19 +231,21 @@ a{
 .media-tag{
     position: fixed;
     height: 20px;
-    top:0; left:0;
+    top: 0;
+    left: 0;
     z-index: 999;
 
-    &:after{
+    &::after{
         content: 'Mobile';
         display: block;
         color: $white;
         font-family: $heading;
         padding: 8px;
         background: $central;
-        top:0; left:0;
-        border-radius: 0 0 4px 0;
-        opacity: 0.8;
+        top: 0;
+        left: 0;
+        border-radius: 0 0 4px;
+        opacity: .8;
 
         @include breakpoint(tablet){
             content: 'Tablet';
@@ -241,6 +256,7 @@ a{
             content: 'Laptop';
             background: $puppy;
         }
+
         @include breakpoint(desktop){
             content: 'Desktop';
             background: $xtly;

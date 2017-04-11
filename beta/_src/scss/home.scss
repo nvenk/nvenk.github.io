@@ -39,22 +39,26 @@ section:not(#about) { // Default transition for sections that are disappearing.
 }
 
 .about-container{
-    display: flex;
-    flex-grow: 1;
     height: 100%;
-
-    div{
-        width: 100%;
-    }
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-$accent: $yellow; // Defining accent color
+.about-info,
+.about-image{
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+    display: flex;
+}
+
+$accent: $xtly; // Defining accent color
 
 .about-info {
-    display: flex;
     justify-content: flex-end;
     flex-direction: column;
     padding-bottom: 60px;
+    flex: 2;
 
     * {
         letter-spacing: .07em;
@@ -93,34 +97,20 @@ $accent: $yellow; // Defining accent color
 }
 
 .about-image {
-    display: flex;
-    align-content: flex-end;
-    width: 100%;
-    max-width: 1024px;
-    position: relative;
+    left: 40px;
 
-    @include breakpoint(laptop){
-        width: 600px;
-        left: 200px;
+    .image-me{
+        margin: 0;
+        max-width: 612px;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        align-self: flex-end;
+        // background-color: white;
     }
 }
 
-.image-me{
-    margin: 0;
-    width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    align-self: flex-end;
 
-    // @include breakpoint(desktop){
-    //     margin: 0 90px;
-    //     width: calc(100% - 100px);
-    // }
-}
-
-.projects{
-    padding: 0;
-}
 
 #gallery{
     @include soft-shadow();
