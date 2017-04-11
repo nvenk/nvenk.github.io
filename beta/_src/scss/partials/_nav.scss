@@ -143,6 +143,13 @@ nav{
     }
 }
 
+.home nav{
+    opacity: 0;
+    animation: fade-in 1s ease-in-out;
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+}
+
 .nav-trigger {
     @include soft-shadow();
 	position: absolute;
@@ -224,6 +231,14 @@ nav{
             transform: scale(0) rotate(180deg);
         }
     }
+
+    .nav-at-top &{
+        top: 48px;
+    }
+
+    .home .nav-at-top &{
+        top:0;
+    }
 }
 
 // Display only on home screen
@@ -259,9 +274,9 @@ nav{
                 color: $primary;
             }
 
-            li::before{
-                transform: scaleX(1);
-            }
+            // li::before{
+            //     transform: scaleX(1);
+            // }
         }
     }
 
@@ -273,18 +288,20 @@ nav{
         font-weight: $bold;
         transition: .2s all ease-in-out;
         position: relative;
+        letter-spacing: .07em;
+        font-size: 1.1em;
 
-        &::before{
-            content: '';
-            position: absolute;
-            left: 16px;
-            bottom: 4px;
-            width: calc(100% - 32px);
-            height: 2px;
-            background: $white;
-            transform: scaleX(0);
-            transition: .2s all ease-in-out;
-        }
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     left: 16px;
+        //     bottom: 4px;
+        //     width: calc(100% - 32px);
+        //     height: 2px;
+        //     background: $white;
+        //     transform: scaleX(0);
+        //     transition: .2s all ease-in-out;
+        // }
     }
 
     @for $i from 1 to 10 {
@@ -386,6 +403,11 @@ nav{
 
         .home .nav-at-top &{
             opacity: 0;
+            top: 0;
+        }
+
+        .nav-at-top &{
+            top: 72px;
         }
     }
 }

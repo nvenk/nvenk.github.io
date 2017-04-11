@@ -31,7 +31,7 @@
     <title>Nikhil | Central Cinema</title>
     <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
     <link rel="stylesheet" type="text/css" href="css/project.css" /> </head>
-  <body class="central">
+  <body class="central ">
     <div class="responsive-beacon"></div>
     <script>
       if (document.getElementsByTagName('body')[0].className == "home")
@@ -340,10 +340,6 @@
       var SMcontroller = new ScrollMagic.Controller(
       {}); // addIndicators: true
       var imageSegments = ["scope", "design-01"];
-      if (DEBUG)
-      {
-        SMcontroller.addIndicators(true);
-      }
       $.each(imageSegments, function()
       {
         new ScrollMagic.Scene(

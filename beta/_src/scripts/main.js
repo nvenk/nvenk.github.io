@@ -48,7 +48,7 @@ function trigger(id, scrollOffset) {
 
 tList = ['about', 'sim', 'xtly', 'central', 'puppy'];
 
-// jQuery SmoothScroll for Nav Links
+// jQuery SmoothScroll for Nav Link
 $(function() {
     $('nav a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

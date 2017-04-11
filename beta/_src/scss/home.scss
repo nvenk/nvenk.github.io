@@ -58,7 +58,8 @@ $accent: $xtly; // Defining accent color
     justify-content: flex-end;
     flex-direction: column;
     padding-bottom: 60px;
-    flex: 2;
+    flex: 2 0 auto;
+    min-width: 12em;
 
     * {
         letter-spacing: .07em;
@@ -98,11 +99,16 @@ $accent: $xtly; // Defining accent color
 
 .about-image {
     left: 40px;
+    align-items: flex-end;
+    @include breakpoint(laptop){
+        left: 200px;
+    }
 
     .image-me{
         margin: 0;
         max-width: 612px;
-        width: 100%;
+        min-width: 500px;
+        // width: 100%;
         margin-bottom: 0;
         padding-bottom: 0;
         align-self: flex-end;
@@ -115,8 +121,13 @@ $accent: $xtly; // Defining accent color
 #gallery{
     @include soft-shadow();
     background: $gallery url('/img/gallery/gradient.jpg') center 60%;
-    height: 100%;
-    padding-top: 140px;
+    height: auto;
+    padding-bottom: 140px;
+
+    .container{
+        padding-top: 140px;
+        position: relative;
+    }
 
     .heading{
         text-align: center;
@@ -124,22 +135,26 @@ $accent: $xtly; // Defining accent color
     }
 
     .label{
-        top: -40px;
+        position: relative;
+        top: -60px;
         left: auto;
         right: auto;
-        padding: 0;
+        padding: 0 10px;
         display: block;
         text-align: center;
         color: $white;
         font-family: $heading;
         opacity: .9;
-        font-size: 1.4em;
+        letter-spacing: .08em;
+        font-weight: $reg;
+        font-size: 1.6em;
 
         @include breakpoint(laptop){
+            position: absolute;
+            top: 180px;
             display: inline;
+            width: auto;
             font-size: 1.6em;
-            padding-left: 90px;
-            top: 40px; left: auto; right: -55%;
         }
 
         &::before,
@@ -150,6 +165,38 @@ $accent: $xtly; // Defining accent color
             @include breakpoint(laptop){
                 opacity: 1;
             }
+        }
+    }
+
+    .r-label .label{
+        @include breakpoint(laptop){
+            padding-left: 80px;
+            left: 53%; right: auto;
+        }
+
+        @include breakpoint(desktop){
+            padding-left: 140px;
+        }
+    }
+
+    .l-label .label{
+        @include breakpoint(laptop){
+            padding-right: 80px;
+            left: auto; right: 53%;
+        }
+
+        @include breakpoint(desktop){
+            padding-right: 140px;
+        }
+
+        &::before{
+            right: 0;
+            left: auto;
+        }
+
+        &::after{
+            right: auto;
+            left: -6%;
         }
     }
 
@@ -169,6 +216,24 @@ $accent: $xtly; // Defining accent color
 
         iframe{
             z-index: 10;
+        }
+    }
+
+    .photos{
+        @include aspect-ratio(16 9);
+        @include soft-shadow();
+        margin: 0;
+        width: auto;
+        max-width: 1080px;
+        background: $xtly;
+        z-index: 10;
+
+        @include breakpoint(laptop){
+            margin: 0 0 0 45%;
+        }
+
+        @include breakpoint(desktop){
+            margin: 0 10% 0 45%;
         }
     }
 }
