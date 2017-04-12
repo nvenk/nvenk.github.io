@@ -52,7 +52,7 @@ section:not(#about) { // Default transition for sections that are disappearing.
     display: flex;
 }
 
-$accent: $xtly; // Defining accent color
+$accent: $central; // Defining accent color
 
 .about-info {
     justify-content: flex-end;
@@ -71,6 +71,7 @@ $accent: $xtly; // Defining accent color
         font-style: normal;
         color: $accent;
         font-weight: $bold;
+        font-family: $heading;
     }
 
     .heading{
@@ -83,6 +84,7 @@ $accent: $xtly; // Defining accent color
         margin: 0;
         font-size: 2.6em;
         font-weight: $thin;
+        font-family: $heading;
     }
 
     h3 {
@@ -115,8 +117,6 @@ $accent: $xtly; // Defining accent color
         // background-color: white;
     }
 }
-
-
 
 #gallery{
     @include soft-shadow();

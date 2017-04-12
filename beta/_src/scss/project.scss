@@ -1,7 +1,5 @@
-@import "partials/_base";
-@import "partials/pr_header";
-@import "vendor/zoom";
-
+@import 'partials/base';
+@import 'partials/pr_header';
 
 // Project Page
 @mixin project-defaults($project){
@@ -28,16 +26,19 @@
 }
 
 header{
-    padding-bottom: 50px !important;
+    padding-bottom: 50px;
 }
+
 em{
     font-family: $heading;
-    font-size: 0.95em;
+    font-size: .95em;
 }
-p, section li{
+
+p,
+section li{
     color: $black;
     font-size: 1em;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     line-height: 1.9;
     padding-bottom: 20px;
     max-width: $content-width;
@@ -48,11 +49,13 @@ p, section li{
         font-weight: $bold;
         margin-bottom: 20px;
         text-align: center;
+
         @include breakpoint(laptop){
             text-align: left;
         }
     }
 }
+
 section li{
     list-style: none;
     position: relative;
@@ -61,17 +64,20 @@ section li{
     &::before{
         content: '›';
         position: absolute;
-        left: -1.2em; top: -4px;
+        left: -1.2em;
+        top: -4px;
         font-size: 1.2em;
         font-weight: $bold;
     }
 }
-picture.content-image{
+
+.content-image{
     padding: 0;
     width: 100%;
     display: block;
     margin: 0 auto;
     position: relative;
+
     @include breakpoint(laptop){
         padding: 20px;
     }
@@ -80,17 +86,20 @@ picture.content-image{
         box-shadow: none;
     }
 
-    img, source{
+    img,
+    source{
+        @include soft-shadow(48, .2);
         border-radius: 4px;
-        @include soft-shadow(48,0.2);
         transition: $default-transition;
     }
+
     .picture-tag{
         text-align: center;
-        font-size: 0.9em;
+        font-size: .9em;
         font-family: $heading;
         font-weight: $thin;
         padding: 16px 0 20px;
+
         @include breakpoint(laptop){
             padding: 16px 20px 20px 40px;
         }
@@ -98,6 +107,7 @@ picture.content-image{
 
     .prototype-tag{
         position: relative;
+
         a{
             display: block;
 
@@ -107,31 +117,34 @@ picture.content-image{
             transition: $default-transition;
             content: 'Live Prototype';
             position: absolute;
-            bottom:0; right:0;
+            bottom: 0;
+            right: 0;
             padding: 10px;
             margin-bottom: 4px;
-            border-radius: 4px 0 4px 0;
+            border-radius: 4px 0;
             color: $white;
             font-weight: $bold;
-            font-size: 0.8em;
+            font-size: .8em;
             text-transform: uppercase;
-            opacity: 0.9;
+            opacity: .9;
             z-index: 10;
         }
+
         &:hover{
             img{
                 filter: brightness(60%);
             }
+
             &::after{
                 opacity: 1;
             }
         }
     }
 }
-section.content{
-    opacity: 0;
-    @extend .fade-in;
 
+section.content{
+    @extend .fade-in;
+    opacity: 0;
     padding: 40px 0;
     position: relative;
     transition: $default-transition;
@@ -146,6 +159,7 @@ section.content{
 
         &.center{
             margin: 0 auto;
+
             @include breakpoint(laptop){
                 margin: 0;
             }
@@ -161,14 +175,15 @@ section.content{
         padding: 0;
 
         *{
-            transition: 0.4s all ease-in-out;
+            transition: .4s all ease-in-out;
         }
 
-        img.bg-image{
+        .bg-image{
             width: 100%;
             max-width: 100%;
             z-index: 1;
             object-fit: cover;
+            transition: .4s all ease-in-out;
         }
 
         .text{
@@ -176,6 +191,7 @@ section.content{
             align-items: flex-end;
             z-index: 2;
             flex: 1;
+            transition: .2s all ease-in-out;
 
             @include breakpoint(tablet){
                 position: absolute;
@@ -184,9 +200,11 @@ section.content{
                 right: 0;
                 height: 100%;
             }
+
             div{
                 margin: 0 auto;
                 max-width: $content-width;
+                transition: .2s all ease-in-out;
 
                 @include breakpoint(tablet){
                     margin: 0;
@@ -197,41 +215,37 @@ section.content{
                     font-size: 1em;
                     line-height: 1.4;
                     font-style: italic;
-                    transition-delay: 0.1s;
-
+                    transition: .2s all ease-in-out;
 
                     @include breakpoint(tablet){
                         color: $white;
                         font-size: 1.2em;
                         opacity: 0;
-                        filter: blur(3px);
                     }
                 }
             }
-
         }
 
         &.scrollfX{
-            img.bg-image{
+            .bg-image{
                 @include breakpoint(tablet){
-                    filter: brightness(0.3);
+                    filter: brightness(.3);
                 }
             }
 
             .text{
                 p{
-                    opacity:1;
-                    filter:blur(0);
+                    opacity: 1;
                 }
             }
         }
     }
 
     .buffer-laptop{
-        display:none;
+        display: none;
 
         @include breakpoint(laptop){
-            display:block;
+            display: block;
         }
     }
 
@@ -259,28 +273,31 @@ section.content{
 
     .project-details{
         align-self: flex-end;
+
         @include breakpoint(tablet){
             padding-top: 200px;
             margin-left: 60px;
         }
+
         div{
             background: $gray;
             padding: 30px;
             margin-bottom: 30px;
             margin-left: auto;
+
             @include breakpoint(desktop){
                 max-width: 600px;
             }
+
             p{
                 font-size: 1.1em;
                 padding-bottom: 0;
-                // color: $white;
+
                 em{
                     display: block;
                     font-style: normal;
                     font-weight: $bold;
                     padding-right: 20px;
-                    // color: $white;
                 }
             }
         }
@@ -288,17 +305,22 @@ section.content{
 
     &.l .project-details{
         order: 2;
+
         @include breakpoint(tablet){
             order: 1;
         }
+
         div{
             margin-left: 0;
         }
     }
 }
-img, picture source{
+
+img,
+picture source{
     width: 100%;
 }
+
 #intro{
     .flex-grid{
         align-items: flex-end;
@@ -315,9 +337,11 @@ img, picture source{
                 margin-right: 0;
             }
         }
+
         .project-details{
             margin-right: auto;
             margin-left: 0;
+
             @include breakpoint(tablet){
                 order: 1;
                 margin-right: 60px;
@@ -328,6 +352,7 @@ img, picture source{
 // Project Specific
 body.sim{
     @include project-defaults($sim);
+
     #video{
         .video{
             @include video-embed(16 9);
@@ -335,15 +360,18 @@ body.sim{
             max-width: 1080px;
         }
     }
+
     .next-up{
         .label::before, .label::after{
             background-color: $xtly;
         }
+
         section{
             margin-top: 200px;
         }
     }
 }
+
 body.xtly{
     @include project-defaults($xtly);
 
@@ -357,16 +385,19 @@ body.xtly{
         .label::before, .label::after{
             background-color: $central;
         }
+
         section{
             @include breakpoint(tablet){
                 margin-top: -80px;
             }
+
             .feature-container{
                 padding-top: 0;
             }
         }
     }
 }
+
 body.central{
     @include project-defaults($central);
     section{

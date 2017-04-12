@@ -6,13 +6,14 @@
 
         .feature-desc{
             border-radius: 0;
-            margin: 0 !important;
+            margin: 0;
             padding: 200px 30px 0;
 
             @include breakpoint(tablet){
                 padding: 200px 60px 0;
 
             }
+
             @include breakpoint(laptop){
                 padding: 200px 90px 0;
             }
@@ -33,13 +34,13 @@
 
         .feature-image{
             .image-container{
-                max-width: 100%;
+                // max-width: 100%;
 
                 picture{
-                    opacity: 0.1;
+                    opacity: .1;
 
                     @include breakpoint(mobile){
-                        opacity: 0.3;
+                        opacity: .3;
                     }
 
                     @include breakpoint(tablet){
@@ -52,110 +53,117 @@
 }
 
 body{
-    overflow-x: hidden !important;
+    overflow-x: hidden;
+
     // Default Project Styles
-    .projects section, header, .next-up section{
+    .projects section,
+    header,
+    .next-up section{
         z-index: 1;
         color: $white;
 
         *{
-            transition: 0.8s all $project-easing;
+            transition: .8s all $project-easing;
         }
 
         .feature-container{
-            @extend .container;
             position: relative;
             overflow: hidden;
 
             @include breakpoint(tablet){
                 overflow: visible;
             }
+        }
 
-            .feature-desc{
-                padding: 0 64px 300px;
-                border-radius: 0;
-                @include soft-shadow();
-                max-height: 100vh;
-                display: flex;
-                flex-flow: column wrap;
+        .feature-desc{
+            @include soft-shadow();
+            padding: 0 64px 300px;
+            border-radius: 0;
+            max-height: 100vh;
+            display: flex;
+            flex-flow: column wrap;
 
-                @include breakpoint(tablet){
-                    padding: 0 104px 50px 86px;
-                }
-                @include breakpoint(laptop){
-                    padding: 0 104px 0 86px;
-                    border-radius: 8px;
-                }
+            @include breakpoint(tablet){
+                padding: 0 104px 50px 86px;
+            }
 
+            @include breakpoint(laptop){
+                padding: 0 104px 0 86px;
+                border-radius: 8px;
+            }
 
-                h1, h2{
-                    padding-top: 64px;
-					font-family: $heading;
-					font-size: 1.8em;
-					font-weight: $bold;
-					text-transform: uppercase;
-					margin: 0;
-					letter-spacing: 2px;
-                    z-index: 10;
+            h1,
+            h2{
+                padding-top: 64px;
+				font-family: $heading;
+				font-size: 1.8em;
+				font-weight: $bold;
+				text-transform: uppercase;
+				margin: 0;
+				letter-spacing: 2px;
+                z-index: 10;
 
-					@include breakpoint(tablet){
-						font-size: 2em;
-					}
-                }
-
-                h3{
-					padding-top: 32px;
-					font-weight: $reg;
-					font-size: 1.1em;
-					letter-spacing: 1.5px;
-					width: 100%;
-					margin: 0;
-                    z-index: 10;
-
-					@include breakpoint(tablet){
-						font-size: 1.2em;
-						width: 70%;
-						max-width: 380px;
-					}
-				}
-
-                .button-container{
-					padding-top: 24px;
-					padding-bottom: 52px;
-					text-align: left;
+				@include breakpoint(tablet){
+					font-size: 2em;
 				}
             }
 
-            .feature-image{
-                position: absolute;
-                bottom: 0; left: 0;
+            h3{
+				padding-top: 32px;
+				font-weight: $reg;
+				font-size: 1.1em;
+				letter-spacing: 1.5px;
+				width: 100%;
+				margin: 0;
+                z-index: 10;
+
+				@include breakpoint(tablet){
+					font-size: 1.2em;
+					width: 70%;
+					max-width: 380px;
+				}
+			}
+
+            .button-container{
+				padding-top: 24px;
+				padding-bottom: 52px;
+				text-align: left;
+			}
+        }
+
+        .feature-image{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .image-container{
+            display: inline-block;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            picture{
                 width: 100%;
-                z-index: 0;
 
-                .image-container{
-                    display: inline-block;
-                    position: relative;
-                    top: 0; left: 0;
-                    @extend .container;
-
-                    picture{
-                        width: 100%;
-                        img, source{
-                            width: 100%;
-                            border-radius: 4px;
-                            z-index: 100;
-                            transform-origin: center bottom;
-                        }
-                    }
+                img, source{
+                    width: 100%;
+                    border-radius: 4px;
+                    z-index: 100;
+                    transform-origin: center bottom;
                 }
             }
         }
+
         // Right Aligned Image Projects
         &.r{
             .feature-image{
                 text-align: right;
             }
         }
+
         // Left Aligned Image Projects
         &.l{
             .feature-desc{
@@ -186,29 +194,36 @@ body{
         @include breakpoint(tablet){
             padding-bottom: 330px;
         }
-        @include breakpoint(laptop){
-            padding-bottom: 480px;
-        }
+        // @include breakpoint(laptop){
+        //     padding-bottom: 480px;
+        // }
 
         .feature-image{
             .image-container{
-                right: auto; top: auto;
-                left: 25%; bottom: -50px;
+                right: auto;
+                top: auto;
+                left: 25%;
+                bottom: -50px;
+
                 @include breakpoint(tablet){
                     left: 25%; bottom: -200px;
                 }
+
                 @include breakpoint(laptop){
                     left: -3%; bottom: -220px;
                 }
+
                 @include breakpoint(desktop){
                     left: -10%; bottom: -220px;
                 }
+
                 img{
                     @include breakpoint(laptop){
-                        transform:scale(1.05);
+                        transform: scale(1.05);
                     }
+
                     @include breakpoint(desktop){
-                        transform:scale(1.1);
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -218,24 +233,27 @@ body{
         @include work-transition-defaults();
         .feature-image{
             .image-container{
-                left: 25%; bottom: -60px;
+                left: 25%;
+                bottom: -60px;
+
                 @include breakpoint(tablet){
                     left: 20%; bottom: -220px;
                 }
+
                 @include breakpoint(laptop){
                     left: 60px;
                 }
+
                 @include breakpoint(desktop){
                     left: 0;
                 }
             }
+
             img{
                 @include breakpoint(tablet){
                     transform: scale(1);
                 }
-                @include breakpoint(laptop){
-                    transform: scale(1);
-                }
+
                 @include breakpoint(desktop){
                     transform: scale(1.1);
                 }
@@ -249,22 +267,25 @@ body{
             padding-bottom: 200px;
         }
         @include breakpoint(laptop){
-            padding-bottom: 100px;
+            padding-bottom: 60px;
         }
         .feature-image{
             .image-container{
                 width: 300px;
-                right: auto; top: auto;
-                left: -60px; bottom: -200px;
+                right: auto;
+                top: auto;
+                left: -60px;
+                bottom: -200px;
                 @include breakpoint(tablet){
                     left: -80px; bottom: 30px;
                 }
+
                 @include breakpoint(laptop){
                     left: 2%; bottom: 30px;
                 }
 
                 @include breakpoint(desktop){
-                    left: 15%;
+                    left: 10%;
                 }
                 img{
                     @include breakpoint(laptop){
@@ -309,28 +330,34 @@ body{
     @include work('central', $central, 32%, 8%);
     #central{
         @include breakpoint(tablet){
-            padding-bottom: 360px;
+            padding-bottom: 280px;
         }
         .feature-image{
             .image-container{
                 width: 600px;
-                left: auto; top: auto;
-                right: -100px; bottom: -100px;
+                left: auto;
+                top: auto;
+                right: -100px;
+                bottom: -100px;
+
                 @include breakpoint(tablet){
                     right: -25%; bottom: -180px;
                 }
+
                 @include breakpoint(laptop){
                     right: -140px;
                 }
+
                 @include breakpoint(desktop){
                     right: 20px;
                 }
+
                 img{
                     @include breakpoint(laptop){
-                        transform:scale(1.05);
+                        transform: scale(1.05);
                     }
                     @include breakpoint(desktop){
-                        transform:scale(1.1);
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -340,7 +367,7 @@ body{
         @include work-transition-defaults();
         .feature-image{
             .image-container{
-                right: 0; bottom: -16vw;
+                // right: 0; bottom: -16vw;
                 @include breakpoint(tablet){
                     right: -280px; bottom: -200px;
                 }

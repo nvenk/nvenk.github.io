@@ -232,8 +232,10 @@ nav{
         }
     }
 
-    .nav-at-top &{
-        top: 48px;
+    .nav-at-top & {
+        @include breakpoint(tablet){
+            top: 48px;
+        }
     }
 
     .home .nav-at-top &{
@@ -248,7 +250,6 @@ nav{
 }
 
 .home .nav-at-top .nav-menu-static{
-
     @include breakpoint(tablet){
         display: flex;
 
@@ -273,10 +274,6 @@ nav{
             li{
                 color: $primary;
             }
-
-            // li::before{
-            //     transform: scaleX(1);
-            // }
         }
     }
 
@@ -290,18 +287,6 @@ nav{
         position: relative;
         letter-spacing: .07em;
         font-size: 1.1em;
-
-        // &::before{
-        //     content: '';
-        //     position: absolute;
-        //     left: 16px;
-        //     bottom: 4px;
-        //     width: calc(100% - 32px);
-        //     height: 2px;
-        //     background: $white;
-        //     transform: scaleX(0);
-        //     transition: .2s all ease-in-out;
-        // }
     }
 
     @for $i from 1 to 10 {
