@@ -74,10 +74,10 @@ $(document).ready(function() {
 
     // Triangle BG
 
-    if($('body').hasClass('home')) {
-        window.onload = onLoad;
-        window.onresize = onResize;
-    }
+    // if($('body').hasClass('home')) {
+    //     window.onload = onLoad;
+    //     window.onresize = onResize;
+    // }
 
     // Initial Run
     var cSize = checkSize();

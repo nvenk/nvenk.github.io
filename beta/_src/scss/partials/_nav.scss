@@ -9,6 +9,7 @@
     z-index: 99;
 
     h6{
+        @extend %fade-in;
         display: inline-block;
         color: $white;
         font-weight: $reg;
@@ -117,7 +118,13 @@ $nav-mob-size: 60px;
             background: lighten($color, 6%);
         }
     }
+
+    .home .nav-menu-static a:hover li{
+        color: $color;
+    }
 }
+
+@include nav-color($xtly);
 
 nav{
     position: fixed;
@@ -159,16 +166,11 @@ nav{
 	height: $nav-mob-size;
 	width: $nav-mob-size;
 	border-radius: 50%;
-    background: $primary;
 	overflow: hidden;
 	white-space: nowrap;
 	color: transparent;
 	pointer-events: auto;
     cursor: pointer;
-
-    &:hover{
-        background: lighten($primary, 6%);
-    }
 
 	span,
     span::after,
@@ -267,12 +269,6 @@ nav{
         margin: 0 6px;
         opacity: 0;
         visibility: hidden;
-
-        &:hover{
-            li{
-                color: $primary;
-            }
-        }
     }
 
     li{
@@ -305,7 +301,6 @@ nav{
     max-height: $nav-mob-size;
     width: $nav-mob-size;
     height: 100%;
-    background: $primary;
     border-radius: 36px;
     visibility: hidden;
     transition-delay: .2s;
@@ -321,14 +316,12 @@ nav{
         // font-weight: $bold;
         padding: 0;
         font-size: 1.1em;
-        background: $primary;
         opacity: 0;
         transform: translateX(20px);
 
         &:active{
             filter: brightness(.8);
         }
-
     }
 
     li{
@@ -369,10 +362,6 @@ nav{
             width: auto;
             text-align: left;
             background: transparent;
-        }
-
-        li:hover{
-            background: lighten($primary, 6%);
         }
 
         .nav-is-visible &{
