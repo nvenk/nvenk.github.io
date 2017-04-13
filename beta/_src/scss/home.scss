@@ -21,6 +21,7 @@ section:not(#about) { // Default transition for sections that are disappearing.
 #about {
     @extend %black-gradient;
     box-sizing: border-box;
+    min-height: 680px;
     height: 100%;
     overflow: hidden;
     position: relative;
