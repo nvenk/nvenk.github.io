@@ -1,10 +1,11 @@
-{% extends "layout.njk" %}
+{% extends "project_layout.njk" %}
 
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
         scripts: 'scripts/all.js',
-        bodyClass: 'central'
+        bodyClass: 'central',
+        nextUp: 'puppy'
 }%}
 
 {% set meta2 = {
@@ -14,26 +15,7 @@
 }%}
 
 {# ----- Content ----- #}
-{% block content %}
-
-{% include "partials/nametag.njk" %}
-<header id="central" class="r">
-    <div class="feature-container container">
-        <div class="feature-desc">
-            <h1>Central Cinema</h1>
-            <h3>Redesigning the web experience for a local beer-theatre</h3>
-            <div class="button-container"></div>
-        </div>
-
-        <div class="feature-image">
-            <div class="image-container container">
-                <picture>
-                    <img src="img/central/feature.jpg" alt="" class="soft-shadow" />
-                </picture>
-            </div>
-        </div>
-    </div>
-</header>
+{% block project_content %}
 
 <section class="content" id="intro">
     <div class="flex-grid container">
@@ -139,6 +121,7 @@
         <div class="fg--cell buffer-laptop"></div>
     </div>
 </section>
+
 <section class="content image-rt" id="design-02">
     <div class="flex-grid container">
         <div class="fg--cell--custom">
@@ -202,28 +185,6 @@
     </div>
 </section>
 
-<div class="next-up">
-    <div class="label">NEXT UP</div>
-    <section id="puppy" class="proj l">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>PuppyHarmony</h2>
-                <h3>A platform to find the perfect playdate for your furry friend</h3>
-                <div class="button-container">
-                    <a href="puppy-harmony.html" class="trigger--puppy hidden-phone">Read About It</a>
-                </div>
-            </div>
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/puppy/feature.png" alt=""/>
-                    </picture>
-                </div>
-            </div>
-        </div>
-        <a href="puppy-harmony.html" class="trigger--puppy overlay-trigger visible-phone"></a>
-    </section>
-</div>
 {% endblock %}
 
 

@@ -1,10 +1,11 @@
-{% extends "layout.njk" %}
+{% extends "project_layout.njk" %}
 
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
         scripts: 'scripts/all.js',
-        bodyClass: 'sim'
+        bodyClass: 'sim',
+        nextUp: 'xtly'
 }%}
 
 {% set meta2 = {
@@ -14,26 +15,7 @@
 }%}
 
 {# ----- Content ----- #}
-{% block content %}
-
-{% include "partials/nametag.njk" %}
-
-<header id="sim" class="r">
-    <div class="feature-container container">
-        <div class="feature-desc">
-            <h1>SIM: The Social Robot</h1>
-            <h3>Designing for affective Human-Robot Interaction.</h3>
-            <div class="button-container"></div>
-        </div>
-        <div class="feature-image">
-            <div class="image-container container">
-                <picture>
-                    <img src="img/sim/feature.png" alt="" />
-                </picture>
-            </div>
-        </div>
-    </div>
-</header>
+{% block project_content %}
 
 <section class="content" id="intro">
     <div class="flex-grid container">
@@ -65,27 +47,4 @@
     </div>
 </section>
 
-<div class="next-up">
-    <div class="label">NEXT UP</div>
-    <section id="xtly" class="proj l">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>Xactly Incent</h2>
-                <h3>Helping the sales force stay informed about their goals</h3>
-                <div class="button-container">
-                    <a href="xactly.html" class="trigger--xtly hidden-phone">Read About It</a>
-                </div>
-            </div>
-
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
-                    </picture>
-                </div>
-            </div>
-            <a href="xactly.html" class="trigger--xtly overlay-trigger visible-phone"></a>
-        </div>
-    </section>
-</div>
 {% endblock %}

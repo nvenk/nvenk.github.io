@@ -1,10 +1,11 @@
-{% extends "layout.njk" %}
+{% extends "project_layout.njk" %}
 
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
         scripts: 'scripts/all.js',
-        bodyClass: 'puppy'
+        bodyClass: 'puppy',
+        nextUp: 'sim'
 }%}
 
 {% set meta2 = {
@@ -14,26 +15,7 @@
 }%}
 
 {# ----- Content ----- #}
-{% block content %}
-
-{% include "partials/nametag.njk" %}
-
-<header id="puppy" class="l">
-    <div class="feature-container container">
-        <div class="feature-desc">
-            <h1>PuppyHarmony</h1>
-            <h3>A platform to find the perfect playdate for your furry friend.</h3>
-            <div class="button-container"></div>
-        </div>
-        <div class="feature-image">
-            <div class="image-container container">
-                <picture>
-                    <img src="img/puppy/feature.png" alt=""/>
-                </picture>
-            </div>
-        </div>
-    </div>
-</header>
+{% block project_content %}
 
 <section class="content l" id="intro">
     <div class="flex-grid container">
@@ -92,6 +74,7 @@
         <img srcset ="img/puppy/wireframes.png" alt="" />
     </picture>
 </section>
+
 <section class="content" id="design-02">
     <div class="flex-grid container">
         <div class="fg--cell content--text center">
@@ -126,27 +109,4 @@
     </div>
 </section>
 
-
-<div class="next-up">
-    <div class="label">NEXT UP</div>
-    <section id="sim" class="proj r">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>SIM: The Social Robot</h2>
-                <h3>Designing for affective Human-Robot Interaction</h3>
-                <div class="button-container">
-                    <a href="sim.html" class="trigger--sim hidden-phone">Read About It</a>
-                </div>
-            </div>
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/sim/feature.png" alt="" />
-                    </picture>
-                </div>
-            </div>
-        </div>
-        <a href="sim.html" class="trigger--sim overlay-trigger visible-phone"></a>
-    </section>
-</div>
 {% endblock %}

@@ -1,10 +1,11 @@
-{% extends "layout.njk" %}
+{% extends "project_layout.njk" %}
 
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/project.css',
         scripts: 'scripts/all.js',
-        bodyClass: 'xtly'
+        bodyClass: 'xtly',
+        nextUp: 'central'
 }%}
 
 {% set meta2 = {
@@ -14,28 +15,7 @@
 }%}
 
 {# ----- Content ----- #}
-{% block content %}
-
-{% include "partials/nametag.njk" %}
-
-<header id="xtly" class="l">
-    <div class="feature-container container">
-        <div class="feature-desc">
-            <h1>Xactly Incent</h1>
-            <h3>Helping the sales force stay informed about their goals.</h3>
-            <div class="button-container">
-            </div>
-        </div>
-
-        <div class="feature-image">
-            <div class="image-container container">
-                <picture>
-                    <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
-                </picture>
-            </div>
-        </div>
-    </div>
-</header>
+{% block project_content %}
 
 <section class="content l" id="intro">
     <div class="flex-grid container">
@@ -59,29 +39,5 @@
         </div>
     </div>
 </section>
-
-<div class="next-up">
-    <div class="label">NEXT UP</div>
-    <section id="central" class="proj r">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>Central Cinema</h2>
-                <h3>Redesigning the web experience for a local beer-theatre</h3>
-                <div class="button-container">
-                    <a href="central-cinema.html" class="trigger--central hidden-phone">Read About It</a>
-                </div>
-            </div>
-
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/central/feature.jpg" alt="" class="soft-shadow" />
-                    </picture>
-                </div>
-            </div>
-        </div>
-        <a href="central-cinema.html" class="trigger--central overlay-trigger visible-phone"></a>
-    </section>
-</div>
 
 {% endblock %}

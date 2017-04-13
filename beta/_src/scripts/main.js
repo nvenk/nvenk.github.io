@@ -43,7 +43,7 @@ function trigger(id, scrollOffset) {
 
         setTimeout(function() {
             window.location = href;
-        }, 750);
+        }, 800);
     });
 }
 

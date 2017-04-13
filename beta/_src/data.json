@@ -1,0 +1,30 @@
+{
+  "projects": [{
+      "name": "sim",
+      "orientation": "r",
+      "title": "SIM: The Social Robot",
+      "subtitle": "Designing for affective Human-Robot Interaction",
+      "url": "sim"
+  },
+  {
+      "name": "xtly",
+      "orientation": "l",
+      "title": "Xactly Incent",
+      "subtitle": "Helping the sales force stay informed about their goals",
+      "url": "xactly"
+  },
+  {
+      "name": "central",
+      "orientation": "r",
+      "title": "Central Cinema",
+      "subtitle": "Redesigning the web experience for a local beer-theatre",
+      "url": "central-cinema"
+  },
+  {
+      "name": "puppy",
+      "orientation": "l",
+      "title": "PuppyHarmony",
+      "subtitle": "Helping your furry friends find the perfect playdate",
+      "url": "puppy-harmony"
+  }]
+}

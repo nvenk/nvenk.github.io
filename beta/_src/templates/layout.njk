@@ -19,6 +19,10 @@
     </head>
 
     <body class="{{ var.bodyClass }} ">
+        {# Importing Global Macros #}
+        {% import 'macros/global.njk' as macro %}
+
+
         <div class="responsive-beacon"></div>
         {# Set Scroll Restoration to 'manual' on Project pages #}
         <script>

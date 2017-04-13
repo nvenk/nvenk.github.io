@@ -1,0 +1,25 @@
+
+{# PROJECT TILES #}
+{% macro project(name='proj', direction='r', headerText='headerText - Project Title', tagline='tagline - Project Tagline goes here', url='#') %}
+
+<section id="{{ name }}" class="proj {{ direction }}">
+    <div class="feature-container container">
+        <div class="feature-desc">
+            <h2>{{ headerText }}</h2>
+            <h3>{{ tagline}}</h3>
+            <div class="button-container">
+                <a href="{{ url }}.html" class="trigger--{{ name }} hidden-phone">Read About It</a>
+            </div>
+        </div>
+        <div class="feature-image">
+            <div class="image-container container">
+                <picture>
+                    <img src="img/{{ name }}/feature.png" alt="" />
+                </picture>
+            </div>
+        </div>
+    </div>
+    <a href="{{ url }}.html" class="trigger--{{ name }} overlay-trigger visible-phone"></a>
+</section>
+
+{% endmacro %}

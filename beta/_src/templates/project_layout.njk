@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{% include "partials/nametag.njk" %}
+
+{# PROJECT HEADER #}
+{% for project in projects %}
+    {% if project.name == var.bodyClass %}
+        {{ macro.project(project.name,
+            project.orientation,
+            project.title,
+            project.subtitle,
+            project.url
+            ) }}
+    {% endif %}
+{% endfor %}
+
+
+{# PROJECT CONTENT GOES HERE #}
+{% block project_content %}{% endblock %}
+
+
+{# NEXT PROJECT #}
+<div class="next-up">
+    <div class="label">NEXT UP</div>
+
+    {% for project in projects %}
+        {% if project.name == var.nextUp %}
+            {{ macro.project(project.name,
+                project.orientation,
+                project.title,
+                project.subtitle,
+                project.url
+                ) }}
+        {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock %}

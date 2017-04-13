@@ -6,7 +6,7 @@
 	}
 
 	// Styling for Home page [section#name] and Project page [body#name header]
-	section##{$name}, &.#{$name} header{
+	.proj##{$name}, &.#{$name} .proj{
 
 		.feature-container{
 			padding: 0;
@@ -39,20 +39,27 @@
     .feature-container{
         max-width: 100%;
         padding: 0;
+
+		@include breakpoint(laptop){
+		    padding-top: 0;
+		}
     }
 
     .feature-desc{
         border-radius: 0;
         margin: 0;
-        padding: 200px 30px 0;
+        padding: 300px 30px 0;
+		min-height: 0;
 
         @include breakpoint(tablet){
             padding: 200px 60px 0;
+			margin: 0;
 
         }
 
         @include breakpoint(laptop){
             padding: 200px 90px 0;
+			margin: 0;
         }
 
         h1, h2{
@@ -65,7 +72,6 @@
 
         .button-container{
             opacity: 0;
-            height: 0;
         }
     }
 
@@ -92,8 +98,7 @@ body{
     overflow-x: hidden;
 
     // Default Project Styles
-    .proj,
-    header{
+    .proj{
         z-index: 1;
         color: $white;
 
@@ -114,14 +119,12 @@ body{
             @include soft-shadow();
             padding: 0 64px 300px;
             border-radius: 0;
-            max-height: 100vh;
-            height: 400px;
             display: flex;
             flex-flow: column wrap;
 
             @include breakpoint(tablet){
                 padding: 0 104px 50px 86px;
-                height: auto;
+                min-height: 0;
             }
 
             @include breakpoint(laptop){
@@ -230,7 +233,8 @@ body{
     }
 
     //// SIM Styles
-    @include project('sim',$sim, 32%, 8%);
+    @include project('sim', $sim, 32%, 8%);
+
     #sim{
         @include breakpoint(tablet){
             padding-bottom: 330px;
@@ -243,15 +247,18 @@ body{
             bottom: -50px;
 
             @include breakpoint(tablet){
-                left: 25%; bottom: -200px;
+                left: 25%;
+				bottom: -200px;
             }
 
             @include breakpoint(laptop){
-                left: -3%; bottom: -220px;
+                left: -3%;
+				bottom: -220px;
             }
 
             @include breakpoint(desktop){
-                left: -10%; bottom: -220px;
+                left: -10%;
+				bottom: -220px;
             }
 
             img{
@@ -266,7 +273,7 @@ body{
         }
     }
 
-    &.transition--sim #sim, &.sim header#sim{
+    &.transition--sim #sim, &.sim .proj#sim{
         @include project-transition();
 
         @include breakpoint(tablet){
@@ -278,7 +285,8 @@ body{
             bottom: -60px;
 
             @include breakpoint(tablet){
-                left: 20%; bottom: -220px;
+                left: 20%;
+				bottom: -220px;
             }
 
             @include breakpoint(laptop){
@@ -337,7 +345,7 @@ body{
             }
         }
     }
-    &.transition--xtly #xtly, &.xtly header#xtly{
+    &.transition--xtly #xtly, &.xtly .proj#xtly{
         @include project-transition();
         .image-container{
             left: -90px; bottom: -200px;
@@ -401,7 +409,7 @@ body{
             }
         }
     }
-    &.transition--central #central, &.central header#central{
+    &.transition--central #central, &.central .proj#central{
         @include project-transition();
         .feature-image{
             .image-container{
@@ -466,7 +474,7 @@ body{
             }
         }
     }
-    &.transition--puppy #puppy, &.puppy header#puppy{
+    &.transition--puppy #puppy, &.puppy .proj#puppy{
         @include project-transition();
         .feature-image{
             .image-container{

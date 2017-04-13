@@ -28,6 +28,7 @@ concat = require 'gulp-concat'
 ## Content
 nunjucks = require 'gulp-nunjucks-render'
 prettify = require 'gulp-prettify'
+json = require 'gulp-data'
 
 ## images
 imagemin = require 'gulp-imagemin'
@@ -77,6 +78,8 @@ gulp.task 'content-task', ->
 
     return gulp.src(sources.content)
     .pipe plumber({ errorHandler: onError })
+    .pipe json ->
+        require './_src/data.json'
     .pipe nunjucks({ path: [sources.templates] })
     .pipe stripComments()
     .pipe prettify()

@@ -16,6 +16,7 @@
 {# ----- Content ----- #}
 {% block content %}
 
+{# LANDING SCREEN #}
 <section id="about">
     <div class="about-container container flex-grid">
         <div class="fg--cell about-info">
@@ -28,90 +29,20 @@
         </div>
     </div>
 </section>
+
+{# PROJECTS #}
 <div class="projects" id="projects">
-    <section id="sim" class="proj r">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>SIM: The Social Robot</h2>
-                <h3>Designing for affective Human-Robot Interaction</h3>
-                <div class="button-container">
-                    <a href="sim.html" class="trigger--sim hidden-phone">Read About It</a>
-                </div>
-            </div>
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/sim/feature.png" alt="" />
-                    </picture>
-                </div>
-            </div>
-        </div>
-        <a href="sim.html" class="trigger--sim overlay-trigger visible-phone"></a>
-    </section>
-
-    <section id="xtly" class="proj l">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>Xactly Incent</h2>
-                <h3>Helping the sales force stay informed about their goals</h3>
-                <div class="button-container">
-                    <a href="xactly.html" class="trigger--xtly hidden-phone">Read About It</a>
-                </div>
-            </div>
-
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/xtly/feature.png" alt="" class="soft-shadow" />
-                    </picture>
-                </div>
-            </div>
-            <a href="xactly.html" class="trigger--xtly overlay-trigger visible-phone"></a>
-        </div>
-    </section>
-
-    <section id="central" class="proj r">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>Central Cinema</h2>
-                <h3>Redesigning the web experience for a local beer-theatre</h3>
-                <div class="button-container">
-                    <a href="central-cinema.html" class="trigger--central hidden-phone">Read About It</a>
-                </div>
-            </div>
-
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/central/feature.jpg" alt="" class="soft-shadow" />
-                    </picture>
-                </div>
-            </div>
-            <a href="central-cinema.html" class="trigger--central overlay-trigger visible-phone"></a>
-        </div>
-    </section>
-
-    <section id="puppy" class="proj l">
-        <div class="feature-container container">
-            <div class="feature-desc">
-                <h2>PuppyHarmony</h2>
-                <h3>A platform to find the perfect playdate for your furry friend</h3>
-                <div class="button-container">
-                    <a href="puppy-harmony.html" class="trigger--puppy hidden-phone">Read About It</a>
-                </div>
-            </div>
-            <div class="feature-image">
-                <div class="image-container container">
-                    <picture>
-                        <img src="img/puppy/feature.png" alt=""/>
-                    </picture>
-                </div>
-            </div>
-            <a href="puppy-harmony.html" class="trigger--puppy overlay-trigger visible-phone"></a>
-        </div>
-    </section>
+    {% for project in projects %}
+        {{ macro.project(project.name,
+                        project.orientation,
+                        project.title,
+                        project.subtitle,
+                        project.url
+                        ) }}
+    {% endfor %}
 </div>
 
+{# GALLERIES #}
 <section id="gallery">
     <div class="container r-label">
         <div class="label">ANIMATION</div>
@@ -126,4 +57,5 @@
         <div class="photos"><a href="https://500px.com/nikhilv" target="_blank"></a></div>
     </div>
 </section>
+
 {% endblock %}

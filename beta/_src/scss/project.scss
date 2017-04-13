@@ -503,10 +503,12 @@ body.puppy{
     section{
         margin-top: 120px;
         position: relative;
-        .feature-container .feature-desc{
+
+        .feature-desc{
             margin: 0;
+
             @include breakpoint(laptop){
-                margin: 0 10% !important;
+                margin: 0 10%;
             }
         }
     }
