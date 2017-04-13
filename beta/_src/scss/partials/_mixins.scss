@@ -50,37 +50,3 @@
 		transform: translateY(-50%);
 	}
 }
-//// Project Tiles Header
-@mixin work($name, $color: $black, $margin-right: 24%, $margin-left: 24%){
-	// Button Color
-	a.trigger--#{$name}:hover {
-		color: $color;
-	}
-
-	// Styling for Home page [section#name] and Project page [body#name header]
-	section##{$name}, &.#{$name} header{
-
-		.feature-container{
-			padding: 0;
-			max-width: 1440px;
-
-			@include breakpoint(laptop){
-			    padding-top: 78px;
-			}
-
-			.feature-desc{
-                background-size: contain;
-                margin: 0;
-
-				@include breakpoint(laptop){
-                    margin: 78px $margin-right 78px $margin-left;
-                }
-			}
-		}
-	}
-
-	&.transition--#{$name} section:not(##{$name}), &.transition--#{$name} footer{
-        opacity: 0;
-    }
-
-}

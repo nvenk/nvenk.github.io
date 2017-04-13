@@ -41,9 +41,9 @@ function trigger(id, scrollOffset) {
 
         if (DEBUG) console.log(href);
 
-        setTimeout(function() {
-            window.location = href;
-        }, 750);
+        // setTimeout(function() {
+        //     window.location = href;
+        // }, 750);
     });
 }
 

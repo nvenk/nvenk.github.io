@@ -10,6 +10,14 @@ section:not(#about) { // Default transition for sections that are disappearing.
     transition-duration: .2s;
 }
 
+.projects{
+    padding-top: 0;
+
+    @include breakpoint(tablet){
+        padding-top: 128px;
+    }
+}
+
 #about {
     @extend %black-gradient;
     box-sizing: border-box;

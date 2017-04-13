@@ -124,7 +124,7 @@ $nav-mob-size: 60px;
     }
 }
 
-@include nav-color($xtly);
+@include nav-color();
 
 nav{
     position: fixed;
