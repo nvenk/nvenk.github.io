@@ -112,7 +112,7 @@ $nav-mob-size: 60px;
         background: lighten($color, 6%);
     }
 
-    @include breakpoint(tablet){
+    @include breakpoint(laptop){
         .nav-menu li:hover{
             background: lighten($color, 6%);
         }
@@ -126,7 +126,7 @@ nav{
     bottom: 100px;
     right: 5%;
 
-    @include breakpoint(tablet){
+    @include breakpoint(laptop){
         bottom: auto;
         top: 24px;
     }
@@ -207,7 +207,7 @@ nav{
         transform: translateY(32px);
         background: transparent;
 
-        @include breakpoint(tablet){
+        @include breakpoint(laptop){
             transform: rotate(-180deg);
         }
 
@@ -227,19 +227,17 @@ nav{
 	}
 
     .home .nav-at-top &{
-        @include breakpoint(tablet){
+        top: 0;
+
+        @include breakpoint(laptop){
             transform: scale(0) rotate(180deg);
         }
     }
 
     .nav-at-top & {
-        @include breakpoint(tablet){
+        @include breakpoint(laptop){
             top: 48px;
         }
-    }
-
-    .home .nav-at-top &{
-        top:0;
     }
 }
 
@@ -250,7 +248,7 @@ nav{
 }
 
 .home .nav-at-top .nav-menu-static{
-    @include breakpoint(tablet){
+    @include breakpoint(laptop){
         display: flex;
 
         a{
@@ -364,8 +362,7 @@ nav{
     }
 
     // Tablet & above
-
-    @include breakpoint(tablet){
+    @include breakpoint(laptop){
         bottom: auto; top: 24px;
 
         a{

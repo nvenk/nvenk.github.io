@@ -1,6 +1,7 @@
 // Nvenk Specific functions
 var DEBUG = true;
 var size = "";
+var SCROLLSPEED = 600;
 
 function checkSize() {
     var prop = $(".responsive-beacon").css("width");
@@ -32,7 +33,7 @@ function trigger(id, scrollOffset) {
 
         $('html, body').animate({
             scrollTop: $("#" + id).offset().top - scrollOffset
-        }, 600);
+        }, SCROLLSPEED);
 
         var href = $(btn).attr('href');
 
@@ -40,13 +41,13 @@ function trigger(id, scrollOffset) {
 
         if (DEBUG) console.log(href);
 
-        // setTimeout(function() {
-        //     window.location = href;
-        // }, 900);
+        setTimeout(function() {
+            window.location = href;
+        }, 750);
     });
 }
 
-tList = ['about', 'sim', 'xtly', 'central', 'puppy'];
+var tList = ['about', 'sim', 'xtly', 'central', 'puppy'];
 
 // jQuery SmoothScroll for Nav Link
 $(function() {
@@ -57,7 +58,7 @@ $(function() {
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 800);
+                }, SCROLLSPEED);
                 setTimeout(function() {
                     $('#nav').removeClass('nav-is-visible');
                 }, 100);
@@ -73,17 +74,27 @@ $(document).ready(function() {
 
     // Triangle BG
 
-    // if($('body').hasClass('home')) {
-    //     window.onload = onLoad;
-    //     window.onresize = onResize;
-    // }
+    if($('body').hasClass('home')) {
+        window.onload = onLoad;
+        window.onresize = onResize;
+    }
 
     // Initial Run
     var cSize = checkSize();
 
     for (i = 0; i < tList.length; i++) {
         trigger(tList[i], 0);
-    };
+    }
+
+    if ($('body').hasClass('home')) {
+        $('.home-link').on('click', function(e){
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, SCROLLSPEED, 'swing');
+            if(DEBUG) console.log('home link pressed');
+        });
+    }
 
     // ON RESIZE
     $(window).smartresize(function() {
@@ -93,7 +104,7 @@ $(document).ready(function() {
         if (newSize != cSize) {
             cSize = newSize;
             if (DEBUG) console.log("Media = " + cSize);
-        };
+        }
     });
 
     // Navigation

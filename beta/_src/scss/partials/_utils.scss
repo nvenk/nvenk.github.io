@@ -15,6 +15,16 @@ html {
     transition: $default-transition;
 }
 
+%black-gradient{
+    // Background definition for about and footer
+    background: $black url('/img/about/gradient-2px.png') repeat-y;
+    background-size: contain;
+    background-image: linear-gradient(
+                        125deg,
+                        $black 10%,
+                        $true-black 80%);
+}
+
 .heading{
     font-size: 1.6em;
     font-family: $heading;

@@ -1,5 +1,5 @@
 @mixin work-transition-defaults() {
-
+    padding-bottom: 0;
     .feature-container{
         max-width: 100%;
         padding: 0;
@@ -194,9 +194,6 @@ body{
         @include breakpoint(tablet){
             padding-bottom: 330px;
         }
-        // @include breakpoint(laptop){
-        //     padding-bottom: 480px;
-        // }
 
         .feature-image{
             .image-container{
@@ -229,8 +226,14 @@ body{
             }
         }
     }
+
     &.transition--sim #sim, &.sim header#sim{
         @include work-transition-defaults();
+
+        @include breakpoint(tablet){
+            padding-bottom: 0;
+        }
+
         .feature-image{
             .image-container{
                 left: 25%;
@@ -269,6 +272,7 @@ body{
         @include breakpoint(laptop){
             padding-bottom: 60px;
         }
+
         .feature-image{
             .image-container{
                 width: 300px;
@@ -332,6 +336,7 @@ body{
         @include breakpoint(tablet){
             padding-bottom: 280px;
         }
+
         .feature-image{
             .image-container{
                 width: 600px;
@@ -456,4 +461,37 @@ body{
             }
         }
     }
+}
+
+// EXPERIMENTAL CSS GRADIENTS
+#sim .feature-desc{
+    background: $sim url('../img/sim/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        130deg,
+                        $sim 20%,
+                        $sim-alt 80%);
+}
+
+#xtly .feature-desc{
+    background: $xtly url('../img/xtly/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        -65deg,
+                        $xtly 20%,
+                        $xtly-alt 70%);
+}
+
+#central .feature-desc{
+    background: $central url('../img/central/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        115deg,
+                        $central 20%,
+                        $central-alt 80%);
+}
+
+#puppy .feature-desc{
+    background: $puppy url('../img/puppy/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        -75deg,
+                        $puppy 20%,
+                        $puppy-alt 80%);
 }

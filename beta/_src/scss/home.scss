@@ -11,8 +11,7 @@ section:not(#about) { // Default transition for sections that are disappearing.
 }
 
 #about {
-    background: $black url('/img/about/background.jpg');
-    background-size: cover;
+    @extend %black-gradient;
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
@@ -28,10 +27,10 @@ section:not(#about) { // Default transition for sections that are disappearing.
         left: 0;
         height: 100%;
         width: 100%;
-        opacity: .85;
+        opacity: 1;
 
         polygon{
-          @extend .fade-in;
+          @extend %fade-in;
           opacity: 0;
         }
     }
@@ -40,8 +39,18 @@ section:not(#about) { // Default transition for sections that are disappearing.
 
 .about-container{
     height: 100%;
+    display: flex;
+    flex-flow: column;
     justify-content: flex-end;
     align-items: flex-end;
+
+    @include breakpoint(tablet){
+        flex-flow: column;
+    }
+
+    @include breakpoint(laptop){
+        flex-flow: row;
+    }
 }
 
 .about-info,
@@ -55,11 +64,22 @@ section:not(#about) { // Default transition for sections that are disappearing.
 $accent: $central; // Defining accent color
 
 .about-info {
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     flex: 2 0 auto;
     min-width: 12em;
+    z-index: 2;
+
+    @include breakpoint(laptop){
+        align-self: center;
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(desktop){
+        align-self: flex-end;
+
+    }
 
     * {
         letter-spacing: .07em;
@@ -75,23 +95,36 @@ $accent: $central; // Defining accent color
     }
 
     .heading{
-        font-size: 7em;
+        font-size: 4em;
         font-family: $heading;
         color: $accent;
+        padding-top: 40px;
+
+        @include breakpoint(tablet){
+            font-size: 7em;
+        }
     }
 
     h1 {
         margin: 0;
-        font-size: 2.6em;
+        font-size: 2em;
         font-weight: $thin;
         font-family: $heading;
+
+        @include breakpoint(tablet){
+            font-size: 2.4em;
+        }
     }
 
     h3 {
         display: block;
         font-weight: $reg;
         max-width: 24em;
-        font-size: 1.5em;
+        font-size: 1em;
+
+        @include breakpoint(tablet){
+            font-size: 1.2em;
+        }
     }
 
     .trigger--about:hover{
@@ -100,27 +133,46 @@ $accent: $central; // Defining accent color
 }
 
 .about-image {
-    left: 40px;
     align-items: flex-end;
-    @include breakpoint(laptop){
-        left: 200px;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+
+    @include breakpoint(tablet){
+        justify-content: flex-end;
     }
 
     .image-me{
-        margin: 0;
-        max-width: 612px;
-        min-width: 500px;
-        // width: 100%;
+        margin: 0 auto;
+        max-width: 400px;
         margin-bottom: 0;
         padding-bottom: 0;
         align-self: flex-end;
-        // background-color: white;
+        transform-origin: bottom;
+        transform: translateX(10%);
+
+        @include breakpoint(tablet){
+            margin: 0;
+            transform: scale(1.3);
+        }
+
+        @include breakpoint(laptop){
+            transform: scale(1.5) translateX(5%);
+        }
+
+        @include breakpoint(desktop){
+            transform: scale(1.5) translateX(-60px);
+        }
     }
 }
 
 #gallery{
     @include soft-shadow();
-    background: $gallery url('/img/gallery/gradient.jpg') center 60%;
+    background: $gallery url('../img/gallery/gradient-2px.png') repeat-x;
+    background-image: linear-gradient(
+                        135deg,
+                        $gallery 0%,
+                        $gallery-alt 100%);
     height: auto;
     padding-bottom: 140px;
 
@@ -222,10 +274,12 @@ $accent: $central; // Defining accent color
     .photos{
         @include aspect-ratio(16 9);
         @include soft-shadow();
+        position: relative;
         margin: 0;
         width: auto;
         max-width: 1080px;
-        background: $xtly;
+        background: $white url('/img/photography.jpg');
+        background-size: contain;
         z-index: 10;
 
         @include breakpoint(laptop){
@@ -234,6 +288,35 @@ $accent: $central; // Defining accent color
 
         @include breakpoint(desktop){
             margin: 0 10% 0 45%;
+        }
+
+        a{
+            background: $black;
+            opacity: 0;
+        }
+
+        &::after{
+            content: 'view on 500px.com';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: $white;
+            font-family: $heading;
+            padding: 10px 15px;
+            background: $xtly;
+            border-radius: 6px 0 0;
+            opacity: .7;
+            z-index: 100;
+        }
+
+        &:hover{
+            a{
+                opacity: .4;
+            }
+
+            &::after{
+                opacity: 1;
+            }
         }
     }
 }

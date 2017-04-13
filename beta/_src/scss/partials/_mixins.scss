@@ -69,8 +69,7 @@
 			}
 
 			.feature-desc{
-				background: $color url('../img/#{$name}/gradient.jpg') no-repeat;
-                background-size: cover;
+                background-size: contain;
                 margin: 0;
 
 				@include breakpoint(laptop){
