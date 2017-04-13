@@ -62,7 +62,8 @@
 			margin: 0;
         }
 
-        h1, h2{
+        h1,
+		h2{
             padding-top: 100px;
 
             @include breakpoint(tablet){
@@ -96,211 +97,199 @@
 
 body{
     overflow-x: hidden;
+}
 
-    // Default Project Styles
-    .proj{
-        z-index: 1;
-        color: $white;
+.overlay-trigger{
+    display: none;
 
-        *{
-            transition: .8s all $project-easing;
+	.home &{
+		display: block;
+		width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 999;
+	}
+}
+
+// Default Project Styles
+.proj{
+    z-index: 1;
+    color: $white;
+
+    *{
+        transition: .8s all $project-easing;
+    }
+
+    .feature-container{
+        position: relative;
+        overflow: hidden;
+
+        @include breakpoint(tablet){
+            overflow: visible;
+        }
+    }
+
+    .feature-desc{
+        @include soft-shadow();
+        padding: 0 64px 300px;
+        border-radius: 0;
+        display: flex;
+        flex-flow: column wrap;
+
+        @include breakpoint(tablet){
+            padding: 0 104px 50px 86px;
+            min-height: 0;
         }
 
-        .feature-container{
-            position: relative;
-            overflow: hidden;
-
-            @include breakpoint(tablet){
-                overflow: visible;
-            }
+        @include breakpoint(laptop){
+            padding: 0 104px 0 86px;
+            border-radius: 8px;
         }
+    }
 
+    h1,
+    h2{
+        padding-top: 64px;
+		font-family: $heading;
+		font-size: 1.8em;
+		font-weight: $bold;
+		text-transform: uppercase;
+		margin: 0;
+		letter-spacing: 2px;
+        z-index: 10;
+
+		@include breakpoint(tablet){
+			font-size: 2em;
+		}
+    }
+
+    h3{
+		padding-top: 32px;
+		font-weight: $reg;
+		font-size: 1.1em;
+		letter-spacing: 1.5px;
+		width: 100%;
+		margin: 0;
+        z-index: 10;
+
+		@include breakpoint(tablet){
+			font-size: 1.2em;
+			width: 70%;
+			max-width: 380px;
+		}
+	}
+
+    .button-container{
+		padding: 0;
+		text-align: left;
+
+        @include breakpoint(tablet){
+            padding-top: 24px;
+			padding-bottom: 52px;
+        }
+	}
+
+    .feature-image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .image-container{
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        picture{
+            width: 100%;
+		}
+
+        img,
+		source{
+            width: 100%;
+            border-radius: 4px;
+            z-index: 100;
+            transform-origin: center bottom;
+        }
+    }
+
+    // Right Aligned Image Projects
+    &.r{
+        .feature-image{
+            text-align: right;
+        }
+    }
+
+    // Left Aligned Image Projects
+    &.l{
         .feature-desc{
-            @include soft-shadow();
-            padding: 0 64px 300px;
-            border-radius: 0;
-            display: flex;
-            flex-flow: column wrap;
+            text-align: right;
+            align-items: flex-end;
 
             @include breakpoint(tablet){
-                padding: 0 104px 50px 86px;
-                min-height: 0;
+                padding: 0 86px 50px 104px;
             }
 
             @include breakpoint(laptop){
-                padding: 0 104px 0 86px;
-                border-radius: 8px;
+                padding: 0 86px 0 104px;
             }
-        }
-
-        h1,
-        h2{
-            padding-top: 64px;
-			font-family: $heading;
-			font-size: 1.8em;
-			font-weight: $bold;
-			text-transform: uppercase;
-			margin: 0;
-			letter-spacing: 2px;
-            z-index: 10;
-
-			@include breakpoint(tablet){
-				font-size: 2em;
-			}
-        }
-
-        h3{
-			padding-top: 32px;
-			font-weight: $reg;
-			font-size: 1.1em;
-			letter-spacing: 1.5px;
-			width: 100%;
-			margin: 0;
-            z-index: 10;
-
-			@include breakpoint(tablet){
-				font-size: 1.2em;
-				width: 70%;
-				max-width: 380px;
-			}
 		}
 
         .button-container{
-			padding: 0;
-			text-align: left;
-
-            @include breakpoint(tablet){
-                padding-top: 24px;
-				padding-bottom: 52px;
-            }
-		}
+            text-align: right;
+        }
 
         .feature-image{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 0;
-        }
-
-        .image-container{
-            display: inline-block;
-            position: relative;
-            top: 0;
-            left: 0;
-
-            picture{
-                width: 100%;
-
-                img, source{
-                    width: 100%;
-                    border-radius: 4px;
-                    z-index: 100;
-                    transform-origin: center bottom;
-                }
-            }
-        }
-
-        // Right Aligned Image Projects
-        &.r{
-            .feature-image{
-                text-align: right;
-            }
-        }
-
-        // Left Aligned Image Projects
-        &.l{
-            .feature-desc{
-                text-align: right;
-                align-items: flex-end;
-
-                @include breakpoint(tablet){
-                    padding: 0 86px 50px 104px;
-                }
-                @include breakpoint(laptop){
-                    padding: 0 86px 0 104px;
-                }
-
-                .button-container{
-                    text-align: right;
-                }
-            }
-
-            .feature-image{
-                text-align: left;
-            }
+            text-align: left;
         }
     }
+}
 
-    //// SIM Styles
-    @include project('sim', $sim, 32%, 8%);
+//// SIM Styles
+@include project('sim', $sim, 32%, 8%);
 
-    #sim{
-        @include breakpoint(tablet){
-            padding-bottom: 330px;
-        }
-
-        .image-container{
-            right: auto;
-            top: auto;
-            left: 25%;
-            bottom: -50px;
-
-            @include breakpoint(tablet){
-                left: 25%;
-				bottom: -200px;
-            }
-
-            @include breakpoint(laptop){
-                left: -3%;
-				bottom: -220px;
-            }
-
-            @include breakpoint(desktop){
-                left: -10%;
-				bottom: -220px;
-            }
-
-            img{
-                @include breakpoint(laptop){
-                    transform: scale(1.05);
-                }
-
-                @include breakpoint(desktop){
-                    transform: scale(1.1);
-                }
-            }
-        }
+#sim{
+    @include breakpoint(tablet){
+        padding-bottom: 330px;
     }
 
-    &.transition--sim #sim, &.sim .proj#sim{
-        @include project-transition();
+	.feature-desc{
+	    background: $sim url('../img/sim/gradient-2px.png') repeat-y;
+	    background-image: linear-gradient(
+	                        130deg,
+	                        $sim 20%,
+	                        $sim-alt 80%);
+	}
+
+    .image-container{
+        right: auto;
+        top: auto;
+        left: 25%;
+        bottom: -50px;
 
         @include breakpoint(tablet){
-            padding-bottom: 0;
+            left: 25%;
+			bottom: -200px;
         }
 
-        .image-container{
-            left: 25%;
-            bottom: -60px;
+        @include breakpoint(laptop){
+            left: -3%;
+			bottom: -220px;
+        }
 
-            @include breakpoint(tablet){
-                left: 20%;
-				bottom: -220px;
-            }
-
-            @include breakpoint(laptop){
-                left: 60px;
-            }
-
-            @include breakpoint(desktop){
-                left: 0;
-            }
+        @include breakpoint(desktop){
+            left: -10%;
+			bottom: -220px;
         }
 
         img{
-            @include breakpoint(tablet){
-                transform: scale(1);
+            @include breakpoint(laptop){
+                transform: scale(1.05);
             }
 
             @include breakpoint(desktop){
@@ -308,231 +297,309 @@ body{
             }
         }
     }
+}
 
-    @include project('xtly', $xtly, 16%, 24%);
-    #xtly{
+.transition--sim #sim,
+.sim .proj#sim{
+    @include project-transition();
+
+    @include breakpoint(tablet){
+        padding-bottom: 0;
+    }
+
+    .image-container{
+        left: 25%;
+        bottom: -60px;
+
         @include breakpoint(tablet){
-            padding-bottom: 200px;
+            left: 20%;
+			bottom: -220px;
         }
+
         @include breakpoint(laptop){
-            padding-bottom: 60px;
+            left: 60px;
         }
 
-        .image-container{
-            width: 300px;
-            right: auto;
-            top: auto;
-            left: -60px;
-            bottom: -200px;
-            @include breakpoint(tablet){
-                left: -80px; bottom: 30px;
-            }
-
-            @include breakpoint(laptop){
-                left: 2%; bottom: 30px;
-            }
-
-            @include breakpoint(desktop){
-                left: 10%;
-            }
-            img{
-                @include breakpoint(laptop){
-                    transform:scale(1.05);
-                }
-                @include breakpoint(desktop){
-                    transform:scale(1.1);
-                }
-            }
+        @include breakpoint(desktop){
+            left: 0;
         }
     }
-    &.transition--xtly #xtly, &.xtly .proj#xtly{
-        @include project-transition();
-        .image-container{
-            left: -90px; bottom: -200px;
-            @include breakpoint(tablet){
-                left: 0; bottom: -250px;
-            }
-            @include breakpoint(laptop){
-                left: 0; bottom: -300px;
-            }
-            @include breakpoint(desktop){
-                left: 0; bottom: -300px;
-            }
+
+    img{
+        @include breakpoint(tablet){
+            transform: scale(1);
         }
+
+        @include breakpoint(desktop){
+            transform: scale(1.1);
+        }
+    }
+}
+
+@include project('xtly', $xtly, 16%, 24%);
+
+#xtly{
+    @include breakpoint(tablet){
+        padding-bottom: 200px;
+    }
+
+    @include breakpoint(laptop){
+        padding-bottom: 60px;
+    }
+
+	.feature-desc{
+	    background: $xtly url('../img/xtly/gradient-2px.png') repeat-y;
+	    background-image: linear-gradient(
+	                        -65deg,
+	                        $xtly 20%,
+	                        $xtly-alt 70%);
+	}
+
+    .image-container{
+        width: 300px;
+        right: auto;
+        top: auto;
+        left: -60px;
+        bottom: -200px;
+
+        @include breakpoint(tablet){
+            left: -80px;
+			bottom: 30px;
+        }
+
+        @include breakpoint(laptop){
+            left: 2%;
+			bottom: 30px;
+        }
+
+        @include breakpoint(desktop){
+            left: 10%;
+        }
+
         img{
-            @include breakpoint(tablet){
-                transform: scale(0.8);
-            }
             @include breakpoint(laptop){
-                transform: scale(1.00);
+                transform: scale(1.05);
             }
+
             @include breakpoint(desktop){
-                transform: scale(1.00);
+                transform: scale(1.1);
             }
         }
     }
+}
 
-    @include project('central', $central, 32%, 8%);
-    #central{
+.transition--xtly #xtly,
+.xtly .proj#xtly{
+    @include project-transition();
+
+    .image-container{
+        left: -90px;
+		bottom: -200px;
+
         @include breakpoint(tablet){
-            padding-bottom: 280px;
+            left: 0;
+			bottom: -250px;
         }
 
-        .feature-image{
-            .image-container{
-                width: 600px;
-                left: auto;
-                top: auto;
-                right: -100px;
-                bottom: -100px;
-
-                @include breakpoint(tablet){
-                    right: -25%; bottom: -180px;
-                }
-
-                @include breakpoint(laptop){
-                    right: -140px;
-                }
-
-                @include breakpoint(desktop){
-                    right: 20px;
-                }
-
-                img{
-                    @include breakpoint(laptop){
-                        transform: scale(1.05);
-                    }
-                    @include breakpoint(desktop){
-                        transform: scale(1.1);
-                    }
-                }
-            }
+        @include breakpoint(laptop){
+            left: 0;
+			bottom: -300px;
         }
-    }
-    &.transition--central #central, &.central .proj#central{
-        @include project-transition();
-        .feature-image{
-            .image-container{
-                // right: 0; bottom: -16vw;
-                @include breakpoint(tablet){
-                    right: -280px; bottom: -200px;
-                }
-                @include breakpoint(laptop){
-                    right: -220px;
-                }
-                @include breakpoint(desktop){
-                    right: -20px;
-                }
 
-                @include breakpoint(98em){
-                    right: 0;
-                }
-            }
-            img{
-                transform: scale(1.2);
-                @include breakpoint(tablet){
-                    transform: scale(1);
-                }
-                @include breakpoint(laptop){
-                    transform: scale(1.00);
-                }
-                @include breakpoint(desktop){
-                    transform: scale(1.00);
-                }
-            }
+        @include breakpoint(desktop){
+            left: 0;
+			bottom: -300px;
         }
     }
 
-    @include project('puppy', $puppy, 24%, 16%);
-    #puppy{
+    img{
         @include breakpoint(tablet){
-            padding-bottom: 100px;
+            transform: scale(.8);
         }
-        .feature-image{
-            .image-container{
-                width: 240px;
-                right: auto; top: auto;
-                left: -60px; bottom: -140px;
 
-                @include breakpoint(tablet){
-                    left: -100px; bottom: 30px;
-                }
-                @include breakpoint(laptop){
-                    left: 0; bottom: 30px;
-                }
-                @include breakpoint(desktop){
-                    left: 6%;
-                }
-                img{
-                    @include breakpoint(laptop){
-                        transform:scale(1.05);
-                    }
-                    @include breakpoint(desktop){
-                        transform:scale(1.1);
-                    }
-                }
-            }
+        @include breakpoint(laptop){
+            transform: scale(1);
         }
-    }
-    &.transition--puppy #puppy, &.puppy .proj#puppy{
-        @include project-transition();
-        .feature-image{
-            .image-container{
-                left: -90px; bottom: -200px;
-                @include breakpoint(tablet){
-                    left: 0; bottom: -250px;
-                }
-                @include breakpoint(laptop){
-                    left: 0; bottom: -300px;
-                }
-                @include breakpoint(desktop){
-                    left: 0; bottom: -300px;
-                }
-            }
-            img{
-                @include breakpoint(tablet){
-                    transform: scale(0.8);
-                }
-                @include breakpoint(laptop){
-                    transform: scale(1.00);
-                }
-                @include breakpoint(desktop){
-                    transform: scale(1.05);
-                }
-            }
+
+        @include breakpoint(desktop){
+            transform: scale(1);
         }
     }
 }
 
-// EXPERIMENTAL CSS GRADIENTS
-#sim .feature-desc{
-    background: $sim url('../img/sim/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        130deg,
-                        $sim 20%,
-                        $sim-alt 80%);
+@include project('central', $central, 32%, 8%);
+
+#central{
+    @include breakpoint(tablet){
+        padding-bottom: 280px;
+    }
+
+	.feature-desc{
+	    background: $central url('../img/central/gradient-2px.png') repeat-y;
+	    background-image: linear-gradient(
+	                        115deg,
+	                        $central 20%,
+	                        $central-alt 80%);
+	}
+
+    .image-container{
+        width: 600px;
+        left: auto;
+        top: auto;
+        right: -100px;
+        bottom: -100px;
+
+        @include breakpoint(tablet){
+            right: -25%;
+			bottom: -180px;
+        }
+
+        @include breakpoint(laptop){
+            right: -140px;
+        }
+
+        @include breakpoint(desktop){
+            right: 20px;
+        }
+
+        img{
+            @include breakpoint(laptop){
+                transform: scale(1.05);
+            }
+
+            @include breakpoint(desktop){
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
-#xtly .feature-desc{
-    background: $xtly url('../img/xtly/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        -65deg,
-                        $xtly 20%,
-                        $xtly-alt 70%);
+.transition--central #central,
+.central .proj#central{
+    @include project-transition();
+
+    .image-container{
+        // right: 0; bottom: -16vw;
+        @include breakpoint(tablet){
+            right: -280px;
+			bottom: -200px;
+        }
+
+        @include breakpoint(laptop){
+            right: -220px;
+			bottom: -200px;
+        }
+
+        @include breakpoint(desktop){
+            right: -20px;
+			bottom: -200px;
+        }
+
+        @include breakpoint(98em){
+            right: 0;
+			bottom: -200px;
+        }
+    }
+
+    img{
+        transform: scale(1.2);
+
+        @include breakpoint(tablet){
+            transform: scale(1);
+        }
+
+        @include breakpoint(laptop){
+            transform: scale(1);
+        }
+
+        @include breakpoint(desktop){
+            transform: scale(1);
+        }
+    }
 }
 
-#central .feature-desc{
-    background: $central url('../img/central/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        115deg,
-                        $central 20%,
-                        $central-alt 80%);
+@include project('puppy', $puppy, 24%, 16%);
+
+#puppy{
+    @include breakpoint(tablet){
+        padding-bottom: 100px;
+    }
+
+	.feature-desc{
+	    background: $puppy url('../img/puppy/gradient-2px.png') repeat-y;
+	    background-image: linear-gradient(
+	                        -75deg,
+	                        $puppy 20%,
+	                        $puppy-alt 80%);
+	}
+
+    .image-container{
+        width: 240px;
+        right: auto;
+		top: auto;
+        left: -60px;
+		bottom: -140px;
+
+        @include breakpoint(tablet){
+            left: -100px;
+			bottom: 30px;
+        }
+
+        @include breakpoint(laptop){
+            left: 0;
+        }
+
+        @include breakpoint(desktop){
+            left: 6%;
+        }
+
+        img{
+            @include breakpoint(laptop){
+                transform: scale(1.05);
+            }
+
+            @include breakpoint(desktop){
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
-#puppy .feature-desc{
-    background: $puppy url('../img/puppy/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        -75deg,
-                        $puppy 20%,
-                        $puppy-alt 80%);
+.transition--puppy #puppy,
+.puppy .proj#puppy{
+    @include project-transition();
+
+    .image-container{
+        left: -90px;
+		bottom: -200px;
+
+        @include breakpoint(tablet){
+			left: 0;
+			bottom: -250px;
+        }
+
+        @include breakpoint(laptop){
+			left: 0;
+			bottom: -300px;
+        }
+
+        @include breakpoint(desktop){
+            left: 0;
+			bottom: -300px;
+        }
+    }
+
+    img{
+        @include breakpoint(tablet){
+            transform: scale(.8);
+        }
+
+        @include breakpoint(laptop){
+            transform: scale(1);
+        }
+
+        @include breakpoint(desktop){
+            transform: scale(1.05);
+        }
+    }
 }

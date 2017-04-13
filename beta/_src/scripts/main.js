@@ -1,91 +1,24 @@
-// Nvenk Specific functions
-var DEBUG = false;
+var DEBUG = true;
 var size = "";
 var SCROLLSPEED = 600;
-
-function checkSize() {
-    var prop = $(".responsive-beacon").css("width");
-
-    if (prop == "10px") {
-        size = "mobile";
-    } else if (prop == "20px") {
-        size = "tablet";
-    } else if (prop == "30px") {
-        size = "laptop";
-    } else if (prop == "40px") {
-        size = "desktop";
-    }
-
-    if (DEBUG) console.log("Media = " + size);
-
-    return size;
-}
-
-// Trigger Transitions
-function trigger(id, scrollOffset) {
-    var btn = '.trigger--' + id;
-
-    $(btn).click(function(e) {
-        e.preventDefault();
-
-        $('body').addClass('transition');
-        $('body').addClass('transition--' + id);
-
-        $('html, body').animate({
-            scrollTop: $("#" + id).offset().top - scrollOffset
-        }, SCROLLSPEED);
-
-        var href = $(btn).attr('href');
-
-        if (href === undefined) href = $(btn).attr('data-href');
-
-        if (DEBUG) console.log(href);
-
-        setTimeout(function() {
-            window.location = href;
-        }, 800);
-    });
-}
-
+// var data = $.getJSON('./_src/data.json');
 var tList = ['about', 'sim', 'xtly', 'central', 'puppy'];
 
-// jQuery SmoothScroll for Nav Link
-$(function() {
-    $('nav a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, SCROLLSPEED);
-                setTimeout(function() {
-                    $('#nav').removeClass('nav-is-visible');
-                }, 100);
-                return false;
-            }
-        }
-    });
-});
+// Navigation variables
+var nav = $('#nav');
+var navTrigger = $('.nav-trigger');
+
 
 $(document).ready(function() {
-    // Add Media Tag
+    // Add Media Tag if DEBUG flag is true
     if (DEBUG) $('body').prepend('<div class="media-tag"></div>');
 
-    // Triangle BG
-
-    // if($('body').hasClass('home')) {
-    //     window.onload = onLoad;
-    //     window.onresize = onResize;
-    // }
-
-    // Initial Run
-    var cSize = checkSize();
-
+    // Initialize the Trigger Animations
     for (i = 0; i < tList.length; i++) {
         trigger(tList[i], 0);
     }
 
+    // Enable Smooth Scrolling to the top of the page if 'Home' is clicked on homepage
     if ($('body').hasClass('home')) {
         $('.home-link').on('click', function(e){
             e.preventDefault();
@@ -96,50 +29,41 @@ $(document).ready(function() {
         });
     }
 
-    // ON RESIZE
-    $(window).smartresize(function() {
-        newSize = checkSize();
-
-        // Trigger Code only when size changes.
-        if (newSize != cSize) {
-            cSize = newSize;
-            if (DEBUG) console.log("Media = " + cSize);
-        }
-    });
-
-    // Navigation
-    var nav = $('#nav');
-    var navTrigger = $('.nav-trigger');
-
+    // Navigation - Open Nav when trigger is clicked
     navTrigger.on('click', function(event) {
         event.preventDefault();
         nav.toggleClass("nav-is-visible");
     });
 
+    // Navigation - Hide Nav when user is not at the page top
     if ($(window).scrollTop() < 100) {
         nav.addClass('nav-at-top');
     } else {
         nav.addClass('nav-not-at-top');
     }
 
-    // Scroll Triggers
+    /*
 
-    $(window).on('scroll', {
-            previousTop: 0
-        },
-        function() {
+        ON SCROLL
+
+    */
+
+    $(window).on('scroll', { previousTop: 0 }, function() {
             var currentTop = $(window).scrollTop();
 
             if (currentTop < 100) {
                 nav.addClass('nav-at-top');
                 nav.removeClass('nav-not-at-top');
+
                 if (cSize != "mobile") {
                     nav.removeClass('nav-is-visible');
                 }
+
             } else {
                 nav.removeClass('nav-at-top');
                 nav.addClass('nav-not-at-top');
             }
+
             /*
 
             //check if user is scrolling up
@@ -160,4 +84,29 @@ $(document).ready(function() {
         }
     );
 
+    // Triangle BG
+    // if($('body').hasClass('home')) {
+    //     window.onload = onLoad;
+    //     window.onresize = onResize;
+    // }
+
+
+    /*
+
+        RESPONSIVE MEDIA CLASSES
+
+    */
+
+    var cSize = checkSize();
+
+    // ON RESIZE
+    $(window).smartresize(function() {
+        newSize = checkSize();
+
+        // Trigger Code only when size changes.
+        if (newSize != cSize) {
+            cSize = newSize;
+            if (DEBUG) console.log("Media = " + cSize);
+        }
+    });
 });

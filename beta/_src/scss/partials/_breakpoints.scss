@@ -7,20 +7,15 @@
 @mixin breakpoint($break-width) {
   @if $break-width == mobile-sm {
     @media (min-width: $screen-mob-sm) { @content; }
-  }
-  @else if $break-width == mobile {
+  } @else if $break-width == mobile {
     @media (min-width: $screen-mob) { @content; }
-  }
-  @else if $break-width == tablet {
+  } @else if $break-width == tablet {
     @media (min-width: $screen-tablet) { @content; }
-  }
-  @else if $break-width == laptop {
+  } @else if $break-width == laptop {
     @media (min-width: $screen-laptop) { @content; }
-  }
-  @else if $break-width == desktop {
+  } @else if $break-width == desktop {
     @media (min-width: $screen-desktop) { @content; }
-  }
-  @else {
+  } @else {
     @media (min-width: $break-width) { @content; }
   }
 }
