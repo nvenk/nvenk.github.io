@@ -12,10 +12,6 @@
         color: $project;
     }
 
-    // .project-details div{
-    //     background: $project;
-    // }
-
     .content-image .picture-tag{
         color: $project;
     }
@@ -416,6 +412,14 @@ picture source{
             @include video-embed(16 9);
             margin: 0 auto;
             max-width: 1080px;
+        }
+    }
+
+    #testing, #design-01{
+        .content-image{
+            @include breakpoint(laptop){
+                max-width: 500px;
+            }
         }
     }
 
