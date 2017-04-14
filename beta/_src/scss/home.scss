@@ -13,9 +13,9 @@ section:not(#about) { // Default transition for sections that are disappearing.
 .projects{
     padding-top: 0;
 
-    @include breakpoint(tablet){
-        padding-top: 128px;
-    }
+    // @include breakpoint(tablet){
+    //     padding-top: 128px;
+    // }
 }
 
 #about {

@@ -34,7 +34,6 @@
 }
 
 @mixin project-transition() {
-    padding-bottom: 0;
 
     .feature-container{
         max-width: 100%;
@@ -97,6 +96,12 @@
 
 body{
     overflow-x: hidden;
+}
+
+body:not(.home){
+	.proj.header{
+		padding-bottom: 40px !important;
+	}
 }
 
 .overlay-trigger{
@@ -302,10 +307,6 @@ body{
 .transition--sim #sim,
 .sim .proj#sim{
     @include project-transition();
-
-    @include breakpoint(tablet){
-        padding-bottom: 0;
-    }
 
     .image-container{
         left: 25%;
@@ -602,4 +603,12 @@ body{
             transform: scale(1.05);
         }
     }
+}
+
+// Overrides for nextUp
+.next-up{
+
+	.feature-container{
+		padding-top: 0 !important;
+	}
 }

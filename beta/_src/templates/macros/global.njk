@@ -1,11 +1,11 @@
 
 {# PROJECT TILES #}
-{% macro project(name='proj', direction='r', headerText='headerText - Project Title', tagline='tagline - Project Tagline goes here', url='#') %}
+{% macro project(name='proj', direction='r', title='title - Project Title', tagline='tagline - Project Tagline goes here', url='#', header = "no") %}
 
-<section id="{{ name }}" class="proj {{ direction }}">
+<section id="{{ name }}" class="proj {{ direction }}{%if header == 'header' %} header {% endif %}">
     <div class="feature-container container">
         <div class="feature-desc">
-            <h2>{{ headerText }}</h2>
+            <h2>{{ title }}</h2>
             <h3>{{ tagline}}</h3>
             <div class="button-container">
                 <a href="{{ url }}.html" class="trigger--{{ name }} hidden-phone">Read About It</a>
