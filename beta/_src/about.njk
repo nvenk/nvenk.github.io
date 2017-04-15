@@ -3,7 +3,7 @@
 {# ----- Variables ----- #}
 {% set var = {
         styles: 'css/home.css',
-        scripts: '',
+        scripts: 'scripts/all.js',
         bodyClass: 'about'
 }%}
 {% set meta2 = {
@@ -15,17 +15,36 @@
 {# ----- Content ----- #}
 {% block content %}
 
+{% include "partials/nametag.njk" %}
+
 <section id="about">
-    <div class="container">
-        <div class="info">
-                <h1>Nikhil Venkatesh</h1>
-                <h3>Design - Animate - Code</h3>
+    <div class="about-container container flex-grid">
+        <div class="fg--cell about-info">
+                <div class="heading">Hi!</div>
+                <h1>I'm <em>Nikhil,</em></h1>
+                <h3>A <em>Product Designer</em> and <em>Animator</em> with a passion for coding. I enjoy transforming wild ideas into usable products, and believe that a little bit of delight in design goes a long way!</h3>
+                <div class="button-container">
+                    <a href="about.html" class="trigger--about">More About Me</a>
+                </div>
         </div>
-        <div class="image">
-            <div class="image-container"></div>
+        <div class="fg--cell about-image">
+            <img class="image-me" src="img/about/poly_me_8bit.png" alt="">
         </div>
     </div>
 </section>
+
+<section class="content l" id="intro">
+    <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+            <p>We've all heard the saying: <em>Dogs are man's best friend</em>. People who have had pets will understand how true this statement is. We love spending time with our dogs, but sometimes our commitments don't give us much time to give them the exercise and attention they need.</p>
+
+            <p>Most dogs need a ton of <em>physical exercise</em>, and the <em>company of other dogs</em> helps them grow up to be social and well rounded animals. Enter - PuppyHarmony. With PuppyHarmony, you can easily find and connect with other like-minded dog owners in your area to bring your dogs together to exercise, socialize and have fun!</p>
+
+            <p>I was the <em>primary designer</em> on the team, working with a project manager, a researcher and another designer.</p>
+        </div>
+    </div>
+</section>
+
 
 <section id="tempScroller"></section>
 

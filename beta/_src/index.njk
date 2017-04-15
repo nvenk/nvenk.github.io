@@ -17,18 +17,21 @@
 {% block content %}
 
 {# LANDING SCREEN #}
-<section id="about">
+<header id="about">
     <div class="about-container container flex-grid">
         <div class="fg--cell about-info">
                 <div class="heading">Hi!</div>
                 <h1>I'm <em>Nikhil,</em></h1>
                 <h3>A <em>Product Designer</em> and <em>Animator</em> with a passion for coding. I enjoy transforming wild ideas into usable products, and believe that a little bit of delight in design goes a long way!</h3>
+                <div class="button-container">
+                    <a href="about.html" class="trigger--about">More About Me</a>
+                </div>
         </div>
         <div class="fg--cell about-image">
             <img class="image-me" src="img/about/poly_me_8bit.png" alt="">
         </div>
     </div>
-</section>
+</header>
 
 {# PROJECTS #}
 <div class="projects" id="projects">
@@ -58,4 +61,15 @@
     </div>
 </section>
 
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+$(document).ready(function() {
+    $('body').addClass('intro');
+});
+</script>
 {% endblock %}
