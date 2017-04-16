@@ -1,42 +1,0 @@
-NIKHIL VENKATESH
-  Email: nikhil@nvenk.com 
-  Phone: +1 (206)739-4980 
-  Website: http://nvenk.com
-
-WORK EXPERIENCEFreelance Designer (Feb 2015 - Sept 2015)
-  Primary Clients: Fourkites Inc., Webinative Technologies  » Designed the UX, interface and visual design for web-based and mobile products.  » Built responsive websites and interfaces using Bootstrap.Character Animator (May 2011 - Feb 2015)
-  Technicolor India Pvt. Ltd., Sanraa Media Pvt. Ltd.  » Animated complex character acting and action sequences for 4 daytime-emmy award nominated television shows.    Key Clients: Dreamworks TV, Nickelodeon.UI / Graphic Design Intern (Dec 2009 - Feb 2010)
-  iNexGen Games  » Created the company’s branding and logo.  » Designed the user interface for flash based web games.Student Creative Head (Sept 2008 - Apr 2009)
-  Computer Society of India, Loyola Students Chapter  » Served as the founding creative head of the Loyola chapter.  » Created the brand identity for the chapter.  » Helped organize over 25 events and oversaw related creative efforts.EDUCATION
-
-University of Washington (2015 - 2017 Exp.)
-  Master of Science in Human Centered Design and Engineering  Seattle, United States
-
-University of New South Wales (2009 - 2010)
-  Master of Digital Media (3D Animation)  Sydney, Australia
-
-Loyola College (2006 - 2009)
-  Bachelor of Science in Computer Science
-  Chennai, IndiaSKILLSUser Experience  User-Centered Design
-  Wireframing 
-  Prototyping  Usability Testing 
-  Heuristic Evaluation 
-  Animation
-
-Programming
-  HTML5
-  CSS3
-  SASS
-  Bootstrap
-  Javascript
-  jQuery
-
-Tools
-  Adobe Creative Suite
-  Sketch  InVision  Framer Studio
-  Indigo Studio
-  Autodesk MayaAWARDS
-
-Performer of the Quarter, Q1 2015
-  for Character Animation on DreamWorks TV’s ‘The Adventures of Puss in Boots’  Technicolor India Pvt. Ltd.
-  

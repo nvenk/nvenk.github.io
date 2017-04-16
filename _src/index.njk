@@ -1,0 +1,75 @@
+{% extends "layout.njk" %}
+
+{# ----- Variables ----- #}
+{% set var = {
+        styles: 'css/home.css',
+        scripts: 'scripts/all.js',
+        bodyClass: 'home'
+}%}
+
+{% set meta2 = {
+        title: 'Nikhil Venkatesh | Product Designer',
+        desc: 'I’m a designer and animator based out of Seattle. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way!',
+        image: ''
+}%}
+
+{# ----- Content ----- #}
+{% block content %}
+
+{# LANDING SCREEN #}
+<header id="about">
+    <div class="about-container container flex-grid">
+        <div class="fg--cell about-info">
+                <div class="heading">Hi!</div>
+                <h1>I'm <em>Nikhil,</em></h1>
+                <h3>A <em>designer</em> and <em>animator</em> based out of Seattle. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way! </h3>
+                <div class="button-container">
+                    <a href="about.html" class="trigger--about">More About Me</a>
+                </div>
+        </div>
+        <div class="fg--cell about-image">
+            <img class="image-me" src="img/about/poly_me_8bit.png" alt="">
+        </div>
+    </div>
+</header>
+
+{# PROJECTS #}
+<div class="projects" id="projects">
+    {% for project in projects %}
+        {{ macro.project(project.name,
+                        project.orientation,
+                        project.title,
+                        project.subtitle,
+                        project.url
+                        ) }}
+    {% endfor %}
+</div>
+
+{# GALLERIES #}
+<section id="gallery">
+    <div class="container r-label">
+        <div class="label">ANIMATION</div>
+        <div class="video">
+            <iframe src="https://player.vimeo.com/video/94683657" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="container l-label">
+        <div class="label">PHOTOGRAPHY</div>
+        <div class="photos"><a href="https://500px.com/nikhilv" target="_blank"></a></div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+$(document).ready(function() {
+    $('body').addClass('intro');
+});
+</script>
+{% endblock %}

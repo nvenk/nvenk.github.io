@@ -1,0 +1,205 @@
+{% extends "project_layout.njk" %}
+
+{# ----- Variables ----- #}
+{% set var = {
+        styles: 'css/project.css',
+        scripts: 'scripts/all.js',
+        bodyClass: 'central',
+        nextUp: 'puppy'
+}%}
+
+{% set meta2 = {
+        title: 'Nikhil | Central Cinema',
+        desc: 'Central Cinema is a neighborhood theater in Seattle\'s Central District. Read about our process when we redesigned their web experience.',
+        image: ''
+}%}
+
+{# ----- Content ----- #}
+{% block project_content %}
+
+<section class="content" id="intro">
+    <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+            <p>We've all seen some incredible movies that were released years ago and wished we could watch them again on the big screen. This is exactly what Central Cinema is all about. Located in Seattle's Central District, Central Cinema is a neighborhood <em>beer-theatre</em>. As you enter the venue, you are hit with a sense of <em>nostaliga</em> - from the decor and the posters of cult classics on the walls, to the movies that are showing on the big screen!</p>
+
+            <p>While the service they offer is enticing, their website <em>doesn't quite reflect</em> the Central Cinema experience. We took this as an opportunity and set out to design their new website.</p>
+
+            <p>I was the <em>primary designer</em> on the team, working alongside two researchers, a content strategist and another designer.</p>
+        </div>
+
+        <div class="fg--cell project-details">
+            <div>
+                <p><em>Type</em> Academic Project</p>
+                <p><em>Role</em> UX Designer, Prototyper</p>
+                <p><em>Duration</em> 3 months (Sep 2015 - Dec 2015)</p>
+                <p><em>Responsibilities</em> UX design, Prototyping, Visual design, Supporting UX research.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content background-image" id="scope">
+    <img class="bg-image" src="img/central/scope.jpg" alt="" />
+    <div class="container text">
+        <div>
+            <p>Before jumping in to design, we wanted to understand the business, identify the business goals and define our scope.</p>
+
+            <p>We met Kevin, the owner to talk about why he runs the business, what his motivations are, and what he would like to get out of this redesign.</p>
+
+            <p>We quickly identified his primary pain point - he couldn't predict how many people were going to show up for a particular show. Most customers bought their tickets at the gate.</p>
+        </div>
+    </div>
+</section>
+
+<section class="content alt" id="users">
+    <p class="heading-1 container">The Users</p>
+    <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+            <p>Talking to Kevin gave us some great insights and ideas to improve his business, but we still didn't know what the customers wanted. Why weren't they booking tickets online? Do they even use the website? What could we do to encourage people to use the website?</p>
+            <p>To answer our questions, we followed many different methods:</p>
+            <ul class="content--list">
+                <li><em>Interviews and Surveys</em> with employees and customers helped us understand business operations and customer patterns. We were able to understand what types of customers frequented the establishment, why they used the website, and where the current website failed them.</li>
+
+                <li>A <em>Competitive Analysis</em> helped us understand what other successful businesses were doing right. We were able to identify what users needed in a theatre website, how users navigated these websites to complete tasks.</li>
+
+                <li>With a <em>Heuristic Evaluation</em>, we saw the major problems with the current website. We used this to identify the parts of the website that needed work and this helped us define the next steps in the design process.</li>
+            </ul>
+        </div>
+        <div class="fg--cell--custom">
+            <picture class="content-image">
+                <img src="img/central/existing.png" alt="Existing Central Cinema Website" />
+                <div class="picture-tag">Central Cinema's current website</div>
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="content" id="personas">
+    <p class="heading-1 container">Organizing the Content</p>
+    <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+            <p>Some things were immediately clear. The website definitely needed better navigation and content organization. Customers found the ticket booking experience clunky and confusing, and many of them had <em>given up</em> after trying to book tickets online.</p>
+
+            <p>To solve the information architecture problem, we conducted a card sort. We used <em>Optimal Sort</em>, an online card sorting tool that the users could access from home. This helped us get to Central Cinema's actual customers and get much more participants in a really short span of time.</p>
+
+            <p class="hidden-mobile hidden-tablet">Since Central Cinema is a very small local business, we didn't have access to as many actual customers as we would have liked. We didn't want our design to wander, so we created two <em>personas to help us stay aligned</em> to the type of customers who come to Central Cinema.</p>
+        </div>
+
+        <div class="fg--cell--custom">
+            <picture class="content-image">
+                <img src="img/central/persona.jpg" alt="Central Cinema Personas" />
+                <div class="picture-tag">Personas helped us stay focused on the user without actually talking to them.</div>
+            </picture>
+        </div>
+    </div>
+    <div class="flex-grid container visible-mobile visible-tablet">
+        <div class="fg--cell content--text center">
+            <p>Since Central Cinema is a very small local business, we didn't have access to as many actual customers as we would have liked. We didn't want our design to wander, so we created two <em>personas to help us stay aligned</em> to the type of customers who come to Central Cinema.</p>
+        </div>
+
+        <div class="fg--cell--custom buffer"></div>
+    </div>
+</section>
+
+<section class="content alt">
+    <p class="heading-1 container">Design & Prototyping</p>
+    <p>
+         Add image here about the design process
+    </p>
+</section>
+
+<section class="content background-image" id="design-01">
+    <img class="bg-image" src="img/central/whiteboard01.jpg" alt="" />
+    <div class="flex-grid container text">
+        <div class="fg--cell content--text">
+            <p>We took the results from the card sort and created a Sitemap to guide our initial designs. It was time to pick up the sharpies!</p>
+
+            <p>As an ideation exercise, we each decided to sketch out our vision for the website design should be. Keeping some key areas in mind - like the calendar, the homepage and the ticket booking experience, we each created what were essentially paper prototypes.</p>
+
+            <p>Having these sketches gave us a great platform to build upon. We picked out specific features from each prototype that we all thought worked best - these would make it to our first test-ready prototype.</p>
+        </div>
+        <div class="fg--cell buffer-laptop"></div>
+    </div>
+</section>
+
+<section class="content image-rt" id="design-02">
+    <div class="flex-grid container">
+        <div class="fg--cell--custom">
+            <picture class="content-image prototype">
+                <div class="prototype-tag">
+                    <a href="https://app.atomic.io/d/MDLT290nAzUp" target="_blank"><img src="img/central/firstPrototype.jpg" alt="Our first Central Cinema prototype" /></a>
+                </div>
+                <div class="picture-tag">Our first prototype - built with Atomic.io</div>
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="content" id="design-03">
+    <div class="flex-grid container">
+        <div class="fg--cell buffer-laptop"></div>
+        <div class="fg--cell content--text center">
+            <p>I used <em>Atomic.io</em> to create a prototype that demonstrates the basic features of our redesign. We wanted to know if our users had any trouble with the <em>essential tasks</em> - looking up show timings, checking out the food and drinks menu, and booking tickets online.</p>
+
+            <p>To make sure we were on the right track and validate our design, we decided to test our prototype with a few users to get a quick round of feedback and see what we were doing right. Our <em>usability tests</em> threw up a mixed bag of results. We did a lot of things right, but there was definitely room for improvement!</p>
+
+            <ul class="content--list">
+                <li>All the users were able to successfully book a ticket on the new website!</li>
+
+                <li>The <em>infromation architecture</em> was already much better than the previous website.</li>
+
+                <li><em>Details about the ticket pricing</em> weren't communicated effectively, leading to some confusion.</li>
+
+                <li>Some users expressed concern about using a <em>modal window</em> to book tickets, as it felt insecure.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="content alt" id="design-04">
+    <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+            <p>Testing the prototype with users opened up another door for us. It gave us the opportunity to talk to them directly about their <em>perception of the Central Cinema brand</em>. With all the data we had about the functionality of the prototype and their brand perception, we were ready to create a new prototype - bumping up the fidelity and throwing in some visual design.</p>
+
+            <p>This time, I used <em>Framer Studio</em>. Framer is really flexible, allowing me to define custom interaction instead of relying on basic predefined ones.</p>
+
+            <p>For the visual pass, I focused primarily on one term that came up repeatedly during our interactions with the users - <em>Nostalgia</em>. I took inspiration from old movie theatres and '80s cinema to develop a style that resonated with Central Cinema.</p>
+        </div>
+        <div class="fg--cell--custom">
+            <picture class="content-image prototype">
+                <div class="prototype-tag">
+                    <a href="http://share.framerjs.com/om3n2a5zwl70/" target="_blank"><img src="img/central/framerPrototype.jpg" alt="Our final Central Cinema prototype" /></a>
+                </div>
+                <div class="picture-tag">Our final prototype - built using Framer Studio</div>
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="content" id="design-04">
+    <p class="heading-1 container">RESULT</p>
+    <div class="flex-grid container">
+        <div class="fg--cell content--text center">
+            <p>RESULTS</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script id="scrollInit">
+    var SMcontroller = new ScrollMagic.Controller(); // addIndicators: true
+    var imageSegments = ["scope", "design-01"];
+
+    $.each(imageSegments, function() {
+        new ScrollMagic.Scene({
+            triggerElement: '#' + this,
+            offset : 10,
+            triggerHook: 0.3
+        })
+        .setClassToggle('#' + this, 'scrollfX')
+        .addTo(SMcontroller);
+    });
+</script>
+{% endblock %}

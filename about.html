@@ -32,7 +32,7 @@
     <script src="scripts/lib/scroll-restoration-polyfill.browser.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Source+Sans+Pro:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/home.css" /> </head>
-  <body class="home ">
+  <body class="about ">
     <script>
       if (document.getElementsByTagName('body')[0].className == "home")
       {
@@ -76,7 +76,17 @@
         </a>
       </div>
     </nav>
-    <header id="about">
+    <div class="nametag">
+      <div class="container">
+        <a href="/">
+          <h6>Nikhil Venkatesh
+            <span class="divider hidden-phone">&nbsp;</span>
+            <span class="title hidden-phone">Product Designer</span>
+          </h6>
+        </a>
+      </div>
+    </div>
+    <section id="about">
       <div class="about-container container flex-grid">
         <div class="fg--cell about-info">
           <div class="heading">Hi!</div>
@@ -84,8 +94,8 @@
             <em>Nikhil,</em>
           </h1>
           <h3>A
-            <em>designer</em> and
-            <em>animator</em> based out of Seattle. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way! </h3>
+            <em>Designer</em> and
+            <em>Animator</em> based out of Seattle. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way! </h3>
           <div class="button-container">
             <a href="about.html" class="trigger--about">More About Me</a>
           </div>
@@ -93,95 +103,66 @@
         <div class="fg--cell about-image">
           <img class="image-me" src="img/about/poly_me_8bit.png" alt=""> </div>
       </div>
-    </header>
-    <div class="projects" id="projects">
-      <section id="sim" class="proj r">
-        <div class="feature-container container">
-          <div class="feature-desc">
-            <h2>SIM: The Social Robot</h2>
-            <h3>Designing for affective Human-Robot Interaction</h3>
-            <div class="button-container">
-              <a href="sim.html" class="trigger--sim hidden-phone">Read About It</a>
-            </div>
-          </div>
-          <div class="feature-image">
-            <div class="image-container container">
-              <picture>
-                <img src="img/sim/feature.png" alt="" /> </picture>
-            </div>
-          </div>
-        </div>
-        <a href="sim.html" class="trigger--sim overlay-trigger visible-phone"></a>
-      </section>
-      <section id="xtly" class="proj l">
-        <div class="feature-container container">
-          <div class="feature-desc">
-            <h2>Xactly Incent</h2>
-            <h3>Helping the sales force stay informed about their goals</h3>
-            <div class="button-container">
-              <a href="xactly.html" class="trigger--xtly hidden-phone">Read About It</a>
-            </div>
-          </div>
-          <div class="feature-image">
-            <div class="image-container container">
-              <picture>
-                <img src="img/xtly/feature.png" alt="" /> </picture>
-            </div>
-          </div>
-        </div>
-        <a href="xactly.html" class="trigger--xtly overlay-trigger visible-phone"></a>
-      </section>
-      <section id="central" class="proj r">
-        <div class="feature-container container">
-          <div class="feature-desc">
-            <h2>Central Cinema</h2>
-            <h3>Redesigning the web experience for a local beer-theatre</h3>
-            <div class="button-container">
-              <a href="central-cinema.html" class="trigger--central hidden-phone">Read About It</a>
-            </div>
-          </div>
-          <div class="feature-image">
-            <div class="image-container container">
-              <picture>
-                <img src="img/central/feature.png" alt="" /> </picture>
-            </div>
-          </div>
-        </div>
-        <a href="central-cinema.html" class="trigger--central overlay-trigger visible-phone"></a>
-      </section>
-      <section id="puppy" class="proj l">
-        <div class="feature-container container">
-          <div class="feature-desc">
-            <h2>PuppyHarmony</h2>
-            <h3>Helping your furry friends find the perfect playdate</h3>
-            <div class="button-container">
-              <a href="puppy-harmony.html" class="trigger--puppy hidden-phone">Read About It</a>
-            </div>
-          </div>
-          <div class="feature-image">
-            <div class="image-container container">
-              <picture>
-                <img src="img/puppy/feature.png" alt="" /> </picture>
-            </div>
-          </div>
-        </div>
-        <a href="puppy-harmony.html" class="trigger--puppy overlay-trigger visible-phone"></a>
-      </section>
-    </div>
-    <section id="gallery">
-      <div class="container r-label">
-        <div class="label">ANIMATION</div>
-        <div class="video">
-          <iframe src="https://player.vimeo.com/video/94683657" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
-        </div>
-      </div>
-      <div class="container l-label">
-        <div class="label">PHOTOGRAPHY</div>
-        <div class="photos">
-          <a href="https://500px.com/nikhilv" target="_blank"></a>
-        </div>
+    </section>
+    <section class="profile-img-container">
+      <div class="profile-image">
+        <img src="img/about/profile.jpg" alt="Nikhil is smiling in this picture" /> </div>
+    </section>
+    <section class="text container">
+      <p class="name">Hi, I'm
+        <em>Nikhil</em>
+      </p>
+      <p>I’m a
+        <em>designer</em> and
+        <em>animator</em>, based out of the beautiful pacific northwest.</p>
+      <p>Born in India in 1989, I’ve had a passion for animation as long as I can remember. That passion turned into a career animating dragons, mutant turtles and a cat wearing boots!</p>
+      <p>Along the way, I was drawn by the amazing things that code can do and taught myself how to build websites. I started working as a freelancer, eventually leading me to discover the wonderful world of UX.</p>
+      <p>I'm always trying to blur the lines these three sides, thinking about how to use animation to design better experiences, and figuring out how to actually build these experiences with code.</p>
+      <p>Right now, I've just earned my
+        <span class="sm">(second)</span> Masters degree, this time in
+        <em>Human Centered Design & Engineering</em> from the University of Washington. I met some incredible people, designed awesome experiences and built a robot!</p>
+    </section>
+    <div class="spacer"></div>
+    <section class="container">
+      <p class="name">My absolute favorite
+        <em>design tools</em>
+      </p>
+      <div class="apps-i-use">
+        <div class="row">
+          <img src="img/about/design_sketch.png" alt="sketch app" />
+          <img src="img/about/design_framer.png" alt="framer studio" /> </div>
+        <div class="row">
+          <img src="img/about/design_pen_paper.png" alt="pen and paper" />
+          <img src="img/about/design_invision.png" alt="invision" /> </div>
+        <div class="row">
+          <img src="img/about/design_code.png" alt="html css and js" />
+          <img src="img/about/design_ae.png" alt="adobe after effects" /> </div>
       </div>
     </section>
+    <div class="spacer"></div>
+    <section class="text container">
+      <p class="name">When I'm not doing design things</p>
+      <ul class="things">
+        <li>I’m reading about the latest and greatest in tech stuff</li>
+        <li>I'm wearing people out by talking about animation</li>
+        <li>I’m watching TV shows and movies</li>
+        <li>I’m spending time with my wife and our cameras</li>
+        <li>I’m DIY-ing something cool</li>
+        <li>I’m
+          <span class="scratch">playing</span> trying to play my guitar</li>
+        <li>I’m planning my next vacation</li>
+        <li>I’m trying to figure out the universe...
+          <span class="sm">(really)</span>
+        </li>
+      </ul>
+    </section>
+    <section class="resume container">
+      <p class="name">Interested in my professional journey?</p>
+      <a href="/files/NikhilVenkatesh_Resume_productDesign_Apr2017.pdf" target="_blank">
+        <div class="button-resume">Download my resumé</div>
+      </a>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <footer>
       <div class="container email-container">
         <a href="mailto:nikhilv.13@gmail.com">
@@ -217,11 +198,5 @@
     </footer>
     <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
     <script src="scripts/all.js"></script>
-    <script>
-      $(document).ready(function()
-      {
-        $('body').addClass('intro');
-      });
-    </script>
   </body>
 </html>

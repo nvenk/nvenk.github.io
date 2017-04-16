@@ -1,1 +1,0 @@
-function backToTop(){return $root.animate({scrollTop:0},900,"swing"),!1}$(window).scroll(function(){$(this).scrollTop()>5?$(".pointer").fadeOut():$(".pointer").fadeIn()});var $root=$("html, body");$(".projects-link").click(function(){return $root.animate({scrollTop:$("#project-section").offset().top},500),!1});
