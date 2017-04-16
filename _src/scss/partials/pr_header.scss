@@ -108,7 +108,8 @@ body:not(.home){
 .overlay-trigger{
     display: none;
 
-	.home &{
+	.home &,
+	.next-up &{
 		display: block;
 		width: 100%;
 	    height: 100%;
@@ -188,13 +189,8 @@ body:not(.home){
 	}
 
     .button-container{
-		padding: 0;
+		padding: 24px 0 52px;
 		text-align: left;
-
-        @include breakpoint(tablet){
-            padding-top: 24px;
-			padding-bottom: 52px;
-        }
 	}
 
     .feature-image{
@@ -362,7 +358,7 @@ body:not(.home){
         right: auto;
         top: auto;
         left: -60px;
-        bottom: -200px;
+        bottom: -240px;
 
         @include breakpoint(tablet){
             left: -80px;
@@ -540,7 +536,7 @@ body:not(.home){
         right: auto;
 		top: auto;
         left: -60px;
-		bottom: -140px;
+		bottom: -190px;
 
         @include breakpoint(tablet){
             left: -100px;
