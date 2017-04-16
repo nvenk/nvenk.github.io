@@ -608,4 +608,16 @@ body:not(.home){
 	.feature-container{
 		padding-top: 0 !important;
 	}
+
+	#puppy{
+		@include breakpoint(tablet){
+		    margin-top: 180px;
+		}
+	}
+
+	#xtly{
+		@include breakpoint(tablet){
+		    margin-top: 240px;
+		}
+	}
 }
