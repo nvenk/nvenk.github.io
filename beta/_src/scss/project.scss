@@ -475,7 +475,7 @@ picture source{
 
             .content--text{
                 @include breakpoint(laptop){
-                    order:2;
+                    order: 2;
                     align-self: center;
                 }
             }

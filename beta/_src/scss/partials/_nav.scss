@@ -109,7 +109,7 @@ $nav-mob-size: 60px;
         background: $color;
     }
 
-    .nav-trigger:hover{
+    .nav-trigger:hover, .nav-is-visible .nav-trigger:hover{
         background: lighten($color, 6%);
     }
 
@@ -171,6 +171,7 @@ nav{
 	color: transparent;
 	pointer-events: auto;
     cursor: pointer;
+    transition: $default-transition, .3s box-shadow .4s;
 
 	span,
     span::after,
@@ -208,6 +209,7 @@ nav{
         @include soft-shadow(0, 0);
         transform: translateY(32px);
         background: transparent;
+        transition: $default-transition;
 
         @include breakpoint(laptop){
             transform: rotate(-180deg);
@@ -342,7 +344,8 @@ nav{
     .nav-is-visible & {
         visibility: visible;
         width: 100%;
-        max-height: 210px;
+        height: auto;
+        max-height: 260px;
         border-radius: 0;
         right: 0;
         bottom: 0;

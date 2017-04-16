@@ -49,6 +49,12 @@
   }
 }
 
+.visible-laptop-plus {
+  @media (min-width: $screen-laptop) {
+    display: block !important;
+  }
+}
+
 .visible-desktop {
   @media (min-width: $screen-desktop) {
     display: block !important;

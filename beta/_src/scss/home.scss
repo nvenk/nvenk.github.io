@@ -84,7 +84,6 @@ $accent: $central; // Defining accent color
 
     @include breakpoint(desktop){
         align-self: flex-end;
-
     }
 
     *{
@@ -338,8 +337,6 @@ $accent: $central; // Defining accent color
     }
 }
 
-
-
 // Styles for Animating the intro screen
 #about::before{
     opacity: 0;
@@ -356,7 +353,6 @@ $accent: $central; // Defining accent color
 
 .about-image{
     opacity: 0;
-    transform: translate(30px);
 }
 
 // Show All Intro Content
@@ -368,255 +364,17 @@ $accent: $central; // Defining accent color
     .about-info h1,
     .about-info h3,
     .about-info .button-container,
-    .about-image{
+    {
         opacity: 1;
         transform: translate(0);
     }
 
-    .about-image,
-    h1,
-    h3,
-    .button-container{
-        max-height: 500px;
+    .about-image{
+        opacity: .85;
     }
 }
 
 // About Page styles
-
-.content {
-    @extend %fade-in;
-    animation-delay: .55s;
-    opacity: 0;
-    padding: 40px 0;
-    position: relative;
-    transition: $default-transition;
-    color: $black;
-
-    @include breakpoint(tablet){
-        padding: 40px 0 80px;
-    }
-
-    .content--text{
-        max-width: $content-width;
-
-        &.center{
-            margin: 0 auto;
-
-            @include breakpoint(laptop){
-                margin: 0;
-            }
-        }
-    }
-
-    &.alt{
-        background: $gray;
-    }
-
-    &.background-image {
-        background: transparent;
-        padding: 0;
-
-        *{
-            transition: .4s all ease-in-out;
-        }
-
-        .bg-image{
-            width: 100%;
-            max-width: 100%;
-            z-index: 1;
-            object-fit: cover;
-        }
-
-        .text{
-            display: flex;
-            align-items: flex-end;
-            z-index: 2;
-            flex: 1;
-            transition: .2s all ease-in-out;
-
-            @include breakpoint(tablet){
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 100%;
-            }
-
-            div{
-                margin: 0 auto;
-                max-width: $content-width;
-                transition: .2s all ease-in-out;
-
-                @include breakpoint(tablet){
-                    margin: 0;
-                }
-
-                p{
-                    color: $black;
-                    font-size: 1em;
-                    line-height: 1.4;
-                    font-style: italic;
-                    transition: .2s all ease-in-out;
-
-                    @include breakpoint(tablet){
-                        color: $white;
-                        font-size: 1.2em;
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-
-        &.scrollfX{
-            .bg-image{
-                @include breakpoint(tablet){
-                    filter: brightness(.3);
-                }
-            }
-
-            .text{
-                p{
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    &.bg-image-quote{
-        .bg-image{
-            filter: brightness(.7);
-            margin: 0;
-            width: 100%;
-            max-height: 800px;
-            z-index: 1;
-            object-fit: cover;
-            transition: .4s all ease-in-out;
-        }
-
-        .quote{
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                font-family: $heading;
-                color: $white;
-                font-weight: $bold;
-                font-size: .5em;
-                letter-spacing: 1.5px;
-                line-height: 1.4;
-                padding-top: 90px;
-
-                @include breakpoint(tablet){
-                    font-size: .8em;
-                    line-height: 1.5;
-                }
-
-                @include breakpoint(laptop){
-                    font-size: 1.2em;
-                }
-
-                &::before{
-                    content: '"';
-                    color: $sim-alt;
-                    font-size: 1.4em;
-                }
-
-                &::after{
-                    content: '"';
-                    color: $sim-alt;
-                    font-size: 1.4em;
-                }
-            }
-        }
-    }
-
-    .buffer-laptop{
-        display: none;
-
-        @include breakpoint(laptop){
-            display: block;
-        }
-    }
-
-    &.image-rt{
-        position: relative;
-        top: 0%;
-        z-index: 20;
-
-        @include breakpoint(laptop){
-            padding-top: 0; padding-bottom: 0;
-            top: -20%;
-        }
-
-        .flex-grid{
-            justify-content: flex-start;
-        }
-    }
-
-    .quote{
-        font-size: 2.3em;
-        font-family: $heading;
-        font-style: italic;
-        text-align: center;
-        align-self: center;
-        display: block;
-
-        p{
-            max-width: 20em;
-            margin: 0 auto;
-        }
-    }
-
-    .project-details{
-        align-self: flex-end;
-
-        @include breakpoint(tablet){
-            padding-top: 200px;
-            margin-left: 60px;
-        }
-
-        div{
-            background: $gray;
-            padding: 30px;
-            margin-bottom: 30px;
-            margin-left: auto;
-
-            @include breakpoint(desktop){
-                max-width: 600px;
-            }
-
-            p{
-                font-size: 1.1em;
-                padding-bottom: 0;
-
-                em{
-                    display: block;
-                    font-style: normal;
-                    font-weight: $bold;
-                    padding-right: 20px;
-                }
-            }
-        }
-    }
-
-    &.l .project-details{
-        order: 2;
-
-        @include breakpoint(tablet){
-            order: 1;
-        }
-
-        div{
-            margin-left: 0;
-        }
-    }
-}
 
 .home.transition--about{
     section{
@@ -638,30 +396,127 @@ $accent: $central; // Defining accent color
 
     #about{
         min-height: 100px;
-        height: 500px;
+        height: 350px;
 
         *{
             transition: .7s all ease-in-out 0s;
         }
 
-        .about-info{
-            min-height: 100px;
-            padding-bottom: 0;
-        }
-
         .about-image,
+        .heading,
         h1,
         h3,
         .button-container{
             opacity: 0;
             visibility: hidden;
-            max-height: 0;
             transition-duration: .75s;
             transition-timing-function: ease-out;
         }
+    }
+}
 
-        .heading{
-            font-size: 9em;
+.about{
+    em{
+        color: $primary;
+        font-style: normal;
+    }
+
+    section:not(#about){
+        @extend %fade-in;
+        opacity: 0;
+        padding-top: 40px;
+    }
+
+    li::before{
+        color: $primary;
+    }
+
+    .content-image .picture-tag{
+        color: $primary;
+    }
+
+    .prototype-tag::after{
+        background: $primary;
+    }
+
+    .profile-img-container{
+        position: relative;
+        top: -140px;
+        height: 128px;
+        animation-delay: .2s !important;
+        animation-duration: .6s !important;
+    }
+
+    .profile-image{
+        @include aspect-ratio(1 1);
+        max-width: 256px;
+        margin: 0 auto;
+
+        img{
+            @include soft-shadow(48, .20);
+            width: 100%;
+            border-radius: 50%;
         }
+    }
+
+    p{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .things li{
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0;
+        list-style-position: inside;
+
+        &::before{
+            display: none;
+        }
+    }
+
+    .sm{
+        font-size: .8em;
+    }
+
+    .scratch{
+        text-decoration: line-through;
+        color: rgba($primary, .65);
+    }
+
+    .name{
+        font-size: 2em;
+        text-align: center;
+        display: block;
+        margin: 0 auto 20px;
+        line-height: 1.4;
+    }
+
+    .text{
+        margin: 0 auto;
+        font-size: 1em;
+        max-width: $content-width + 12em;
+    }
+
+    .apps-i-use{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .row{
+            display: flex;
+            align-items: center;
+        }
+
+        img{
+            @include aspect-ratio(1 1);
+            max-width: 160px;
+            margin: 10px;
+            border-radius: 3px;
+        }
+    }
+
+    footer{
+        margin-top: 150px;
     }
 }
