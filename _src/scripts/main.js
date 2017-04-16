@@ -1,4 +1,4 @@
-var DEBUG = false;
+var DEBUG = false; 
 var size = "";
 var SCROLLSPEED = 600;
 // var data = $.getJSON('./_src/data.json');
