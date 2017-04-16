@@ -530,6 +530,10 @@ picture source{
         }
     }
 
+    .prototype-tag::after{
+        margin-bottom: 3px;
+    }
+
     .next-up{
         .label::before, .label::after{
             background-color: $sim;

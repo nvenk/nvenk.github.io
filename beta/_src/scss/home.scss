@@ -464,14 +464,18 @@ $accent: $central; // Defining accent color
         margin: 0 auto;
     }
 
-    .things li{
-        margin: 0 auto;
-        text-align: center;
-        padding: 16px 0;
-        list-style-position: inside;
+    .things{
+        padding: 0;
 
-        &::before{
-            display: none;
+        li{
+            margin: 0 auto;
+            text-align: center;
+            padding: 16px 0;
+            list-style-position: inside;
+
+            &::before{
+                display: none;
+            }
         }
     }
 
@@ -518,5 +522,28 @@ $accent: $central; // Defining accent color
 
     footer{
         margin-top: 150px;
+    }
+}
+
+.resume a{
+    display: block;
+    text-align: center;
+}
+.button-resume{
+    @include soft-shadow();
+    background: $primary;
+    color: $white;
+    display: inline-block;
+    padding: 18px 24px;
+    border-radius: 2px;
+    transition: $default-transition;
+    position: relative;
+
+    &:hover{
+        background: lighten($primary, 6%);
+    }
+
+    &:active{
+        top: 2px;
     }
 }

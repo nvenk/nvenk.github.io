@@ -109,7 +109,8 @@ $nav-mob-size: 60px;
         background: $color;
     }
 
-    .nav-trigger:hover, .nav-is-visible .nav-trigger:hover{
+    .nav-trigger:hover,
+    .nav-is-visible .nav-trigger:hover{
         background: lighten($color, 6%);
     }
 
@@ -305,8 +306,7 @@ nav{
     right: 5%;
     max-height: $nav-mob-size;
     width: $nav-mob-size;
-    height: 100%;
-    border-radius: 36px;
+    border-radius: $nav-mob-size / 2;
     visibility: hidden;
     transition-delay: .2s;
     transition-duration: .3s;
@@ -318,7 +318,6 @@ nav{
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1.3px;
-        // font-weight: $bold;
         padding: 0;
         font-size: 1.1em;
         opacity: 0;
@@ -344,15 +343,14 @@ nav{
     .nav-is-visible & {
         visibility: visible;
         width: 100%;
-        height: auto;
-        max-height: 260px;
+        max-height: 214px;
         border-radius: 0;
         right: 0;
         bottom: 0;
         opacity: 1;
         transition-delay: 0s;
         transition-duration: .2s;
-        padding-bottom: 12px;
+        padding: 12px 0;
 
         a{
             opacity: 1;
@@ -374,7 +372,6 @@ nav{
             right: 5%;
             bottom: 38px;
             width: 240px;
-            height: 400px;
             border-radius: 4px;
         }
 
