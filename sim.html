@@ -33,21 +33,24 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Source+Sans+Pro:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/project.css" />
     <script>
-      (function(i, s, o, g, r, a, m)
+      if (window.location.host != 'localhost')
       {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function()
+        (function(i, s, o, g, r, a, m)
         {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-58390127-3', 'auto');
-      ga('send', 'pageview');
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function()
+          {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-58390127-3', 'auto');
+        ga('send', 'pageview');
+      }
     </script>
   </head>
   <body class="sim ">
@@ -211,6 +214,12 @@
     <section class="content alt" id="design-01">
       <p class="heading-1 container">Designing the Robot</p>
       <div class="flex-grid container">
+        <div class="fg--cell--custom">
+          <picture class="content-image">
+            <img class="no-shadow" src="img/sim/design-stages.png" alt="Design Stages" />
+            <div class="picture-tag">Design Stages - From Sketch to Prototype</div>
+          </picture>
+        </div>
         <div class="fg--cell content--text center">
           <p>Knowing what emotions SIM needed to express before-hand made it much easier to work out the design and technical details.</p>
           <p>For the body, we used three motors - two for the head and one for the torso. This gave us enough
@@ -220,12 +229,6 @@
             <em>minimal, but super versatile</em>, so SIM's expressions are
             <em>exaggerated</em> and easily understandable.</p>
           <p>After a few rounds of iteration, we had a prototype that we could put in front of people to test our hypotheses.</p>
-        </div>
-        <div class="fg--cell--custom">
-          <picture class="content-image">
-            <img class="no-shadow" src="img/sim/design-stages.png" alt="Design Stages" />
-            <div class="picture-tag">Design Stages - From Sketch to Prototype</div>
-          </picture>
         </div>
       </div>
     </section>
@@ -243,7 +246,7 @@
         <div class="fg--cell--custom">
           <picture class="content-image">
             <img src="img/sim/usability.jpg" alt="Usability Testing with SIM" />
-            <div class="picture-tag">A Participant performing the usability test with SIM</div>
+            <div class="picture-tag">Usability sessions with SIM</div>
           </picture>
         </div>
       </div>
