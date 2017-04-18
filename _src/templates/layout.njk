@@ -17,6 +17,7 @@
 
         {# Stylesheets #}
         <link rel="stylesheet" type="text/css" href="{{ var.styles }}" />
+        {% include "partials/analytics.njk" %}
     </head>
 
     <body class="{{ var.bodyClass }} ">
@@ -47,8 +48,6 @@
         <script src="scripts/lib/jquery-3.2.0.min.js" charset="utf-8"></script>
 
         <script src="{{ var.scripts }}"></script>
-
-        {% include "partials/analytics.njk" %}
 
         {% block scripts %}{% endblock %}
 
