@@ -26,43 +26,6 @@ em{
     font-size: .95em;
 }
 
-// p,
-// section li{
-//     color: $black;
-//     font-size: 1em;
-//     letter-spacing: .02em;
-//     line-height: 1.9;
-//     padding-bottom: 20px;
-//     max-width: $content-width;
-//
-//     &.heading-1{
-//         font-size: 1.6em;
-//         font-family: $heading;
-//         font-weight: $bold;
-//         margin-bottom: 20px;
-//         text-align: center;
-//
-//         @include breakpoint(laptop){
-//             text-align: left;
-//         }
-//     }
-// }
-//
-// section li{
-//     list-style: none;
-//     position: relative;
-//     padding-left: 0;
-//
-//     &::before{
-//         content: '›';
-//         position: absolute;
-//         left: -1.2em;
-//         top: -4px;
-//         font-size: 1.2em;
-//         font-weight: $bold;
-//     }
-// }
-
 .content-image{
     padding: 0;
     width: 100%;
@@ -375,6 +338,21 @@ picture source{
     width: 100%;
 }
 
+.awards{
+    .fg--cell--custom{
+        padding: 0 40px;
+
+        @include breakpoint(tablet){
+            margin: 0 auto;
+        }
+    }
+    .content-image{
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
 #intro{
     .flex-grid{
         align-items: flex-end;
@@ -406,6 +384,23 @@ picture source{
 // Project Specific
 .sim{
     @include project-defaults($sim);
+
+    #awards{
+        p.heading-1{
+            @include breakpoint(laptop){
+                text-align: center;
+            }
+        }
+
+        .picture-tag{
+            color: $black;
+            font-size: 1em;
+            line-height: 1.5;
+            @include breakpoint(tablet){
+                font-size: 1.2em;
+            }
+        }
+    }
 
     #video{
         .video{
