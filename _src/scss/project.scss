@@ -347,9 +347,19 @@ picture source{
         }
     }
     .content-image{
-        max-width: 400px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 20px 0;
+        max-width: 400px;
+
+        img{
+            width: 100%;
+            padding: 0;
+
+            @include breakpoint(tablet){
+                width: calc(100% - 80px);
+                padding: 40px;
+            }
+        }
     }
 }
 
