@@ -25,7 +25,7 @@
 //// Video Embeds
 @mixin video-embed($ratio: 16 9) {
     @include aspect-ratio($ratio, 'iframe');
-    iframe{
+    iframe {
         border: 0;
         height: 100%;
         width: 100%;
@@ -34,7 +34,7 @@
 
 //// Center mixin for nav
 @mixin center($xy:xy) {
-	 @if $xy == xy{
+	@if $xy == xy {
 		left: 50%;
 		top: 50%;
 		bottom: auto;

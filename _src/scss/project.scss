@@ -2,21 +2,25 @@
 @import 'partials/pr_header';
 
 // Project Page
-@mixin project-defaults($project){
+@mixin project-defaults($project) {
 
-    em{
+    em {
         color: $project;
     }
 
-    li::before{
+    .inline-link::after{
+        background-color: $project;
+    }
+
+    li::before {
         color: $project;
     }
 
-    .content-image .picture-tag{
+    .content-image .picture-tag {
         color: $project;
     }
 
-    .prototype-tag::after{
+    .prototype-tag::after {
         background: $project;
     }
 }
@@ -338,24 +342,25 @@ picture source{
     width: 100%;
 }
 
-.awards{
-    .fg--cell--custom{
+.awards {
+    .fg--cell--custom {
         padding: 0 40px;
 
-        @include breakpoint(tablet){
+        @include breakpoint(tablet) {
             margin: 0 auto;
         }
     }
-    .content-image{
+
+    .content-image {
         margin: 0 auto;
         padding: 20px 0;
         max-width: 400px;
 
-        img{
+        img {
             width: 100%;
             padding: 0;
 
-            @include breakpoint(tablet){
+            @include breakpoint(tablet) {
                 width: calc(100% - 80px);
                 padding: 40px;
             }
@@ -363,28 +368,28 @@ picture source{
     }
 }
 
-#intro{
-    .flex-grid{
+#intro {
+    .flex-grid {
         align-items: flex-end;
 
-        .content--text{
+        .content--text {
             align-self: flex-start;
         }
     }
 
-    &.l{
-        .content--text{
-            @include breakpoint(tablet){
+    &.l {
+        .content--text {
+            @include breakpoint(tablet) {
                 order: 2;
                 margin-right: 0;
             }
         }
 
-        .project-details{
+        .project-details {
             margin-right: auto;
             margin-left: 0;
 
-            @include breakpoint(tablet){
+            @include breakpoint(tablet) {
                 order: 1;
                 margin-right: 60px;
             }
@@ -392,207 +397,226 @@ picture source{
     }
 }
 // Project Specific
-.sim{
+.sim {
     @include project-defaults($sim);
 
-    #awards{
-        p.heading-1{
+    #awards {
+        p.heading-1 {
             @include breakpoint(laptop){
                 text-align: center;
             }
         }
 
-        .picture-tag{
+        .picture-tag {
             color: $black;
             font-size: 1em;
             line-height: 1.5;
-            @include breakpoint(tablet){
+
+            @include breakpoint(tablet) {
                 font-size: 1.2em;
             }
         }
     }
 
-    #video{
-        .video{
+    #video {
+        .video {
             @include video-embed(16 9);
             margin: 0 auto;
             max-width: 1080px;
         }
     }
 
-    #testing, #design-01{
-        .content-image{
-            @include breakpoint(laptop){
+    #testing,
+    #design-01 {
+        .content-image {
+            @include breakpoint(laptop) {
                 max-width: 500px;
             }
         }
     }
 
-    .next-up{
-        .label::before, .label::after{
+    .next-up {
+        .label::before,
+        .label::after {
             background-color: $xtly;
         }
 
-        section{
+        section {
             margin-top: 200px;
         }
     }
 }
 
-.xtly{
+.xtly {
     @include project-defaults($xtly);
 
-    .project-details{
-        @include breakpoint(tablet){
+    .project-details {
+        @include breakpoint(tablet) {
             padding-top: 300px;
         }
     }
 
-    .next-up{
-        .label::before, .label::after{
+    .next-up {
+        .label::before,
+        .label::after {
             background-color: $central;
         }
 
-        section{
-            @include breakpoint(tablet){
+        section {
+            @include breakpoint(tablet) {
                 margin-top: -80px;
             }
 
-            .feature-container{
+            .feature-container {
                 padding-top: 0;
             }
         }
     }
 }
 
-.central{
+.central {
     @include project-defaults($central);
-    section{
-        &#design-01{
+    section {
+        &#design-01 {
             max-height: 800px;
             overflow: hidden;
-            @include breakpoint(laptop){
+
+            @include breakpoint(laptop) {
                 max-height: 750px;
             }
-            @include breakpoint(desktop){
+
+            @include breakpoint(desktop) {
                 max-height: 630px;
             }
 
-            .content--text{
-                @include breakpoint(laptop){
+            .content--text {
+                @include breakpoint(laptop) {
                     order: 2;
                     align-self: center;
                 }
             }
 
-            .buffer-laptop{
+            .buffer-laptop {
                 padding-right: 60px;
-                @include breakpoint(laptop){
+
+                @include breakpoint(laptop) {
                     order: 1;
                 }
             }
         }
 
-        &#design-02{
+        &#design-02 {
             padding-bottom: 0;
-            @include breakpoint(laptop){
+
+            @include breakpoint(laptop) {
                 height: 0%;
             }
         }
 
-        &#design-03{
-            .buffer-laptop{
-                @include breakpoint(laptop){
+        &#design-03 {
+            .buffer-laptop {
+                @include breakpoint(laptop) {
                     padding-right: 60px;
                 }
             }
         }
 
-        &#design-04{
-            .prototype-tag::after{
+        &#design-04 {
+            .prototype-tag::after {
                 margin-bottom: 3px;
             }
         }
     }
-    .next-up{
-        .label::before, .label::after{
+
+    .next-up {
+        .label::before,
+        .label::after {
             background-color: $puppy;
         }
-        section{
-            @include breakpoint(tablet){
+
+        section {
+            @include breakpoint(tablet) {
                 margin-top: 120px;
             }
         }
     }
 }
-.puppy{
+
+.puppy {
     @include project-defaults($puppy);
     // @include nav-color($xtly);
 
-    .project-details{
-        @include breakpoint(tablet){
+    .project-details {
+        @include breakpoint(tablet) {
             padding-top: 300px;
         }
     }
 
-    .prototype-tag::after{
+    .prototype-tag::after {
         margin-bottom: 3px;
     }
 
-    .next-up{
-        .label::before, .label::after{
+    .next-up {
+        .label::before,
+        .label::after {
             background-color: $sim;
         }
-        section{
-            @include breakpoint(tablet){
+
+        section {
+            @include breakpoint(tablet) {
                 margin-top: -80px;
             }
-            .feature-container{
+
+            .feature-container {
                 padding-top: 0;
             }
         }
     }
 
-    #design-02{
-        .content--text{
+    #design-02 {
+        .content--text {
             padding-right: 30px;
         }
-        .content-image{
+
+        .content-image {
             max-width: 320px !important;
         }
     }
 }
 
 // FOOTER
-.next-up{
+.next-up {
     padding-top: 0;
-    @include breakpoint(tablet){
+
+    @include breakpoint(tablet) {
         padding-top: 200px;
     }
 
-    section{
+    section {
         margin-top: 120px;
         position: relative;
 
-        .feature-desc{
+        .feature-desc {
             margin: 0;
 
-            @include breakpoint(laptop){
+            @include breakpoint(laptop) {
                 margin: 0 10%;
             }
         }
     }
 }
-body.transition{
-    .next-up{
-        .label{
+
+body.transition {
+    .next-up {
+        .label {
             left: -200px;
-            opacity:0;
+            opacity: 0;
         }
     }
 }
-body[class^="transition--"]{
-    .next-up{
+
+body[class^="transition--"] {
+    .next-up {
         padding: 200px;
     }
 }
