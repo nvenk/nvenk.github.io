@@ -20,32 +20,6 @@
     }
 }
 
-@keyframes pop{
-    0%{
-        transform: scale(0);
-    }
-
-    10%{
-        transform: scale(1.4);
-    }
-
-    25%{
-        transform: scale(.6);
-    }
-
-    60%{
-        transform: scale(1.2);
-    }
-
-    80%{
-        transform: scale(.9);
-    }
-
-    100%{
-        transform: scale(1);
-    }
-}
-
 @keyframes slideInFromLeft {
     0%{
         transform: translateX(-30px);
