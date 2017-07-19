@@ -1,0 +1,35 @@
+
+{# Project Tiles #}
+
+{% macro project(name='proj',
+        title='title - Project Title',
+        tagline='tagline - Project Tagline goes here',
+        url='#',
+        header = 'n'
+        ) %}
+
+    {# Macro Content -------- #}
+
+    <section class="project container {%if header == 'header' %} active {% endif %}">
+        <a href="{{ url }}" id="{{ name }}" class="trigger p-tile">
+            <div class="p-title">{{ title }}</div>
+            <div class="p-tag">{{ tagline }}</div>
+        </a>
+
+        <div class="p-img">
+            <img src="img/{{ name }}/hero.png" alt="">
+        </div>
+    </section>
+
+    {%if header == 'header' %}
+
+    <div class="p-header">
+        <div class="p-title">{{ title }}</div>
+        <div class="p-tag">{{ tagline }}</div>
+    </div>
+
+
+
+    {% endif %}
+
+{% endmacro %}

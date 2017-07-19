@@ -1,0 +1,303 @@
+@import 'partials/base';
+
+h1 {
+    font-size: 60px;
+    font-weight: $light;
+    margin: 0;
+    color: $grey;
+    letter-spacing: 3px;
+}
+
+p {
+    font-family: $text;
+    font-weight: $light;
+    font-size: 1.375em;
+    color: $grey;
+    letter-spacing: .18px;
+}
+
+a p {
+    color: $accent;
+    display: inline;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        height: 2px;
+        width: 100%;
+        border-radius: 2px;
+        background: $accent-gradient;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .2s all $easing-d;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+
+.landing {
+    height: 100%;
+    min-height: 380px;
+}
+
+.intro {
+    min-height: 300px;
+    align-self: center;
+    z-index: 1;
+    // height: 100%;
+
+    h1 {
+        padding-top: 200px;
+    }
+
+    .emphasis {
+        color: $black;
+    }
+
+    .separator {
+        margin: 40px 0 100px;
+    }
+
+    .trigger {
+        transition: $transition-d;
+        transform-origin: left;
+    }
+}
+
+.typer-p {
+    height: 54px;
+}
+
+.hero {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: url('/img/profile_pic-bw.png');
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 95%;
+    opacity: .6;
+    pointer-events: none;
+
+    @include media('<=phone') {
+        display: none;
+    }
+}
+
+$icon-size: 128px;
+
+.skill-icons {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 48px 0 0;
+    opacity: .8;
+
+    .icon {
+        height: $icon-size;
+        width: $icon-size;
+        margin: 24px;
+        padding: 24px;
+
+        object {
+            width: 100%;
+        }
+    }
+}
+
+.quote {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 120px;
+    padding: 40px;
+    max-width: 720px;
+    height: auto;
+    font-family: $quote;
+    font-size: 2.625em;
+    color: $black;
+
+    .q-text {
+        text-align: center;
+    }
+
+    .q-by {
+        color: $accent;
+        font-size: .8em;
+        padding-top: 20px;
+
+        &::before {
+            content: '- ';
+        }
+    }
+}
+
+.temp-spacer {
+    height: 1000px;
+    width: 100%;
+}
+
+
+
+// Project Specific Tiles
+
+.project {
+    padding: 0 0 90px;
+    flex-flow: column wrap;
+    transition: $transition-d;
+
+    @include media('>tablet') {
+        padding: 0 60px 90px;
+    }
+
+    @include media('>laptop') {
+        padding: 0 90px 90px;
+    }
+
+    * {
+        transition: $transition-d;
+    }
+}
+
+.p-tile {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    min-height: 380px;
+    color: $white;
+    background: $black;
+    border-radius: 0;
+    padding: 60px 30px;
+
+    @include media('>tablet') {
+        border-radius: 6px;
+    }
+}
+
+.p-title {
+    font-size: 2em;
+    font-weight: $heavy;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.p-tag {
+    font-size: 1.3em;
+    font-weight: $light;
+    letter-spacing: 1.3px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.p-img {
+    padding: 0;
+    margin-top: -220px;
+    text-align: center;
+    pointer-events: none;
+
+    img {
+        max-height: 500px;
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+    }
+}
+
+
+.p-header {
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+
+    .p-title,
+    .p-tag {
+        opacity: 0;
+        animation: p-header-fade-in $timing-d $easing-d forwards;
+    }
+
+    .p-tag {
+        animation-delay: .1s;
+    }
+}
+
+// Expanded styles
+
+.active {
+    &.intro {
+        .trigger {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &.project {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .p-tile {
+        border-radius: 0;
+        min-height: 420px;
+    }
+
+    .p-title,
+    .p-tag {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    .p-title {
+        transition-delay: .3s;
+    }
+
+    .p-tag {
+        transition-delay: .2s;
+    }
+}
+
+// Project Specific
+
+@include p-color('sim', $sim);
+
+#sim {
+    background: $sim url('../img/sim/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        130deg,
+                        $sim 20%,
+                        $sim-alt 80%);
+}
+
+#xtly {
+    background: $xtly url('../img/xtly/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        -65deg,
+                        $xtly 20%,
+                        $xtly-alt 70%);
+}
+
+#central {
+    background: $central url('../img/central/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        115deg,
+                        $central 20%,
+                        $central-alt 80%);
+}
+
+#puppy {
+    background: $puppy url('../img/puppy/gradient-2px.png') repeat-y;
+    background-image: linear-gradient(
+                        -75deg,
+                        $puppy 20%,
+                        $puppy-alt 80%);
+}

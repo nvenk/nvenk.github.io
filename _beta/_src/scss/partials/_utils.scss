@@ -1,0 +1,51 @@
+body,
+html {
+    min-height: 100%;
+    height: 100%;
+    background: $white;
+    font-family: $text;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+a,
+a * {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Layout
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: $site-max;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+// Helper Classes
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.accent {
+    background: $accent-gradient;
+}
+
+.separator {
+    height: 12px;
+    width: 80px;
+    margin: 20px 0;
+}

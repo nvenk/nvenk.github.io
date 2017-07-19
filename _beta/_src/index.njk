@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+
+
+{# Variables --------------- #}
+{% set var = {
+        styles: 'css/styles.css',
+        scripts: 'scripts/scripts.js',
+        bodyClass: 'home'
+}%}
+
+{% set meta2 = {
+        title: 'Nikhil Venkatesh | Product Designer',
+        desc: 'I\'m a Product Designer and Animator from San Francisco. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way!',
+        image: 'http://nvenk.com/img/about/profile.jpg'
+}%}
+
+
+
+
+{# Page Content --------------- #}
+{% block content %}
+
+<div class="container landing">
+    <section class="intro">
+        <h1>Hi, I'm <span class="emphasis">Nikhil!</span></h1>
+        <div class="separator accent"></div>
+        <p>I'm a Product Designer and Animator based out of San Francisco.</p>
+        <p class="typer-p">In the wild, you might spot me <span class="typer" id="in-the-wild" data-delay="30" data-words="fiddling with new gadgets,designing digital experiences,obsessing over micro-interactions,living the #makerlife,hiking in the mountains,photographing wildlife,evangelizing motion in UX"></span>
+        <span class="cursor" data-owner="in-the-wild"></span></p>
+        <a href="about.html" class="trigger"><p>Curious?</p></a>
+    </section>
+</div>
+
+<div class="hero"></div>
+
+{# <section class="container quote">
+    <ul class="skill-icons">
+        <li class="icon">
+            <object type="image/svg+xml" data="img/icons/001-design.svg">
+            </object>
+        </li>
+        <li class="icon">
+            <object type="image/svg+xml" data="img/icons/001-animate.svg">
+            </object>
+        </li>
+        <li class="icon">
+            <object type="image/svg+xml" data="img/icons/001-code.svg">
+            </object>
+        </li>
+        <li class="icon">
+            <object type="image/svg+xml" data="img/icons/001-build.svg">
+            </object>
+        </li>
+    </ul>
+    <div class="q-text">"Choose a job you love, and you will never have to work a day in your life" </div><div class="q-by">Conficius</div>
+</section> #}
+
+{% for project in projects %}
+    {{ macro.project(project.name,
+                    project.title,
+                    project.tag,
+                    project.url
+                    ) }}
+{% endfor %}
+
+<div class="temp-spacer"></div>
+
+{% endblock %}
+
+
+
+
+{# Page Specific Scripts ------ #}
+{% block scripts %}
+
+{% endblock %}
