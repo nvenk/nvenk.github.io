@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <meta name="description" content="I&#39;m a Product Designer and Animator from San Francisco. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way!">
     <meta name="title" content="Nikhil Venkatesh | Product Designer}">
@@ -29,7 +29,10 @@
     <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil Venkatesh | Product Designer</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" /> </head>
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Lato:200,300,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  </head>
   <body class="home ">
     <script>
       if (document.getElementsByTagName('body')[0].className == "home")
@@ -41,61 +44,63 @@
         history.scrollRestoration = 'manual';
       }
     </script>
-    <div class="container landing">
-      <section class="intro">
+    <section class="container landing ">
+      <div class="about-block"></div>
+      <div class="intro">
         <h1>Hi, I'm
           <span class="emphasis">Nikhil!</span>
         </h1>
         <div class="separator accent"></div>
-        <p>I'm a Product Designer and Animator based out of San Francisco.</p>
+        <p class="line-1">I'm a Product Designer and Animator based out of San Francisco.</p>
         <p class="typer-p">In the wild, you might spot me
           <span class="typer" id="in-the-wild" data-delay="30" data-words="fiddling with new gadgets,designing digital experiences,obsessing over micro-interactions,living the #makerlife,hiking in the mountains,photographing wildlife,evangelizing motion in UX"></span>
           <span class="cursor" data-owner="in-the-wild"></span>
         </p>
-        <a href="about.html" class="trigger">
+        <a href="about.html" class="trigger button">
           <p>Curious?</p>
         </a>
-      </section>
-    </div>
-    <div class="hero"></div>
-    <section class="project container ">
-      <a href="sim.html" id="sim" class="trigger p-tile">
-        <div class="p-title">SIM: The Social Robot</div>
-        <div class="p-tag">Designing for affective Human-Robot Interaction</div>
+      </div>
+      <div class="hero-container">
+        <div class="hero"></div>
+      </div>
+    </section>
+    <section class="project-tile-wrapper container ">
+      <a href="sim.html" id="sim" class="trigger project-tile">
+        <div class="project-title">SIM: The Social Robot</div>
+        <div class="project-tag">A Human Centered Approach to Designing Social Robots</div>
       </a>
-      <div class="p-img">
+      <div class="project-img">
         <img src="img/sim/hero.png" alt=""> </div>
     </section>
-    <section class="project container ">
-      <a href="xactly.html" id="xtly" class="trigger p-tile">
-        <div class="p-title">Xactly Incent</div>
-        <div class="p-tag">Helping the sales force stay informed about their goals</div>
+    <section class="project-tile-wrapper container ">
+      <a href="xactly.html" id="xtly" class="trigger project-tile">
+        <div class="project-title">Xactly Incent</div>
+        <div class="project-tag">Helping the sales force stay informed about their goals</div>
       </a>
-      <div class="p-img">
+      <div class="project-img">
         <img src="img/xtly/hero.png" alt=""> </div>
     </section>
-    <section class="project container ">
-      <a href="central-cinema.html" id="central" class="trigger p-tile">
-        <div class="p-title">Central Cinema</div>
-        <div class="p-tag">Redesigning the web experience for a local beer-theatre</div>
+    <section class="project-tile-wrapper container ">
+      <a href="central-cinema.html" id="central" class="trigger project-tile">
+        <div class="project-title">Central Cinema</div>
+        <div class="project-tag">Redesigning the web experience for a local beer-theatre</div>
       </a>
-      <div class="p-img">
+      <div class="project-img">
         <img src="img/central/hero.png" alt=""> </div>
     </section>
-    <section class="project container ">
-      <a href="puppy-harmony.html" id="puppy" class="trigger p-tile">
-        <div class="p-title">PuppyHarmony</div>
-        <div class="p-tag">Helping your furry friends find the perfect playdate</div>
+    <section class="project-tile-wrapper container ">
+      <a href="puppy-harmony.html" id="puppy" class="trigger project-tile">
+        <div class="project-title">PuppyHarmony</div>
+        <div class="project-tag">Helping your furry friends find the perfect playdate</div>
       </a>
-      <div class="p-img">
+      <div class="project-img">
         <img src="img/puppy/hero.png" alt=""> </div>
     </section>
-    <div class="temp-spacer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script src="scripts/scripts.js"></script>
-  </body>
+    <script src="scripts/scripts.js"></script> $(window).on('load',function() { // Hero Image var fadeTween = TweenMax.fromTo('.hero', 1, { opacity: 0.6 }, { opacity: 0 }); var heroScene = new ScrollMagic.Scene({ duration: 350 }) .setTween(fadeTween) .addTo(primeCtrl); if(DEBUG) heroScene.addIndicators({
+    name:"Fade Hero" }); // Skill Icons Stagger var skillTween = TweenMax.staggerFromTo(".skill-icons .icon", 0.5, { opacity: 0, y: -60 }, { opacity: 1, y: 0 }, 0.15 ); var skillScene = new ScrollMagic.Scene({ triggerElement: '.skill-icons', // reverse:
+    false, duration: 150 }) .setTween(skillTween) .addTo(primeCtrl); if(DEBUG) skillScene.addIndicators({ name:"Fade Icons" }); }); </body>
 </html>

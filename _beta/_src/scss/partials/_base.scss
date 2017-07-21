@@ -3,8 +3,9 @@
 $black: #232628;
 $grey: #797e83;
 $white: #fff;
+$light-grey: #eaeef1;
 
-$accent: #ff5252;
+$accent: #ff5252 !default;
 $accent-gradient: linear-gradient(to left, $accent, lighten($accent, 6%));
 
 // Projects
@@ -43,12 +44,13 @@ $animation-d: fade-in $timing-d $easing-d;
 // -------------
 $site-max: 1200px;
 $content-max: 576px;
+$content-large-max: 1920px;
 
 
 // Imports
 // -------------
+@import 'vendor/include-media';
+
 @import 'partials/mixins';
 @import 'partials/utils';
 @import 'partials/animation';
-
-@import 'vendor/include-media';

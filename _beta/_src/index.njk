@@ -20,18 +20,7 @@
 {# Page Content --------------- #}
 {% block content %}
 
-<div class="container landing">
-    <section class="intro">
-        <h1>Hi, I'm <span class="emphasis">Nikhil!</span></h1>
-        <div class="separator accent"></div>
-        <p>I'm a Product Designer and Animator based out of San Francisco.</p>
-        <p class="typer-p">In the wild, you might spot me <span class="typer" id="in-the-wild" data-delay="30" data-words="fiddling with new gadgets,designing digital experiences,obsessing over micro-interactions,living the #makerlife,hiking in the mountains,photographing wildlife,evangelizing motion in UX"></span>
-        <span class="cursor" data-owner="in-the-wild"></span></p>
-        <a href="about.html" class="trigger"><p>Curious?</p></a>
-    </section>
-</div>
-
-<div class="hero"></div>
+{{ macro.aboutStack() }}
 
 {# <section class="container quote">
     <ul class="skill-icons">
@@ -63,8 +52,6 @@
                     ) }}
 {% endfor %}
 
-<div class="temp-spacer"></div>
-
 {% endblock %}
 
 
@@ -72,5 +59,31 @@
 
 {# Page Specific Scripts ------ #}
 {% block scripts %}
+
+$(window).on('load',function() {
+    // Hero Image
+    var fadeTween = TweenMax.fromTo('.hero',
+                                    1,
+                                    { opacity: 0.6 },
+                                    { opacity: 0 });
+    var heroScene = new ScrollMagic.Scene({ duration: 350 })
+                                            .setTween(fadeTween)
+                                            .addTo(primeCtrl);
+    if(DEBUG) heroScene.addIndicators({ name:"Fade Hero" });
+
+    // Skill Icons Stagger
+    var skillTween = TweenMax.staggerFromTo(".skill-icons .icon",
+                                            0.5,
+                                            { opacity: 0, y: -60 },
+                                            { opacity: 1, y: 0 },
+                                            0.15 );
+    var skillScene = new ScrollMagic.Scene({ triggerElement: '.skill-icons',
+                                            //  reverse: false,
+                                             duration: 150 })
+                                             .setTween(skillTween)
+                                             .addTo(primeCtrl);
+    if(DEBUG) skillScene.addIndicators({ name:"Fade Icons" });
+
+});
 
 {% endblock %}

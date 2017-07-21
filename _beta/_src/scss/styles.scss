@@ -1,77 +1,92 @@
 @import 'partials/base';
 
-h1 {
-    font-size: 60px;
-    font-weight: $light;
-    margin: 0;
-    color: $grey;
-    letter-spacing: 3px;
-}
 
-p {
-    font-family: $text;
-    font-weight: $light;
-    font-size: 1.375em;
-    color: $grey;
-    letter-spacing: .18px;
-}
-
-a p {
-    color: $accent;
-    display: inline;
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        height: 2px;
-        width: 100%;
-        border-radius: 2px;
-        background: $accent-gradient;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: .2s all $easing-d;
-    }
-
-    &:hover::after {
-        transform: scaleX(1);
-    }
-}
-
+// Landing Section
 
 .landing {
     height: 100%;
-    min-height: 380px;
+    min-height: 680px;
 }
 
 .intro {
-    min-height: 300px;
+    $text: $grey;
+
     align-self: center;
     z-index: 1;
-    // height: 100%;
+    max-height: 100%;
+    min-height: 600px;
+    max-width: 65%;
+
+    @include media('<tablet') {
+        align-self: flex-end;
+        max-width: 100%;
+        min-height: 550px;
+    }
 
     h1 {
         padding-top: 200px;
+
+        @include media('<tablet') {
+            padding-top: 100px;
+        }
+
+        span {
+            transition: $transition-d .3s;
+        }
     }
 
     .emphasis {
         color: $black;
     }
 
-    .separator {
-        margin: 40px 0 100px;
-    }
+    // Transitioning to About Page
+    .active & {
+        $text: $white;
 
-    .trigger {
-        transition: $transition-d;
-        transform-origin: left;
+        .button p {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .line-1,
+        .typer-p {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-30px);
+        }
+
+        .about-p {
+            color: $text;
+        }
+
+        h1 {
+            span {
+                color: $text;
+            }
+        }
     }
+}
+
+.line-1 {
+    transition: $transition-d .35s;
+    transition-duration: .2s;
 }
 
 .typer-p {
     height: 54px;
+    transition: $transition-d;
+    transition-duration: .2s;
+    transition-delay: .375s;
+}
+
+.hero-container {
+    transition: .3s all ease-in-out .4s;
+    opacity: 1;
+
+    .active & {  // Expanded or Transition Styles
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .hero {
@@ -87,10 +102,30 @@ a p {
     opacity: .6;
     pointer-events: none;
 
-    @include media('<=phone') {
+    @include media('<tablet') {
         display: none;
     }
 }
+
+.about-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $black;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transform-origin: left;
+    transition: .6s all ease-in-out .2s;
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+
+    .active & {    // Expanded or Transition Styles
+        transform: translateX(0%);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+// Skills Section
 
 $icon-size: 128px;
 
@@ -113,191 +148,100 @@ $icon-size: 128px;
     }
 }
 
-.quote {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 120px;
-    padding: 40px;
-    max-width: 720px;
-    height: auto;
-    font-family: $quote;
-    font-size: 2.625em;
-    color: $black;
+// About Page
 
-    .q-text {
-        text-align: center;
-    }
+.about {
+    background: $black;
+    $text: $light-grey; // Set text to light grey for the dark background
 
-    .q-by {
-        color: $accent;
-        font-size: .8em;
-        padding-top: 20px;
+    color: $text;
 
-        &::before {
-            content: '- ';
+    // Landing on About Page
+    .active {
+        .intro {
+            animation: slide-down ease-in-out .6s forwards .4s;
+
+            .line-1,
+            .typer-p {
+                opacity: 0;
+                animation: fade-in-down $easing-d .3s forwards;
+                color: $text;
+                visibility: visible;
+            }
+
+            .typer-p {
+                animation-delay: .05s;
+            }
         }
     }
+
+    p,
+    li {
+        color: $text;
+        letter-spacing: 1.18px;
+        line-height: 1.4;
+    }
+
+    .text p {
+        font-size: 1.08em;
+        line-height: 1.8;
+        max-width: 36em;
+        text-align: center;
+        margin: 18px auto;
+        letter-spacing: 1.2px;
+        font-weight: $light;
+    }
 }
 
-.temp-spacer {
-    height: 1000px;
+.design-tools {
+    text-align: center;
+    display: block;
+}
+
+.apps-i-use {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
     width: 100%;
-}
 
-
-
-// Project Specific Tiles
-
-.project {
-    padding: 0 0 90px;
-    flex-flow: column wrap;
-    transition: $transition-d;
-
-    @include media('>tablet') {
-        padding: 0 60px 90px;
+    @include media('<laptop') {
+        grid-template-columns: repeat(3, auto);
     }
 
-    @include media('>laptop') {
-        padding: 0 90px 90px;
+    @include media('<phone') {
+        grid-template-columns: repeat(2, auto);
     }
-
-    * {
-        transition: $transition-d;
-    }
-}
-
-.p-tile {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    min-height: 380px;
-    color: $white;
-    background: $black;
-    border-radius: 0;
-    padding: 60px 30px;
-
-    @include media('>tablet') {
-        border-radius: 6px;
-    }
-}
-
-.p-title {
-    font-size: 2em;
-    font-weight: $heavy;
-    letter-spacing: 2.2px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.p-tag {
-    font-size: 1.3em;
-    font-weight: $light;
-    letter-spacing: 1.3px;
-    margin-bottom: 100px;
-    text-align: center;
-}
-
-.p-img {
-    padding: 0;
-    margin-top: -220px;
-    text-align: center;
-    pointer-events: none;
 
     img {
-        max-height: 500px;
-        max-width: 100%;
-        width: auto;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 200px;
+        border-radius: 4px;
     }
 }
 
-
-.p-header {
-    display: block;
+.other-things .h3 {
+    width: 100%;
     text-align: center;
-    padding-top: 50px;
+}
 
-    .p-title,
-    .p-tag {
-        opacity: 0;
-        animation: p-header-fade-in $timing-d $easing-d forwards;
-    }
+.things {
+    display: block;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
 
-    .p-tag {
-        animation-delay: .1s;
+    li {
+        padding: 16px 0;
+        margin: 0 auto;
+        font-size: 1.1em;
     }
 }
 
-// Expanded styles
+.resume {
+    text-align: center;
 
-.active {
-    &.intro {
-        .trigger {
-            opacity: 0;
-            visibility: hidden;
-        }
+    p {
+        color: $accent;
     }
-
-    &.project {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .p-tile {
-        border-radius: 0;
-        min-height: 420px;
-    }
-
-    .p-title,
-    .p-tag {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-
-    .p-title {
-        transition-delay: .3s;
-    }
-
-    .p-tag {
-        transition-delay: .2s;
-    }
-}
-
-// Project Specific
-
-@include p-color('sim', $sim);
-
-#sim {
-    background: $sim url('../img/sim/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        130deg,
-                        $sim 20%,
-                        $sim-alt 80%);
-}
-
-#xtly {
-    background: $xtly url('../img/xtly/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        -65deg,
-                        $xtly 20%,
-                        $xtly-alt 70%);
-}
-
-#central {
-    background: $central url('../img/central/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        115deg,
-                        $central 20%,
-                        $central-alt 80%);
-}
-
-#puppy {
-    background: $puppy url('../img/puppy/gradient-2px.png') repeat-y;
-    background-image: linear-gradient(
-                        -75deg,
-                        $puppy 20%,
-                        $puppy-alt 80%);
 }

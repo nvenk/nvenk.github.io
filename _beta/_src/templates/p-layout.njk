@@ -16,26 +16,21 @@
     {% endif %}
 {% endfor %}
 
-{# PROJECT CONTENT GOES HERE #}
+
+
+{# PROJECT CONTENT #}
 {% block p_content %}{% endblock %}
 
-<div class="temp-spacer"></div> 
 
 
-{# NEXT PROJECT #}
-{# <div class="next-up">
-    <div class="label">NEXT UP</div>
+<div class="temp-spacer"></div>
 
-    {% for project in projects %}
-        {% if project.name == var.nextUp %}
-            {{ macro.project(project.name,
-                project.orientation,
-                project.title,
-                project.subtitle,
-                project.url
-                ) }}
-        {% endif %}
-    {% endfor %}
 
-</div> #}
+{# Prevent header link from working on project pages #}
+<script type="text/javascript">
+    $('.project-tile').click(function(e){
+        e.preventDefault();
+    });
+</script>
+
 {% endblock %}

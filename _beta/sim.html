@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <meta name="description" content="I&#39;m a Product Designer and Animator from San Francisco. I am passionate about telling stories visually and believe that a little bit of delight in design goes a long way!">
     <meta name="title" content="Nikhil Venkatesh | Product Designer}">
@@ -29,8 +29,11 @@
     <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
     <title>Nikhil Venkatesh | Product Designer</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" /> </head>
-  <body class="sim ">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Lato:200,300,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/projects.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  </head>
+  <body class="sim project-page ">
     <script>
       if (document.getElementsByTagName('body')[0].className == "home")
       {
@@ -41,24 +44,160 @@
         history.scrollRestoration = 'manual';
       }
     </script>
-    <section class="project container  active ">
-      <a href="sim.html" id="sim" class="trigger p-tile">
-        <div class="p-title">SIM: The Social Robot</div>
-        <div class="p-tag">Designing for affective Human-Robot Interaction</div>
+    <section class="project-tile-wrapper container  active ">
+      <a href="sim.html" id="sim" class="trigger project-tile">
+        <div class="project-title">SIM: The Social Robot</div>
+        <div class="project-tag">A Human Centered Approach to Designing Social Robots</div>
       </a>
-      <div class="p-img">
+      <div class="project-img">
         <img src="img/sim/hero.png" alt=""> </div>
     </section>
-    <div class="p-header">
-      <div class="p-title">SIM: The Social Robot</div>
-      <div class="p-tag">Designing for affective Human-Robot Interaction</div>
+    <div class="project-header">
+      <div class="project-title">SIM: The Social Robot</div>
+      <div class="project-tag">A Human Centered Approach to Designing Social Robots</div>
+    </div>
+    <div class="container awards-grid">
+      <div class="award makerSummit">
+        <object type="image/svg+xml" data="img/sim/badge.svg"> </object>
+        <a href="https://www.hcde.washington.edu/news/hcde-students-win-at-uw-maker-summit" target="_blank" class="external">
+          <p>UW Maker Summit 2017
+            <span class="sub">Winners - Graduate Gizmos Category</span>
+          </p>
+        </a>
+      </div>
+      <div class="award hcde-open">
+        <object type="image/svg+xml" data="img/sim/badge.svg"> </object>
+        <a href="https://www.hcde.washington.edu/news/hcde-2017-open-house" target="_blank" class="external">
+          <p>UW HCDE Open House 2017
+            <span class="sub">Honorable Mention - Technology</span>
+          </p>
+        </a>
+      </div>
+      <div class="award hcde-grad">
+        <object type="image/svg+xml" data="img/sim/badge.svg"> </object>
+        <a href="https://www.hcde.washington.edu/news/2017-graduation-and-awards-ceremony" target="_blank" class="external">
+          <p>UW HCDE Graduate Awards 2017
+            <span class="sub">Graduate Award for Innovation</span>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="container text p-intro">
+      <p>
+        <em>SIM</em> started out as our capstone project at the HCDE Masters program. Fueled by our mutual passion and fasciantion with robots, Sahil, John, Dorothy and I wanted to take a
+        <em>human-centered approach</em> to designing and building social robots.</p>
+      <p>The idea to build SIM stemed from our initial research and exploration. There are amazing strides being made in the field of social robotics in terms of technology, but we found that
+        <em>interacting with these robots still felt unnatural and forced</em>. We also wanted to explore how we can take the Human Centered Approach that is so key to building digital experiences today, and apply those concepts to the world of social robots.</p>
+      <p>Personally, this was a wonderful opportunity for me to bring together the three things that define me. I could apply my experience in
+        <em>animation</em> and television to design SIM - how it would look, and how it would move. I was not only able to apply what I had learnt about
+        <em>user-centered design</em>, but also explore how those concepts apply in a different context, in this case, robotics. Finally, I saw this as an awesome opportunity to learn more about building robots and
+        <em> expand my knowledge about coding.</em>
+      </p>
+    </div>
+    <div class="full-image">
+      <h2>The Process</h2>
+      <div class="quote">
+        <div class="q-text">"It has never been more evident to us that the problem defines the process!"</div>
+      </div>
+      <img src="img/sim/process.jpg" /> </div>
+    <div class="content container-large flip">
+      <h2>Inspiration</h2>
+      <div class="content-cell text">
+        <p>The idea of social robots isn't new. We were inspired by 'Project EMAR', a robotics project run by professors at the University of Washington to create a robot that can collect survey data
+          <em>in context</em> from users. The idea of robots integrating into society was fascinating, but the
+          <em>biggest obstacle</em> we noticed was that people who were exposed to with EMAR had
+          <em>preset expectations</em> of how to interact with it - likely because of its humanoid form.</p>
+        <p>Other studies in Human-Robot interaction also suggest that accounting for
+          <em>simple social aspects</em> in the design of robots improves our interactions with them. Robots that are capable of displaying social cues and nonverbal behaviors during collaborative tasks attribute to improved task performance, higher recall
+          accuracy, error prevention and faster task-completion times.</p>
+        <p>It was clear from our research that people had social expectations from interactive robots. If robots are to become a part of our everyday lives, it isn't enough if they help us physically. They need to provide
+          <em>mental and emotional assistance</em> as well. This thought helped us derive our research question...</p>
+      </div>
+      <div class="content-cell image">
+        <img src="img/sim/inspiration.jpg" alt="">
+        <div class="image-tag">Our inspiration for SIM - existing home companion robots, Project EMAR, pop-culture robots.
+          <span class="attribution">Images are Copyright of their respective owners - (top to bottom) Aido Interactive, Project EMAR and Lucasfilm Ltd.</span>
+        </div>
+      </div>
+    </div>
+    <div class="full-image">
+      <img class="darken" src="img/sim/research-qn.jpg" />
+      <div class="quote overlay-quote">
+        <p>"How might we design natural and intuitive interaction between humans and robots?"</p>
+      </div>
+    </div>
+    <div class="content container-large">
+      <h2>Research & Behavior Modeling</h2>
+      <div class="content-cell image">
+        <img src="img/sim/sim-table.png" alt="">
+        <div class="image-tag">We synthesized the SIM Table from existing research to define how SIM should behave / react in certain situations.</div>
+      </div>
+      <div class="content-cell text">
+        <p>We had done the groundwork, were super inspired, and had our research question and hypotheses - but we needed a way to test them. We built
+          <em>SIM</em> - our prototype of a socially intelligent robot. SIM can engage in
+          <em>affective interchanges</em> with people by
+          <em>understanding</em> and
+          <em>expressing</em> emotions. It's behavior is governed by what we call the Social Interaction Model.</p>
+        <p>Built on theories of human emotion from psychology, behavioral sciences and human-robot interaction, the SIM table is essentially a
+          <em>map</em> of situations, emotions, behaviors, and functions. The SIM table defines how SIM would
+          <em>react to an emotional stimulus</em> in a given situation, and how that emotional response would
+          <em>affect the dynamics</em> of that interaction.</p>
+      </div>
+    </div>
+    <div class="content container-large">
+      <h2>Let's build a robot!</h2>
+      <div class="content-cell text">
+        <p>Knowing what emotions SIM needed to express before-hand made it much easier to work out the design and technical details.</p>
+        <p>For the body, we used three motors - two for the head and one for the torso. This gave us enough
+          <em>flexibility</em> to design expressive movements. We mounted an android powered phone for SIM's head, giving us
+          <em>a blank canvas</em> to design the face on.</p>
+        <p>For the facial design, we wanted to keep things as simple as possible. I designed SIM's face to be
+          <em>minimal, but super versatile</em>, so SIM's expressions are
+          <em>exaggerated</em> and easily understandable.</p>
+        <p>After a few rounds of iteration, we had a prototype that we could put in front of people to test our hypotheses.</p>
+      </div>
+      <div class="content-cell image">
+        <img src="img/sim/design.jpg" alt="">
+        <div class="image-tag">Design Stages - From Sketch to Prototype</div>
+      </div>
     </div>
     <div class="temp-spacer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript">
+      $('.project-tile').click(function(e)
+      {
+        e.preventDefault();
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script type="text/javascript">
+      $(window).on('load', function()
+      {
+        var primeCtrl = new ScrollMagic.Controller(
+        {
+          name: 'primeTrigger',
+          globalSceneOptions:
+          {
+            triggerHook: 'onEnter'
+          }
+        });
+        var awardsTween = TweenMax.staggerFromTo(".award", 0.7,
+        {
+          opacity: 0,
+          y: 60
+        },
+        {
+          opacity: 1,
+          y: 0
+        }, 0.1);
+        var awardsScene = new ScrollMagic.Scene(
+        {
+          triggerElement: '.awards-grid'
+        }).setTween(awardsTween).addTo(primeCtrl)
+      });
+    </script>
   </body>
 </html>

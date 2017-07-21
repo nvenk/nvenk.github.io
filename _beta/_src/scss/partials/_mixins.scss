@@ -33,10 +33,17 @@
 }
 
 
-@mixin p-color($name, $color: $black) {
+@mixin p-color($name, $color: $accent) {
     .#{$name} {
-        .p-title {
+        .project-title,
+        em,
+        .sub,
+        .image-tag {
             color: $color;
+        }
+
+        .external::after {
+            background-color: $color;
         }
     }
 }
