@@ -44,6 +44,20 @@ h1 {
     }
 }
 
+h2 {
+    font-size: 1.6em;
+    text-align: center;
+    width: 100%;
+    padding-top: 120px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include media('<tablet'){
+        font-size: 1.2em;
+        padding-top: 60px;
+    }
+}
+
 .h3 {
     font-size: 2em;
     display: block;
@@ -74,6 +88,7 @@ li {
 .sm {
     font-size: .8em;
     font-style: italic;
+    color: inherit;
 }
 
 em {
@@ -257,12 +272,88 @@ em {
 
 
 
+// Footer
+
+footer {
+    background: $black;
+    min-height: 500px;
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    h2 {
+        color: $white;
+    }
+
+    .f-text {
+        color: $light-grey;
+        font-size: 1.1em;
+        opacity: .7;
+        line-height: 1.8;
+        text-align: center;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+}
+
+.social {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    max-width: 500px;
+    padding-top: 30px;
+}
+
+.s-icon {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    margin: 0 20px;
+
+    @include media('<tablet'){
+        padding: 40px 20px;
+    }
+
+    a {
+        display: block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $accent;
+            transform-origin: center;
+            transition: .2s transform $easing-d;
+            transform: scaleX(0);
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
+    object {
+        width: 48px;
+        pointer-events: none;
+
+        @include media('<tablet'){
+            width: 36px;
+        }
+    }
+}
 
 
-
-
+// .email {
+//     display: block;
+//     text-align: center;
+//     color: $accent;
+//     font-size: 1.6em;
+// }
 // Common Styles - Project Headers
-
 
 .project-header {  // Project Pages - When the tile is the header
     display: block;

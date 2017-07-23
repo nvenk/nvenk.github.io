@@ -58,14 +58,12 @@
 }
 
 .flip {
-    @include media('<laptop') {
-        div:nth-child(odd) {
-            order: 1;
-        }
+    div:nth-child(odd) {
+        order: 1;
+    }
 
-        div:nth-child(even) {
-            order: 2;
-        }
+    div:nth-child(even) {
+        order: 2;
     }
 }
 
@@ -90,6 +88,10 @@
 
 .image {
     padding: 40px 0;
+
+    img {
+        border-radius: 8px;
+    }
 }
 
 .image-tag {
@@ -117,19 +119,9 @@
         font-size: 1.2em;
     }
 
-    em{
+    em {
         font-weight: $normal;
     }
-}
-
-
-h2 {
-    font-size: 1.6em;
-    text-align: center;
-    width: 100%;
-    padding-top: 120px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .full-image {
