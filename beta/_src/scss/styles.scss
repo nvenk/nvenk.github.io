@@ -1,0 +1,247 @@
+@import 'partials/base';
+
+
+// Landing Section
+
+.landing {
+    height: 100%;
+    min-height: 680px;
+}
+
+.intro {
+    $text: $grey;
+
+    align-self: center;
+    z-index: 1;
+    max-height: 100%;
+    min-height: 600px;
+    max-width: 65%;
+
+    @include media('<tablet') {
+        align-self: flex-end;
+        max-width: 100%;
+        min-height: 550px;
+    }
+
+    h1 {
+        padding-top: 200px;
+
+        @include media('<tablet') {
+            padding-top: 100px;
+        }
+
+        span {
+            transition: $transition-d .3s;
+        }
+    }
+
+    .emphasis {
+        color: $black;
+    }
+
+    // Transitioning to About Page
+    .active & {
+        $text: $white;
+
+        .button p {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .line-1,
+        .typer-p {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-30px);
+        }
+
+        .about-p {
+            color: $text;
+        }
+
+        h1 {
+            span {
+                color: $text;
+            }
+        }
+    }
+}
+
+.line-1 {
+    transition: $transition-d .35s;
+    transition-duration: .2s;
+}
+
+.typer-p {
+    height: 54px;
+    transition: $transition-d;
+    transition-duration: .2s;
+    transition-delay: .375s;
+}
+
+.hero-container {
+    transition: .3s all ease-in-out .4s;
+    opacity: 1;
+
+    .active & {  // Expanded or Transition Styles
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.hero {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: url('/img/profile_pic-bw.png');
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 95%;
+    opacity: .6;
+    pointer-events: none;
+
+    @include media('<tablet') {
+        display: none;
+    }
+}
+
+.about-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $black;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transform-origin: left;
+    transition: .6s all ease-in-out .2s;
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+
+    .active & {    // Expanded or Transition Styles
+        transform: translateX(0%);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+// Skills Section
+
+$icon-size: 128px;
+
+.skill-icons {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 48px 0 0;
+    opacity: .8;
+
+    .icon {
+        height: $icon-size;
+        width: $icon-size;
+        margin: 24px;
+        padding: 24px;
+
+        object {
+            width: 100%;
+        }
+    }
+}
+
+// About Page
+
+.about {
+    background: $black;
+    $text: $light-grey; // Set text to light grey for the dark background
+
+    color: $text;
+
+    // Landing on About Page
+    .active {
+        .intro {
+            animation: slide-down ease-in-out .6s forwards .4s;
+
+            .line-1,
+            .typer-p {
+                opacity: 0;
+                animation: fade-in-down $easing-d .3s forwards;
+                color: $text;
+                visibility: visible;
+            }
+
+            .typer-p {
+                animation-delay: .05s;
+            }
+        }
+    }
+
+    p,
+    li {
+        color: $text;
+        letter-spacing: 1.18px;
+        line-height: 1.4;
+    }
+
+    .text p {
+        font-size: 1.08em;
+        line-height: 1.8;
+        max-width: 36em;
+        text-align: center;
+        margin: 18px auto;
+        letter-spacing: 1.2px;
+        font-weight: $light;
+    }
+}
+
+.design-tools {
+    text-align: center;
+    display: block;
+}
+
+.apps-i-use {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    width: 100%;
+
+    @include media('<laptop') {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    @include media('<phone') {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 4px;
+    }
+}
+
+.other-things .h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.things {
+    display: block;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+
+    li {
+        padding: 16px 0;
+        margin: 0 auto;
+        font-size: 1.1em;
+    }
+}
+
+.resume {
+    text-align: center;
+
+    p {
+        color: $accent;
+    }
+}

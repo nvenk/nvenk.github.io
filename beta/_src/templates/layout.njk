@@ -1,0 +1,52 @@
+{% set meta = {
+        url: 'http://nvenk.com',
+        site: 'Nikhil Venkatesh'
+} %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {# Metadata #}
+        {% include "partials/meta.njk" %}
+
+        {# Google Fonts #}
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Lato:200,300,700" rel="stylesheet">
+
+        {# Stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{{ var.styles }}" />
+        {# {% include "partials/analytics.njk" %} #}
+
+        {# Loading JQuery First #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    </head>
+
+    <body class="{{ var.bodyClass }} {% if var.bodyClass != 'home' and var.bodyClass != 'about' %}project-page {% endif %}">
+
+        {# Global Macros #}
+        {% import 'macros/global.njk' as macro %}
+
+        {# Set Scroll Restoration to 'manual' on Project pages #}
+        <script>
+            if(document.getElementsByTagName('body')[0].className == "home") {
+                history.scrollRestoration = 'auto';
+            }
+            else { history.scrollRestoration = 'manual'; }
+        </script>
+
+        {% block content %}{% endblock %}
+
+        {% include "partials/footer.njk" %}
+
+        {# CDN Scripts  #}
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.1/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+
+        <script src="{{ var.scripts }}"></script>
+
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

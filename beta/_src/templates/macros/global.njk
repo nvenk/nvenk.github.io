@@ -1,0 +1,76 @@
+
+{# Project Tiles #}
+
+{% macro project(name='proj',
+        title='title - Project Title',
+        tagline='tagline - Project Tagline goes here',
+        url='#',
+        header = 'n'
+        ) %}
+
+    {# Macro Content -------- #}
+
+    <section class="project-tile-wrapper container {%if header == 'header' %} active {% endif %}">
+
+        <a href="{{ url }}" id="{{ name }}" class="trigger project-tile">
+            <div class="project-title">{{ title }}</div>
+            <div class="project-tag">{{ tagline }}</div>
+        </a>
+
+        <div class="project-img">
+            <img src="img/{{ name }}/hero.png" alt="">
+        </div>
+    </section>
+
+    {%if header == 'header' %}
+
+    <div class="project-header">
+        <div class="project-title">{{ title }}</div>
+        <div class="project-tag">{{ tagline }}</div>
+    </div>
+
+    {% endif %}
+
+{% endmacro %}
+
+
+
+
+
+{# Landing / About View #}
+
+{% macro aboutStack(active='false') %}
+
+<section class="container landing {%if active == 'active' %} active {% endif %}">
+    {% if active == 'false' %}
+    <div class="about-block"></div>
+    {% endif %}
+
+    <div class="intro">
+        <h1>Hi, I'm <span class="emphasis">Nikhil!</span></h1>
+        <div class="separator accent"></div>
+
+        {% if active == 'false' %}
+            <p class="line-1">I'm a Product Designer and Animator based out of San Francisco.</p>
+            <p class="typer-p">In the wild, you might spot me <span class="typer" id="in-the-wild" data-delay="30" data-words="fiddling with new gadgets,designing digital experiences,obsessing over micro-interactions,living the #makerlife,hiking in the mountains,photographing wildlife,evangelizing motion in UX"></span>
+            <span class="cursor" data-owner="in-the-wild"></span></p>
+            <a href="about.html" class="trigger button"><p>Curious?</p></a>
+
+
+        {% elif active == 'active' %}
+            <p class="line-1">I'm really excited that you're here!</p>
+            <p class="typer-p">My journey to get here has been super fun...</p>
+            <a href="about.html" class="trigger button"><p></p></a>
+        {% endif %}
+
+    </div>
+
+    {% if active == 'false' %}
+        <div class="hero-container">
+            <div class="hero"></div>
+        </div>
+    {% endif %}
+</section>
+
+
+{% endmacro %}

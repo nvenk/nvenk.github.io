@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{# {% include "partials/nametag.njk" %} #}
+
+{# PROJECT HEADER #}
+{% for project in projects %}
+    {% if project.name == var.bodyClass %}
+    {{ macro.project(project.name,
+                    project.title,
+                    project.tag,
+                    project.url,
+                    'header'
+                    ) }}
+    {% endif %}
+{% endfor %}
+
+
+{# PROJECT CONTENT #}
+{% block p_content %}{% endblock %}
+
+
+{# Prevent header link from working on project pages #}
+<script type="text/javascript">
+    $('.project-tile').click(function(e){
+        e.preventDefault();
+    });
+</script>
+
+{% endblock %}

@@ -130,9 +130,16 @@ $accent: $central; // Defining accent color
         max-width: 24em;
         font-size: 1em;
         transition: .7s all ease-in-out .65s;
+        line-height: 1.4;
 
         @include breakpoint(tablet){
             font-size: 1.2em;
+        }
+
+        em {
+            font-family: $sans-serif;
+            font-weight: $reg;
+            font-style: italic;
         }
     }
 

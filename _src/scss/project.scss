@@ -4,7 +4,8 @@
 // Project Page
 @mixin project-defaults($project) {
 
-    em {
+    em,
+    .awards-grid p {
         color: $project;
     }
 
@@ -28,6 +29,42 @@
 em{
     font-family: $heading;
     font-size: .95em;
+}
+
+.awards-grid {
+    display: flex;
+    flex-grow: 0;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 80px;
+
+    .award {
+        width: auto;
+        margin: 30px 20px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        p {
+            text-align: center;
+            font-weight: $bold;
+
+            .sub{
+                font-size: .9em;
+                display: block;
+                font-weight: $thin;
+                color: $black;
+            }
+        }
+    }
+
+    object {
+        height: 100%;
+        max-height: 96px;
+        margin: 0 auto;
+    }
 }
 
 .content-image{
