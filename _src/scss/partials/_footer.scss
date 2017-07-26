@@ -1,135 +1,3 @@
-// footer{
-//     @extend %black-gradient;
-//     height: 40%;
-//     display: flex;
-//     justify-content: center;
-//     flex-flow: column;
-//     padding: 120px 0;
-//     opacity: 1;
-//     z-index: -99;
-//     align-items: center;
-//
-// 	.email-container{
-// 		padding-bottom: 40px;
-// 	}
-//
-//     .email{
-//         color: $white;
-//         font-size: 1.8em;
-//         font-family: $heading;
-//         font-weight: $thin;
-//         text-align: center;
-//         width: 100%;
-//         position: relative;
-//
-//         &::before{
-//             content: '';
-//             position: absolute;
-//             left: 0;
-//             bottom: -10px;
-//             width: 100%;
-//             height: 2px;
-//             background: $white;
-//             transform: scaleX(0);
-//             transition: .3s all ease-in-out;
-//
-//         }
-//
-//         &:hover{
-//             color: $primary;
-//
-//             &::before{
-//                 transform: scaleX(1);
-//             }
-//         }
-//     }
-//
-//     .social-container{
-//         padding-bottom: 40px;
-// 		display: flex;
-// 	    justify-content: space-between;
-// 	    max-width: 280px;
-//         min-width: 280px;
-// 	    width: 280px;
-//
-// 		.footer-social-link{
-// 			display: block;
-// 			width: 48px;
-// 			height: 48px;
-// 			opacity: 1;
-// 			transition: all .3s cubic-bezier(.33, .01, .06, 1);
-// 			border-radius: 10px;
-//
-// 			&:hover{
-// 				transform: scale(1.3);
-//
-// 				.bg{
-// 					fill: rgba($black, 0);
-// 					stroke-dashoffset: 4000;
-// 					stroke: $primary;
-// 				}
-//
-// 				.icon{
-// 					fill: $primary;
-// 				}
-// 			}
-// 		}
-//
-// 		svg{
-// 			padding: 5px;
-// 			transition: all .3s ease-in-out;
-// 			position: relative;
-// 			left: -5px;
-// 			top: -5px;
-//
-// 			*{
-// 				transition: all .6s cubic-bezier(.23, .29, .45, 1);
-// 			}
-//
-// 			.bg{
-// 				stroke-dasharray: 2000;
-// 				stroke-dashoffset: 2000;
-// 				stroke-width: 20;
-// 			}
-//
-// 			.icon{
-// 				fill: $white;
-// 			}
-// 		}
-// 		// LinkedIn
-// 		.li{
-// 			.bg{
-// 				fill: $linkedin;
-// 				stroke: $linkedin;
-// 			}
-// 		}
-//
-// 		// Twitter
-// 		.tw{
-// 			.bg{
-// 				fill: $twitter;
-// 				stroke: $twitter;
-// 			}
-// 		}
-//
-// 		// Dribbble
-// 		.db{
-// 			.bg{
-// 				fill: $dribbble;
-// 				stroke: $dribbble;
-// 			}
-// 		}
-//
-// 		// 500PX
-// 		// .p500{
-// 		// 	.bg{
-// 		// 		fill: $px500;
-// 		// 		stroke: $px500;
-// 		// 	}
-// 		// }
-//     }
-// }
-
 
 // Button - Link on Desktop
 .button {
@@ -157,35 +25,13 @@
             background: $primary;
         }
 
-        &:hover::after {
-            transform: scaleX(0);
-        }
-
         &:active {
             background: darken($primary, 6%);
             color: $white;
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            height: 2px;
-            width: 100%;
-            border-radius: 2px;
-            background: $primary;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: .2s all ease-in-out;
-        }
-
         &.center::after {
             transform-origin: center;
-        }
-
-        &:hover::after {
-            transform: scaleX(1);
         }
     }
 }
@@ -265,7 +111,7 @@ footer {
         width: 36px;
         pointer-events: none;
 
-        @include breakpoint(tablet){
+        @include breakpoint(tablet) {
             width: 48px;
         }
     }
