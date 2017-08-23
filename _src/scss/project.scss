@@ -138,7 +138,21 @@ em{
     }
 }
 
-.content{
+.text-emphasis {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.3em;
+    font-weight: $bold;
+    color: $xtly;
+    padding: 60px 30px;
+
+
+    @include breakpoint(tablet) {
+        font-size: 1.6em;
+    }
+}
+
+.content {
     @extend %fade-in;
     animation-delay: .55s;
     opacity: 0;
@@ -147,17 +161,17 @@ em{
     transition: $default-transition;
     color: $black;
 
-    @include breakpoint(tablet){
+    @include breakpoint(tablet) {
         padding: 40px 0 80px;
     }
 
-    .content--text{
+    .content--text {
         max-width: $content-width;
 
-        &.center{
+        &.center {
             margin: 0 auto;
 
-            @include breakpoint(laptop){
+            @include breakpoint(laptop) {
                 margin: 0;
             }
         }
@@ -249,7 +263,7 @@ em{
             transition: .4s all ease-in-out;
         }
 
-        .quote{
+        .overlay-quote{
             position: absolute;
             top: 0;
             left: 0;
@@ -263,18 +277,19 @@ em{
                 font-family: $heading;
                 color: $white;
                 font-weight: $bold;
-                font-size: .5em;
+                font-size: 1.6em;
                 letter-spacing: 1.5px;
                 line-height: 1.4;
-                padding-top: 90px;
+                text-align: center;
 
                 @include breakpoint(tablet){
-                    font-size: .8em;
+                    font-size: 2em;
                     line-height: 1.5;
+                    padding-top: 0px;
                 }
 
                 @include breakpoint(laptop){
-                    font-size: 1.2em;
+                    font-size: 3em;
                 }
 
                 &::before{
