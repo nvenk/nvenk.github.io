@@ -15,8 +15,6 @@
 }%}
 
 
-
-
 {# Page Content --------------- #}
 {% block content %}
 
@@ -24,24 +22,24 @@
 
 <style>
 body, html {
-    background: #232628; {# $black #}
+    background: #232628;
 }
 </style>
 
 <div class="container text intro-blurb section-spacer">
     <p>I’m a <em>designer</em> and <em>animator</em>, based out of beautiful San Francisco.</p>
 
-    <p>Born in India in 1989, I’ve had a passion for animation as long as I can remember. That passion turned into a career animating dragons, mutant turtles and a cat wearing boots!</p>
+    <p>Born in India in 1989, I’ve had a passion for animation as long as I can remember. <em>I turned that passion into a career</em> animating dragons, mutant turtles and a cat wearing boots!</p>
 
-    <p>Along the way, I was drawn by the amazing things that code can do and taught myself how to build websites. I started freelancing on web and UI projects, eventually leading me to discover the wonderful world of UX.</p>
+    <p>Along the way, I was drawn by the <em>amazing things that code can do</em> and taught myself how to build websites. I started freelancing on web and UI projects, eventually leading me to discover the wonderful world of UX.</p>
 
-    <p>I'm always trying to blur the lines these three sides of me - thinking about how my animation expertise can help me design better interactions and experiences, and figuring out how to actually build these experiences with code.</p>
+    <p>I'm always trying to <em>blur the lines</em> these three sides of me - thinking about how my animation expertise can help me design better interactions and experiences, and figuring out how to actually build these experiences with code.</p>
 
     <p>I recently earned my <span class="sm">(second)</span> Masters degree, this time in <em>Human Centered Design & Engineering</em> from the University of Washington. I met some incredible people, designed awesome experiences and built a robot!</p>
 </div>
 
 <div class="container design-tools section-spacer">
-    <p class="h3">My absolute favorite <em>design tools</em></p>
+    <p class="h3">My favorite <em>design tools</em> include</p>
 
     <div class="apps-i-use">
         <img src="img/about/design_sketch.png" alt="sketch app" />
@@ -67,17 +65,18 @@ body, html {
     </ul>
 </div>
 
-<div class="container section-spacer">
+<div class="container">
     <p class="h3">Interested in my <em>professional</em> journey?</p>
     <a href="/files/NikhilVenkatesh_Resume.pdf" class="button resume" target="_blank"><p class="center">Download my résumé</p></a>
 </div>
 
 {% endblock %}
 
-
-
-
 {# Page Specific Scripts ------ #}
 {% block scripts %}
+
+<script type="text/javascript">
+    window.onload = document.getElementsByTagName("footer")[0].className += ' alt';
+</script>
 
 {% endblock %}

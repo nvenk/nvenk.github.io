@@ -34,43 +34,64 @@
 {% endmacro %}
 
 
-
-
-
 {# Landing / About View #}
 
 {% macro aboutStack(active='false') %}
 
 <section class="container landing {%if active == 'active' %} active {% endif %}">
     {% if active == 'false' %}
-    <div class="about-block"></div>
+    <div class="about-transition-block"></div>
     {% endif %}
 
     <div class="intro">
+
+        {# LOGO #}
+
+        <a href="/">
+            {% include 'partials/nvenk-logo.njk' %}
+        </a>
+
+
         <h1>Hi, I'm <span class="emphasis">Nikhil!</span></h1>
         <div class="separator accent"></div>
 
         {% if active == 'false' %}
             <p class="line-1">I'm a Product Designer and Animator based out of San Francisco.</p>
-            <p class="typer-p">In the wild, you might spot me <span class="typer" id="in-the-wild" data-delay="30" data-words="fiddling with new gadgets,designing digital experiences,obsessing over micro-interactions,living the #makerlife,hiking in the mountains,photographing wildlife,evangelizing motion in UX"></span>
+            <p class="typer-p">In the wild, you might spot me <span class="typer" id="in-the-wild" data-delay="30" data-words="designing digital experiences,obsessing over micro-interactions,living the #makerlife,fiddling with new gadgets,hiking in the mountains,photographing wildlife,evangelizing motion in UX"></span>
             <span class="cursor" data-owner="in-the-wild"></span></p>
             <a href="about.html" class="trigger button"><p>Curious?</p></a>
 
-
         {% elif active == 'active' %}
-            <p class="line-1">I'm really excited that you're here!</p>
-            <p class="typer-p">My journey to get here has been super fun...</p>
+            <p class="line-1">My journey into the world of design has been a roller coaster!</p>
+            <p class="typer-p">Here's my story...</p>
             <a href="about.html" class="trigger button"><p></p></a>
         {% endif %}
 
     </div>
 
-    {% if active == 'false' %}
-        <div class="hero-container">
-            <div class="hero"></div>
+    {# {% if active == 'false' %} #}
+        <div class="hero-wrapper">
+            <div class="hero-image">
+                <img src="img/profile.jpg" alt="">
+            </div>
         </div>
-    {% endif %}
+    {# {% endif %} #}
 </section>
 
+{% endmacro %}
+
+{# Navigation #}
+
+{% macro nav() %}
+
+<nav>
+<ul class="container">
+    <li>Projects</li>
+    <li>Animation</li>
+    <li><object class="logo" data="img/nvenk-logo.svg" type="image/svg+xml"></object></li>
+    <li>About</li>
+    <li>Resume</li>
+</ul>
+</nav>
 
 {% endmacro %}

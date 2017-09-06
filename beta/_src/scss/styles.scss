@@ -6,30 +6,48 @@
 .landing {
     height: 100%;
     min-height: 680px;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .intro {
     $text: $grey;
 
     align-self: center;
+    justify-content: space-between;
     z-index: 1;
     max-height: 100%;
+    height: auto;
     min-height: 600px;
-    max-width: 65%;
+    max-width: 60%;
+    flex-grow: 1;
+    order: 1;
+    padding-top: 100px;
 
-    @include media('<tablet') {
+    @include media('<laptop') {
         align-self: flex-end;
         max-width: 100%;
         min-height: 550px;
+        order: 2;
+        padding-top: 100px;
+    }
+
+    .nvenk-logo {
+        height: 64px;
+        width: 64px;
+        margin: 24px 0 72px;
+        transition: .2s transform $easing-d;
+
+        .n-lines {
+            transition: .2s fill $easing-d .3s;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     h1 {
-        padding-top: 200px;
-
-        @include media('<tablet') {
-            padding-top: 100px;
-        }
-
         span {
             transition: $transition-d .3s;
         }
@@ -64,6 +82,56 @@
                 color: $text;
             }
         }
+
+        .n-lines {
+            fill: $white;
+        }
+    }
+}
+
+.hero-wrapper {
+    width: 40%;
+    padding: 20px;
+    order: 2;
+    display: flex;
+    align-items: center;
+    perspective: 3000px;
+
+    @include media('<laptop'){
+        width: 100%;
+        max-height: 50%;
+        order: 1;
+        flex-shrink: 1;
+    }
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    transition: .35s all ease-in-out .35s;
+    opacity: 1;
+    perspective: 1000px;
+    @include aspect-ratio (400 512);
+
+    @include media('<laptop') {
+        display: none;
+    }
+
+    .active & {  // Expanded or Transition Styles
+        // transform: rotateY(90deg);
+        // visibility: hidden;
+    }
+
+    img {
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 40px rgba($black, .1);
+
+        @include media('<laptop') {
+            height: 192px;
+            margin: 50px auto 0;
+        }
     }
 }
 
@@ -79,35 +147,7 @@
     transition-delay: .375s;
 }
 
-.hero-container {
-    transition: .3s all ease-in-out .4s;
-    opacity: 1;
-
-    .active & {  // Expanded or Transition Styles
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-.hero {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background: url('/img/profile_pic-bw.png');
-    background-size: contain;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 95%;
-    opacity: .6;
-    pointer-events: none;
-
-    @include media('<tablet') {
-        display: none;
-    }
-}
-
-.about-block {
+.about-transition-block {
     position: fixed;
     top: 0;
     left: 0;
@@ -123,6 +163,10 @@
         transform: translateX(0%);
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     }
+}
+
+.project-wrapper {
+    padding-top: 40px;
 }
 
 // Skills Section
@@ -159,7 +203,7 @@ $icon-size: 128px;
     // Landing on About Page
     .active {
         .intro {
-            animation: slide-down ease-in-out .6s forwards .4s;
+            // animation: slide-down ease-in-out .6s forwards .4s;
 
             .line-1,
             .typer-p {
